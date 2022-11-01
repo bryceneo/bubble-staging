@@ -8,7 +8,7 @@ function Dashboard() {
     <>
       <div id="dashboard">
         <SidePanel />
-        <DataDisplay />
+        {/* <DataDisplay /> */}
       </div>
     </>
   );

@@ -7,21 +7,23 @@ function Categories() {
   return (
     <>
       <div>
-        <h4>category</h4>
+        <h6 className="categories-title">Categories</h6>
         <div>
-          {catgories.map((category) => {
-            return (
-              <div>
-                {category.name}{" "}
-                <span>
-                  <div
-                    id="circle1"
-                    style={{ backgroundColor: category.colorCode }}
-                  ></div>
-                </span>
-              </div>
-            );
-          })}
+          <ul className="categories-list p-0">
+            {catgories.map((category) => {
+              return (
+                <li>
+                  <span>{category.name}</span>
+                  <span>
+                    <div
+                      id="circle1"
+                      style={{ backgroundColor: category.colorCode }}
+                    ></div>
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
     </>
