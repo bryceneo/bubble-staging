@@ -14,10 +14,7 @@ function Categories() {
               <div>
                 {category.name}{" "}
                 <span>
-                  <div
-                    id="circle1"
-                    style={{ backgroundColor: category.colorCode }}
-                  ></div>
+                  <div id="circle1"></div>
                 </span>
               </div>
             );
