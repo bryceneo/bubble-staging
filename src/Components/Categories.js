@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CategoriesData from "./Data/CategoriesData";
+import "./styles/Categories.css";
 
 function Categories() {
   const [catgories, setcategories] = useState(CategoriesData);
@@ -9,7 +10,14 @@ function Categories() {
         <h4>category</h4>
         <div>
           {catgories.map((category) => {
-            return <div>{category.name}</div>;
+            return (
+              <div>
+                {category.name}{" "}
+                <span>
+                  <div id="circle1"></div>
+                </span>
+              </div>
+            );
           })}
         </div>
       </div>
