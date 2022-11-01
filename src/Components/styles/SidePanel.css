@@ -1,0 +1,8 @@
+#sidePanel {
+  display: flex;
+  direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  width: 6em;
+}
