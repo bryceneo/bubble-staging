@@ -1,0 +1,53 @@
+import React from "react";
+import testPerson from "./Data/Pics/2.jpeg";
+
+function Child({ params }) {
+  console.log(params.id, params.backgroundColor);
+  if (params.type === "text") {
+    return (
+      <div
+        style={{
+          color: `${params.textColor}`,
+          border: `${params.borderThickness} solid ${params.borderColor}`,
+          borderRadius: 100,
+          backgroundColor: `${params.backgroundColor}`,
+          height: "90px",
+          width: "90px",
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+          padding: "2px",
+          overflow: "hidden",
+          scale: `${params.scaleFactor}`,
+          opacity: `${params.isActive ? "100%" : "50%"}`,
+        }}
+      >
+        {params.text}
+      </div>
+    );
+  }
+  if (params.type === "person") {
+    return (
+      <div
+        style={{
+          borderRadius: 50,
+          border: `${params.borderThickness} solid ${params.borderColor}`,
+          height: "90px",
+          width: "90px",
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+          padding: "2px",
+          overflow: "hidden",
+          scale: `${params.scaleFactor}`,
+          opacity: `${params.isActive ? "100%" : "50%"}`,
+        }}
+      >
+        <img src={testPerson} width="120px" height="120px" alt="test" />
+      </div>
+    );
+  }
+  return <div>Failed</div>;
+}
+
+export default Child;

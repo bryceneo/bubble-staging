@@ -1,13 +1,16 @@
 import Dashboard from "./Components/Dashboard";
 import Filters from "./Components/Filters";
 import Timeline from "./Components/Timeline";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Filters />
-      <Timeline />
-      <Dashboard />
+      <BrowserRouter>
+        <Filters />
+        <Timeline />
+        <Dashboard />
+      </BrowserRouter>
     </>
   );
 }
