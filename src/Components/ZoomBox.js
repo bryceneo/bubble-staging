@@ -3,6 +3,7 @@ import "./styles/ZoomBox.css";
 
 function ZoomBox() {
   const [count, setCount] = useState(0);
+
   const increment = () => {
     let max = 200;
     if (count < max) {
@@ -15,38 +16,46 @@ function ZoomBox() {
       setCount(count - 1);
     }
   };
+  // const handleChange = (value, name) => {
+  //   console.log(value);
+  //   console.log({ [name]: value });
+  // };
+  const handleChange = (e) => {
+    setCount(e.target.value);
+  };
+  const percenTage = () => {
+    return (count / 200) * 100;
+  };
 
   return (
     <>
       <div className="zoom-box">
         <div className="zm-title mb-3">
           <span className="text-b">Zoom</span>
-          <span className="text-r">100%</span>
+          <span className="text-r">{percenTage().toFixed(2)}%</span>
         </div>
 
-        {/* <div className="zoom-cnrtls">
-          <span className="zoom-in">+</span>
-
-          <input type="range" />
-          <span className="zoom-out">-</span>
-        </div> */}
         <div className="zoom-cnrtls">
           <button className="zoom-in" onClick={increment}>
             +
           </button>
-          <input type="range" max={200} min={0} value={count} />
+          <input
+            type="range"
+            max={200}
+            min={0}
+            name="range"
+            value={count}
+            // onChange={(event) =>
+            //   handleChange(event.target.value, event.target.name)
+            // }
+            onChange={handleChange}
+          />
           {count}
           <button className="zoom-out" onClick={decrement}>
             -
           </button>
         </div>
       </div>
-
-      {/* <div class="zoom-cnrtls">
-        <span class="zoom-in">+</span>
-        <input type="range" min="100" max="250" value="180" id="height" />
-        <span class="zoom-out">-</span>
-      </div> */}
     </>
   );
 }
