@@ -31,7 +31,7 @@ const first = [
     id: 3,
     type: "subject",
     subjectId: "ds023426",
-
+    
     isRouting: false,
     text: "Literary Studies",
     textColor: "#223247",
@@ -346,8 +346,8 @@ const first = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnUg_S8jc9xjw-UYRvEBtPdjO1Ytj75rcajbn-FY7z&s",
     textColor: "#223247",
-    borderThickness: "2px",
-    borderColor: "#D2D2D2",
+    borderThickness: "4px",
+    borderColor: "#F1AC4D",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,
@@ -376,8 +376,8 @@ const first = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYInlcLz-tohmDcaurwEy29Bk94eg1075l0Q&usqp=CAU",
     textColor: "#223247",
-    borderThickness: "2px",
-    borderColor: "#D2D2D2",
+    borderThickness: "4px",
+    borderColor: "#704CA2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,
@@ -448,8 +448,8 @@ const first = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY46bDjH2LeAM-zTiyngADD2TmlqpwAlwDyA&usqp=CAU",
     textColor: "#223247",
-    borderThickness: "2px",
-    borderColor: "#D2D2D2",
+    borderThickness: "4px",
+    borderColor: "#90C56D",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,
@@ -475,10 +475,10 @@ const first = [
 
     isRouting: false,
     text: "2020 Prize Winners",
-    textColor: "#223247",
+    textColor: "#ffffff",
     borderThickness: "2px",
-    borderColor: "#D2D2D2",
-    backgroundColor: " #FFFFFF5E",
+    borderColor: "#14202E",
+    backgroundColor: " #14202E",
     scaleFactor: 1,
     isActive: true,
   },
@@ -492,8 +492,8 @@ const first = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFEdOGWCl2XyCAxD_pzARX98Swdft2_XB2zT-dCU4V8ovseWC5d5EVEi1bW4LHonanbIU&usqp=CAU",
     textColor: "#223247",
-    borderThickness: "2px",
-    borderColor: "#D2D2D2",
+    borderThickness: "4px",
+    borderColor: "#8695A8",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,
@@ -592,8 +592,8 @@ const first = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsUmE6FMTWUnXwdX_vkq9XMe_6AIFuuBY_lQ&usqp=CAU",
     textColor: "#223247",
-    borderThickness: "2px",
-    borderColor: "#D2D2D2",
+    borderThickness: "4px",
+    borderColor: "#2CC7C9",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,
@@ -622,8 +622,8 @@ const first = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
     textColor: "#223247",
-    borderThickness: "2px",
-    borderColor: "#D2D2D2",
+    borderThickness: "4px",
+    borderColor: "#418BCA",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,

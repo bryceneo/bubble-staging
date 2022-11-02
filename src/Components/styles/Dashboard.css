@@ -1,3 +1,5 @@
 #dashboard {
   display: flex;
+  border-top: 1px solid #dbdada;
+ margin-top: 40px;
 }

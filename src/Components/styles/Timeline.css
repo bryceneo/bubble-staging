@@ -4,6 +4,12 @@
   justify-content: center;
   align-items: center;
 }
+.emp-name {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 0.9;
+}
 .years-scroll {
   list-style-type: none;
   display: flex;
@@ -15,7 +21,7 @@
   border-left: 1px solid #dbdbdb;
   border-top: 1px solid #dbdbdb;
   height: 25px;
-  width: 45px;
+  width: 46px;
   display: flex;
   justify-content: space-around;
 }

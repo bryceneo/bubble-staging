@@ -6,7 +6,7 @@ import "./styles/SidePanel.css";
 function SidePanel() {
   return (
     <>
-      <div id="sidePanel">
+      <div id="sidePanel" className="pe-3 pt-5">
         <Categories />
         <ZoomBox />
       </div>
