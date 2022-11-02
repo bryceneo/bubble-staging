@@ -1,9 +1,23 @@
 import React from "react";
 import testPerson from "./Data/Pics/2.jpeg";
+import { useNavigate } from "react-router-dom";
 
 function Child({ params }) {
   console.log(params.id, params.backgroundColor);
-  if (params.type === "text") {
+  const navigate = useNavigate();
+  const subjectClickHandler = (subID, isRouting) => {
+    if (isRouting) {
+      navigate(`subject-details/${subID}`, {
+        state: { subId: params.subjectId, subText: params.text },
+      });
+    }
+  };
+  const personClickHandler = (lauID, isRouting) => {
+    if (isRouting) {
+      navigate(`laurate-details/${lauID}`);
+    }
+  };
+  if (params.type === "subject" || params.type === "sub-subject") {
     return (
       <div
         style={{
@@ -20,7 +34,9 @@ function Child({ params }) {
           overflow: "hidden",
           scale: `${params.scaleFactor}`,
           opacity: `${params.isActive ? "100%" : "50%"}`,
+          cursor: `${params.isRouting ? "pointer" : null}`,
         }}
+        onClick={() => subjectClickHandler(params.subjectId, params.isRouting)}
       >
         {params.text}
       </div>
@@ -41,9 +57,11 @@ function Child({ params }) {
           overflow: "hidden",
           scale: `${params.scaleFactor}`,
           opacity: `${params.isActive ? "100%" : "50%"}`,
+          cursor: `${params.isRouting ? "pointer" : null}`,
         }}
+        onClick={() => personClickHandler(params.laurateId, params.isRouting)}
       >
-        <img src={testPerson} width="120px" height="120px" alt="test" />
+        <img src={params.image} width="120px" height="120px" alt="test" />
       </div>
     );
   }
