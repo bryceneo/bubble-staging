@@ -6,11 +6,13 @@ import { BrowserRouter } from "react-router-dom";
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Filters />
-        <Timeline />
-        <Dashboard />
-      </BrowserRouter>
+      <div className="container">
+        <BrowserRouter>
+          <Filters />
+          <Timeline />
+          <Dashboard />
+        </BrowserRouter>
+      </div>
     </>
   );
 }

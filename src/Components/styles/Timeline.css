@@ -4,3 +4,65 @@
   justify-content: center;
   align-items: center;
 }
+.years-scroll {
+  list-style-type: none;
+  display: flex;
+}
+.years-scroll li {
+  position: relative;
+}
+.years-scroll li .cm {
+  border-left: 1px solid #dbdbdb;
+  border-top: 1px solid #dbdbdb;
+  height: 25px;
+  width: 45px;
+  display: flex;
+  justify-content: space-around;
+}
+.years-scroll li .mm {
+  border-right: 1px solid #dbdbdb;
+  height: 14px;
+  width: 6%;
+}
+.years-scroll li .cm .mm:nth-of-type(11) {
+  margin-right: 2px;
+}
+.years-scroll li span {
+  font-size: 12px;
+  text-align: center;
+  color: #dbdbdb;
+}
+.years-scroll-item {
+  position: relative;
+}
+.years-scroll li.active span {
+  color: #000;
+}
+.years-scroll li.active .cm {
+  border-top-color: #111;
+}
+.years-scroll-item.active.active-start::before,
+.years-scroll-item.active.active-end::after {
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  background: #111;
+  border-radius: 40px;
+  top: -3px;
+  left: -3px;
+}
+.years-scroll-item.active.active-end .cm {
+  border-top-color: #dbdbdb;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  align-items: center;
+  height: 100px;
+}
