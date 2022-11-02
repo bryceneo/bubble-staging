@@ -347,7 +347,7 @@ const first = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnUg_S8jc9xjw-UYRvEBtPdjO1Ytj75rcajbn-FY7z&s",
     textColor: "#223247",
     borderThickness: "2px",
-    borderColor: "#D2D2D2",
+    borderColor: "#f1ac4d",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,

@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles/ZoomBox.css";
 
-function ZoomBox() {
+function ZoomBox({ SetZoom }) {
   const [count, setCount] = useState(0);
+  useEffect(() => {
+    SetZoom(count);
+  }, [count]);
 
   const increment = () => {
     let max = 200;

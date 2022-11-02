@@ -3,7 +3,7 @@ import testPerson from "./Data/Pics/2.jpeg";
 import { useNavigate } from "react-router-dom";
 
 function Child({ params }) {
-  console.log(params.id, params.backgroundColor);
+  // console.log(params.id, params.backgroundColor);
   const navigate = useNavigate();
   const subjectClickHandler = (subID, isRouting) => {
     if (isRouting) {
