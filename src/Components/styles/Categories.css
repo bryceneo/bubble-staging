@@ -1,7 +1,7 @@
 #circle1 {
   /* background-color: #b90136; */
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   border-radius: 50px; /* specify the radius */
 }
 .categories-list li {
@@ -17,6 +17,8 @@
 
 .categories-list {
   list-style-type: none;
+  padding-right: 10px;
+  padding-left: 0;
 }
 
 .categories-title {
