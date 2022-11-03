@@ -40,6 +40,10 @@ function Dashboard() {
             element={<DataDisplay dataId={6} zoom={zoom} />}
           />
           <Route path="/subject-details/:id/all" element={<Grapher />} />
+          <Route
+            path="/year/:id"
+            element={<DataDisplay dataId={"year"} zoom={zoom} />}
+          />
         </Routes>
       </div>
     </>

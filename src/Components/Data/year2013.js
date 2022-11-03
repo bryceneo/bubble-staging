@@ -1,4 +1,4 @@
-const first = [
+const year2013 = [
   {
     id: 1,
     type: "subject",
@@ -892,4 +892,4 @@ const first = [
   },
 ];
 
-export default first;
+export default year2013;
