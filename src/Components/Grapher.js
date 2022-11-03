@@ -15,6 +15,7 @@ function Grapher() {
         height: "100%",
         width: "100%",
         padding: "1em",
+        lineHeight: "3em",
       }}
     >
       {node.id}
@@ -25,8 +26,11 @@ function Grapher() {
   const config = {
     directed: false,
     automaticRearrangeAfterDropNode: true,
+    focusAnimationDuration: 0.75,
+    focusZoom: 5,
     collapsible: true,
-    height: "700",
+    height: 600,
+    width: 600,
     highlightDegree: 2,
     highlightOpacity: 0.5,
     linkHighlightBehavior: false,
@@ -35,7 +39,6 @@ function Grapher() {
     nodeHighlightBehavior: false, // comment this to reset nodes positions to work
     panAndZoom: true,
     staticGraph: false,
-    width: "700",
 
     d3: {
       alphaTarget: 0.05,
@@ -71,6 +74,8 @@ function Grapher() {
       opacity: 1,
       semanticStrokeWidth: false,
       strokeWidth: 1,
+      markerHeight: 5,
+      markerWidth: 5,
       type: "STRAIGHT",
     },
   };
