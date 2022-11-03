@@ -6,6 +6,9 @@ import third from "./Data/third";
 import fourth from "./Data/fourth";
 import fifth from "./Data/fourth";
 import sixth from "./Data/fourth";
+import year2010 from "./Data/year2010";
+import year2012 from "./Data/year2012";
+import year2013 from "./Data/year2013";
 import BubbleUI from "react-bubble-ui";
 import "react-bubble-ui/dist/index.css";
 import Child from "./Child";
@@ -25,9 +28,18 @@ function DataDisplay({ dataId, zoom }) {
   if (dataId === 4) data = fourth;
   if (dataId === 5) data = fifth;
   if (dataId === 6) data = sixth;
+  if (dataId === "year") {
+    const { year } = state;
+    if (year === 2010) data = year2010;
+    if (year === 2012) data = year2012;
+    if (year === 2013) data = year2013;
+  }
 
   let subjectNav = (
-    <div className="subject-title" onClick={() => navigate(`/subject-details/${subId}/all`)}>
+    <div
+      className="subject-title"
+      onClick={() => navigate(`/subject-details/${subId}/all`)}
+    >
       Show all laureates in {subText}
       <i class="fas fa-arrow-right"></i>
     </div>
@@ -43,7 +55,7 @@ function DataDisplay({ dataId, zoom }) {
     size: 180,
     // size: zoom,
     minSize: 30,
-    gutter: -70,
+    gutter: -77,
     provideProps: true,
     numCols: 9,
     fringeWidth: 500,
