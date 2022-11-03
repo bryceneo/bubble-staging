@@ -3,18 +3,18 @@ import testPerson from "./Data/Pics/2.jpeg";
 import { useNavigate } from "react-router-dom";
 
 function Child({ params }) {
-  console.log(params.id, params.backgroundColor);
+  // console.log(params.id, params.backgroundColor);
   const navigate = useNavigate();
   const subjectClickHandler = (subID, isRouting) => {
     if (isRouting) {
-      navigate(`subject-details/${subID}`, {
+      navigate(`/subject-details/${subID}`, {
         state: { subId: params.subjectId, subText: params.text },
       });
     }
   };
   const personClickHandler = (lauID, isRouting) => {
     if (isRouting) {
-      navigate(`laurate-details/${lauID}`);
+      navigate(`/laurate-details/${lauID}`);
     }
   };
   if (params.type === "subject" || params.type === "sub-subject") {

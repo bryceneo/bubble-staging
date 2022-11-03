@@ -3,12 +3,12 @@ import Categories from "./Categories";
 import ZoomBox from "./ZoomBox";
 import "./styles/SidePanel.css";
 
-function SidePanel() {
+function SidePanel({ SetZoom }) {
   return (
     <>
       <div id="sidePanel" className="pe-3 pt-5">
         <Categories />
-        <ZoomBox />
+        <ZoomBox SetZoom={SetZoom} />
       </div>
     </>
   );

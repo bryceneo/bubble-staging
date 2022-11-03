@@ -2,13 +2,17 @@ import React, { useEffect, useState } from "react";
 import "./styles/DataDisplay.css";
 import first from "./Data/first";
 import second from "./Data/second";
+import third from "./Data/third";
+import fourth from "./Data/fourth";
+import fifth from "./Data/fourth";
+import sixth from "./Data/fourth";
 import BubbleUI from "react-bubble-ui";
 import "react-bubble-ui/dist/index.css";
 import Child from "./Child";
 import InstaFilters from "./InstaFilters";
 import { useLocation, useNavigate } from "react-router-dom";
 
-function DataDisplay({ dataId }) {
+function DataDisplay({ dataId, zoom }) {
   const [topPanel, setTopPanel] = useState(undefined);
   const { state } = useLocation();
   const { subId, subText } = state ? state : { subId: "", subText: "" };
@@ -17,10 +21,10 @@ function DataDisplay({ dataId }) {
   let data;
   if (dataId === 1) data = first;
   if (dataId === 2) data = second;
-  if (dataId === 3) data = second;
-  if (dataId === 4) data = second;
-  if (dataId === 5) data = second;
-  if (dataId === 6) data = second;
+  if (dataId === 3) data = third;
+  if (dataId === 4) data = fourth;
+  if (dataId === 5) data = fifth;
+  if (dataId === 6) data = sixth;
 
   let subjectNav = (
     <div onClick={() => navigate(`/subject-details/${subId}/all`)}>
@@ -36,8 +40,9 @@ function DataDisplay({ dataId }) {
 
   const options = {
     size: 180,
+    // size: zoom,
     minSize: 30,
-    gutter: -45,
+    gutter: -70,
     provideProps: true,
     numCols: 9,
     fringeWidth: 500,
