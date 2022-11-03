@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SidePanel from "./SidePanel";
 import DataDisplay from "./DataDisplay";
 import "./styles/Dashboard.css";
@@ -6,12 +6,15 @@ import { Routes, Route } from "react-router-dom";
 import Grapher from "./Grapher";
 
 function Dashboard() {
+  const [zoom, SetZoom] = useState(100);
+  console.log(zoom);
+
   return (
     <>
       <div id="dashboard">
-        <SidePanel />
+        <SidePanel SetZoom={SetZoom} />
         <Routes>
-          <Route path="/" element={<DataDisplay dataId={1} />} />
+          <Route path="/" element={<DataDisplay dataId={1} zoom={zoom} />} />
           <Route
             path="/laurate-details/field-of-study-&-training"
             element={<DataDisplay dataId={2} />}

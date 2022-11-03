@@ -1,4 +1,4 @@
-const second = [
+const four = [
   {
     id: 1,
     type: "subject",
@@ -892,4 +892,4 @@ const second = [
   },
 ];
 
-export default second;
+export default four;

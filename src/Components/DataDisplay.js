@@ -8,7 +8,7 @@ import Child from "./Child";
 import InstaFilters from "./InstaFilters";
 import { useLocation, useNavigate } from "react-router-dom";
 
-function DataDisplay({ dataId }) {
+function DataDisplay({ dataId, zoom }) {
   const [topPanel, setTopPanel] = useState(undefined);
   const { state } = useLocation();
   const { subId, subText } = state ? state : { subId: "", subText: "" };
@@ -36,6 +36,7 @@ function DataDisplay({ dataId }) {
 
   const options = {
     size: 180,
+    // size: zoom,
     minSize: 30,
     gutter: -45,
     provideProps: true,
