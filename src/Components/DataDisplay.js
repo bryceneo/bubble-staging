@@ -27,8 +27,9 @@ function DataDisplay({ dataId, zoom }) {
   if (dataId === 6) data = sixth;
 
   let subjectNav = (
-    <div onClick={() => navigate(`/subject-details/${subId}/all`)}>
+    <div className="subject-title" onClick={() => navigate(`/subject-details/${subId}/all`)}>
       Show all laureates in {subText}
+      <i class="fas fa-arrow-right"></i>
     </div>
   );
 
