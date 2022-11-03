@@ -3,7 +3,7 @@ import SidePanel from "./SidePanel";
 import DataDisplay from "./DataDisplay";
 import "./styles/Dashboard.css";
 import { Routes, Route } from "react-router-dom";
-import Graph from "./Graph";
+import Grapher from "./Grapher";
 
 function Dashboard() {
   return (
@@ -36,7 +36,7 @@ function Dashboard() {
             path="/subject-details/:id"
             element={<DataDisplay dataId={6} />}
           />
-          <Route path="/subject-details/:id/all" element={<Graph />} />
+          <Route path="/subject-details/:id/all" element={<Grapher />} />
         </Routes>
       </div>
     </>
