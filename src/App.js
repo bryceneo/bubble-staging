@@ -8,7 +8,7 @@ function App() {
     <>
       <div className="container">
         <BrowserRouter>
-          <Filters />
+          {/* <Filters /> */}
           <Timeline />
           <Dashboard />
         </BrowserRouter>
