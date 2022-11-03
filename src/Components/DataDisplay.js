@@ -60,9 +60,22 @@ function DataDisplay({ dataId, zoom }) {
   return (
     <div id="dataDisplay">
       {topPanel}
-      <BubbleUI options={options} className="myBubbleUI">
-        {children}
-      </BubbleUI>
+      <div
+        style={{
+          overflow: "hidden",
+        }}
+      >
+        <div
+          style={{
+            scale: `${zoom ? ((zoom + 1) / 100) * 20 : 1}`,
+            padding: `${zoom > 7 ? 9 : 1}em`,
+          }}
+        >
+          <BubbleUI options={options} className="myBubbleUI">
+            {children}
+          </BubbleUI>
+        </div>
+      </div>
     </div>
   );
 }
