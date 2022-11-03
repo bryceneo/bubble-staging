@@ -22,7 +22,9 @@ function Child({ params }) {
       <div
         style={{
           color: `${params.textColor}`,
-          border: `${params.borderThickness} solid ${params.borderColor}`,
+          border: `${params.borderThickness} ${
+            params.borderStyle ? params.borderStyle : "solid"
+          } ${params.borderColor}`,
           borderRadius: 100,
           backgroundColor: `${params.backgroundColor}`,
           height: "90px",
