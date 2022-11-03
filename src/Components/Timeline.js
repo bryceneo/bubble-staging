@@ -17,12 +17,12 @@ function Timeline() {
           className="mySwiper"
           spaceBetween={0}
           slidesPerView={20}
-          mouseWheel={true}
+          mousewheel={true}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
         >
           <ul class="years-scroll p-0">
-            {timelines.map((timeline) => {
+            {timelines.map((timeline, index) => {
               return (
                 // <Swiper
                 //   className="mySwiper"
@@ -31,22 +31,22 @@ function Timeline() {
                 //   onSlideChange={() => console.log("slide change")}
                 //   onSwiper={(swiper) => console.log(swiper)}
                 // >
-                <SwiperSlide>
-                  <li class="years-scroll-item">
-                    <div class="cm">
-                      <div class="mm"></div>
-                      <div class="mm"></div>
-                      <div class="mm"></div>
-                      <div class="mm"></div>
-                      <div class="mm"></div>
-                      <div class="mm"></div>
-                      <div class="mm"></div>
-                      <div class="mm"></div>
-                      <div class="mm"></div>
-                      <div class="mm"></div>
-                      <div class="mm"></div>
+                <SwiperSlide key={index}>
+                  <li className="years-scroll-item">
+                    <div className="cm">
+                      <div className="mm"></div>
+                      <div className="mm"></div>
+                      <div className="mm"></div>
+                      <div className="mm"></div>
+                      <div className="mm"></div>
+                      <div className="mm"></div>
+                      <div className="mm"></div>
+                      <div className="mm"></div>
+                      <div className="mm"></div>
+                      <div className="mm"></div>
+                      <div className="mm"></div>
                     </div>
-                    <span class="year-txt">{timeline.year}</span>
+                    <span className="year-txt">{timeline.year}</span>
                   </li>
                 </SwiperSlide>
                 // </Swiper>
