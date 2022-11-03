@@ -2,8 +2,37 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 20px 10px;
 }
 
 .filter {
   cursor: pointer;
+  background: #fff;
+  padding:4px 10px 4px 25px;
+  border: 1px solid #dfdfdf;
+  border-radius: 30px;
+  font-size: 14px;
+  position: relative;
+}
+.filter:before {
+  content: '';
+  position: absolute;
+  height: 17px;
+  width: 17px;
+  background: #F1AC4D;
+  border: 1px solid #F1AC4D;
+  border-radius: 10px;
+  top: 6px;
+  left: 4px;
+}
+#instaFilters .filter:nth-child(2):before{
+  background: #ffffff;
+}
+#instaFilters .filter:nth-child(3):before{
+  background: #ffffff;
+  border: dotted 2px #f1ac4d;;
+}
+#instaFilters .filter:nth-child(4):before{
+  background: #F4F4F4;
+  border-color: #D2D2D2;
 }
