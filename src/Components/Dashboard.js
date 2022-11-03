@@ -17,27 +17,27 @@ function Dashboard() {
           <Route path="/" element={<DataDisplay dataId={1} zoom={zoom} />} />
           <Route
             path="/laurate-details/field-of-study-&-training"
-            element={<DataDisplay dataId={2} />}
+            element={<DataDisplay dataId={2} zoom={zoom} />}
           />
           <Route
             path="/laurate-details/major-body-of-work"
-            element={<DataDisplay dataId={3} />}
+            element={<DataDisplay dataId={3} zoom={zoom} />}
           />
           <Route
             path="/laurate-details/influence-impact"
-            element={<DataDisplay dataId={4} />}
+            element={<DataDisplay dataId={4} zoom={zoom} />}
           />
           <Route
             path="/laurate-details/other-areas"
-            element={<DataDisplay dataId={5} />}
+            element={<DataDisplay dataId={5} zoom={zoom} />}
           />
           <Route
             path="/laurate-details/:id"
-            element={<DataDisplay dataId={2} />}
+            element={<DataDisplay dataId={2} zoom={zoom} />}
           />
           <Route
             path="/subject-details/:id"
-            element={<DataDisplay dataId={6} />}
+            element={<DataDisplay dataId={6} zoom={zoom} />}
           />
           <Route path="/subject-details/:id/all" element={<Grapher />} />
         </Routes>
