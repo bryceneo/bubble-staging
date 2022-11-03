@@ -1,4 +1,4 @@
-const five = [
+const sixth = [
   {
     id: 1,
     type: "subject",
@@ -892,4 +892,4 @@ const five = [
   },
 ];
 
-export default five;
+export default sixth;

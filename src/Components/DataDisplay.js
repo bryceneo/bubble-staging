@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import "./styles/DataDisplay.css";
 import first from "./Data/first";
 import second from "./Data/second";
+import third from "./Data/third";
+import fourth from "./Data/fourth";
+import fifth from "./Data/fourth";
+import sixth from "./Data/fourth";
 import BubbleUI from "react-bubble-ui";
 import "react-bubble-ui/dist/index.css";
 import Child from "./Child";
@@ -17,10 +21,10 @@ function DataDisplay({ dataId, zoom }) {
   let data;
   if (dataId === 1) data = first;
   if (dataId === 2) data = second;
-  if (dataId === 3) data = second;
-  if (dataId === 4) data = second;
-  if (dataId === 5) data = second;
-  if (dataId === 6) data = second;
+  if (dataId === 3) data = third;
+  if (dataId === 4) data = fourth;
+  if (dataId === 5) data = fifth;
+  if (dataId === 6) data = sixth;
 
   let subjectNav = (
     <div onClick={() => navigate(`/subject-details/${subId}/all`)}>
