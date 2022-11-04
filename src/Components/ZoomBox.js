@@ -53,7 +53,7 @@ function ZoomBox({ SetZoom }) {
             // }
             onChange={handleChange}
           />
-          {count}
+          {/* {count} */}
           <button className="zoom-in" onClick={increment}>
             +
           </button>
