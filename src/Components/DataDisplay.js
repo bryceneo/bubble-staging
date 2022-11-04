@@ -45,7 +45,7 @@ function DataDisplay({ dataId, zoom }) {
   );
 
   useEffect(() => {
-    if (dataId === 1) setTopPanel(undefined);
+    if (dataId === 1 || dataId === "year") setTopPanel(undefined);
     else if (dataId === 6) setTopPanel(subjectNav);
     else setTopPanel(<InstaFilters />);
   }, [dataId, subjectNav]);
