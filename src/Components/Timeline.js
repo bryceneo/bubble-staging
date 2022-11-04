@@ -31,7 +31,7 @@ function Timeline() {
                 //   onSlideChange={() => console.log("slide change")}
                 //   onSwiper={(swiper) => console.log(swiper)}
                 // >
-                <SwiperSlide key={index}>
+                <SwiperSlide key={index} className={timeline.isactive}>
                   <li className="years-scroll-item">
                     <div className="cm">
                       <div className="mm"></div>
