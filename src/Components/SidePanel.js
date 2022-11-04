@@ -6,7 +6,7 @@ import "./styles/SidePanel.css";
 function SidePanel({ SetZoom }) {
   return (
     <>
-      <div id="sidePanel" className="pe-3 pt-5">
+      <div id="sidePanel" className="pe-3 pt-4">
         <Categories />
         <ZoomBox SetZoom={SetZoom} />
       </div>

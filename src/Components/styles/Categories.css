@@ -6,9 +6,9 @@
 }
 .categories-list li {
   font-size: 14px;
-  font-family: "Poppins";
+  font-family: 'Poppins-Regular';
   color: #232323;
-  padding: 25px 0;
+  padding: 20px 0;
   position: relative;
   display: flex;
   justify-content: space-between;

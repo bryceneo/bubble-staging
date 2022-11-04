@@ -1,18 +1,19 @@
 #instaFilters {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
-  padding: 20px 10px;
+  padding: 20px 10px 0 10px;
+  gap: 20px;
 }
 
 .filter {
   cursor: pointer;
-  background: #fff;
-  padding:4px 10px 4px 25px;
-  border: 1px solid #dfdfdf;
-  border-radius: 30px;
-  font-size: 14px;
-  position: relative;
+    background: #fff;
+    padding: 2px 24px 2px 38px;
+    border: 1px solid #dfdfdf;
+    border-radius: 30px;
+    font-size: 14px;
+    position: relative;
 }
 .filter:before {
   content: '';
@@ -22,7 +23,7 @@
   background: #F1AC4D;
   border: 1px solid #F1AC4D;
   border-radius: 10px;
-  top: 6px;
+  top: 4px;
   left: 4px;
 }
 #instaFilters .filter:nth-child(2):before{
