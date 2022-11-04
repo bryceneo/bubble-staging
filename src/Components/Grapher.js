@@ -12,13 +12,14 @@ function Grapher() {
         display: "flex",
         justifyContent: "center",
         textAlign: "center",
-        fontSize: "15px",
+        fontSize: "11px",
         height: "100%",
         width: "100%",
         padding: "1em",
+        alignItems: "center",
         // lineHeight: "10em",
       }}
-    >
+    className="graph">
       {node.id}
     </div>
   );

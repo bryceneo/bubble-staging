@@ -41,7 +41,7 @@ function DataDisplay({ dataId, zoom }) {
       onClick={() => navigate(`/subject-details/${subId}/all`)}
     >
       Show all laureates in {subText}
-      <i class="fas fa-arrow-right"></i>
+   
     </div>
   );
 
