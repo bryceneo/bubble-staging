@@ -70,7 +70,7 @@ function DataDisplay({ dataId, zoom }) {
   });
 
   const scaleValue = zoom / 3 + 1.01;
-  const marginValue = `${zoom * 3}em`;
+  // const marginValue = `${zoom * 3}em`;
 
   return (
     <div id="dataDisplay">
@@ -83,7 +83,7 @@ function DataDisplay({ dataId, zoom }) {
         <div
           style={{
             scale: `${scaleValue}`,
-            margin: `${marginValue}`,
+            // padding: `${marginValue}`,
           }}
         >
           <BubbleUI options={options} className="myBubbleUI">
