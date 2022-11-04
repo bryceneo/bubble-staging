@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./styles/DataDisplay.css";
-import first from "./Data/first";
-import second from "./Data/second";
-import third from "./Data/third";
-import fourth from "./Data/fourth";
-import fifth from "./Data/fifth";
-import sixth from "./Data/sixth";
+import first from "./Data/home";
+import second from "./Data/laurateDetails";
+import third from "./Data/majorBodyOfWork";
+import fourth from "./Data/influenceImpact";
+import fifth from "./Data/otherAreas";
+import sixth from "./Data/subjectDetails";
 import year2010 from "./Data/year2010";
 import year2012 from "./Data/year2012";
 import year2013 from "./Data/year2013";

@@ -17,9 +17,9 @@ function Grapher() {
         width: "100%",
         padding: "1em",
         alignItems: "center",
-        // lineHeight: "10em",
       }}
-    className="graph">
+      className="graph"
+    >
       {node.id}
     </div>
   );
@@ -41,7 +41,6 @@ function Grapher() {
     nodeHighlightBehavior: false, // comment this to reset nodes positions to work
     panAndZoom: true,
     staticGraph: false,
-    // staticGraphWithDragAndDrop: true,
 
     d3: {
       alphaTarget: 0.05,
