@@ -41,7 +41,6 @@ function DataDisplay({ dataId, zoom }) {
       onClick={() => navigate(`/subject-details/${subId}/all`)}
     >
       Show all laureates in {subText}
-   
     </div>
   );
 
@@ -71,6 +70,7 @@ function DataDisplay({ dataId, zoom }) {
   });
 
   const scaleValue = zoom / 3 + 1.01;
+  const marginValue = `${zoom * 3}em`;
 
   return (
     <div id="dataDisplay">
@@ -83,6 +83,7 @@ function DataDisplay({ dataId, zoom }) {
         <div
           style={{
             scale: `${scaleValue}`,
+            margin: `${marginValue}`,
           }}
         >
           <BubbleUI options={options} className="myBubbleUI">

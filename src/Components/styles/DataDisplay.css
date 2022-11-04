@@ -26,6 +26,7 @@
   font-weight: 500;
   position: relative;
   padding: 20px 30px;
+  cursor: pointer;
 }
 .subject-title:after {
   content: "\f061";
@@ -33,4 +34,5 @@
   font-family: "Font Awesome 5 Pro";
   font-weight: 900;
   right: 7px;
+  cursor: pointer;
 }
