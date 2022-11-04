@@ -81,6 +81,8 @@ const data = {
       id: "Anthropology",
       symbolType: "circle",
       labelPosition: "center",
+      x: 150,
+      y: 300,
     },
     {
       id: "Sociology",
