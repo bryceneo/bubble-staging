@@ -119,6 +119,7 @@ const data = {
       name: "Max Eisenhardt",
       svg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnUg_S8jc9xjw-UYRvEBtPdjO1Ytj75rcajbn-FY7z&s",
       viewGenerator: picGenerator,
+     
     },
     {
       id: "27",
