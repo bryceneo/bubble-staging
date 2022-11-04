@@ -41,6 +41,7 @@ function Grapher() {
     nodeHighlightBehavior: false, // comment this to reset nodes positions to work
     panAndZoom: true,
     staticGraph: false,
+    // staticGraphWithDragAndDrop: true,
 
     d3: {
       alphaTarget: 0.05,

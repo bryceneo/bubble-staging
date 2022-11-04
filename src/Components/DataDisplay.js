@@ -4,8 +4,8 @@ import first from "./Data/first";
 import second from "./Data/second";
 import third from "./Data/third";
 import fourth from "./Data/fourth";
-import fifth from "./Data/fourth";
-import sixth from "./Data/fourth";
+import fifth from "./Data/fifth";
+import sixth from "./Data/sixth";
 import year2010 from "./Data/year2010";
 import year2012 from "./Data/year2012";
 import year2013 from "./Data/year2013";
@@ -69,6 +69,9 @@ function DataDisplay({ dataId, zoom }) {
   const children = data.map((item) => {
     return <Child className="child" key={item.id} params={item} />;
   });
+
+  const scaleValue = zoom / 3 + 1.01;
+
   return (
     <div id="dataDisplay">
       {topPanel}
@@ -79,8 +82,7 @@ function DataDisplay({ dataId, zoom }) {
       >
         <div
           style={{
-            scale: `${zoom ? ((zoom + 1) / 100) * 20 : 1}`,
-            padding: `${zoom > 7 ? 9 : 1}em`,
+            scale: `${scaleValue}`,
           }}
         >
           <BubbleUI options={options} className="myBubbleUI">

@@ -11,7 +11,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 7,
@@ -95,7 +95,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 8,
@@ -109,7 +109,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
 
   {
@@ -124,7 +124,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 10,
@@ -133,10 +133,10 @@ const sixth = [
 
     isRouting: false,
     text: "Sociology",
-    textColor: "#223247",
+    textColor: "#FFFFFF",
     borderThickness: "2px",
-    borderColor: "#D2D2D2",
-    backgroundColor: " #FFFFFF5E",
+    borderColor: "#14202E",
+    backgroundColor: "#14202E",
     scaleFactor: 1,
     isActive: true,
   },
@@ -152,7 +152,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 12,
@@ -161,10 +161,10 @@ const sixth = [
 
     isRouting: false,
     text: "History",
-    textColor: "#223247",
+    textColor: "#FFFFFF",
     borderThickness: "2px",
-    borderColor: "#D2D2D2",
-    backgroundColor: " #FFFFFF5E",
+    borderColor: "#14202E",
+    backgroundColor: "#14202E",
     scaleFactor: 1,
     isActive: true,
   },
@@ -180,7 +180,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 14,
@@ -194,7 +194,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 15,
@@ -208,7 +208,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 16,
@@ -222,7 +222,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 17,
@@ -236,7 +236,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 18,
@@ -250,7 +250,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 19,
@@ -264,7 +264,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 20,
@@ -278,7 +278,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 21,
@@ -292,7 +292,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 22,
@@ -301,10 +301,10 @@ const sixth = [
 
     isRouting: true,
     text: "Anthropology",
-    textColor: "#223247",
+    textColor: "#FFFFFF",
     borderThickness: "2px",
-    borderColor: "#D2D2D2",
-    backgroundColor: " #FFFFFF5E",
+    borderColor: "#14202E",
+    backgroundColor: "#14202E",
     scaleFactor: 1,
     isActive: true,
   },
@@ -320,7 +320,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 24,
@@ -334,7 +334,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 25,
@@ -350,7 +350,7 @@ const sixth = [
     borderColor: "#f1ac4d",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 26,
@@ -359,10 +359,10 @@ const sixth = [
 
     isRouting: false,
     text: "Social & Cultural Studies",
-    textColor: "#223247",
+    textColor: "#FFFFFF",
     borderThickness: "2px",
-    borderColor: "#D2D2D2",
-    backgroundColor: " #FFFFFF5E",
+    borderColor: "#14202E",
+    backgroundColor: "#14202E",
     scaleFactor: 1,
     isActive: true,
   },
@@ -380,7 +380,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 28,
@@ -394,7 +394,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 29,
@@ -403,10 +403,10 @@ const sixth = [
 
     isRouting: false,
     text: "Political Science",
-    textColor: "#223247",
+    textColor: "#FFFFFF",
     borderThickness: "2px",
-    borderColor: "#D2D2D2",
-    backgroundColor: " #FFFFFF5E",
+    borderColor: "#14202E",
+    backgroundColor: "#14202E",
     scaleFactor: 1,
     isActive: true,
   },
@@ -422,7 +422,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 31,
@@ -436,7 +436,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 32,
@@ -452,7 +452,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 33,
@@ -466,7 +466,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 34,
@@ -475,10 +475,10 @@ const sixth = [
 
     isRouting: false,
     text: "2020 Prize Winners",
-    textColor: "#223247",
+    textColor: "#FFFFFF",
     borderThickness: "2px",
-    borderColor: "#D2D2D2",
-    backgroundColor: " #FFFFFF5E",
+    borderColor: "#14202E",
+    backgroundColor: "#14202E",
     scaleFactor: 1,
     isActive: true,
   },
@@ -496,7 +496,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 36,
@@ -510,7 +510,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 37,
@@ -519,10 +519,10 @@ const sixth = [
 
     isRouting: false,
     text: "Economics",
-    textColor: "#223247",
+    textColor: "#FFFFFF",
     borderThickness: "2px",
-    borderColor: "#D2D2D2",
-    backgroundColor: " #FFFFFF5E",
+    borderColor: "#14202E",
+    backgroundColor: "#14202E",
     scaleFactor: 1,
     isActive: true,
   },
@@ -538,7 +538,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 39,
@@ -552,7 +552,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 40,
@@ -566,7 +566,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 41,
@@ -580,7 +580,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 42,
@@ -596,7 +596,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 43,
@@ -610,7 +610,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 44,
@@ -626,7 +626,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 45,
@@ -640,7 +640,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 46,
@@ -654,7 +654,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 47,
@@ -668,7 +668,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 48,
@@ -682,7 +682,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
 
   {
@@ -697,7 +697,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 50,
@@ -711,7 +711,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
 
   {
@@ -726,7 +726,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
 
   {
@@ -741,7 +741,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 53,
@@ -755,7 +755,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
 
   {
@@ -770,7 +770,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
 
   {
@@ -785,7 +785,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 56,
@@ -799,7 +799,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
 
   {
@@ -814,7 +814,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
 
   {
@@ -829,7 +829,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
 
   {
@@ -844,7 +844,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
 
   {
@@ -859,7 +859,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
 
   {
@@ -874,7 +874,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 62,
@@ -888,7 +888,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
 ];
 

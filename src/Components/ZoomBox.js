@@ -8,14 +8,14 @@ function ZoomBox({ SetZoom }) {
   }, [count]);
 
   const increment = () => {
-    let max = 200;
-    if (count < max) {
+    let max = 2;
+    if (count <= max) {
       setCount(count + 1);
     }
   };
   const decrement = () => {
-    let min = 0;
-    if (count > min) {
+    let min = -2;
+    if (count >= min) {
       setCount(count - 1);
     }
   };
@@ -27,7 +27,7 @@ function ZoomBox({ SetZoom }) {
     setCount(e.target.value);
   };
   const percenTage = () => {
-    return (count / 200) * 100;
+    return (count / 3) * 100;
   };
 
   return (
@@ -39,13 +39,13 @@ function ZoomBox({ SetZoom }) {
         </div>
 
         <div className="zoom-cnrtls">
-          <button className="zoom-in" onClick={increment}>
-            +
+          <button className="zoom-out" onClick={decrement}>
+            -
           </button>
           <input
             type="range"
-            max={200}
-            min={0}
+            max={3}
+            min={-3}
             name="range"
             value={count}
             // onChange={(event) =>
@@ -54,8 +54,8 @@ function ZoomBox({ SetZoom }) {
             onChange={handleChange}
           />
           {count}
-          <button className="zoom-out" onClick={decrement}>
-            -
+          <button className="zoom-in" onClick={increment}>
+            +
           </button>
         </div>
       </div>
