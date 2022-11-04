@@ -33,14 +33,14 @@ input[type="range"]::-webkit-slider-thumb {
   border-bottom: 1px solid #cdcdcd;
 }
 .text-b {
-  font-family: "Poppins";
+  font-family: "Poppins-SemiBold";
   font-weight: 600;
   font-size: 20px;
 }
 .text-r {
   color: #d8534e;
   font-weight: 500;
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
 }
 .zoom-in,
 .zoom-out {
