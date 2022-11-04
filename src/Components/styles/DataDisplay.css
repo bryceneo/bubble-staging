@@ -1,6 +1,7 @@
 #dataDisplay {
   /* border: 1em solid black; */
   width: 100%;
+  font-family: "Poppins", regular;
 }
 /* myComponent.css */
 
@@ -18,18 +19,20 @@
   height: 100%;
   border-radius: 50%;
 }
-.subject-title{
+.subject-title {
   margin-left: auto;
   text-align: right;
   font-size: 15px;
   font-weight: 500;
   position: relative;
   padding: 20px 30px;
+  cursor: pointer;
 }
 .subject-title:after {
-  content: '\f061';
+  content: "\f061";
   position: absolute;
   font-family: "Font Awesome 5 Pro";
   font-weight: 900;
   right: 7px;
+  cursor: pointer;
 }

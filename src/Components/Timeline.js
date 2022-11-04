@@ -6,9 +6,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import { useNavigate } from "react-router-dom";
 
 function Timeline() {
+  const navigate = useNavigate();
   const [timelines, setTimeLinedata] = useState(TimeLineYearData);
+  const yearClickHandler = (year) => {
+    if (year == 2010 || year == 2012 || year == 2013) {
+      navigate(`/year/${year}`, { state: { year } });
+    }
+  };
   return (
     <>
       <h4 className="mt-4 mb-4 emp-name">Laureate Ramesh Pradhan</h4>
@@ -46,7 +53,15 @@ function Timeline() {
                       <div className="mm"></div>
                       <div className="mm"></div>
                     </div>
-                    <span className="year-txt">{timeline.year}</span>
+                    <span
+                      className="year-txt"
+                      onClick={() => yearClickHandler(timeline.year)}
+                      style={{
+                        cursor: "pointer",
+                      }}
+                    >
+                      {timeline.year}{" "}
+                    </span>
                   </li>
                 </SwiperSlide>
                 // </Swiper>

@@ -1,4 +1,4 @@
-const sixth = [
+const year2010 = [
   {
     id: 1,
     type: "subject",
@@ -11,7 +11,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 7,
@@ -95,7 +95,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 8,
@@ -109,7 +109,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
 
   {
@@ -124,7 +124,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 10,
@@ -133,10 +133,10 @@ const sixth = [
 
     isRouting: false,
     text: "Sociology",
-    textColor: "#FFFFFF",
+    textColor: "#223247",
     borderThickness: "2px",
-    borderColor: "#14202E",
-    backgroundColor: "#14202E",
+    borderColor: "#D2D2D2",
+    backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,
   },
@@ -152,7 +152,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 12,
@@ -161,10 +161,10 @@ const sixth = [
 
     isRouting: false,
     text: "History",
-    textColor: "#FFFFFF",
+    textColor: "#223247",
     borderThickness: "2px",
-    borderColor: "#14202E",
-    backgroundColor: "#14202E",
+    borderColor: "#D2D2D2",
+    backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,
   },
@@ -180,7 +180,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 14,
@@ -194,7 +194,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 15,
@@ -208,7 +208,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 16,
@@ -222,7 +222,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 17,
@@ -236,7 +236,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 18,
@@ -250,7 +250,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 19,
@@ -264,7 +264,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 20,
@@ -278,7 +278,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 21,
@@ -292,7 +292,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 22,
@@ -301,10 +301,10 @@ const sixth = [
 
     isRouting: true,
     text: "Anthropology",
-    textColor: "#FFFFFF",
+    textColor: "#223247",
     borderThickness: "2px",
-    borderColor: "#14202E",
-    backgroundColor: "#14202E",
+    borderColor: "#D2D2D2",
+    backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,
   },
@@ -320,7 +320,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 24,
@@ -334,7 +334,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 25,
@@ -350,7 +350,7 @@ const sixth = [
     borderColor: "#f1ac4d",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 26,
@@ -359,10 +359,10 @@ const sixth = [
 
     isRouting: false,
     text: "Social & Cultural Studies",
-    textColor: "#FFFFFF",
+    textColor: "#223247",
     borderThickness: "2px",
-    borderColor: "#14202E",
-    backgroundColor: "#14202E",
+    borderColor: "#D2D2D2",
+    backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,
   },
@@ -376,11 +376,11 @@ const sixth = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYInlcLz-tohmDcaurwEy29Bk94eg1075l0Q&usqp=CAU",
     textColor: "#223247",
-    borderThickness: "2px",
-    borderColor: "#D2D2D2",
+    borderThickness: "4px",
+    borderColor: "#704CA2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 28,
@@ -394,7 +394,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 29,
@@ -403,10 +403,68 @@ const sixth = [
 
     isRouting: false,
     text: "Political Science",
-    textColor: "#FFFFFF",
+    textColor: "#223247",
+    borderThickness: "2px",
+    borderColor: "#D2D2D2",
+    backgroundColor: " #FFFFFF5E",
+    scaleFactor: 1,
+    isActive: true,
+  },
+  {
+    id: 34,
+    type: "sub-subject",
+    subjectId: "ds0239hjkmc456",
+
+    isRouting: false,
+    text: "2020 Prize Winners",
+    textColor: "#ffffff",
     borderThickness: "2px",
     borderColor: "#14202E",
-    backgroundColor: "#14202E",
+    backgroundColor: " #14202E",
+    scaleFactor: 1,
+    isActive: true,
+  },
+  {
+    id: 31,
+    type: "sub-subject",
+    subjectId: "ds023bhnkj9456",
+
+    isRouting: false,
+    text: "Public Policy",
+    textColor: "#223247",
+    borderThickness: "2px",
+    borderColor: "#D2D2D2",
+    backgroundColor: " #FFFFFF5E",
+    scaleFactor: 1,
+    isActive: true,
+  },
+  {
+    id: 32,
+    type: "person",
+    laurateId: "ds02kmnb39456",
+
+    isRouting: false,
+    text: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY46bDjH2LeAM-zTiyngADD2TmlqpwAlwDyA&usqp=CAU",
+    textColor: "#223247",
+    borderThickness: "4px",
+    borderColor: "#90C56D",
+    backgroundColor: " #FFFFFF5E",
+    scaleFactor: 1,
+    isActive: true,
+  },
+  {
+    id: 33,
+    type: "sub-subject",
+    subjectId: "ds0239456",
+
+    isRouting: false,
+    text: "Biology",
+    textColor: "#223247",
+    borderThickness: "2px",
+    borderColor: "#D2D2D2",
+    backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,
   },
@@ -422,64 +480,6 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
-  },
-  {
-    id: 31,
-    type: "sub-subject",
-    subjectId: "ds023bhnkj9456",
-
-    isRouting: false,
-    text: "Public Policy",
-    textColor: "#223247",
-    borderThickness: "2px",
-    borderColor: "#D2D2D2",
-    backgroundColor: " #FFFFFF5E",
-    scaleFactor: 1,
-    isActive: false,
-  },
-  {
-    id: 32,
-    type: "person",
-    laurateId: "ds02kmnb39456",
-
-    isRouting: false,
-    text: "",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY46bDjH2LeAM-zTiyngADD2TmlqpwAlwDyA&usqp=CAU",
-    textColor: "#223247",
-    borderThickness: "2px",
-    borderColor: "#D2D2D2",
-    backgroundColor: " #FFFFFF5E",
-    scaleFactor: 1,
-    isActive: false,
-  },
-  {
-    id: 33,
-    type: "sub-subject",
-    subjectId: "ds0239456",
-
-    isRouting: false,
-    text: "Biology",
-    textColor: "#223247",
-    borderThickness: "2px",
-    borderColor: "#D2D2D2",
-    backgroundColor: " #FFFFFF5E",
-    scaleFactor: 1,
-    isActive: false,
-  },
-  {
-    id: 34,
-    type: "sub-subject",
-    subjectId: "ds0239hjkmc456",
-
-    isRouting: false,
-    text: "2020 Prize Winners",
-    textColor: "#FFFFFF",
-    borderThickness: "2px",
-    borderColor: "#14202E",
-    backgroundColor: "#14202E",
-    scaleFactor: 1,
     isActive: true,
   },
   {
@@ -492,11 +492,11 @@ const sixth = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFEdOGWCl2XyCAxD_pzARX98Swdft2_XB2zT-dCU4V8ovseWC5d5EVEi1bW4LHonanbIU&usqp=CAU",
     textColor: "#223247",
-    borderThickness: "2px",
-    borderColor: "#D2D2D2",
+    borderThickness: "4px",
+    borderColor: "#8695A8",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 36,
@@ -510,7 +510,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 37,
@@ -519,10 +519,10 @@ const sixth = [
 
     isRouting: false,
     text: "Economics",
-    textColor: "#FFFFFF",
+    textColor: "#223247",
     borderThickness: "2px",
-    borderColor: "#14202E",
-    backgroundColor: "#14202E",
+    borderColor: "#D2D2D2",
+    backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,
   },
@@ -538,7 +538,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 39,
@@ -552,7 +552,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 40,
@@ -566,7 +566,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 41,
@@ -580,7 +580,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 42,
@@ -592,11 +592,11 @@ const sixth = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsUmE6FMTWUnXwdX_vkq9XMe_6AIFuuBY_lQ&usqp=CAU",
     textColor: "#223247",
-    borderThickness: "2px",
-    borderColor: "#D2D2D2",
+    borderThickness: "4px",
+    borderColor: "#2CC7C9",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 43,
@@ -610,7 +610,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 44,
@@ -622,11 +622,11 @@ const sixth = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
     textColor: "#223247",
-    borderThickness: "2px",
-    borderColor: "#D2D2D2",
+    borderThickness: "4px",
+    borderColor: "#418BCA",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 45,
@@ -640,7 +640,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 46,
@@ -654,7 +654,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 47,
@@ -668,7 +668,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 48,
@@ -682,7 +682,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
 
   {
@@ -697,7 +697,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 50,
@@ -711,7 +711,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
 
   {
@@ -726,7 +726,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
 
   {
@@ -741,7 +741,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 53,
@@ -755,7 +755,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
 
   {
@@ -770,7 +770,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
 
   {
@@ -785,7 +785,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 56,
@@ -799,7 +799,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
 
   {
@@ -814,7 +814,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
 
   {
@@ -829,7 +829,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
 
   {
@@ -844,7 +844,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
 
   {
@@ -859,7 +859,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
 
   {
@@ -874,7 +874,7 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 62,
@@ -888,8 +888,8 @@ const sixth = [
     borderColor: "#D2D2D2",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
 ];
 
-export default sixth;
+export default year2010;
