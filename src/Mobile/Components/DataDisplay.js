@@ -15,7 +15,7 @@ function DataDisplay({ data, numCols = 4 }) {
     yRadius: 50,
     xRadius: 50,
     cornerRadius: 0,
-    showGuides: true,
+    showGuides: false,
     compact: true,
     gravitation: 1,
   };
