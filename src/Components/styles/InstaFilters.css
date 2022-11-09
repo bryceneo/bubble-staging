@@ -2,17 +2,17 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 20px 10px 0 10px;
+  padding: 20px 10px 10px 10px;
   gap: 20px;
 }
 
 .filter {
   cursor: pointer;
     background: #fff;
-    padding: 2px 24px 2px 38px;
+    padding: 3px 24px 3px 38px;
     border: 1px solid #dfdfdf;
     border-radius: 30px;
-    font-size: 14px;
+    font-size: 12px;
     position: relative;
 }
 .filter:before {
