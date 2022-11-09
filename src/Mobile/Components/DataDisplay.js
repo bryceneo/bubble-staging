@@ -4,7 +4,6 @@ import "react-bubble-ui/dist/index.css";
 import Child from "./Child";
 
 function DataDisplay({ data, numCols = 4 }) {
-  console.log("first", data);
   const options = {
     size: 180,
     // size: zoom,
