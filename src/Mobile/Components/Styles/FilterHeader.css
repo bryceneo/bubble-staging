@@ -1,0 +1,15 @@
+#filter{
+    padding: 10px;
+    background: #14202E;
+    color: #fff;
+    position: relative;
+}
+#filter::after{
+    content: '\f0b0';
+    font-family: 'Font Awesome 5 Pro';
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    right: 10px;
+    font-weight: 100;
+}
