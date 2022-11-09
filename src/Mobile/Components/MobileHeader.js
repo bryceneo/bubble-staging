@@ -1,9 +1,7 @@
 import React from "react";
 
-function Mobile_Header({ isMenu }) {
-  return (
-    <>{isMenu ? <>Mobile Header with menu</> : <>Mobile Header with back</>}</>
-  );
+function Mobile_Header() {
+  return <div>filter</div>;
 }
 
 export default Mobile_Header;

@@ -1,0 +1,275 @@
+const laureatesOfSubjects = [
+  {
+    id: 1,
+    type: "person",
+    laurateId: "ds023fkwje9456",
+
+    isRouting: false,
+    text: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
+    textColor: "#223247",
+    borderThickness: "4px",
+    borderColor: "#418BCA",
+    backgroundColor: " #FFFFFF5E",
+    scaleFactor: 1,
+    isActive: true,
+  },
+  {
+    id: 2,
+    type: "person",
+    laurateId: "ds023fkwje9456",
+
+    isRouting: false,
+    text: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
+    textColor: "#223247",
+    borderThickness: "4px",
+    borderColor: "#418BCA",
+    backgroundColor: " #FFFFFF5E",
+    scaleFactor: 1,
+    isActive: true,
+  },
+  {
+    id: 3,
+    type: "person",
+    laurateId: "ds023fkwje9456",
+
+    isRouting: false,
+    text: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
+    textColor: "#223247",
+    borderThickness: "4px",
+    borderColor: "#418BCA",
+    backgroundColor: " #FFFFFF5E",
+    scaleFactor: 1,
+    isActive: true,
+  },
+  {
+    id: 4,
+    type: "person",
+    laurateId: "ds023fkwje9456",
+
+    isRouting: false,
+    text: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
+    textColor: "#223247",
+    borderThickness: "4px",
+    borderColor: "#418BCA",
+    backgroundColor: " #FFFFFF5E",
+    scaleFactor: 1,
+    isActive: true,
+  },
+  {
+    id: 5,
+    type: "person",
+    laurateId: "ds023fkwje9456",
+
+    isRouting: false,
+    text: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
+    textColor: "#223247",
+    borderThickness: "4px",
+    borderColor: "#418BCA",
+    backgroundColor: " #FFFFFF5E",
+    scaleFactor: 1,
+    isActive: true,
+  },
+  {
+    id: 6,
+    type: "person",
+    laurateId: "ds023fkwje9456",
+
+    isRouting: false,
+    text: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
+    textColor: "#223247",
+    borderThickness: "4px",
+    borderColor: "#418BCA",
+    backgroundColor: " #FFFFFF5E",
+    scaleFactor: 1,
+    isActive: true,
+  },
+  {
+    id: 7,
+    type: "person",
+    laurateId: "ds023fkwje9456",
+
+    isRouting: false,
+    text: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
+    textColor: "#223247",
+    borderThickness: "4px",
+    borderColor: "#418BCA",
+    backgroundColor: " #FFFFFF5E",
+    scaleFactor: 1,
+    isActive: true,
+  },
+  {
+    id: 8,
+    type: "person",
+    laurateId: "ds023fkwje9456",
+
+    isRouting: false,
+    text: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
+    textColor: "#223247",
+    borderThickness: "4px",
+    borderColor: "#418BCA",
+    backgroundColor: " #FFFFFF5E",
+    scaleFactor: 1,
+    isActive: true,
+  },
+  {
+    id: 9,
+    type: "person",
+    laurateId: "ds023fkwje9456",
+
+    isRouting: false,
+    text: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
+    textColor: "#223247",
+    borderThickness: "4px",
+    borderColor: "#418BCA",
+    backgroundColor: " #FFFFFF5E",
+    scaleFactor: 1,
+    isActive: true,
+  },
+  {
+    id: 10,
+    type: "person",
+    laurateId: "ds023fkwje9456",
+
+    isRouting: false,
+    text: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
+    textColor: "#223247",
+    borderThickness: "4px",
+    borderColor: "#418BCA",
+    backgroundColor: " #FFFFFF5E",
+    scaleFactor: 1,
+    isActive: true,
+  },
+  {
+    id: 11,
+    type: "person",
+    laurateId: "ds023fkwje9456",
+
+    isRouting: false,
+    text: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
+    textColor: "#223247",
+    borderThickness: "4px",
+    borderColor: "#418BCA",
+    backgroundColor: " #FFFFFF5E",
+    scaleFactor: 1,
+    isActive: true,
+  },
+  {
+    id: 12,
+    type: "person",
+    laurateId: "ds023fkwje9456",
+
+    isRouting: false,
+    text: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
+    textColor: "#223247",
+    borderThickness: "4px",
+    borderColor: "#418BCA",
+    backgroundColor: " #FFFFFF5E",
+    scaleFactor: 1,
+    isActive: true,
+  },
+  {
+    id: 13,
+    type: "person",
+    laurateId: "ds023fkwje9456",
+
+    isRouting: false,
+    text: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
+    textColor: "#223247",
+    borderThickness: "4px",
+    borderColor: "#418BCA",
+    backgroundColor: " #FFFFFF5E",
+    scaleFactor: 1,
+    isActive: true,
+  },
+  {
+    id: 14,
+    type: "person",
+    laurateId: "ds023fkwje9456",
+
+    isRouting: false,
+    text: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
+    textColor: "#223247",
+    borderThickness: "4px",
+    borderColor: "#418BCA",
+    backgroundColor: " #FFFFFF5E",
+    scaleFactor: 1,
+    isActive: true,
+  },
+  {
+    id: 15,
+    type: "person",
+    laurateId: "ds023fkwje9456",
+
+    isRouting: false,
+    text: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
+    textColor: "#223247",
+    borderThickness: "4px",
+    borderColor: "#418BCA",
+    backgroundColor: " #FFFFFF5E",
+    scaleFactor: 1,
+    isActive: true,
+  },
+  {
+    id: 16,
+    type: "person",
+    laurateId: "ds023fkwje9456",
+
+    isRouting: false,
+    text: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
+    textColor: "#223247",
+    borderThickness: "4px",
+    borderColor: "#418BCA",
+    backgroundColor: " #FFFFFF5E",
+    scaleFactor: 1,
+    isActive: true,
+  },
+  {
+    id: 17,
+    type: "person",
+    laurateId: "ds023fkwje9456",
+
+    isRouting: false,
+    text: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
+    textColor: "#223247",
+    borderThickness: "4px",
+    borderColor: "#418BCA",
+    backgroundColor: " #FFFFFF5E",
+    scaleFactor: 1,
+    isActive: true,
+  },
+];
+export default laureatesOfSubjects;
