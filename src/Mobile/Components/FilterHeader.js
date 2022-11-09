@@ -9,8 +9,11 @@ function FilterHeader() {
   return (
     <>
       <div onClick={openModal}>FilterHeader</div>;
-      <Modal isOpen={isModalOpen} onRequestClose={closeModal}>
-        <div onClick={closeModal}>Close Filter</div>
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        portalClassName=""
+      >
         <FilterModal />
       </Modal>
     </>
