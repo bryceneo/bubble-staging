@@ -1,5 +1,10 @@
 const prizeWinners2020 = [
   {
+    type: "empty",
+    backgroundColor: "#FFFFFF5E",
+    scaleFactor: 0.5,
+  },
+  {
     id: 1,
     type: "person",
     laurateId: "ds023fkwje9456",

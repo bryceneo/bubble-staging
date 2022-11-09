@@ -67,6 +67,27 @@ function Child({ params }) {
       </div>
     );
   }
+  if (params.type === "empty") {
+    return (
+      <div
+        style={{
+          borderRadius: 100,
+          border: "1px solid black",
+          backgroundColor: `${params.backgroundColor}`,
+          height: "90px",
+          width: "90px",
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+          padding: "2px",
+          overflow: "hidden",
+          scale: `${params.scaleFactor}`,
+          // opacity: `${params.isActive ? "100%" : "50%"}`,
+          cursor: `${params.isRouting ? "pointer" : null}`,
+        }}
+      ></div>
+    );
+  }
   return <div>Failed</div>;
 }
 

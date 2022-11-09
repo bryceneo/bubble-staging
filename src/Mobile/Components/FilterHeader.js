@@ -8,7 +8,7 @@ function FilterHeader() {
   const closeModal = () => setIsModalOpen(false);
   return (
     <>
-      <div onClick={openModal}>FilterHeader</div>;
+      <div onClick={openModal}>FilterHeader</div>
       <Modal
         isOpen={isModalOpen}
         onRequestClose={closeModal}
