@@ -8,11 +8,14 @@ function FilterHeader() {
   const closeModal = () => setIsModalOpen(false);
   return (
     <>
-      <div id="filter-mob" onClick={openModal}>FilterHeader</div>
+      <div id="filter-mob" onClick={openModal}>
+        FilterHeader
+      </div>
       <Modal
         isOpen={isModalOpen}
         onRequestClose={closeModal}
-        portalClassName=""
+        // portalClassName="filter-modal"
+        className={"filter-modal"}
       >
         <FilterModal />
       </Modal>

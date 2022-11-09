@@ -72,7 +72,6 @@ function Child({ params }) {
       <div
         style={{
           borderRadius: 100,
-          border: "1px solid black",
           backgroundColor: `${params.backgroundColor}`,
           height: "90px",
           width: "90px",
@@ -82,7 +81,7 @@ function Child({ params }) {
           padding: "2px",
           overflow: "hidden",
           scale: `${params.scaleFactor}`,
-          // opacity: `${params.isActive ? "100%" : "50%"}`,
+          opacity: `${params.isActive ? "100%" : "50%"}`,
           cursor: `${params.isRouting ? "pointer" : null}`,
         }}
       ></div>

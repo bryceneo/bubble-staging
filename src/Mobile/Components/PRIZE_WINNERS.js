@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import DataDisplay from "./DataDisplay";
-import MobileHeader from "./MobileHeader";
 import YearLine from "./YearLine";
 import prizeWinners2020 from "../Data/prizeWinners2020";
 import Categories from "./Categories";
@@ -15,10 +14,13 @@ function Prize_Winners() {
   else prizeWinners = null;
   return (
     <>
-      <MobileHeader />
       <div className="prize-winner-title">Prize winners {year}</div>
       <Categories />
-      <DataDisplay data={prizeWinners} numCols={4} />
+      <DataDisplay
+        data={prizeWinners}
+        bubbleOptions={{ numCols: 4 }}
+        height={"500px"}
+      />
       <YearLine />
     </>
   );

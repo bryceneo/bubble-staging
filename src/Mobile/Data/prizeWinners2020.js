@@ -1,7 +1,37 @@
 const prizeWinners2020 = [
   {
     type: "empty",
-    backgroundColor: "#FFFFFF5E",
+    backgroundColor: "#707070",
+    scaleFactor: 0.5,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.5,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.5,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.5,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.5,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.5,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
     scaleFactor: 0.5,
   },
   {
@@ -275,6 +305,41 @@ const prizeWinners2020 = [
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.5,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.5,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.5,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.5,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.5,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.5,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.5,
   },
 ];
 export default prizeWinners2020;

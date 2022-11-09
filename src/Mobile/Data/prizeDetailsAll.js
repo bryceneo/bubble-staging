@@ -1,5 +1,30 @@
 const prizeDetailsAll = [
   {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 1,
+  },
+  {
     id: 1,
     type: "subject",
     subjectId: "dse23456",
@@ -42,6 +67,16 @@ const prizeDetailsAll = [
     isActive: false,
   },
   {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 1,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 1,
+  },
+  {
     id: 4,
     type: "subject",
     subjectId: "dse23456",
@@ -70,6 +105,21 @@ const prizeDetailsAll = [
     isActive: false,
   },
   {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 1,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 1,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 1,
+  },
+  {
     id: 6,
     type: "subject",
     subjectId: "dse23456",
@@ -96,6 +146,31 @@ const prizeDetailsAll = [
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: false,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 1,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 1,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 1,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 1,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 1,
   },
 ];
 

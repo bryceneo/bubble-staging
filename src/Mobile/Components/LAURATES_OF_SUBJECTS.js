@@ -7,7 +7,11 @@ function Laurates_Of_Subjects() {
   return (
     <>
       <div>Laureates in Social Sciences</div>
-      <DataDisplay data={laureatesOfSubjects} numCols={4} />
+      <DataDisplay
+        data={laureatesOfSubjects}
+        bubbleOptions={{ numCols: 4 }}
+        height={"700px"}
+      />
       <RangeLine />
     </>
   );

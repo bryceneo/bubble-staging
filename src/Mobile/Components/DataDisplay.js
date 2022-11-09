@@ -3,14 +3,14 @@ import BubbleUI from "react-bubble-ui";
 import "react-bubble-ui/dist/index.css";
 import Child from "./Child";
 
-function DataDisplay({ data, numCols = 4 }) {
+function DataDisplay({ data, bubbleOptions, height = "500px" }) {
   const options = {
     size: 180,
     // size: zoom,
     minSize: 30,
     gutter: -77,
     provideProps: true,
-    numCols,
+    numCols: 4,
     fringeWidth: 500,
     yRadius: 50,
     xRadius: 50,
@@ -19,15 +19,38 @@ function DataDisplay({ data, numCols = 4 }) {
     compact: true,
     gravitation: 1,
   };
-  const children = data.map((item) => {
-    return <Child className="child" key={item.id} params={item} />;
+  const children = data.map((item, index) => {
+    return (
+      <Child
+        className="child"
+        key={item.id ? item.id : `e${index}`}
+        params={item}
+      />
+    );
   });
   return (
     <>
-      <div>
-        <BubbleUI options={options} className="myBubbleUI">
-          {children}
-        </BubbleUI>
+      <div
+        style={{
+          height: `${height}`,
+        }}
+      >
+        <div
+          style={{
+            height: "100%",
+            overflow: "hidden",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <BubbleUI
+            options={{ ...options, ...bubbleOptions }}
+            className="myBubbleUI"
+          >
+            {children}
+          </BubbleUI>
+        </div>
       </div>
     </>
   );

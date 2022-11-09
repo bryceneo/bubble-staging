@@ -7,7 +7,11 @@ function YEAR_RANGES() {
   return (
     <>
       <div>Anthropology for the year 2016 - 2020</div>
-      <DataDisplay data={yearRanges} numCols={4} />
+      <DataDisplay
+        data={yearRanges}
+        bubbleOptions={{ numCols: 4 }}
+        height={"700px"}
+      />
       <RangeLine />
     </>
   );

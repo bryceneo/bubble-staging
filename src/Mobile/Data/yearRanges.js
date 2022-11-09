@@ -1,5 +1,40 @@
 const yearRanges = [
   {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.5,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.5,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.5,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.8,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.8,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.8,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.8,
+  },
+  {
     id: 1,
     type: "person",
     laurateId: "ds023fkwje9456",
@@ -270,6 +305,26 @@ const yearRanges = [
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.5,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.5,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.5,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.5,
   },
 ];
 export default yearRanges;

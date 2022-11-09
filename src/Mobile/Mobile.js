@@ -24,19 +24,40 @@ function Mobile() {
           <Route path="prize-details/:prizeId" element={<PrizeDetails />}>
             <Route
               path="all"
-              element={<DataDisplay data={prizeDetailsAll} numCols={4} />}
+              element={
+                <DataDisplay
+                  data={prizeDetailsAll}
+                  bubbleOptions={{ numCols: 5 }}
+                  height={"400px"}
+                />
+              }
             />
             <Route
               path="studies"
-              element={<DataDisplay data={prizeDetailsStudies} numCols={4} />}
+              element={
+                <DataDisplay
+                  data={prizeDetailsStudies}
+                  bubbleOptions={{ numCols: 4 }}
+                />
+              }
             />
             <Route
               path="work"
-              element={<DataDisplay data={prizeDetailsWork} numCols={4} />}
+              element={
+                <DataDisplay
+                  data={prizeDetailsWork}
+                  bubbleOptions={{ numCols: 4 }}
+                />
+              }
             />
             <Route
               path="influence"
-              element={<DataDisplay data={prizeDetailsInfluence} numCols={4} />}
+              element={
+                <DataDisplay
+                  data={prizeDetailsInfluence}
+                  bubbleOptions={{ numCols: 4 }}
+                />
+              }
             />
           </Route>
           <Route path="subject-areas/:subjectId" element={<SubjectAreas />} />
