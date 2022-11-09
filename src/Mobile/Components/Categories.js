@@ -9,16 +9,16 @@ function Categories() {
       <div>
         <h6 className="categories-title d-none d-lg-block d-xl-none">Categories</h6>
         <div>
-          <ul className="categories-list p-0">
+          <ul className="categories-list-mobile p-0">
             {catgories.map((category) => {
               return (
                 <li key={category.id}>
                   <span>{category.name}</span>
                   <span>
                     <div
-                      id="circle1"
+                      id="circle1" className="d-none d-lg-block d-xl-none"
                       style={{ backgroundColor: category.colorCode }}
-                    className="d-none d-lg-block d-xl-none"></div>
+                   ></div>
                   </span>
                 </li>
               );

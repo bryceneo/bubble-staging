@@ -1,10 +1,10 @@
-#filter{
+#filter-mob{
     padding: 10px;
     background: #14202E;
     color: #fff;
     position: relative;
 }
-#filter::after{
+#filter-mob:after{
     content: '\f0b0';
     font-family: 'Font Awesome 5 Pro';
     font-size: 16px;
