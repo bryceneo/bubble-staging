@@ -5,6 +5,7 @@ import MobileHeader from "./MobileHeader";
 import YearLine from "./YearLine";
 import prizeWinners2020 from "../Data/prizeWinners2020";
 import Categories from "./Categories";
+import "./Styles/PrizeWinners.css";
 
 function Prize_Winners() {
   const { year } = useParams();
@@ -15,7 +16,7 @@ function Prize_Winners() {
   return (
     <>
       <MobileHeader />
-      <div>Prize winners {year}</div>
+      <div className="prize-winner-title">Prize winners {year}</div>
       <Categories />
       <DataDisplay data={prizeWinners} numCols={4} />
       <YearLine />

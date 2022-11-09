@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import CategoriesData from "../Data/CategoriesData";
-// import "./styles/Categories.css";
+import "./Styles/Categories.css";
 
 function Categories() {
   const [catgories, setcategories] = useState(CategoriesData);
   return (
     <>
       <div>
-        <h6 className="categories-title">Categories</h6>
+        <h6 className="categories-title d-none d-lg-block d-xl-none">Categories</h6>
         <div>
           <ul className="categories-list p-0">
             {catgories.map((category) => {
@@ -18,7 +18,7 @@ function Categories() {
                     <div
                       id="circle1"
                       style={{ backgroundColor: category.colorCode }}
-                    ></div>
+                    className="d-none d-lg-block d-xl-none"></div>
                   </span>
                 </li>
               );
