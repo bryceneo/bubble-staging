@@ -41,12 +41,12 @@ function DataDisplay({ data, bubbleOptions, height = "500px" }) {
             overflow: "hidden",
             display: "flex",
             justifyContent: "center",
-            alignItems: "center",
+            alignItems: "start",
           }}
         >
           <BubbleUI
             options={{ ...options, ...bubbleOptions }}
-            className="myBubbleUI"
+            className="myBubbleUI mob-bubbleui"
           >
             {children}
           </BubbleUI>
