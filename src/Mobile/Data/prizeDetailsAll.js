@@ -29,7 +29,7 @@ const prizeDetailsAll = [
     type: "subject",
     subjectId: "dse23456",
 
-    isRouting: false,
+    isRouting: "/subject-areas/1",
     text: "Sociology",
     textColor: "#223247",
     borderThickness: "2px",
@@ -57,7 +57,7 @@ const prizeDetailsAll = [
     type: "subject",
     subjectId: "dse23456",
 
-    isRouting: false,
+    isRouting: "/field-relations/1",
     text: "Anthropology",
     textColor: "#223247",
     borderThickness: "2px",
@@ -156,6 +156,26 @@ const prizeDetailsAll = [
     type: "empty",
     backgroundColor: "#C7C7C75E",
     scaleFactor: 1,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#C7C7C75E",
+    scaleFactor: 1,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#C7C7C75E",
+    scaleFactor: 1,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#C7C7C75E",
+    scaleFactor: 1,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#C7C7C75E",
+    scaleFactor: 0,
   },
   {
     type: "empty",
