@@ -172,6 +172,11 @@ const prizeDetailsStudies = [
     backgroundColor: "#707070",
     scaleFactor: 1,
   },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 1,
+  },
 ];
 
 export default prizeDetailsStudies;
