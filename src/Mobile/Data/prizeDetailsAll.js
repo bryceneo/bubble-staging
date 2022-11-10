@@ -21,7 +21,7 @@ const prizeDetailsAll = [
   },
   {
     type: "empty",
-    backgroundColor: "#707070",
+    backgroundColor: "#C7C7C75E",
     scaleFactor: 1,
   },
   {
@@ -29,14 +29,14 @@ const prizeDetailsAll = [
     type: "subject",
     subjectId: "dse23456",
 
-    isRouting: false,
-    text: "Mathematics",
+    isRouting: "/subject-areas/1",
+    text: "Sociology",
     textColor: "#223247",
     borderThickness: "2px",
-    borderColor: "#D2D2D2",
-    backgroundColor: " #FFFFFF5E",
+
+    backgroundColor: " #F1AC4D",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 2,
@@ -44,36 +44,36 @@ const prizeDetailsAll = [
     subjectId: "dse23456",
 
     isRouting: false,
-    text: "Mathematics",
+    text: "History",
     textColor: "#223247",
     borderThickness: "2px",
-    borderColor: "#D2D2D2",
-    backgroundColor: " #FFFFFF5E",
+
+    backgroundColor: " #F1AC4D",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 3,
     type: "subject",
     subjectId: "dse23456",
 
-    isRouting: false,
-    text: "Mathematics",
+    isRouting: "/field-relations/1",
+    text: "Anthropology",
     textColor: "#223247",
     borderThickness: "2px",
-    borderColor: "#D2D2D2",
-    backgroundColor: " #FFFFFF5E",
+
+    backgroundColor: " #F1AC4D",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     type: "empty",
-    backgroundColor: "#707070",
+    backgroundColor: "#C7C7C75E",
     scaleFactor: 1,
   },
   {
     type: "empty",
-    backgroundColor: "#707070",
+    backgroundColor: "#C7C7C75E",
     scaleFactor: 1,
   },
   {
@@ -82,13 +82,13 @@ const prizeDetailsAll = [
     subjectId: "dse23456",
 
     isRouting: false,
-    text: "Mathematics",
+    text: "Political Science",
     textColor: "#223247",
     borderThickness: "2px",
-    borderColor: "#D2D2D2",
+    borderColor: "#F1AC4D",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 5,
@@ -96,27 +96,27 @@ const prizeDetailsAll = [
     subjectId: "dse23456",
 
     isRouting: false,
-    text: "Mathematics",
+    text: "Economics",
     textColor: "#223247",
     borderThickness: "2px",
-    borderColor: "#D2D2D2",
+    borderColor: "#F1AC4D",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     type: "empty",
-    backgroundColor: "#707070",
+    backgroundColor: "#C7C7C75E",
     scaleFactor: 1,
   },
   {
     type: "empty",
-    backgroundColor: "#707070",
+    backgroundColor: "#C7C7C75E",
     scaleFactor: 1,
   },
   {
     type: "empty",
-    backgroundColor: "#707070",
+    backgroundColor: "#C7C7C75E",
     scaleFactor: 1,
   },
   {
@@ -125,13 +125,13 @@ const prizeDetailsAll = [
     subjectId: "dse23456",
 
     isRouting: false,
-    text: "Mathematics",
-    textColor: "#223247",
-    borderThickness: "2px",
+    text: "International Relations",
+    textColor: "#FFFBFB",
+
     borderColor: "#D2D2D2",
-    backgroundColor: " #FFFFFF5E",
+    backgroundColor: " #418BCA",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 7,
@@ -139,37 +139,57 @@ const prizeDetailsAll = [
     subjectId: "dse23456",
 
     isRouting: false,
-    text: "Mathematics",
+    text: "Earth Science",
     textColor: "#223247",
-    borderThickness: "2px",
+
     borderColor: "#D2D2D2",
-    backgroundColor: " #FFFFFF5E",
+    backgroundColor: " #90C56D",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     type: "empty",
-    backgroundColor: "#707070",
-    scaleFactor: 1,
-  },
-  {
-    type: "empty",
-    backgroundColor: "#707070",
+    backgroundColor: "#C7C7C75E",
     scaleFactor: 1,
   },
   {
     type: "empty",
-    backgroundColor: "#707070",
+    backgroundColor: "#C7C7C75E",
     scaleFactor: 1,
   },
   {
     type: "empty",
-    backgroundColor: "#707070",
+    backgroundColor: "#C7C7C75E",
     scaleFactor: 1,
   },
   {
     type: "empty",
-    backgroundColor: "#707070",
+    backgroundColor: "#C7C7C75E",
+    scaleFactor: 1,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#C7C7C75E",
+    scaleFactor: 1,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#C7C7C75E",
+    scaleFactor: 0,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#C7C7C75E",
+    scaleFactor: 1,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#C7C7C75E",
+    scaleFactor: 1,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#C7C7C75E",
     scaleFactor: 1,
   },
 ];
