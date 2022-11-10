@@ -3,6 +3,7 @@ import subjectAreas from "../Data/subjectAreas";
 import Categories from "./Categories";
 import DataDisplay from "./DataDisplay";
 import "./Styles/Subjectstyle.css";
+import ViewAll from "./ViewAll";
 
 function Subject_Areas() {
   return (
@@ -13,8 +14,10 @@ function Subject_Areas() {
         bubbleOptions={{ numCols: 5 }}
         height={"600px"}
       />
-      <Categories />
-     <div className="text-center"> <button className="view-btn">View all laureates in Social Sciences</button></div>
+      <div className="text-center">
+        <Categories />
+        <ViewAll />
+      </div>
     </>
   );
 }

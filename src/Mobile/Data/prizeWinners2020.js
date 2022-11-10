@@ -103,7 +103,7 @@ const prizeWinners2020 = [
     type: "person",
     laurateId: "ds023fkwje9456",
 
-    isRouting: false,
+    isRouting: true,
     text: "",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",

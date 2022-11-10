@@ -4,6 +4,7 @@ import WinnerCard from "./WinnerCard";
 import Categories from "./Categories";
 import { Outlet, Route, Routes } from "react-router-dom";
 import "./Styles/Fieldrelation.css";
+import ViewAll from "./ViewAll";
 
 function PRIZE_DETAILS() {
   return (
@@ -12,10 +13,9 @@ function PRIZE_DETAILS() {
       <InstaFilters />
       <Outlet />
       <div className="text-center">
-      <Categories />
-      <button className="view-btn">View all laureates in Social Sciences</button>
+        <Categories />
+        <ViewAll />
       </div>
-      
     </>
   );
 }

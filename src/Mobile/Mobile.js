@@ -28,7 +28,6 @@ function Mobile() {
                 <DataDisplay
                   data={prizeDetailsAll}
                   bubbleOptions={{ numCols: 5 }}
-                  height={"400px"}
                 />
               }
             />
@@ -37,7 +36,7 @@ function Mobile() {
               element={
                 <DataDisplay
                   data={prizeDetailsStudies}
-                  bubbleOptions={{ numCols: 4 }}
+                  bubbleOptions={{ numCols: 5 }}
                 />
               }
             />
@@ -46,7 +45,7 @@ function Mobile() {
               element={
                 <DataDisplay
                   data={prizeDetailsWork}
-                  bubbleOptions={{ numCols: 4 }}
+                  bubbleOptions={{ numCols: 5 }}
                 />
               }
             />
@@ -55,7 +54,7 @@ function Mobile() {
               element={
                 <DataDisplay
                   data={prizeDetailsInfluence}
-                  bubbleOptions={{ numCols: 4 }}
+                  bubbleOptions={{ numCols: 5 }}
                 />
               }
             />

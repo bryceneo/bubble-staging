@@ -1,0 +1,11 @@
+.view-btn {
+  background: #14202e;
+  border: #14202e;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  margin: 10px auto;
+  width: auto;
+}
