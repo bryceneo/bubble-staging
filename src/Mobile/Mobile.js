@@ -1,5 +1,4 @@
 import React from "react";
-import CategorySelection from "./Components/CATEGORY_SELECTION";
 import FieldRelations from "./Components/FIELD_RELATIONS";
 import LauratesOfSubjects from "./Components/LAURATES_OF_SUBJECTS";
 import PrizeDetails from "./Components/PRIZE_DETAILS";
@@ -60,7 +59,6 @@ function Mobile() {
             />
           </Route>
           <Route path="subject-areas/:subjectId" element={<SubjectAreas />} />
-          <Route path="category-selection" element={<CategorySelection />} />
           <Route path="field-relations/:field" element={<FieldRelations />} />
           <Route path="year-ranges/:range" element={<YearRanges />} />
           <Route
