@@ -7,9 +7,7 @@ function Child({ params }) {
   const navigate = useNavigate();
   const subjectClickHandler = (subID, isRouting) => {
     if (isRouting) {
-      navigate(`/subject-details/${subID}`, {
-        state: { subId: params.subjectId, subText: params.text },
-      });
+      navigate(`${isRouting}`);
     }
   };
   const personClickHandler = (lauID, isRouting) => {
