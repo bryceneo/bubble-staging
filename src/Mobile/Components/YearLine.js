@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Navigate } from "react-router-dom";
 import yearLine from "../Data/yearLine";
-
+import "./Styles/YearLine.css";
 function YearLine({ selectedYear }) {
   return (
     <>
@@ -39,7 +39,7 @@ function YearLine({ selectedYear }) {
                 </div>
               );
             return (
-              <Link to={`/prize-winners/${year}`}>
+              <Link to={`/prize-winners/${year}`} className="year-link">
                 <div
                   style={{
                     margin: "0px",
