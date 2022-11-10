@@ -172,26 +172,6 @@ const prizeDetailsAll = [
     backgroundColor: "#C7C7C75E",
     scaleFactor: 1,
   },
-  {
-    type: "empty",
-    backgroundColor: "#C7C7C75E",
-    scaleFactor: 0,
-  },
-  {
-    type: "empty",
-    backgroundColor: "#C7C7C75E",
-    scaleFactor: 1,
-  },
-  {
-    type: "empty",
-    backgroundColor: "#C7C7C75E",
-    scaleFactor: 1,
-  },
-  {
-    type: "empty",
-    backgroundColor: "#C7C7C75E",
-    scaleFactor: 1,
-  },
 ];
 
 export default prizeDetailsAll;
