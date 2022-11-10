@@ -13,3 +13,61 @@
     right: 10px;
     font-weight: 100;
 }
+.ReactModal__Overlay{
+    background-color: rgb(0 0 0 / 42%) !important;
+}
+.ReactModal__Content{
+    position: absolute;
+    inset: 0px !important;
+    border: 1px solid rgb(243 243 243) !important;
+    background: rgb(255, 255, 255) !important;
+    overflow: auto;
+    border-radius: 35px 35px 0 0  !important;
+    outline: none;
+    padding: 20px;
+    top: 30% !important;
+    height: auto;
+}
+.modal-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+.modal-title .modal-heading{
+    font-size: 26px;
+    font-family: 'Poppins-Bold';
+    font-weight: 600;
+    color: #223347;
+}
+.modal-title .results{
+    font-size: 14px;
+    color: #8695A8;
+}
+.category{
+    position: relative;
+    height: 60px;
+}
+.category p{
+    color: #212121;
+}
+.category .category-span{
+    color: #8695A8;
+    font-size: 14px;
+}
+.category:after{
+    content: '\f105';
+    font-family: "Font Awesome 5 Pro";
+    right: 0;
+    position: absolute;
+    color: #707070;
+    top: 10px;
+    transform: translateY(25px);
+}
+.reset-filter{
+    text-align: center;
+    margin: 0 auto;
+    background: transparent;
+    border: 0;
+    color: #8695A8;
+}

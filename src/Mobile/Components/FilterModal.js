@@ -3,20 +3,33 @@ import React from "react";
 function FilterModal() {
   return (
     <>
-      <div>
-        <span>Filter By</span>
-        <span>5 Results available</span>
+      <div className="modal-title">
+        <span className="modal-heading">Filter By</span>
+        <span className="results">5 Results available</span>
       </div>
-      <div>Category</div>
-      <div>Engineering and Computer Science</div>
-      <div>Field of Study</div>
-      <div>Anthropology</div>
-      <div>Major Body of Work</div>
-      <div>Influence/Impact Area</div>
-      <div>Year</div>
-      <div>2019,2020,2021</div>
-      <button>Apply Filter</button>
-      <button>Reset Filter</button>
+      <div className="category pt-4 pb-4">
+        <p className="m-0">Category</p>
+     <span className="category-span d-block"> Engineering and Computer Science</span>
+      </div>
+      <div className="category pt-4 pb-4">
+        <p className="m-0">Field of Study</p>
+     <span className="category-span d-block">Anthropology</span>
+      </div>
+      <div className="category pt-4 pb-4">
+        <p className="m-0">Major Body of Work</p>
+     <span className="category-span d-block"></span>
+      </div>
+      <div className="category pt-4 pb-4">
+        <p className="m-0">Influence/Impact Area</p>
+     <span className="category-span d-block"></span>
+      </div>
+      <div className="category pt-4 pb-4">
+        <p className="m-0">Year</p>
+     <span className="category-span d-block">2019,2020,2021</span>
+      </div>
+      
+      <button className="view-btn d-block w-100 mt-4 ">Apply Filter</button>
+      <button className="reset-filter d-block">Reset Filter</button>
     </>
   );
 }
