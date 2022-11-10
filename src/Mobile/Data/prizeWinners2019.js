@@ -1,4 +1,4 @@
-const lauratesOfSubjects = [
+const prizeWinners2019 = [
   {
     type: "empty",
     backgroundColor: "#707070",
@@ -17,22 +17,22 @@ const lauratesOfSubjects = [
   {
     type: "empty",
     backgroundColor: "#707070",
-    scaleFactor: 0.8,
+    scaleFactor: 0.5,
   },
   {
     type: "empty",
     backgroundColor: "#707070",
-    scaleFactor: 0.8,
+    scaleFactor: 0.5,
   },
   {
     type: "empty",
     backgroundColor: "#707070",
-    scaleFactor: 0.8,
+    scaleFactor: 0.5,
   },
   {
     type: "empty",
     backgroundColor: "#707070",
-    scaleFactor: 0.8,
+    scaleFactor: 0.5,
   },
   {
     id: 1,
@@ -125,7 +125,7 @@ const lauratesOfSubjects = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYInlcLz-tohmDcaurwEy29Bk94eg1075l0Q&usqp=CAU",
     textColor: "#223247",
     borderThickness: "6px",
-    borderColor: "#F1AC4D",
+    borderColor: "#223347",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,
@@ -157,7 +157,7 @@ const lauratesOfSubjects = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFEdOGWCl2XyCAxD_pzARX98Swdft2_XB2zT-dCU4V8ovseWC5d5EVEi1bW4LHonanbIU&usqp=CAU",
     textColor: "#223247",
     borderThickness: "6px",
-    borderColor: "#F1AC4D",
+    borderColor: "#90C56D",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,
@@ -173,7 +173,7 @@ const lauratesOfSubjects = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY46bDjH2LeAM-zTiyngADD2TmlqpwAlwDyA&usqp=CAU",
     textColor: "#223247",
     borderThickness: "6px",
-    borderColor: "#F1AC4D",
+    borderColor: "#223347",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,
@@ -189,7 +189,7 @@ const lauratesOfSubjects = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsUmE6FMTWUnXwdX_vkq9XMe_6AIFuuBY_lQ&usqp=CAU",
     textColor: "#223247",
     borderThickness: "6px",
-    borderColor: "#F1AC4D",
+    borderColor: "#8695A8",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,
@@ -221,7 +221,7 @@ const lauratesOfSubjects = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvBqg3kiPCJMnwaPlY5Y2z05cNpL8qNkA2PA&usqp=CAU",
     textColor: "#223247",
     borderThickness: "6px",
-    borderColor: "#F1AC4D",
+    borderColor: "#2CC7C9",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,
@@ -237,7 +237,7 @@ const lauratesOfSubjects = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-qOOPkDL-IyK6brdTwf4Mb04HnuHnYfpy_Q&usqp=CAU",
     textColor: "#223247",
     borderThickness: "6px",
-    borderColor: "#F1AC4D",
+    borderColor: "#418BCA",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,
@@ -309,22 +309,22 @@ const lauratesOfSubjects = [
   {
     type: "empty",
     backgroundColor: "#707070",
-    scaleFactor: 0.8,
+    scaleFactor: 0.5,
   },
   {
     type: "empty",
     backgroundColor: "#707070",
-    scaleFactor: 0.8,
+    scaleFactor: 0.5,
   },
   {
     type: "empty",
     backgroundColor: "#707070",
-    scaleFactor: 0.8,
+    scaleFactor: 0.5,
   },
   {
     type: "empty",
     backgroundColor: "#707070",
-    scaleFactor: 0.8,
+    scaleFactor: 0.5,
   },
   {
     type: "empty",
@@ -342,4 +342,4 @@ const lauratesOfSubjects = [
     scaleFactor: 0.5,
   },
 ];
-export default lauratesOfSubjects;
+export default prizeWinners2019;
