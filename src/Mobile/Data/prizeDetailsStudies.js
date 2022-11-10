@@ -111,12 +111,12 @@ const prizeDetailsStudies = [
   },
   {
     type: "empty",
-    backgroundColor: "#707070",
+    backgroundColor: "#C7C7C75E",
     scaleFactor: 1,
   },
   {
     type: "empty",
-    backgroundColor: "#707070",
+    backgroundColor: "#C7C7C75E",
     scaleFactor: 1,
   },
   {
@@ -149,32 +149,32 @@ const prizeDetailsStudies = [
   // },
   {
     type: "empty",
-    backgroundColor: "#707070",
+    backgroundColor: "#C7C7C75E",
     scaleFactor: 1,
   },
   {
     type: "empty",
-    backgroundColor: "#707070",
+    backgroundColor: "#C7C7C75E",
     scaleFactor: 1,
   },
   {
     type: "empty",
-    backgroundColor: "#707070",
+    backgroundColor: "#C7C7C75E",
     scaleFactor: 1,
   },
   {
     type: "empty",
-    backgroundColor: "#707070",
+    backgroundColor: "#C7C7C75E",
     scaleFactor: 1,
   },
   {
     type: "empty",
-    backgroundColor: "#707070",
+    backgroundColor: "#C7C7C75E",
     scaleFactor: 1,
   },
   {
     type: "empty",
-    backgroundColor: "#707070",
+    backgroundColor: "#C7C7C75E",
     scaleFactor: 1,
   },
 ];
