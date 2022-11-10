@@ -8,7 +8,10 @@ import Categories from "./Categories";
 import "./Styles/PrizeWinners.css";
 
 function Prize_Winners() {
-  const { year } = useParams();
+  let { year } = useParams();
+  if (!year) {
+    year = "2020";
+  }
   let prizeWinners;
   if (year === "2020") prizeWinners = prizeWinners2020;
   else if (year === "2019") prizeWinners = prizeWinners2019;

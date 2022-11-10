@@ -1,10 +1,8 @@
 import React from "react";
+import { Link, Navigate } from "react-router-dom";
 import yearLine from "../Data/yearLine";
 
 function YearLine({ selectedYear }) {
-  const handleYearClick = (year) => {
-    //
-  };
   return (
     <>
       <div
@@ -41,18 +39,19 @@ function YearLine({ selectedYear }) {
                 </div>
               );
             return (
-              <div
-                style={{
-                  margin: "0px",
-                  cursor: "pointer",
-                  fontSize: "12px",
-                  padding: "11px 7px",
-                }}
-                key={year}
-                onClick={() => handleYearClick(year)}
-              >
-                {year}
-              </div>
+              <Link to={`/prize-winners/${year}`}>
+                <div
+                  style={{
+                    margin: "0px",
+                    cursor: "pointer",
+                    fontSize: "12px",
+                    padding: "11px 7px",
+                  }}
+                  key={year}
+                >
+                  {year}
+                </div>
+              </Link>
             );
           })}
         </div>

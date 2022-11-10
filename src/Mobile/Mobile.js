@@ -19,6 +19,7 @@ function Mobile() {
       <FilterHeader />
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<PrizeWinners />} />
           <Route path="prize-winners/:year" element={<PrizeWinners />} />
           <Route path="prize-details/:prizeId" element={<PrizeDetails />}>
             <Route
