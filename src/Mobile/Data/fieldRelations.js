@@ -194,7 +194,7 @@ const fieldRelations = [
     borderColor: "#D2D2D2",
     backgroundColor: "#14202E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 14,
