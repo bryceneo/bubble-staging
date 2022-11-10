@@ -1,7 +1,7 @@
 import React from "react";
 import yearLine from "../Data/yearLine";
 
-function YearLine({ selectedYear = 2020 }) {
+function YearLine({ selectedYear }) {
   const handleYearClick = (year) => {
     //
   };
@@ -31,9 +31,9 @@ function YearLine({ selectedYear = 2020 }) {
                     justifyContent: "center",
                     textAlign: "center",
                     margin: "0px",
-                    fontSize:'12px',                  
-                    padding: '11px 7px',
-                    color:'#fff',
+                    fontSize: "12px",
+                    padding: "11px 7px",
+                    color: "#fff",
                   }}
                   key={year}
                 >
@@ -45,8 +45,8 @@ function YearLine({ selectedYear = 2020 }) {
                 style={{
                   margin: "0px",
                   cursor: "pointer",
-                  fontSize:'12px',
-                  padding: '11px 7px',
+                  fontSize: "12px",
+                  padding: "11px 7px",
                 }}
                 key={year}
                 onClick={() => handleYearClick(year)}

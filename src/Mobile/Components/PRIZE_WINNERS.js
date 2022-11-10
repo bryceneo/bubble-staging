@@ -22,7 +22,7 @@ function Prize_Winners() {
         bubbleOptions={{ numCols: 4 }}
         height={"600px"}
       />
-      <YearLine />
+      <YearLine selectedYear={parseInt(year)} />
     </>
   );
 }

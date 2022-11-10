@@ -34,7 +34,6 @@ const prizeWinners2019 = [
     backgroundColor: "#707070",
     scaleFactor: 0.5,
   },
-
   {
     id: 1,
     type: "person",
@@ -43,7 +42,7 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoMB87KVcbBsZLvjXjcG_s9mijDAIiUI8hsw&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHfHsJ0gRyl8LGr5W-V-dq3jKf-iUoOynafQ&usqp=CAU",
     textColor: "#223247",
     borderThickness: "4px",
     borderColor: "#223347",
@@ -59,7 +58,7 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR45_ODTn_onImbQoe-tTKBkRV4jEBfRxhHynbwsxXjGe0_86QNYmoRzortR-KT_W1J8ss&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4qOdfNedJt9Icfqq2fz-wPUknAzb_JOfMRQ&usqp=CAU",
     textColor: "#223247",
     borderThickness: "4px",
     borderColor: "#223347",
@@ -75,7 +74,7 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHfHsJ0gRyl8LGr5W-V-dq3jKf-iUoOynafQ&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoMB87KVcbBsZLvjXjcG_s9mijDAIiUI8hsw&usqp=CAU",
     textColor: "#223247",
     borderThickness: "4px",
     borderColor: "#223347",
@@ -83,7 +82,6 @@ const prizeWinners2019 = [
     scaleFactor: 1,
     isActive: false,
   },
-  ,
   {
     id: 4,
     type: "person",
@@ -92,7 +90,7 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4qOdfNedJt9Icfqq2fz-wPUknAzb_JOfMRQ&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR45_ODTn_onImbQoe-tTKBkRV4jEBfRxhHynbwsxXjGe0_86QNYmoRzortR-KT_W1J8ss&usqp=CAU",
     textColor: "#223247",
     borderThickness: "4px",
     borderColor: "#223347",
@@ -108,7 +106,7 @@ const prizeWinners2019 = [
     isRouting: true,
     text: "",
     image:
-      "https://i.pinimg.com/236x/d8/82/59/d88259a42fcc6ee481c879e05b5ff465--business-headshot-ideas-woman-profile-picture-professional.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnUg_S8jc9xjw-UYRvEBtPdjO1Ytj75rcajbn-FY7z&s",
     textColor: "#223247",
     borderThickness: "6px",
     borderColor: "#F1AC4D",
@@ -124,15 +122,14 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFEdOGWCl2XyCAxD_pzARX98Swdft2_XB2zT-dCU4V8ovseWC5d5EVEi1bW4LHonanbIU&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYInlcLz-tohmDcaurwEy29Bk94eg1075l0Q&usqp=CAU",
     textColor: "#223247",
     borderThickness: "6px",
-    borderColor: "#90C56D",
+    borderColor: "#223347",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,
   },
-
   {
     id: 7,
     type: "person",
@@ -141,13 +138,13 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsUmE6FMTWUnXwdX_vkq9XMe_6AIFuuBY_lQ&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
     textColor: "#223247",
-    borderThickness: "6px",
-    borderColor: "#8695A8",
+    borderThickness: "4px",
+    borderColor: "#223347",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 8,
@@ -157,10 +154,10 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYInlcLz-tohmDcaurwEy29Bk94eg1075l0Q&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFEdOGWCl2XyCAxD_pzARX98Swdft2_XB2zT-dCU4V8ovseWC5d5EVEi1bW4LHonanbIU&usqp=CAU",
     textColor: "#223247",
     borderThickness: "6px",
-    borderColor: "#223347",
+    borderColor: "#90C56D",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
     isActive: true,
@@ -189,13 +186,13 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsUmE6FMTWUnXwdX_vkq9XMe_6AIFuuBY_lQ&usqp=CAU",
     textColor: "#223247",
-    borderThickness: "4px",
-    borderColor: "#223347",
+    borderThickness: "6px",
+    borderColor: "#8695A8",
     backgroundColor: " #FFFFFF5E",
     scaleFactor: 1,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 11,
