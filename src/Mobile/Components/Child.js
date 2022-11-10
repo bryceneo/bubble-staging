@@ -14,7 +14,7 @@ function Child({ params }) {
   };
   const personClickHandler = (lauID, isRouting) => {
     if (isRouting) {
-      navigate(`/prize-details/${lauID}`);
+      navigate(`/prize-details/${lauID}/studies`);
     }
   };
   if (params.type === "subject" || params.type === "sub-subject") {

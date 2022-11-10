@@ -34,6 +34,7 @@ function YearLine({ selectedYear = 2020 }) {
                     textAlign: "center",
                     margin: "20px",
                   }}
+                  key={year}
                 >
                   {year}
                 </div>
@@ -44,6 +45,7 @@ function YearLine({ selectedYear = 2020 }) {
                   margin: "20px",
                   cursor: "pointer",
                 }}
+                key={year}
                 onClick={() => handleYearClick(year)}
               >
                 {year}
