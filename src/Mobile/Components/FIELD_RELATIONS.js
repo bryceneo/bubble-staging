@@ -8,7 +8,11 @@ function Field_Relations() {
   return (
     <>
       <div>Showing fields related to Anthropology</div>
-      <DataDisplay data={fieldRelations} numCols={5} />
+      <DataDisplay
+        data={fieldRelations}
+        bubbleOptions={{ numCols: 5 }}
+        height={"600px"}
+      />
       <Categories />
       <button className="view-btn">View all laureates in Anthropology</button>
     </>

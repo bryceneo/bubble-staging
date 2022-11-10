@@ -1,8 +1,20 @@
-#filter-mob{
-    padding: 10px;
-    background: #14202E;
-    color: #fff;
-    position: relative;
+#filter-mob {
+  padding: 10px;
+  background: #14202e;
+  color: #fff;
+  position: relative;
+}
+#filter-mob:after {
+  content: "\f0b0";
+  font-family: "Font Awesome 5 Pro";
+  font-size: 16px;
+  color: #fff;
+  position: absolute;
+  right: 10px;
+  font-weight: 100;
+}
+.filter-modal {
+  background-color: "#24FFF30e";
 }
 #filter-mob:after{
     content: '\f0b0';
