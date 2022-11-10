@@ -2,9 +2,12 @@ import React from "react";
 import rangeLine from "../Data/rangeLine";
 
 function RangeLine({ selectedRange = 2, selectedColors }) {
+  console.log(selectedColors);
+  const { color, bgColor } = selectedColors;
   return (
     <>
-      <div className="range"
+      <div
+        className="range"
         style={{
           display: "flex",
           justifyContent: "center",
@@ -14,12 +17,13 @@ function RangeLine({ selectedRange = 2, selectedColors }) {
         {rangeLine.map((range) => {
           if (selectedRange === range.id) {
             return (
-              <div className="selected-range"
+              <div
+                className="selected-range"
                 style={{
-                  background: "rgb(20, 32, 46)",
+                  background: `${bgColor}`,
                   padding: "12px",
-                  color:"#fff",
-                  borderRadius:'8px',
+                  color: `${color}`,
+                  borderRadius: "8px",
                 }}
                 key={range.id}
               >
@@ -28,7 +32,11 @@ function RangeLine({ selectedRange = 2, selectedColors }) {
             );
           }
           return (
-            <div className="range-year" style={{ padding: "12px" }} key={range.id}>
+            <div
+              className="range-year"
+              style={{ padding: "12px" }}
+              key={range.id}
+            >
               {range.range}
             </div>
           );

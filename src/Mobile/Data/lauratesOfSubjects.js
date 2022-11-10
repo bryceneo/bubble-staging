@@ -309,7 +309,22 @@ const lauratesOfSubjects = [
   {
     type: "empty",
     backgroundColor: "#707070",
-    scaleFactor: 0.5,
+    scaleFactor: 0.8,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.8,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.8,
+  },
+  {
+    type: "empty",
+    backgroundColor: "#707070",
+    scaleFactor: 0.8,
   },
   {
     type: "empty",
