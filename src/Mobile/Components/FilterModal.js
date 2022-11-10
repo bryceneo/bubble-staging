@@ -45,15 +45,24 @@ function FilterModal() {
     return (
       <>
         <div>
-          <div onClick={() => setModalPage("filter")}>back</div>
-          <div>
-            <span>Category</span>
-            <span>12 results available</span>
-          </div>
-          <div>searchbox</div>
-          <div>Engineering</div>
-          <button>Choose</button>
-          <button>Cancel</button>
+          <div onClick={() => setModalPage("filter")}> <i class="fas fa-arrow-left"></i></div>
+         
+          <div class="modal-title">
+            <span class="modal-heading">Category</span>
+            <span class="results">12 Results available</span>
+            </div>
+            <input class="form-control me-2" type="search" placeholder="Enter Keywords to Search" aria-label="Search"/>
+         
+          <ul className="child-categories pt-3">
+           <li>Engineering</li> 
+           <li>Humanities</li>
+           <li>Life Sciences</li>
+           <li>Mathematical Sciences</li>
+           <li>Physical Sciences</li>
+           <li>Social Sciences</li>
+          </ul>
+          <button className="view-btn d-block w-100 mt-4 "> Choose</button>
+        <button className="reset-filter d-block"> Cancel</button>
         </div>
       </>
     );
