@@ -84,3 +84,29 @@
     color: #8695A8;
     font-size: 14px;
 }
+.child-categories{
+    list-style-type: none;
+}
+.child-categories li{
+    padding: 10px 0;
+    position: relative;
+}
+.child-categories li:before{
+position: absolute;
+content: '';
+top: 12px;
+left: -30px;
+height: 18px;
+width: 18px;
+background-color: transparent;
+border-radius: 50px;
+border: 1px solid #707070;
+}
+.child-categories li:nth-child(1):before{
+    content: '\f00c';
+    font-family: "Font Awesome 5 Pro";
+    font-size: 11px;
+    padding: 0px 3px;
+    color: #fff;
+    background: #111;
+}
