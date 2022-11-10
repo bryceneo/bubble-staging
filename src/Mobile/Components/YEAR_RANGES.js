@@ -14,9 +14,7 @@ function YEAR_RANGES() {
         bubbleOptions={{ numCols: 4 }}
         height={"700px"}
       />
-      <RangeLine
-        selectedColors={{ color: "white", bgColor: "rgb(20, 32, 46)" }}
-      />
+      <RangeLine selectedColors={{ color: "#FFFFFF", bgColor: "#14202E" }} />
     </>
   );
 }

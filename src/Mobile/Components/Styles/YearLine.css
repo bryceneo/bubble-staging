@@ -1,0 +1,9 @@
+.outer-div {
+  overflow: "hidden";
+}
+.inner-div {
+  display: "flex";
+  paddingright: "50px";
+  direction: "rtl";
+  overflow: "auto";
+}

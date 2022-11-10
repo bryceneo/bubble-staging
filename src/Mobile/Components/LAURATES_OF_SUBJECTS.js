@@ -14,7 +14,7 @@ function Laurates_Of_Subjects() {
         bubbleOptions={{ numCols: 4 }}
         height={"700px"}
       />
-      <RangeLine selectedColors={{ color: "red", bgColor: "white" }} />
+      <RangeLine selectedColors={{ color: "#14202E", bgColor: "#F1AC4D" }} />
     </>
   );
 }
