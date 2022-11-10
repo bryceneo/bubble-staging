@@ -6,7 +6,7 @@ import RangeLine from "./RangeLine";
 function YEAR_RANGES() {
   return (
     <>
-      <div>Anthropology for the year 2016 - 2020</div>
+      <div className="subject-areas-title grey-text p-3 text-center">Anthropology for the year 2016 - 2020</div>
       <DataDisplay
         data={yearRanges}
         bubbleOptions={{ numCols: 4 }}
