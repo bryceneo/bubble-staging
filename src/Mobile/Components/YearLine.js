@@ -25,14 +25,15 @@ function YearLine({ selectedYear = 2020 }) {
               return (
                 <div
                   style={{
-                    border: "1px solid black",
+                    background: "#223247",
                     borderRadius: "100%",
-                    height: "50px",
-                    width: "50px",
                     display: "flex",
                     justifyContent: "center",
                     textAlign: "center",
-                    margin: "20px",
+                    margin: "0px",
+                    fontSize:'12px',                  
+                    padding: '11px 7px',
+                    color:'#fff',
                   }}
                   key={year}
                 >
@@ -42,8 +43,10 @@ function YearLine({ selectedYear = 2020 }) {
             return (
               <div
                 style={{
-                  margin: "20px",
+                  margin: "0px",
                   cursor: "pointer",
+                  fontSize:'12px',
+                  padding: '11px 7px',
                 }}
                 key={year}
                 onClick={() => handleYearClick(year)}

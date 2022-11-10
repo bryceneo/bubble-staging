@@ -4,7 +4,7 @@ import rangeLine from "../Data/rangeLine";
 function RangeLine({ selectedRange = 2, selectedColors }) {
   return (
     <>
-      <div
+      <div className="range"
         style={{
           display: "flex",
           justifyContent: "center",
@@ -14,10 +14,12 @@ function RangeLine({ selectedRange = 2, selectedColors }) {
         {rangeLine.map((range) => {
           if (selectedRange === range.id) {
             return (
-              <div
+              <div className="selected-range"
                 style={{
-                  border: "1px solid black",
-                  padding: "2px",
+                  background: "rgb(20, 32, 46)",
+                  padding: "12px",
+                  color:"#fff",
+                  borderRadius:'8px',
                 }}
                 key={range.id}
               >
@@ -26,7 +28,7 @@ function RangeLine({ selectedRange = 2, selectedColors }) {
             );
           }
           return (
-            <div style={{ padding: "2px" }} key={range.id}>
+            <div className="range-year" style={{ padding: "12px" }} key={range.id}>
               {range.range}
             </div>
           );
