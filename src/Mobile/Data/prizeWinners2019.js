@@ -42,7 +42,7 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHfHsJ0gRyl8LGr5W-V-dq3jKf-iUoOynafQ&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp6QrT1cygiYFwpETqJHGoBCT4CWM3Pe_8xA&usqp=CAU",
     textColor: "#223247",
     borderThickness: "4px",
     borderColor: "#223347",
@@ -58,7 +58,7 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4qOdfNedJt9Icfqq2fz-wPUknAzb_JOfMRQ&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0iyowC4fQ3uuXPqmzhNwi1QVTCPEaY9FqmQ&usqp=CAU",
     textColor: "#223247",
     borderThickness: "4px",
     borderColor: "#223347",
@@ -74,7 +74,7 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoMB87KVcbBsZLvjXjcG_s9mijDAIiUI8hsw&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3VnkfYbu3-Zu1i-sLcKw_GOdReK6wBcTikw&usqp=CAU",
     textColor: "#223247",
     borderThickness: "4px",
     borderColor: "#223347",
@@ -90,7 +90,7 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR45_ODTn_onImbQoe-tTKBkRV4jEBfRxhHynbwsxXjGe0_86QNYmoRzortR-KT_W1J8ss&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
     textColor: "#223247",
     borderThickness: "4px",
     borderColor: "#223347",
@@ -106,7 +106,7 @@ const prizeWinners2019 = [
     isRouting: true,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnUg_S8jc9xjw-UYRvEBtPdjO1Ytj75rcajbn-FY7z&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJluDAJ6gcjqcL-abKSeS3i86hmysm2wqzJQ&usqp=CAU",
     textColor: "#223247",
     borderThickness: "6px",
     borderColor: "#F1AC4D",
@@ -122,7 +122,7 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYInlcLz-tohmDcaurwEy29Bk94eg1075l0Q&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsUmE6FMTWUnXwdX_vkq9XMe_6AIFuuBY_lQ&usqp=CAU",
     textColor: "#223247",
     borderThickness: "6px",
     borderColor: "#223347",
@@ -138,7 +138,7 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9iTjtrYlOkCwewoOOodDd-UzfZI6t-w3Ayw&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR45_ODTn_onImbQoe-tTKBkRV4jEBfRxhHynbwsxXjGe0_86QNYmoRzortR-KT_W1J8ss&usqp=CAU",
     textColor: "#223247",
     borderThickness: "4px",
     borderColor: "#223347",
@@ -154,7 +154,7 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFEdOGWCl2XyCAxD_pzARX98Swdft2_XB2zT-dCU4V8ovseWC5d5EVEi1bW4LHonanbIU&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvBqg3kiPCJMnwaPlY5Y2z05cNpL8qNkA2PA&usqp=CAU",
     textColor: "#223247",
     borderThickness: "6px",
     borderColor: "#90C56D",
@@ -170,7 +170,7 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY46bDjH2LeAM-zTiyngADD2TmlqpwAlwDyA&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-qOOPkDL-IyK6brdTwf4Mb04HnuHnYfpy_Q&usqp=CAU",
     textColor: "#223247",
     borderThickness: "6px",
     borderColor: "#223347",
@@ -185,8 +185,9 @@ const prizeWinners2019 = [
 
     isRouting: false,
     text: "",
+
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsUmE6FMTWUnXwdX_vkq9XMe_6AIFuuBY_lQ&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYInlcLz-tohmDcaurwEy29Bk94eg1075l0Q&usqp=CAU",
     textColor: "#223247",
     borderThickness: "6px",
     borderColor: "#8695A8",
@@ -202,7 +203,7 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJluDAJ6gcjqcL-abKSeS3i86hmysm2wqzJQ&usqp=CAU",
+      "https://media.istockphoto.com/id/1311084168/photo/overjoyed-pretty-asian-woman-look-at-camera-with-sincere-laughter.jpg?b=1&s=170667a&w=0&k=20&c=XPuGhP9YyCWquTGT-tUFk6TwI-HZfOr1jNkehKQ17g0=",
     textColor: "#223247",
     borderThickness: "4px",
     borderColor: "#223347",
@@ -218,7 +219,7 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvBqg3kiPCJMnwaPlY5Y2z05cNpL8qNkA2PA&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVPEAZg-ldRIW3nHgbJy0dRVDL_k9slPl-DQ&usqp=CAU",
     textColor: "#223247",
     borderThickness: "6px",
     borderColor: "#2CC7C9",
@@ -234,7 +235,7 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-qOOPkDL-IyK6brdTwf4Mb04HnuHnYfpy_Q&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY46bDjH2LeAM-zTiyngADD2TmlqpwAlwDyA&usqp=CAU",
     textColor: "#223247",
     borderThickness: "6px",
     borderColor: "#418BCA",
@@ -250,7 +251,7 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0iyowC4fQ3uuXPqmzhNwi1QVTCPEaY9FqmQ&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4qOdfNedJt9Icfqq2fz-wPUknAzb_JOfMRQ&usqp=CAU",
     textColor: "#223247",
     borderThickness: "4px",
     borderColor: "#223347",
@@ -266,7 +267,7 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVPEAZg-ldRIW3nHgbJy0dRVDL_k9slPl-DQ&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFEdOGWCl2XyCAxD_pzARX98Swdft2_XB2zT-dCU4V8ovseWC5d5EVEi1bW4LHonanbIU&usqp=CAU",
     textColor: "#223247",
     borderThickness: "4px",
     borderColor: "#223347",
@@ -282,7 +283,7 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp6QrT1cygiYFwpETqJHGoBCT4CWM3Pe_8xA&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHfHsJ0gRyl8LGr5W-V-dq3jKf-iUoOynafQ&usqp=CAU",
     textColor: "#223247",
     borderThickness: "4px",
     borderColor: "#223347",
@@ -298,7 +299,7 @@ const prizeWinners2019 = [
     isRouting: false,
     text: "",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3VnkfYbu3-Zu1i-sLcKw_GOdReK6wBcTikw&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoMB87KVcbBsZLvjXjcG_s9mijDAIiUI8hsw&usqp=CAU",
     textColor: "#223247",
     borderThickness: "4px",
     borderColor: "#223347",

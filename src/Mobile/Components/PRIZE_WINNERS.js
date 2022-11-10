@@ -3,14 +3,18 @@ import { useParams } from "react-router-dom";
 import DataDisplay from "./DataDisplay";
 import YearLine from "./YearLine";
 import prizeWinners2020 from "../Data/prizeWinners2020";
+import prizeWinners2019 from "../Data/prizeWinners2019";
 import Categories from "./Categories";
 import "./Styles/PrizeWinners.css";
 
 function Prize_Winners() {
-  const { year } = useParams();
+  let { year } = useParams();
+  if (!year) {
+    year = "2020";
+  }
   let prizeWinners;
   if (year === "2020") prizeWinners = prizeWinners2020;
-  // if(year===2019) prizeWinners = prizeWinners2019
+  else if (year === "2019") prizeWinners = prizeWinners2019;
   else prizeWinners = null;
   return (
     <>
@@ -21,7 +25,7 @@ function Prize_Winners() {
         bubbleOptions={{ numCols: 4 }}
         height={"600px"}
       />
-      <YearLine />
+      <YearLine selectedYear={parseInt(year)} />
     </>
   );
 }
