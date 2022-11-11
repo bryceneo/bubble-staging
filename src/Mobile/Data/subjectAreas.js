@@ -6,7 +6,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "History",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -20,7 +20,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Molecular Science",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -34,7 +34,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Migration Studies",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -48,7 +48,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Climate Science",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -67,7 +67,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Molecular Biology",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -81,7 +81,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Cross- Cultural Exchanges",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -95,7 +95,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Postcolonial Theory",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -114,7 +114,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Biophysics",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -128,7 +128,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Chemical Sensing",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -142,7 +142,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Strategic Studies",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -156,7 +156,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Chemistry",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -175,7 +175,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Biomedicine",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -203,7 +203,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Big Data",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -222,7 +222,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Art History",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -236,7 +236,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Structural Biology",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -250,7 +250,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Algorithmic Optimization",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -264,7 +264,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Earth Science",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -283,7 +283,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Bio- Technology",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -297,7 +297,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Compu- tational Neuroscience",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -311,7 +311,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Machine Learning",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -330,7 +330,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "History",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -344,7 +344,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Social & Cultural Studies",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -358,7 +358,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Computer Science",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
@@ -372,7 +372,7 @@ const subjectAreas = [
 
     isRouting: false,
     text: "Biophysics",
-    textColor: "#223247",
+    textColor: "#000000",
     borderThickness: "2px",
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
