@@ -12,6 +12,7 @@ function RangeLine({ selectedRange = 2, selectedColors }) {
           display: "flex",
           justifyContent: "center",
           textAlign: "center",
+          margin:"20px 0",
         }}
       >
         {rangeLine.map((range) => {

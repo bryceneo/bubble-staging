@@ -12,7 +12,7 @@ function YEAR_RANGES() {
       <DataDisplay
         data={yearRanges}
         bubbleOptions={{ numCols: 4 }}
-        height={"700px"}
+        height={"500px"}
       />
       <RangeLine selectedColors={{ color: "#FFFFFF", bgColor: "#14202E" }} />
     </>

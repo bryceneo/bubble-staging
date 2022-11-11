@@ -16,6 +16,7 @@ function YearLine({ selectedYear }) {
             paddingRight: "50px",
             direction: "rtl",
             overflow: "auto",
+            margin:"20px 0",
           }}
         >
           {yearLine.map((year) => {

@@ -12,7 +12,7 @@ function Subject_Areas() {
       <DataDisplay
         data={subjectAreas}
         bubbleOptions={{ numCols: 5 }}
-        height={"600px"}
+        height={"500px"}
       />
       <div className="text-center">
         <Categories />
