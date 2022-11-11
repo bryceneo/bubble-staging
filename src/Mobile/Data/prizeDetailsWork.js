@@ -145,7 +145,7 @@ const prizeDetailsWork = [
 
     isRouting: false,
     text: "Earth Science",
-    textColor: "#223247",
+    textColor: "#FFFFFF",
 
     borderColor: "#D2D2D2",
     backgroundColor: " #90C56D",
