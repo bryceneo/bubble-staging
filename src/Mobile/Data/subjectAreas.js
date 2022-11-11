@@ -25,7 +25,7 @@ const subjectAreas = [
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const subjectAreas = [
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ const subjectAreas = [
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     type: "empty",
@@ -72,7 +72,7 @@ const subjectAreas = [
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 6,
@@ -227,7 +227,7 @@ const subjectAreas = [
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 16,
@@ -269,7 +269,7 @@ const subjectAreas = [
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     type: "empty",
@@ -349,7 +349,7 @@ const subjectAreas = [
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 24,
@@ -363,7 +363,7 @@ const subjectAreas = [
     borderColor: "#D2D2D2",
     backgroundColor: " #C7C7C75E",
     scaleFactor: 1,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 25,
