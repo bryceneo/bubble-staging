@@ -23,7 +23,7 @@ function Prize_Winners() {
       <DataDisplay
         data={prizeWinners}
         bubbleOptions={{ numCols: 4 }}
-        height={"500px"}
+        height={"435px"}
       />
       <YearLine selectedYear={parseInt(year)} />
     </>
