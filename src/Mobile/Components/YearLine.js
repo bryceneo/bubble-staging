@@ -8,6 +8,10 @@ function YearLine({ selectedYear }) {
       <div
         style={{
           overflow: "hidden",
+          position: "absolute",
+          bottom: "0",
+          left: "0",
+          width: "100%",
         }}
       >
         <div

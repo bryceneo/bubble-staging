@@ -14,3 +14,6 @@
 .mob-bubbleui ._376IX{
   display: none;
 }
+.mob-bubbleui{
+  height: calc(100vh - 200px);
+}

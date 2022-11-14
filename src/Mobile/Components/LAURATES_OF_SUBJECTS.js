@@ -12,7 +12,7 @@ function Laurates_Of_Subjects() {
       <DataDisplay
         data={laureatesOfSubjects}
         bubbleOptions={{ numCols: 4 }}
-        height={"500px"}
+        height={"100%"}
       />
       <RangeLine selectedColors={{ color: "#14202E", bgColor: "#F1AC4D" }} />
     </>
