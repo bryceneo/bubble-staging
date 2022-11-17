@@ -42,7 +42,7 @@
 .years-scroll-item{
   position: relative;
     display: inline-block;
-    width: 55px;
+    width: 100%;
     text-align: left;
 }
 .swiper-slide-active span{

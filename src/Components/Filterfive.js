@@ -1,18 +1,18 @@
 import React, {
-  useState
-} from "react";
-import "./styles/Filters.css";
+    useState
+  } from "react";
+  import "./styles/Filters.css";
 
-function Filters() {
-  const [isOptionsOpen, setIsOptionsOpen] = useState(false);
+const Filterfive = () => {
+    const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
   const optionsList = [
-    "Select Category",
-    "Social Science",
-    "Physical Sciences",
-    "Mathematical Sciences",
-    "Life Sciences",
-    "Humanities"
+    "Select Year",
+    "2000",
+    "2001",
+    "2002",
+    "2003",
+    "2004"
   ];
   const toggleOptions = () => {
     setIsOptionsOpen(!isOptionsOpen);
@@ -32,9 +32,9 @@ function Filters() {
 };
   return (
     <div id="filters">
-       <div className="select-wrapper">
+      <div className="select-wrapper">
      
-     <span className="sort-label">Category</span>
+     <span className="sort-label">Year</span>
   <button id="select-btn"
       type="button"
       aria-haspopup="listbox"
@@ -52,17 +52,17 @@ function Filters() {
   >
   {optionsList.map((option, index) => (
       <li
-    id={option}
+      id={option}
           role="option"
           aria-selected={selectedOption == index}
           tabIndex={0}
           onKeyDown={handleKeyDown(index)}
           onClick={() => {
-        setSelectedOption(index);
+          setSelectedOption(index);
               setIsOptionsOpen(false);
           }}
       >
-    {option}
+      {option}
       </li>
   ))}
       
@@ -72,7 +72,7 @@ function Filters() {
      
       
     </div>
-  );
+  )
 }
 
-export default Filters;
+export default Filterfive

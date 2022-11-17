@@ -42,6 +42,7 @@ function ZoomBox({ SetZoom }) {
           <button className="zoom-out" onClick={decrement}>
             -
           </button>
+          <div className="input-range">
           <input
             type="range"
             max={3}
@@ -53,6 +54,18 @@ function ZoomBox({ SetZoom }) {
             // }
             onChange={handleChange}
           />
+            <div className="range-bars">
+            <span className="inner-bars"></span>
+            <span className="inner-bars"></span>
+            <span className="inner-bars"></span>
+            <span className="inner-bars"></span>
+            <span className="inner-bars"></span>
+            <span className="inner-bars"></span>
+            <span className="inner-bars"></span>
+          </div>
+          </div>
+         
+        
           {/* {count} */}
           <button className="zoom-in" onClick={increment}>
             +
