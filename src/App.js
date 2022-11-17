@@ -2,19 +2,30 @@ import Dashboard from "./Components/Dashboard";
 import Filters from "./Components/Filters";
 import Timeline from "./Components/Timeline";
 import { BrowserRouter } from "react-router-dom";
-import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import Mobile from "./Mobile/Mobile";
 
 function App() {
-  const [isMobile, setIsMobile] = useState(
-    useMediaQuery({ query: "(max-width: 1224px)" })
-  );
+  const useDesktopMediaQuery = () =>
+    useMediaQuery({ query: "(min-width: 769px)" });
+
+  const useMobileMediaQuery = () =>
+    useMediaQuery({ query: "(max-width: 768px)" });
+
+  const DesktopSize = ({ children }) => {
+    const isDesktop = useDesktopMediaQuery();
+
+    return isDesktop ? children : null;
+  };
+
+  const MobileSize = ({ children }) => {
+    const isMobile = useMobileMediaQuery();
+
+    return isMobile ? children : null;
+  };
   return (
     <>
-      {isMobile ? (
-        <Mobile />
-      ) : (
+      <DesktopSize>
         <>
           <div className="container">
             <BrowserRouter>
@@ -24,7 +35,10 @@ function App() {
             </BrowserRouter>
           </div>
         </>
-      )}
+      </DesktopSize>
+      <MobileSize>
+        <Mobile />
+      </MobileSize>
     </>
   );
 }

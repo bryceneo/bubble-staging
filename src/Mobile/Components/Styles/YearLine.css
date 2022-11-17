@@ -1,0 +1,19 @@
+.outer-div {
+  overflow: "hidden";
+}
+.inner-div {
+  display: "flex";
+  padding-right: "50px";
+  direction: "rtl";
+  overflow: "auto";
+}
+.year-link{
+  color: #707070;
+  text-decoration: none;
+}
+.mob-bubbleui ._376IX{
+  display: none;
+}
+.mob-bubbleui{
+  height: calc(100vh - 200px);
+}

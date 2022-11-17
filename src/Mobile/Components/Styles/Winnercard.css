@@ -1,0 +1,35 @@
+.winner-card{
+    background: #223247;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+.winner-empname{
+    font-family: "Poppins-SemiBold";
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 0.9;
+    padding: 12px 0;
+}
+.winner-sub{
+    font-size: 14px;
+}
+.view-profile{
+    font-size: 12px;
+    padding: 10px 0;
+    position: relative;
+    display: inline-block;
+}
+.view-profile:after {
+    content: "\f061";
+    position: absolute;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    right: -16px;
+    cursor: pointer;
+}
+.sub-active{
+    background-color: #F1AC4D;
+    padding: 5px;
+    border-radius: 4px;
+}
