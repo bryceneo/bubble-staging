@@ -1,5 +1,5 @@
 input[type="range"] {
-  width: 70%;
+  width: 100%;
   height: 0.5px;
   -webkit-appearance: none;
   appearance: none;
@@ -20,6 +20,7 @@ input[type="range"]::-webkit-slider-thumb {
   align-items: center;
   justify-content: space-between;
   display: flex;
+  gap: 5px;
 }
 .zoom-box {
   padding: 22px 10px;
@@ -49,4 +50,37 @@ input[type="range"]::-webkit-slider-thumb {
   background: #fff;
   border-radius: 4px;
   font-size: 14px;
+}
+.input-range{
+  position: relative;
+}
+.input-range span.inner-bars {
+  height: 10px;
+  width: 1px;
+  background: #38383861;
+  display: block;
+  position: absolute;
+  top: 13px;
+  z-index: -1;
+}
+.input-range span.inner-bars:nth-child(1){
+  left: 3px;
+}
+.input-range span.inner-bars:nth-child(2){
+  left: 20px;
+}
+.input-range span.inner-bars:nth-child(3){
+  left: 40px;
+}
+.input-range span.inner-bars:nth-child(4){
+  left: 60px;
+}
+.input-range span.inner-bars:nth-child(5){
+  left: 80px;
+}
+.input-range span.inner-bars:nth-child(6){
+  left: 100px;
+}
+.input-range span.inner-bars:nth-child(7){
+  left: 117px;
 }

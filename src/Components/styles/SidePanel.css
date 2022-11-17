@@ -1,9 +1,8 @@
 #sidePanel {
-  /* display: flex; */
   direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 2em; */
-  /* width: 6em; */
+max-width: 240px;
+  width: 100%;
   border-right: 1px solid #dbdada;
 }

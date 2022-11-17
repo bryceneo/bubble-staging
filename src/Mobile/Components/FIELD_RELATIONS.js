@@ -14,7 +14,7 @@ function Field_Relations() {
       <DataDisplay
         data={fieldRelations}
         bubbleOptions={{ numCols: 5 }}
-        height={"500px"}
+        height={"100%"}
       />
       <Categories />
       <Link to={"/year-ranges/2016-2020"}>
