@@ -8,6 +8,7 @@ import Timeline from "./Components/Timeline";
 import { BrowserRouter } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import Mobile from "./Mobile/Mobile";
+import FilterMain from "./Components/FilterMain";
 
 function App() {
   const useDesktopMediaQuery = () =>
@@ -31,34 +32,34 @@ function App() {
     <>
       <DesktopSize>
         <>
-        <div className="filter-header">
-        <div className="container-fluid">
-        <div className="container">
-        <div className="row align-items-center">
-             <div className="col-lg-10">
-              <div className="main-wrapper-filter d-flex">
-               <Filters />
+          <div className="filter-header">
+            <div className="container-fluid">
+              <div className="container">
+                <div className="row align-items-center">
+                  <div className="col-lg-10">
+                    <div className="main-wrapper-filter d-flex">
+                      {/* <Filters />
                <Filtertwo></Filtertwo>
                <Filterthree></Filterthree>
                <Filterfour></Filterfour>
                <Filterfive></Filterfive>
-          
+           */}
+
+                      <FilterMain />
+                    </div>
+                  </div>
+                  <div className="col-lg-2 text-end pt-3">
+                    <a href="#" className="clear-filter">
+                      Clear Filter
+                    </a>
+                  </div>
+                </div>
               </div>
-             </div>
-             <div className="col-lg-2 text-end pt-3" >
-             <a href="#" className="clear-filter">Clear Filter</a>
-             </div>
-             
             </div>
-        </div>
-        </div>
-        </div>
-        
+          </div>
+
           <div className="container">
             <BrowserRouter>
-           
-            
-             
               <Timeline />
               <Dashboard />
             </BrowserRouter>
