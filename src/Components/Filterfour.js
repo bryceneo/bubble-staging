@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles/Filters.css";
 
-const Filterfour = () => {
+const Filterfour = ({ switchBoard, setSwitchBoard }) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
   const optionsList = [
@@ -12,8 +12,24 @@ const Filterfour = () => {
     "Life Sciences",
     "Humanities",
   ];
+  useEffect(() => {
+    if (switchBoard == "00010") {
+      setIsOptionsOpen(true);
+      // console.log("First is on");
+    } else {
+      setIsOptionsOpen(false);
+      // console.log("First is off");
+    }
+  }, [switchBoard]);
   const toggleOptions = () => {
-    setIsOptionsOpen(!isOptionsOpen);
+    // setIsOptionsOpen(true);
+    if (switchBoard == "00010") {
+      setSwitchBoard("00000");
+      // console.log("reseting switch board");
+    } else {
+      setSwitchBoard("00010");
+      // console.log("setting Switch board for first");
+    }
   };
   const handleKeyDown = (index) => (e) => {
     switch (e.key) {
@@ -51,6 +67,7 @@ const Filterfour = () => {
           {optionsList.map((option, index) => (
             <li
               id={option}
+              key={index}
               role="option"
               aria-selected={selectedOption == index}
               tabIndex={0}

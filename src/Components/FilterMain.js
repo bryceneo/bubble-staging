@@ -11,9 +11,9 @@ const FilterMain = () => {
     <>
       <Filters switchBoard={switchBoard} setSwitchBoard={setSwitchBoard} />
       <Filtertwo switchBoard={switchBoard} setSwitchBoard={setSwitchBoard} />
-      <Filterthree switchBoard={[switchBoard, setSwitchBoard]} />
-      <Filterfour switchBoard={[switchBoard, setSwitchBoard]} />
-      <Filterfive switchBoard={[switchBoard, setSwitchBoard]} />
+      <Filterthree switchBoard={switchBoard} setSwitchBoard={setSwitchBoard} />
+      <Filterfour switchBoard={switchBoard} setSwitchBoard={setSwitchBoard} />
+      <Filterfive switchBoard={switchBoard} setSwitchBoard={setSwitchBoard} />
     </>
   );
 };

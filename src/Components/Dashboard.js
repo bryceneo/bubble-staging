@@ -7,7 +7,7 @@ import Grapher from "./Grapher";
 
 function Dashboard() {
   const [zoom, SetZoom] = useState(100);
-  console.log(zoom);
+  // console.log(zoom);
 
   return (
     <>

@@ -9,20 +9,20 @@ function Filters({ switchBoard, setSwitchBoard }) {
   useEffect(() => {
     if (switchBoard == "10000") {
       setIsOptionsOpen(true);
-      console.log("First is on");
+      // console.log("First is on");
     } else {
       setIsOptionsOpen(false);
-      console.log("First is off");
+      // console.log("First is off");
     }
-  }, switchBoard);
+  }, [switchBoard]);
   const toggleOptions = () => {
     // setIsOptionsOpen(true);
     if (switchBoard == "10000") {
       setSwitchBoard("00000");
-      console.log("reseting switch board");
+      // console.log("reseting switch board");
     } else {
       setSwitchBoard("10000");
-      console.log("setting Switch board for first");
+      // console.log("setting Switch board for first");
     }
   };
   const optionsList = [
@@ -71,6 +71,7 @@ function Filters({ switchBoard, setSwitchBoard }) {
         >
           {optionsList.map((option, index) => (
             <li
+              key={index}
               id={option}
               role="option"
               aria-selected={selectedOption == index}

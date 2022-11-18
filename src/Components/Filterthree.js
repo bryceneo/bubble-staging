@@ -13,18 +13,22 @@ const Filterthree = ({ switchBoard, setSwitchBoard }) => {
     " Anthropology ",
   ];
   useEffect(() => {
-    if (switchBoard === [0, 0, 1, 0, 0]) {
+    if (switchBoard == "00100") {
       setIsOptionsOpen(true);
+      // console.log("three is on");
     } else {
       setIsOptionsOpen(false);
+      // console.log("three is off");
     }
-  }, switchBoard);
+  }, [switchBoard]);
   const toggleOptions = () => {
     // setIsOptionsOpen(true);
-    if (switchBoard === [0, 0, 1, 0, 0]) {
-      setSwitchBoard([0, 0, 0, 0, 0]);
+    if (switchBoard == "00100") {
+      setSwitchBoard("00000");
+      // console.log("reseting switch board");
     } else {
-      setSwitchBoard([0, 0, 1, 0, 0]);
+      setSwitchBoard("00100");
+      // console.log("setting Switch board for first");
     }
   };
   // const toggleOptions = () => {
@@ -66,6 +70,7 @@ const Filterthree = ({ switchBoard, setSwitchBoard }) => {
           {optionsList.map((option, index) => (
             <li
               id={option}
+              key={index}
               role="option"
               aria-selected={selectedOption == index}
               tabIndex={0}
