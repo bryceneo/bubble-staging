@@ -5,20 +5,22 @@ const Filtertwo = ({ switchBoard, setSwitchBoard }) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
   useEffect(() => {
-    if (switchBoard === [0, 1, 0, 0, 0]) {
+    if (switchBoard == "01000") {
       setIsOptionsOpen(true);
+      console.log("First is on");
     } else {
       setIsOptionsOpen(false);
+      console.log("First is off");
     }
   }, switchBoard);
   const toggleOptions = () => {
-    // setIsOptionsOpen(!isOptionsOpen);
-    // setSwitchBoard([0, 1, 0, 0, 0]);
-
-    if (switchBoard === [0, 1, 0, 0, 0]) {
-      setSwitchBoard([0, 0, 0, 0, 0]);
+    // setIsOptionsOpen(true);
+    if (switchBoard == "01000") {
+      setSwitchBoard("00000");
+      console.log("reseting switch board");
     } else {
-      setSwitchBoard([0, 1, 0, 0, 0]);
+      setSwitchBoard("01000");
+      console.log("setting Switch board for first");
     }
   };
   const optionsList = [
@@ -39,7 +41,8 @@ const Filtertwo = ({ switchBoard, setSwitchBoard }) => {
       case "Enter":
         e.preventDefault();
         setSelectedOption(index);
-        setIsOptionsOpen(false);
+        setSwitchBoard("00000");
+        // setIsOptionsOpen(false);
         break;
       default:
         break;
@@ -74,7 +77,8 @@ const Filtertwo = ({ switchBoard, setSwitchBoard }) => {
               onKeyDown={handleKeyDown(index)}
               onClick={() => {
                 setSelectedOption(index);
-                setIsOptionsOpen(false);
+                setSwitchBoard("00000");
+                // setIsOptionsOpen(false);
               }}
             >
               {option}

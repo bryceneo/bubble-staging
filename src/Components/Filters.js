@@ -7,20 +7,22 @@ function Filters({ switchBoard, setSwitchBoard }) {
   const [selectedOption, setSelectedOption] = useState(0);
 
   useEffect(() => {
-    if (switchBoard === [1, 0, 0, 0, 0]) {
+    if (switchBoard == "10000") {
       setIsOptionsOpen(true);
-      console.log("on first");
+      console.log("First is on");
     } else {
       setIsOptionsOpen(false);
-      console.log("off first");
+      console.log("First is off");
     }
   }, switchBoard);
   const toggleOptions = () => {
     // setIsOptionsOpen(true);
-    if (switchBoard === [1, 0, 0, 0, 0]) {
-      setSwitchBoard([0, 0, 0, 0, 0]);
+    if (switchBoard == "10000") {
+      setSwitchBoard("00000");
+      console.log("reseting switch board");
     } else {
-      setSwitchBoard([1, 0, 0, 0, 0]);
+      setSwitchBoard("10000");
+      console.log("setting Switch board for first");
     }
   };
   const optionsList = [
@@ -39,7 +41,8 @@ function Filters({ switchBoard, setSwitchBoard }) {
       case "Enter":
         e.preventDefault();
         setSelectedOption(index);
-        setIsOptionsOpen(false);
+        setSwitchBoard("00000");
+        // setIsOptionsOpen(false);
         break;
       default:
         break;
@@ -76,6 +79,7 @@ function Filters({ switchBoard, setSwitchBoard }) {
               onClick={() => {
                 setSelectedOption(index);
                 // setIsOptionsOpen(false);
+                setSwitchBoard("00000");
               }}
             >
               {option}

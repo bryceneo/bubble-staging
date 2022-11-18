@@ -6,10 +6,7 @@ import Filterthree from "./Filterthree";
 import Filtertwo from "./Filtertwo";
 
 const FilterMain = () => {
-  const [switchBoard, setSwitchBoard] = useState([0, 0, 0, 0, 0]);
-  //   useEffect(() => {
-  //     return setSwitchBoard(0);
-  //   }, [switchBoard]);
+  const [switchBoard, setSwitchBoard] = useState("00000");
   return (
     <>
       <Filters switchBoard={switchBoard} setSwitchBoard={setSwitchBoard} />
