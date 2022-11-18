@@ -4,6 +4,7 @@
   align-items: center;
   padding: 20px 10px 0 10px;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .filter {
@@ -23,8 +24,9 @@
   background: #F1AC4D;
   border: 1px solid #F1AC4D;
   border-radius: 10px;
-  top: 3px;
+  top: 50%;
   left: 4px;
+  transform: translateY(-50%);
 }
 #instaFilters .filter:nth-child(2):before{
   background: #ffffff;

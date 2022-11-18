@@ -6,6 +6,7 @@
 .main-wrapper-filter {
   justify-content: space-between;
   gap: 30px;
+  align-items: center;
 }
 #filters {
   height: 5em;
@@ -74,7 +75,7 @@ ul.options li {
 }
 ul.options li:active,
 ul.options li[aria-selected="true"] {
-  background: #8695a8;
+  background: #223247;
   cursor: pointer;
   color: #fff;
 }
@@ -93,4 +94,11 @@ ul.options li[aria-selected="true"] {
     padding-bottom: 1px;
     font-size: 12px;
   }
+}
+@media screen  and (max-width:992px){
+  .main-wrapper-filter {
+    gap: 0px 18px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
 }
