@@ -49,11 +49,11 @@
 }
 
 ul.options {
-  border: 1px solid #a3a7ab;
+  box-shadow: 0px 3px 6px #00000029;
   display: none;
-  background: #f6f6f6;
+  background: #fff;
   list-style: none;
-  padding: 4px 0;
+  padding: 0;
   margin-top: -4px;
   position: absolute;
   z-index: 3;
@@ -65,14 +65,18 @@ ul.show {
 
 ul.options li {
   padding: 6px 10px;
+  font-size: 13px;
 }
-
-ul.options li:active,
-ul.options li:focus,
-ul.options li:hover,
-ul.options li[aria-selected="true"] {
-  background: #8695A8;
+ ul.options li:focus, ul.options li:hover{
+  background: #efefef;
   cursor: pointer;
+  color: #000;
+}
+ul.options li:active,
+ul.options li[aria-selected="true"] {
+  background: #223247;
+  cursor: pointer;
+  color: #fff;
 }
 .clear-filter{
   padding: 10px 15px;
@@ -80,4 +84,13 @@ ul.options li[aria-selected="true"] {
   color: #fff;
   font-size: 12px;
   text-decoration: none;
+}
+.clear-filter:hover{
+  color: #fff;
+}
+@media  screen and (max-width:1024px) {
+  #select-btn{
+    padding-bottom: 1px;
+    font-size: 12px;
+  }
 }
