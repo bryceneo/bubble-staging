@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function FilterModal() {
   const [modalPage, setModalPage] = useState("filter");
@@ -10,6 +10,8 @@ function FilterModal() {
     { id: 5, name: "Physical Sciences" },
     { id: 6, name: "Social Sciences" },
   ];
+
+  const [categorySelection, setCategorySelection] = useState(0);
 
   if (modalPage === "filter") {
     return (
@@ -86,7 +88,13 @@ function FilterModal() {
             ))}
           </ul>
           <button className="view-btn d-block w-100 mt-4 "> Choose</button>
-          <button className="reset-filter d-block"> Cancel</button>
+          <button
+            className="reset-filter d-block"
+            onClick={() => setCategorySelection(0)}
+          >
+            {" "}
+            Cancel
+          </button>
         </div>
       </>
     );
