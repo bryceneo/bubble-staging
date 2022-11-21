@@ -54,7 +54,7 @@ ul.options {
   display: none;
   background: #fff;
   list-style: none;
-  padding: 0;
+  padding: 10px 4px;
   margin-top: -4px;
   position: absolute;
   z-index: 3;
@@ -67,28 +67,32 @@ ul.show {
 
 ul.options li {
   padding: 6px 10px;
-  font-size: 13px;
+  font-size: 12px;
 }
  ul.options li:focus, ul.options li:hover{
   background: #efefef;
   cursor: pointer;
   color: #000;
 }
-ul.options li:active,
+/* ul.options li:active,
 ul.options li[aria-selected="true"] {
   background: #223247;
   cursor: pointer;
   color: #fff;
-}
+} */
 .clear-filter {
   padding: 10px 15px;
+  border: 1px solid #223247;
   background-color: #223247;
   color: #fff;
   font-size: 12px;
   text-decoration: none;
+  transition: ease-out all 0.3s;
 }
-.clear-filter:hover{
-  color: #fff;
+.clear-filter:hover {
+  color: #223247;
+  background: transparent;
+  border: 1px solid #223247;
 }
 @media  screen and (max-width:1024px) {
   #select-btn{
