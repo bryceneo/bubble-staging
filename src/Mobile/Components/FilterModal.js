@@ -2,6 +2,15 @@ import React, { useState } from "react";
 
 function FilterModal() {
   const [modalPage, setModalPage] = useState("filter");
+  const categoryObj = [
+    { id: 1, name: "Social Sciences" },
+    { id: 2, name: "Humanities" },
+    { id: 3, name: "Life Sciences" },
+    { id: 4, name: "Mathematical Sciences" },
+    { id: 5, name: "Physical Sciences" },
+    { id: 6, name: "Social Sciences" },
+  ];
+
   if (modalPage === "filter") {
     return (
       <>
@@ -45,41 +54,39 @@ function FilterModal() {
     return (
       <>
         <div>
-          <div onClick={() => setModalPage("filter")}> <i class="fas fa-arrow-left"></i></div>
-         
+          <div onClick={() => setModalPage("filter")}>
+            {" "}
+            <i class="fas fa-arrow-left"></i>
+          </div>
+
           <div class="modal-title">
             <span class="modal-heading">Category</span>
             <span class="results">12 Results available</span>
-            </div>
-            <input class="form-control me-2" type="search" placeholder="Enter Keywords to Search" aria-label="Search"/>
-         
+          </div>
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Enter Keywords to Search"
+            aria-label="Search"
+          />
+
           <ul className="child-categories pt-3 ps-0">
-           <li>
-            <input id="radio-1" class="radio-custom" name="radio-group" type="radio" />
-            <label for="radio-1" class="radio-custom-label">Engineering & Computer Science</label>
-        </li> 
-           <li>
-           <input id="radio-2" class="radio-custom" name="radio-group" type="radio"/>
-            <label for="radio-2" class="radio-custom-label">Humanities</label>
-            </li>
-           <li>
-           <input id="radio-3" class="radio-custom" name="radio-group" type="radio"/>
-            <label for="radio-3" class="radio-custom-label">Life Sciences</label>
-            </li>
-           <li>
-           <input id="radio-4" class="radio-custom" name="radio-group" type="radio"/>
-            <label for="radio-4" class="radio-custom-label"> Mathematical Sciences</label>
-           </li>
-           <li>
-           <input id="radio-5" class="radio-custom" name="radio-group" type="radio"/>
-            <label for="radio-5" class="radio-custom-label"> Physical Sciences</label>
-           </li>
-           <li>
-           <input id="radio-6" class="radio-custom" name="radio-group" type="radio"/>
-            <label for="radio-6" class="radio-custom-label"> Social Sciences</label> </li>
+            {categoryObj.map((cat) => (
+              <li>
+                <input
+                  id="radio-1"
+                  class="radio-custom"
+                  name="radio-group"
+                  type="radio"
+                />
+                <label for="radio-1" class="radio-custom-label">
+                  {cat.name}
+                </label>
+              </li>
+            ))}
           </ul>
           <button className="view-btn d-block w-100 mt-4 "> Choose</button>
-        <button className="reset-filter d-block"> Cancel</button>
+          <button className="reset-filter d-block"> Cancel</button>
         </div>
       </>
     );
