@@ -90,10 +90,10 @@ function Grapher() {
     setRef(ref);
   }, []);
   return (
-    <>
+    <div className="graph-wrapper w-100 text-center">
       {/* <button onClick={resetNodesPositions}>Reset Nodes</button> */}
       <Graph id="test" data={data} config={config} ref={handleRefChange} />
-    </>
+    </div>
   );
 }
 
