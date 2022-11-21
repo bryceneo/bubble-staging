@@ -14,7 +14,7 @@ const FilterMain = () => {
     } else {
       setClearVisible(true);
     }
-    // console.log("swithboard:", switchBoard, "isClearVisible:", isClearVisible);
+    console.log("swithboard:", switchBoard, "isClearVisible:", isClearVisible);
   }, [switchBoard]);
 
   const handleClear = () => {

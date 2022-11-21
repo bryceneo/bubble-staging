@@ -81,8 +81,8 @@ const Filtertwo = ({ switchBoard, setSwitchBoard }) => {
               onKeyDown={handleKeyDown(index)}
               onClick={() => {
                 setSelectedOption(index);
-                setSwitchBoard("00000");
-                // setIsOptionsOpen(false);
+                // setSwitchBoard("00000");
+                setIsOptionsOpen(false);
               }}
             >
               {option}

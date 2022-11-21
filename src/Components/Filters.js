@@ -45,7 +45,7 @@ function Filters({ switchBoard, setSwitchBoard }) {
         e.preventDefault();
         setSelectedOption(index);
         setSwitchBoard("00000");
-        setIsOptionsOpen(false);
+        // setIsOptionsOpen(false);
         break;
       default:
         break;
@@ -82,8 +82,8 @@ function Filters({ switchBoard, setSwitchBoard }) {
               onKeyDown={handleKeyDown(index)}
               onClick={() => {
                 setSelectedOption(index);
-                // setIsOptionsOpen(false);
-                setSwitchBoard("00000");
+                // setSwitchBoard("00000");
+                setIsOptionsOpen(false);
               }}
             >
               {option}
