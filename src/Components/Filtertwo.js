@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./styles/Filters.css";
 
-const Filtertwo = ({ switchBoard, setSwitchBoard }) => {
+const Filtertwo = ({
+  switchBoard,
+  setSwitchBoard,
+  isClearVisible,
+  setClearVisible,
+}) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
   useEffect(() => {
