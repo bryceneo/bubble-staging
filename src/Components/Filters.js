@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./styles/Filters.css";
 
-function Filters({
-  switchBoard,
-  setSwitchBoard,
-  isClearVisible,
-  setClearVisible,
-}) {
+function Filters({ switchBoard, setSwitchBoard }) {
   // console.log(switchBoard, setSwitchBoard, "hii");
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
@@ -18,6 +13,9 @@ function Filters({
     } else {
       setIsOptionsOpen(false);
       // console.log("First is off");
+    }
+    if (switchBoard == "00000") {
+      setSelectedOption(0);
     }
   }, [switchBoard]);
   const toggleOptions = () => {
@@ -47,7 +45,7 @@ function Filters({
         e.preventDefault();
         setSelectedOption(index);
         setSwitchBoard("00000");
-        // setIsOptionsOpen(false);
+        setIsOptionsOpen(false);
         break;
       default:
         break;

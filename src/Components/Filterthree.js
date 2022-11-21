@@ -20,6 +20,9 @@ const Filterthree = ({ switchBoard, setSwitchBoard }) => {
       setIsOptionsOpen(false);
       // console.log("three is off");
     }
+    if (switchBoard == "00000") {
+      setSelectedOption(0);
+    }
   }, [switchBoard]);
   const toggleOptions = () => {
     // setIsOptionsOpen(true);
