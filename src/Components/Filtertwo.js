@@ -17,6 +17,9 @@ const Filtertwo = ({
       setIsOptionsOpen(false);
       // console.log("First is off");
     }
+    if (switchBoard == "00000") {
+      setSelectedOption(0);
+    }
   }, [switchBoard]);
   const toggleOptions = () => {
     // setIsOptionsOpen(true);

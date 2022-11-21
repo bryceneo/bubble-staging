@@ -7,14 +7,19 @@ import Filtertwo from "./Filtertwo";
 
 const FilterMain = () => {
   const [switchBoard, setSwitchBoard] = useState("00000");
-  const [isClearVisible, setClearVisible] = useState("00000");
-  const isVisible = () => {
-    console.log("hii");
-  };
+  const [isClearVisible, setClearVisible] = useState(true);
   useEffect(() => {
-    if (isClearVisible === "00000") {
+    if (switchBoard != "00000") {
+      setClearVisible(false);
+    } else {
+      setClearVisible(true);
     }
-  });
+    console.log("swithboard:", switchBoard, "isClearVisible:", isClearVisible);
+  }, [switchBoard]);
+
+  const handleClear = () => {
+    setSwitchBoard("00000");
+  };
 
   return (
     <>
@@ -50,7 +55,11 @@ const FilterMain = () => {
       />
 
       <div className="col-lg-2 text-end">
-        <button className="clear-filter" onClick={isVisible}>
+        <button
+          className="clear-filter"
+          hidden={isClearVisible}
+          onClick={handleClear}
+        >
           Clear Filter
         </button>
       </div>
