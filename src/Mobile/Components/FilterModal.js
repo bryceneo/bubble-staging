@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function FilterModal() {
   const [modalPage, setModalPage] = useState("filter");
+  const [categorySelection, setCategorySelection] = useState(0);
+
   if (modalPage === "filter") {
     return (
       <>
@@ -45,41 +47,101 @@ function FilterModal() {
     return (
       <>
         <div>
-          <div onClick={() => setModalPage("filter")}> <i class="fas fa-arrow-left"></i></div>
-         
+          <div onClick={() => setModalPage("filter")}>
+            {" "}
+            <i class="fas fa-arrow-left"></i>
+          </div>
+
           <div class="modal-title">
             <span class="modal-heading">Category</span>
             <span class="results">12 Results available</span>
-            </div>
-            <input class="form-control me-2" type="search" placeholder="Enter Keywords to Search" aria-label="Search"/>
-         
+          </div>
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Enter Keywords to Search"
+            aria-label="Search"
+          />
+
           <ul className="child-categories pt-3 ps-0">
-           <li>
-            <input id="radio-1" class="radio-custom" name="radio-group" type="radio" />
-            <label for="radio-1" class="radio-custom-label">Engineering & Computer Science</label>
-        </li> 
-           <li>
-           <input id="radio-2" class="radio-custom" name="radio-group" type="radio"/>
-            <label for="radio-2" class="radio-custom-label">Humanities</label>
+            <li onClick={() => setCategorySelection(1)}>
+              <input
+                id="radio-1"
+                class="radio-custom"
+                name="radio-group"
+                type="radio"
+              />
+              <label for="radio-1" class="radio-custom-label">
+                Engineering & Computer Science
+              </label>
             </li>
-           <li>
-           <input id="radio-3" class="radio-custom" name="radio-group" type="radio"/>
-            <label for="radio-3" class="radio-custom-label">Life Sciences</label>
+            <li onClick={() => setCategorySelection(2)}>
+              <input
+                id="radio-2"
+                class="radio-custom"
+                name="radio-group"
+                type="radio"
+              />
+              <label for="radio-2" class="radio-custom-label">
+                Humanities
+              </label>
             </li>
-           <li>
-           <input id="radio-4" class="radio-custom" name="radio-group" type="radio"/>
-            <label for="radio-4" class="radio-custom-label"> Mathematical Sciences</label>
-           </li>
-           <li>
-           <input id="radio-5" class="radio-custom" name="radio-group" type="radio"/>
-            <label for="radio-5" class="radio-custom-label"> Physical Sciences</label>
-           </li>
-           <li>
-           <input id="radio-6" class="radio-custom" name="radio-group" type="radio"/>
-            <label for="radio-6" class="radio-custom-label"> Social Sciences</label> </li>
+            <li onClick={() => setCategorySelection(3)}>
+              <input
+                id="radio-3"
+                class="radio-custom"
+                name="radio-group"
+                type="radio"
+              />
+              <label for="radio-3" class="radio-custom-label">
+                Life Sciences
+              </label>
+            </li>
+            <li onClick={() => setCategorySelection(4)}>
+              <input
+                id="radio-4"
+                class="radio-custom"
+                name="radio-group"
+                type="radio"
+              />
+              <label for="radio-4" class="radio-custom-label">
+                {" "}
+                Mathematical Sciences
+              </label>
+            </li>
+            <li onClick={() => setCategorySelection(5)}>
+              <input
+                id="radio-5"
+                class="radio-custom"
+                name="radio-group"
+                type="radio"
+              />
+              <label for="radio-5" class="radio-custom-label">
+                {" "}
+                Physical Sciences
+              </label>
+            </li>
+            <li onClick={() => setCategorySelection(6)}>
+              <input
+                id="radio-6"
+                class="radio-custom"
+                name="radio-group"
+                type="radio"
+              />
+              <label for="radio-6" class="radio-custom-label">
+                {" "}
+                Social Sciences
+              </label>{" "}
+            </li>
           </ul>
           <button className="view-btn d-block w-100 mt-4 "> Choose</button>
-        <button className="reset-filter d-block"> Cancel</button>
+          <button
+            className="reset-filter d-block"
+            onClick={() => setCategorySelection(0)}
+          >
+            {" "}
+            Cancel
+          </button>
         </div>
       </>
     );
