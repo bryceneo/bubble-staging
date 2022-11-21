@@ -76,12 +76,13 @@ function FilterModal() {
             {categoryObj.map((cat) => (
               <li>
                 <input
-                  id="radio-1"
+                  id={`radio-${cat.id}`}
                   class="radio-custom"
                   name="radio-group"
                   type="radio"
+                  onClick={() => setCategorySelection(cat.id)}
                 />
-                <label for="radio-1" class="radio-custom-label">
+                <label for={`radio-${cat.id}`} class="radio-custom-label">
                   {cat.name}
                 </label>
               </li>
