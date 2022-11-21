@@ -14,13 +14,13 @@ function YearLine({ selectedYear }) {
           width: "100%",
         }}
       >
-        <div
+        <div className="yearline-mob"
           style={{
             display: "flex",
             paddingRight: "50px",
             direction: "rtl",
             overflow: "auto",
-            margin:"20px 0",
+            padding:"10px 0",
             background: "#f6f6f6"
           }}
         >
