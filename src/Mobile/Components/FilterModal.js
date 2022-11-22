@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 function FilterModal({
   selectedCategory,
   setSelectedCategory,
+  selectedFieldOfStudy,
+  setSelectedFieldOfStudy,
   setIsModalOpen,
 }) {
   const [modalPage, setModalPage] = useState("filter");
@@ -14,8 +16,17 @@ function FilterModal({
     { id: 5, name: "Physical Sciences" },
     { id: 6, name: "Social Sciences" },
   ];
+  const filterObj = [
+    { id: 1, name: "Social Sciences" },
+    { id: 2, name: "Humanities" },
+    { id: 3, name: "Life Sciences" },
+    { id: 4, name: "Mathematical Sciences" },
+    { id: 5, name: "Physical Sciences" },
+    { id: 6, name: "Social Sciences" },
+  ];
   const handleResetFilter = () => {
     setSelectedCategory(0);
+    setSelectedFieldOfStudy(0);
     setIsModalOpen(false);
   };
   const handleApplyFilter = () => {
@@ -23,9 +34,15 @@ function FilterModal({
   };
 
   const [categorySelection, setCategorySelection] = useState(selectedCategory);
+  const [fieldOfStudySelection, setFieldOfStudySelection] =
+    useState(selectedFieldOfStudy);
   console.log("categorySelection", categorySelection);
   const handleCategoryChoose = () => {
     setSelectedCategory(categorySelection);
+    setIsModalOpen(false);
+  };
+  const handleFieldOfStudyChoose = () => {
+    setSelectedFieldOfStudy(fieldOfStudySelection);
     setIsModalOpen(false);
   };
   const handleCancel = () => {
@@ -46,12 +63,21 @@ function FilterModal({
           <p className="m-0">Category</p>
           <span className="category-span d-block">
             {" "}
-            Engineering and Computer Science
+            {selectedCategory
+              ? categoryObj[selectedCategory - 1].name
+              : undefined}
           </span>
         </div>
-        <div className="category pt-4 pb-4">
+        <div
+          className="category pt-4 pb-4"
+          onClick={() => setModalPage("fieldOfStudy")}
+        >
           <p className="m-0">Field of Study</p>
-          <span className="category-span d-block">Anthropology</span>
+          <span className="category-span d-block">
+            {selectedFieldOfStudy
+              ? categoryObj[selectedFieldOfStudy - 1].name
+              : undefined}
+          </span>
         </div>
         <div className="category pt-4 pb-4">
           <p className="m-0">Major Body of Work</p>
@@ -118,6 +144,58 @@ function FilterModal({
           <button
             className="view-btn d-block w-100 mt-4 "
             onClick={handleCategoryChoose}
+          >
+            {" "}
+            Choose
+          </button>
+          <button className="reset-filter d-block" onClick={handleCancel}>
+            {" "}
+            Cancel
+          </button>
+        </div>
+      </>
+    );
+  }
+  if (modalPage === "fieldOfStudy") {
+    return (
+      <>
+        <div>
+          <div onClick={() => setModalPage("filter")}>
+            {" "}
+            <i class="fas fa-arrow-left"></i>
+          </div>
+
+          <div class="modal-title">
+            <span class="modal-heading">Field Of Study</span>
+            <span class="results">12 Results available</span>
+          </div>
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Enter Keywords to Search"
+            aria-label="Search"
+          />
+
+          <ul className="child-categories pt-3 ps-0">
+            {filterObj.map((filter) => (
+              <li>
+                <input
+                  id={`radio-${filter.id}`}
+                  class="radio-custom"
+                  name="radio-group"
+                  type="radio"
+                  checked={fieldOfStudySelection == filter.id}
+                  onClick={() => setFieldOfStudySelection(filter.id)}
+                />
+                <label for={`radio-${filter.id}`} class="radio-custom-label">
+                  {filter.name}
+                </label>
+              </li>
+            ))}
+          </ul>
+          <button
+            className="view-btn d-block w-100 mt-4 "
+            onClick={handleFieldOfStudyChoose}
           >
             {" "}
             Choose
