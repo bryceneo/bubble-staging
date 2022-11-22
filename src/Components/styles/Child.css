@@ -1,0 +1,45 @@
+.emp-popup{
+    background: #fff;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #70707099;
+    padding: 15px 10px;
+    position: absolute;
+    border-radius: 5px;
+    top: -70px;
+    z-index: 1;
+    width: auto;
+}
+.emp-popup:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: -0.5em;
+    bottom: -20px;
+    left: 50%;
+    box-sizing: border-box;
+    border: 1em solid black;
+    border-color: transparent transparent #fff #fff;
+    transform-origin: 0 0;
+    transform: rotate(-45deg);
+    box-shadow: -3px 3px 3px 0 #00000029;
+    z-index: 11;
+}
+.emp-pop-name{
+    font-size: 16px;
+    font-family: 'Poppins-Semibold';
+    font-weight: 600;
+    line-height: 0.9;
+}
+.emp-pop-des{
+    color: #727272;
+    font-size: 14px;
+}
+.emp-pop-info{
+    color: #223247;
+    font-size: 12px;
+}
+.emp-pop-know-more{
+    color: #3A58E9;
+    font-size: 12px;
+}

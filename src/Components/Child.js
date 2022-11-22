@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import testPerson from "./Data/Pics/2.jpeg";
 import { useNavigate } from "react-router-dom";
+import "./styles/Child.css";
 
 function Child({ params }) {
   const [isHovering, setIsHovering] = useState(false);
@@ -57,11 +58,11 @@ function Child({ params }) {
         {/* Hover panel */}
         {isHovering && (
           <>
-            <div>
-              <div>Ramesh Pradhan</div>
-              <div>Asst Prof.</div>
-              <div>Random Text</div>
-              <div>Know More</div>
+            <div className="emp-popup">
+              <div className="emp-pop-name">Ramesh Pradhan</div>
+              <div className="emp-pop-des">Asst Prof.</div>
+              <div className="emp-pop-info">Random Text</div>
+              <div className="emp-pop-know-more">Know More</div>
             </div>
           </>
         )}
