@@ -14,6 +14,13 @@ function FilterModal({
     { id: 5, name: "Physical Sciences" },
     { id: 6, name: "Social Sciences" },
   ];
+  const handleResetFilter = () => {
+    setSelectedCategory(0);
+    setIsModalOpen(false);
+  };
+  const handleApplyFilter = () => {
+    setIsModalOpen(false);
+  };
 
   const [categorySelection, setCategorySelection] = useState(selectedCategory);
   console.log("categorySelection", categorySelection);
@@ -59,8 +66,15 @@ function FilterModal({
           <span className="category-span d-block">2019,2020,2021</span>
         </div>
 
-        <button className="view-btn d-block w-100 mt-4 ">Apply Filter</button>
-        <button className="reset-filter d-block">Reset Filter</button>
+        <button
+          className="view-btn d-block w-100 mt-4 "
+          onClick={handleApplyFilter}
+        >
+          Apply Filter
+        </button>
+        <button className="reset-filter d-block" onClick={handleResetFilter}>
+          Reset Filter
+        </button>
       </>
     );
   }
