@@ -5,12 +5,11 @@ const Filterfour = ({ switchBoard, setSwitchBoard }) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
   const optionsList = [
-    "Select Category",
-    "Social Science",
-    "Physical Sciences",
-    "Mathematical Sciences",
-    "Life Sciences",
-    "Humanities",
+    "Molecular Chemistry",
+    "Archaeology",
+    "Theoretical Linguistics",
+    "Biochemistry",
+    "Database Optimization",
   ];
   useEffect(() => {
     if (switchBoard == "00010") {

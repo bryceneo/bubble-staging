@@ -27,12 +27,13 @@ const Filtertwo = ({ switchBoard, setSwitchBoard }) => {
     }
   };
   const optionsList = [
-    " Anthropology",
     " Anthropology ",
-    " Anthropology ",
-    " Anthropology ",
-    " Anthropology ",
-    " Anthropology ",
+    "Economics",
+    " Chemical Engineering ",
+    " Physics ",
+    " History",
+    " Mathematics ",
+    " Mechanical Engineering",
   ];
   // const toggleOptions = () => {
   //   setIsOptionsOpen(!isOptionsOpen);

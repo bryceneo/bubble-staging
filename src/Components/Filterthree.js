@@ -5,12 +5,12 @@ const Filterthree = ({ switchBoard, setSwitchBoard }) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
   const optionsList = [
-    " Anthropology",
-    " Anthropology ",
-    " Anthropology ",
-    " Anthropology ",
-    " Anthropology ",
-    " Anthropology ",
+    " Plant Genetics",
+    " Polymer Science ",
+    " Material Engineering",
+    " Cell  Biology",
+    "  Biophysics ",
+    "Supramolecular Chemistry",
   ];
   useEffect(() => {
     if (switchBoard == "00100") {
