@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 
-function FilterModal() {
+function FilterModal({
+  selectedCategory,
+  setSelectedCategory,
+  setIsModalOpen,
+}) {
   const [modalPage, setModalPage] = useState("filter");
   const categoryObj = [
     { id: 1, name: "Social Sciences" },
@@ -11,10 +15,14 @@ function FilterModal() {
     { id: 6, name: "Social Sciences" },
   ];
 
-  const [selectedCategory, setSelectedCategory] = useState(0);
-  const [categorySelection, setCategorySelection] = useState(0);
+  const [categorySelection, setCategorySelection] = useState(selectedCategory);
+  console.log("categorySelection", categorySelection);
   const handleCategoryChoose = () => {
-    selectedCategory = categorySelection;
+    setSelectedCategory(categorySelection);
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
   };
 
   if (modalPage === "filter") {
@@ -74,7 +82,6 @@ function FilterModal() {
             type="search"
             placeholder="Enter Keywords to Search"
             aria-label="Search"
-            defaultChecked={`radio-${selectedCategory}`}
           />
 
           <ul className="child-categories pt-3 ps-0">
@@ -85,6 +92,7 @@ function FilterModal() {
                   class="radio-custom"
                   name="radio-group"
                   type="radio"
+                  checked={categorySelection == cat.id}
                   onClick={() => setCategorySelection(cat.id)}
                 />
                 <label for={`radio-${cat.id}`} class="radio-custom-label">
@@ -100,10 +108,7 @@ function FilterModal() {
             {" "}
             Choose
           </button>
-          <button
-            className="reset-filter d-block"
-            onClick={() => setCategorySelection(0)}
-          >
+          <button className="reset-filter d-block" onClick={handleCancel}>
             {" "}
             Cancel
           </button>
