@@ -7,6 +7,8 @@ function FilterHeader() {
   const [selectedFieldOfStudy, setSelectedFieldOfStudy] = useState(0);
   const [selectedMajorBody, setSelecteMajorBody] = useState(0);
   const [selectedInfluenceImpact, setSelecteInfluenceImpact] = useState(0);
+  const [selectedYear, setSelecteYear] = useState(0);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -31,6 +33,8 @@ function FilterHeader() {
           setSelecteMajorBody={setSelecteMajorBody}
           selectedInfluenceImpact={selectedInfluenceImpact}
           setSelecteInfluenceImpact={setSelecteInfluenceImpact}
+          selectedYear={selectedYear}
+          setSelecteYear={setSelecteYear}
         />
       </Modal>
     </>

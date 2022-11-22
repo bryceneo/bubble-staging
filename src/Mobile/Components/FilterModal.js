@@ -9,6 +9,8 @@ function FilterModal({
   setSelecteMajorBody,
   selectedInfluenceImpact,
   setSelecteInfluenceImpact,
+  selectedYear,
+  setSelecteYear,
   setIsModalOpen,
 }) {
   const [modalPage, setModalPage] = useState("filter");
@@ -44,11 +46,36 @@ function FilterModal({
     { id: 5, name: "Biochemistry" },
     { id: 6, name: "Database Optimization" },
   ];
+  const yearObj = [
+    { id: 1, year: 2000 },
+    { id: 2, year: 2001 },
+    { id: 3, year: 2002 },
+    { id: 4, year: 2003 },
+    { id: 5, year: 2004 },
+    { id: 6, year: 2005 },
+    { id: 7, year: 2006 },
+    { id: 8, year: 2007 },
+    { id: 9, year: 2008 },
+    { id: 10, year: 2009 },
+    { id: 11, year: 2010 },
+    { id: 12, year: 2011 },
+    { id: 13, year: 2012 },
+    { id: 14, year: 2013 },
+    { id: 15, year: 2014 },
+    { id: 16, year: 2015 },
+    { id: 17, year: 2016 },
+    { id: 18, year: 2017 },
+    { id: 19, year: 2018 },
+    { id: 20, year: 2019 },
+    { id: 21, year: 2020 },
+    { id: 22, year: 2021 },
+  ];
   const handleResetFilter = () => {
     setSelectedCategory(0);
     setSelectedFieldOfStudy(0);
     setSelecteMajorBody(0);
     setSelecteInfluenceImpact(0);
+    selectedYear(0);
     setIsModalOpen(false);
   };
   const handleApplyFilter = () => {
@@ -64,6 +91,7 @@ function FilterModal({
   const [influenceImpactSelection, setInfluenceImpactSelection] = useState(
     selectedInfluenceImpact
   );
+  const [yearSelection, setYearSelection] = useState(selectedInfluenceImpact);
   // console.log("majorbodySelection", majorbodyWorkSelection);
   const handleCategoryChoose = () => {
     setSelectedCategory(categorySelection);
@@ -79,6 +107,10 @@ function FilterModal({
   };
   const handleInfluenceImpactChoose = () => {
     setSelecteInfluenceImpact(influenceImpactSelection);
+    setIsModalOpen(false);
+  };
+  const handleYearChoose = () => {
+    setSelecteYear(yearSelection);
     setIsModalOpen(false);
   };
   const handleCancel = () => {
@@ -137,9 +169,14 @@ function FilterModal({
               : undefined}
           </span>
         </div>
-        <div className="category pt-4 pb-4">
+        <div
+          className="category pt-4 pb-4"
+          onClick={() => setModalPage("yearSelect")}
+        >
           <p className="m-0">Year</p>
-          <span className="category-span d-block">2019,2020,2021</span>
+          <span className="category-span d-block">
+            {selectedYear ? yearObj[selectedYear - 1].year : undefined}
+          </span>{" "}
         </div>
 
         <button
@@ -350,6 +387,59 @@ function FilterModal({
           <button
             className="view-btn d-block w-100 mt-4 "
             onClick={handleInfluenceImpactChoose}
+          >
+            {" "}
+            Choose
+          </button>
+          <button className="reset-filter d-block" onClick={handleCancel}>
+            {" "}
+            Cancel
+          </button>
+        </div>
+      </>
+    );
+  }
+
+  if (modalPage === "yearSelect") {
+    return (
+      <>
+        <div>
+          <div onClick={() => setModalPage("filter")}>
+            {" "}
+            <i class="fas fa-arrow-left"></i>
+          </div>
+
+          <div class="modal-title">
+            <span class="modal-heading">Year</span>
+            <span class="results">12 Results available</span>
+          </div>
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Enter Keywords to Search"
+            aria-label="Search"
+          />
+
+          <ul className="child-categories pt-3 ps-0">
+            {yearObj.map((filter) => (
+              <li>
+                <input
+                  id={`radio-${filter.id}`}
+                  class="radio-custom"
+                  name="radio-group"
+                  type="radio"
+                  checked={yearSelection == filter.id}
+                  onClick={() => setYearSelection(filter.id)}
+                />
+                <label for={`radio-${filter.id}`} class="radio-custom-label">
+                  {filter.year}
+                </label>
+              </li>
+            ))}
+          </ul>
+          <button
+            className="view-btn d-block w-100 mt-4 "
+            onClick={handleYearChoose}
           >
             {" "}
             Choose
