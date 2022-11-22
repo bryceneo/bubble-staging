@@ -1,11 +1,12 @@
 .categories-list-mobile {
-    display: grid;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     list-style-type: none;
-    grid-template-columns: repeat(2,1fr);
+    /* grid-template-columns: repeat(2,1fr); */
     flex-wrap: wrap;
     margin: 0 10px;
+    gap:0 5px;
 }
 .categories-list-mobile li{
     font-size: 11px;
@@ -38,4 +39,9 @@
   }
   .categories-list-mobile li:nth-child(6):after{
    background: #704CA2;
+  }
+  @media screen and (max-width:390px) {
+    .categories-list-mobile{
+        gap: 0;
+    }
   }
