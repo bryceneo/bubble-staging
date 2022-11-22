@@ -5,6 +5,8 @@ import "./Styles/FilterHeader.css";
 function FilterHeader() {
   const [selectedCategory, setSelectedCategory] = useState(0);
   const [selectedFieldOfStudy, setSelectedFieldOfStudy] = useState(0);
+  const [selectedMajorBody, setSelecteMajorBody] = useState(0);
+  const [selectedInfluenceImpact, setSelecteInfluenceImpact] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -25,6 +27,10 @@ function FilterHeader() {
           selectedFieldOfStudy={selectedFieldOfStudy}
           setSelectedFieldOfStudy={setSelectedFieldOfStudy}
           setIsModalOpen={setIsModalOpen}
+          selectedMajorBody={selectedMajorBody}
+          setSelecteMajorBody={setSelecteMajorBody}
+          selectedInfluenceImpact={selectedInfluenceImpact}
+          setSelecteInfluenceImpact={setSelecteInfluenceImpact}
         />
       </Modal>
     </>
