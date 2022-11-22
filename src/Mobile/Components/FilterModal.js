@@ -211,7 +211,7 @@ function FilterModal({
             aria-label="Search"
           />
 
-          <ul className="child-categories pt-3 ps-0">
+          <ul className="child-categories pt-2 ps-0">
             {categoryObj.map((cat) => (
               <li>
                 <input
