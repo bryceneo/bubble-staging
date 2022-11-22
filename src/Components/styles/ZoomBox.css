@@ -63,11 +63,12 @@ input[type="range"]::-webkit-slider-thumb {
   transform: translateY(-50%);
   display: flex;
   justify-content: space-evenly;
+  pointer-events: none;
 }
 .input-range span.inner-bars {
   height: 10px;
   width: 1px;
   background: #38383861;
   display: block;
-  z-index: -1;
+  
 }

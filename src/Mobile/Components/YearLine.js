@@ -12,6 +12,7 @@ function YearLine({ selectedYear }) {
           bottom: "0",
           left: "0",
           width: "100%",
+          background: "#f6f6f6",
         }}
       >
         <div className="yearline-mob"

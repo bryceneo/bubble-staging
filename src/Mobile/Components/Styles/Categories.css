@@ -1,8 +1,9 @@
 .categories-list-mobile {
-    list-style-type: none;
-    padding-right: 10px;
-    display: flex;
+    display: grid;
+    flex-wrap: wrap;
     justify-content: space-between;
+    list-style-type: none;
+    grid-template-columns: repeat(2,1fr);
     flex-wrap: wrap;
     margin: 0 10px;
 }
