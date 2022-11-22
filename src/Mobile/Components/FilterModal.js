@@ -11,7 +11,11 @@ function FilterModal() {
     { id: 6, name: "Social Sciences" },
   ];
 
+  const [selectedCategory, setSelectedCategory] = useState(0);
   const [categorySelection, setCategorySelection] = useState(0);
+  const handleCategoryChoose = () => {
+    selectedCategory = categorySelection;
+  };
 
   if (modalPage === "filter") {
     return (
@@ -70,6 +74,7 @@ function FilterModal() {
             type="search"
             placeholder="Enter Keywords to Search"
             aria-label="Search"
+            defaultChecked={`radio-${selectedCategory}`}
           />
 
           <ul className="child-categories pt-3 ps-0">
@@ -88,7 +93,13 @@ function FilterModal() {
               </li>
             ))}
           </ul>
-          <button className="view-btn d-block w-100 mt-4 "> Choose</button>
+          <button
+            className="view-btn d-block w-100 mt-4 "
+            onClick={handleCategoryChoose}
+          >
+            {" "}
+            Choose
+          </button>
           <button
             className="reset-filter d-block"
             onClick={() => setCategorySelection(0)}
