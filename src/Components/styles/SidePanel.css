@@ -36,6 +36,12 @@ max-width: 22%;
 .yearline-mob{
   justify-content: center;
 }
+.graph-wrapper{
+  overflow: hidden;
+}
+.graph-wrapper #test-graph-wrapper{
+  overflow: auto;
+}
 }
 @media screen  and (max-width:767px){
   .yearline-mob{
