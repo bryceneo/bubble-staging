@@ -3,6 +3,7 @@ import Modal from "react-modal";
 import FilterModal from "./FilterModal";
 import "./Styles/FilterHeader.css";
 function FilterHeader() {
+  const [selectedCategory, setSelectedCategory] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -17,7 +18,11 @@ function FilterHeader() {
         // portalClassName="filter-modal"
         className={"filter-modal"}
       >
-        <FilterModal />
+        <FilterModal
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+          setIsModalOpen={setIsModalOpen}
+        />
       </Modal>
     </>
   );

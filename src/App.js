@@ -28,6 +28,7 @@ function App() {
 
     return isMobile ? children : null;
   };
+  // const isFilter = true;
   return (
     <>
       <DesktopSize>
@@ -38,22 +39,19 @@ function App() {
                 <div className="row align-items-center">
                   <div className="col-lg-12">
                     <div className="main-wrapper-filter d-flex">
-                      {/* <Filters />
-               <Filtertwo></Filtertwo>
-               <Filterthree></Filterthree>
-               <Filterfour></Filterfour>
-               <Filterfive></Filterfive>
-           */}
-
                       <FilterMain />
-                      <div className="col-lg-2 text-end">
-                    <a href="#" className="clear-filter">
-                      Clear Filter
-                    </a>
-                  </div>
+                      {/* <div className="col-lg-2 text-end">
+                        <button className="clear-filter">Clear Filter</button>
+                      </div> */}
+                      {/* {isFilter == true ? (
+                        <FilterMain />
+                      ) : (
+                        <div className="col-lg-2 text-end">
+                          <button className="clear-filter">Clear Filter</button>
+                        </div>
+                      )} */}
                     </div>
                   </div>
-                 
                 </div>
               </div>
             </div>

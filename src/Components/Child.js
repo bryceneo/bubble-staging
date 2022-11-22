@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import testPerson from "./Data/Pics/2.jpeg";
 import { useNavigate } from "react-router-dom";
 
 function Child({ params }) {
-  // console.log(params.id, params.backgroundColor);
+  const [isHovering, setIsHovering] = useState(false);
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  };
   const navigate = useNavigate();
   const subjectClickHandler = (subID, isRouting) => {
     if (isRouting) {
@@ -46,25 +53,41 @@ function Child({ params }) {
   }
   if (params.type === "person") {
     return (
-      <div
-        style={{
-          borderRadius: 50,
-          border: `${params.borderThickness} solid ${params.borderColor}`,
-          height: "90px",
-          width: "90px",
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-          padding: "2px",
-          overflow: "hidden",
-          scale: `${params.scaleFactor}`,
-          opacity: `${params.isActive ? "100%" : "50%"}`,
-          cursor: `${params.isRouting ? "pointer" : null}`,
-        }}
-        onClick={() => personClickHandler(params.laurateId, params.isRouting)}
-      >
-        <img src={params.image} width="120px" height="120px" alt="test" />
-      </div>
+      <>
+        {/* Hover panel */}
+        {isHovering && (
+          <>
+            <div>
+              <div>Ramesh Pradhan</div>
+              <div>Asst Prof.</div>
+              <div>Random Text</div>
+              <div>Know More</div>
+            </div>
+          </>
+        )}
+        {/* Person photo */}
+        <div
+          onMouseOver={handleMouseOver}
+          onMouseOut={handleMouseOut}
+          style={{
+            borderRadius: 50,
+            border: `${params.borderThickness} solid ${params.borderColor}`,
+            height: "90px",
+            width: "90px",
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+            padding: "2px",
+            overflow: "hidden",
+            scale: `${params.scaleFactor}`,
+            opacity: `${params.isActive ? "100%" : "50%"}`,
+            cursor: `${params.isRouting ? "pointer" : null}`,
+          }}
+          onClick={() => personClickHandler(params.laurateId, params.isRouting)}
+        >
+          <img src={params.image} width="120px" height="120px" alt="test" />
+        </div>
+      </>
     );
   }
   return <div>Failed</div>;
