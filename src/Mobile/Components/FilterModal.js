@@ -151,7 +151,7 @@ function FilterModal({
           <p className="m-0">Field of Study</p>
           <span className="category-span d-block">
             {selectedFieldOfStudy
-              ? categoryObj[selectedFieldOfStudy - 1].name
+              ? filterObj[selectedFieldOfStudy - 1].name
               : undefined}
           </span>
         </div>

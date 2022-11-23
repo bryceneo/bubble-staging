@@ -58,7 +58,11 @@ function Child({ params }) {
         {/* Hover panel */}
         {isHovering && (
           <>
-            <div className="emp-popup">
+            <div
+              className="emp-popup"
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
               <div className="emp-pop-name">Ramesh Pradhan</div>
               <div className="emp-pop-des">Asst Prof.</div>
               <div className="emp-pop-info">Random Text</div>
