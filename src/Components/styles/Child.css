@@ -5,9 +5,18 @@
     padding: 15px 10px;
     position: absolute;
     border-radius: 5px;
-    top: -60px;
+    top: -85px;
     z-index: 1;
     width: auto;
+}
+.emp-popup:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    border: 25px solid transparent;
+    bottom: -30px;
+    left: 0;
 }
 .emp-popup:after{
     content: "";
@@ -15,12 +24,12 @@
     width: 0;
     height: 0;
     margin-left: -0.5em;
-    bottom: -20px;
+    bottom: -18px;
     left: 50%;
     box-sizing: border-box;
     border: 1em solid black;
     border-color: transparent transparent #fff #fff;
-    transform-origin: 0 0;
+    transform-origin: left;
     transform: rotate(-45deg);
     box-shadow: -3px 3px 3px 0 #00000029;
     z-index: 11;
