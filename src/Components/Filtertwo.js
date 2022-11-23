@@ -1,9 +1,20 @@
 import React, { useState, useEffect } from "react";
 import "./styles/Filters.css";
 
-const Filtertwo = ({ switchBoard, setSwitchBoard }) => {
+const Filtertwo = ({
+  switchBoard,
+  setSwitchBoard,
+  selectedOptions,
+  setSelectedOptions,
+}) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
+  useEffect(() => {
+    setSelectedOptions((prev) => ({ ...prev, two: selectedOption }));
+  }, [selectedOption]);
+  useEffect(() => {
+    if (selectedOptions.two == 0) setSelectedOption(0);
+  }, [selectedOptions]);
   useEffect(() => {
     if (switchBoard == "01000") {
       setIsOptionsOpen(true);
@@ -11,9 +22,6 @@ const Filtertwo = ({ switchBoard, setSwitchBoard }) => {
     } else {
       setIsOptionsOpen(false);
       // console.log("First is off");
-    }
-    if (switchBoard == "00000") {
-      setSelectedOption(0);
     }
   }, [switchBoard]);
   const toggleOptions = () => {
@@ -27,6 +35,7 @@ const Filtertwo = ({ switchBoard, setSwitchBoard }) => {
     }
   };
   const optionsList = [
+    "Select Field Of Study",
     " Anthropology ",
     "Economics",
     " Chemical Engineering ",

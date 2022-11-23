@@ -6,19 +6,31 @@ import Filterthree from "./Filterthree";
 import Filtertwo from "./Filtertwo";
 
 const FilterMain = () => {
+  const defaultOptions = {
+    one: 0,
+    two: 0,
+    three: 0,
+    four: 0,
+    five: 0,
+  };
   const [switchBoard, setSwitchBoard] = useState("00000");
+  const [selectedOptions, setSelectedOptions] = useState(defaultOptions);
   const [isClearVisible, setClearVisible] = useState(true);
   useEffect(() => {
-    if (switchBoard != "00000") {
-      setClearVisible(false);
-    } else {
+    const optionsCheck = Object.entries(selectedOptions).every(
+      ([key, value]) => {
+        return value === 0;
+      }
+    );
+    if (optionsCheck) {
       setClearVisible(true);
+    } else {
+      setClearVisible(false);
     }
-    console.log("swithboard:", switchBoard, "isClearVisible:", isClearVisible);
-  }, [switchBoard]);
+  }, [selectedOptions]);
 
   const handleClear = () => {
-    setSwitchBoard("00000");
+    setSelectedOptions(defaultOptions);
   };
 
   return (
@@ -26,32 +38,32 @@ const FilterMain = () => {
       <Filters
         switchBoard={switchBoard}
         setSwitchBoard={setSwitchBoard}
-        isClearVisible={isClearVisible}
-        setClearVisible={setClearVisible}
+        selectedOptions={selectedOptions}
+        setSelectedOptions={setSelectedOptions}
       />
       <Filtertwo
         switchBoard={switchBoard}
         setSwitchBoard={setSwitchBoard}
-        isClearVisible={isClearVisible}
-        setClearVisible={setClearVisible}
+        selectedOptions={selectedOptions}
+        setSelectedOptions={setSelectedOptions}
       />
       <Filterthree
         switchBoard={switchBoard}
         setSwitchBoard={setSwitchBoard}
-        isClearVisible={isClearVisible}
-        setClearVisible={setClearVisible}
+        selectedOptions={selectedOptions}
+        setSelectedOptions={setSelectedOptions}
       />
       <Filterfour
         switchBoard={switchBoard}
         setSwitchBoard={setSwitchBoard}
-        isClearVisible={isClearVisible}
-        setClearVisible={setClearVisible}
+        selectedOptions={selectedOptions}
+        setSelectedOptions={setSelectedOptions}
       />
       <Filterfive
         switchBoard={switchBoard}
         setSwitchBoard={setSwitchBoard}
-        isClearVisible={isClearVisible}
-        setClearVisible={setClearVisible}
+        selectedOptions={selectedOptions}
+        setSelectedOptions={setSelectedOptions}
       />
 
       <div className="col-lg-2 text-end">

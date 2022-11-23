@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./styles/Filters.css";
 
-const Filterthree = ({ switchBoard, setSwitchBoard }) => {
+const Filterthree = ({
+  switchBoard,
+  setSwitchBoard,
+  selectedOptions,
+  setSelectedOptions,
+}) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
   const optionsList = [
+    "Select Major Body Of Work",
     " Plant Genetics",
     " Polymer Science ",
     " Material Engineering",
@@ -13,15 +19,18 @@ const Filterthree = ({ switchBoard, setSwitchBoard }) => {
     "Supramolecular Chemistry",
   ];
   useEffect(() => {
+    setSelectedOptions((prev) => ({ ...prev, three: selectedOption }));
+  }, [selectedOption]);
+  useEffect(() => {
+    if (selectedOptions.three == 0) setSelectedOption(0);
+  }, [selectedOptions]);
+  useEffect(() => {
     if (switchBoard == "00100") {
       setIsOptionsOpen(true);
       // console.log("three is on");
     } else {
       setIsOptionsOpen(false);
       // console.log("three is off");
-    }
-    if (switchBoard == "00000") {
-      setSelectedOption(0);
     }
   }, [switchBoard]);
   const toggleOptions = () => {

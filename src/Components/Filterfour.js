@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./styles/Filters.css";
 
-const Filterfour = ({ switchBoard, setSwitchBoard }) => {
+const Filterfour = ({
+  switchBoard,
+  setSwitchBoard,
+  selectedOptions,
+  setSelectedOptions,
+}) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
   const optionsList = [
+    "Select Influence/Impact",
     "Molecular Chemistry",
     "Archaeology",
     "Theoretical Linguistics",
@@ -12,15 +18,18 @@ const Filterfour = ({ switchBoard, setSwitchBoard }) => {
     "Database Optimization",
   ];
   useEffect(() => {
+    setSelectedOptions((prev) => ({ ...prev, four: selectedOption }));
+  }, [selectedOption]);
+  useEffect(() => {
+    if (selectedOptions.four == 0) setSelectedOption(0);
+  }, [selectedOptions]);
+  useEffect(() => {
     if (switchBoard == "00010") {
       setIsOptionsOpen(true);
       // console.log("First is on");
     } else {
       setIsOptionsOpen(false);
       // console.log("First is off");
-    }
-    if (switchBoard == "00000") {
-      setSelectedOption(0);
     }
   }, [switchBoard]);
   const toggleOptions = () => {

@@ -1,10 +1,21 @@
 import React, { useState, useEffect } from "react";
 import "./styles/Filters.css";
 
-const Filterfive = ({ switchBoard, setSwitchBoard }) => {
+const Filterfive = ({
+  switchBoard,
+  setSwitchBoard,
+  selectedOptions,
+  setSelectedOptions,
+}) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
   const optionsList = ["Select Year", "2000", "2001", "2002", "2003", "2004"];
+  useEffect(() => {
+    setSelectedOptions((prev) => ({ ...prev, five: selectedOption }));
+  }, [selectedOption]);
+  useEffect(() => {
+    if (selectedOptions.five == 0) setSelectedOption(0);
+  }, [selectedOptions]);
   useEffect(() => {
     if (switchBoard == "00001") {
       setIsOptionsOpen(true);
@@ -12,9 +23,6 @@ const Filterfive = ({ switchBoard, setSwitchBoard }) => {
     } else {
       setIsOptionsOpen(false);
       // console.log("First is off");
-    }
-    if (switchBoard == "00000") {
-      setSelectedOption(0);
     }
   }, [switchBoard]);
   const toggleOptions = () => {

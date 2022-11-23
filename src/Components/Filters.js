@@ -1,10 +1,24 @@
 import React, { useState, useEffect } from "react";
 import "./styles/Filters.css";
 
-function Filters({ switchBoard, setSwitchBoard }) {
+function Filters({
+  switchBoard,
+  setSwitchBoard,
+  selectedOptions,
+  setSelectedOptions,
+}) {
   // console.log(switchBoard, setSwitchBoard, "hii");
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
+
+  useEffect(() => {
+    setSelectedOptions((prev) => ({ ...prev, one: selectedOption }));
+  }, [selectedOption]);
+
+  useEffect(() => {
+    if (selectedOptions.one == 0) setSelectedOption(0);
+    // console.log(selectedOptions.one);
+  }, [selectedOptions]);
 
   useEffect(() => {
     if (switchBoard == "10000") {
@@ -13,9 +27,6 @@ function Filters({ switchBoard, setSwitchBoard }) {
     } else {
       setIsOptionsOpen(false);
       // console.log("First is off");
-    }
-    if (switchBoard == "00000") {
-      setSelectedOption(0);
     }
   }, [switchBoard]);
   const toggleOptions = () => {
@@ -45,7 +56,7 @@ function Filters({ switchBoard, setSwitchBoard }) {
         e.preventDefault();
         setSelectedOption(index);
         setSwitchBoard("00000");
-        // setIsOptionsOpen(false);
+        setIsOptionsOpen(false);
         break;
       default:
         break;
@@ -82,8 +93,8 @@ function Filters({ switchBoard, setSwitchBoard }) {
               onKeyDown={handleKeyDown(index)}
               onClick={() => {
                 setSelectedOption(index);
-                // setSwitchBoard("00000");
-                setIsOptionsOpen(false);
+                // setIsOptionsOpen(false);
+                setSwitchBoard("00000");
               }}
             >
               {option}
