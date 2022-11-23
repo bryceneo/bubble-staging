@@ -17,7 +17,6 @@ function Filters({
 
   useEffect(() => {
     if (selectedOptions.one == 0) setSelectedOption(0);
-    // console.log(selectedOptions.one);
   }, [selectedOptions]);
 
   useEffect(() => {

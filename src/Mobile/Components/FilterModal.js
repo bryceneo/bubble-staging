@@ -93,6 +93,14 @@ function FilterModal({
   );
   const [yearSelection, setYearSelection] = useState(selectedInfluenceImpact);
   // console.log("majorbodySelection", majorbodyWorkSelection);
+
+  //Search Terms
+  const [categorySearch, setCategorySearch] = useState("");
+  const [fieldOfStudySearch, setFieldOfStudySearch] = useState("");
+  const [majorBodyOfWorkSearch, setMajorBodyOfWorkSearch] = useState("");
+  const [influenceImpactSearch, setInfluenceImpactSearch] = useState("");
+  const [yearSearch, setYearSearch] = useState("");
+
   const handleCategoryChoose = () => {
     setSelectedCategory(categorySelection);
     setIsModalOpen(false);
@@ -209,24 +217,39 @@ function FilterModal({
             type="search"
             placeholder="Enter Keywords to Search"
             aria-label="Search"
+            onChange={(e) => setCategorySearch(e.target.value)}
           />
 
           <ul className="child-categories pt-2 ps-0">
-            {categoryObj.map((cat) => (
-              <li>
-                <input
-                  id={`radio-${cat.id}`}
-                  class="radio-custom"
-                  name="radio-group"
-                  type="radio"
-                  checked={categorySelection == cat.id}
-                  onClick={() => setCategorySelection(cat.id)}
-                />
-                <label for={`radio-${cat.id}`} class="radio-custom-label">
-                  {cat.name}
-                </label>
-              </li>
-            ))}
+            {categoryObj
+              .filter((val) => {
+                if (categorySearch == "") {
+                  return val;
+                } else {
+                  if (
+                    val.name
+                      .toLowerCase()
+                      .includes(categorySearch.toLowerCase())
+                  ) {
+                    return val;
+                  }
+                }
+              })
+              .map((cat) => (
+                <li>
+                  <input
+                    id={`radio-${cat.id}`}
+                    class="radio-custom"
+                    name="radio-group"
+                    type="radio"
+                    checked={categorySelection == cat.id}
+                    onClick={() => setCategorySelection(cat.id)}
+                  />
+                  <label for={`radio-${cat.id}`} class="radio-custom-label">
+                    {cat.name}
+                  </label>
+                </li>
+              ))}
           </ul>
           <button
             className="view-btn d-block w-100 mt-4 "
@@ -261,24 +284,39 @@ function FilterModal({
             type="search"
             placeholder="Enter Keywords to Search"
             aria-label="Search"
+            onChange={(e) => setFieldOfStudySearch(e.target.value)}
           />
 
           <ul className="child-categories pt-3 ps-0">
-            {filterObj.map((filter) => (
-              <li>
-                <input
-                  id={`radio-${filter.id}`}
-                  class="radio-custom"
-                  name="radio-group"
-                  type="radio"
-                  checked={fieldOfStudySelection == filter.id}
-                  onClick={() => setFieldOfStudySelection(filter.id)}
-                />
-                <label for={`radio-${filter.id}`} class="radio-custom-label">
-                  {filter.name}
-                </label>
-              </li>
-            ))}
+            {filterObj
+              .filter((val) => {
+                if (fieldOfStudySearch == "") {
+                  return val;
+                } else {
+                  if (
+                    val.name
+                      .toLowerCase()
+                      .includes(fieldOfStudySearch.toLowerCase())
+                  ) {
+                    return val;
+                  }
+                }
+              })
+              .map((filter) => (
+                <li>
+                  <input
+                    id={`radio-${filter.id}`}
+                    class="radio-custom"
+                    name="radio-group"
+                    type="radio"
+                    checked={fieldOfStudySelection == filter.id}
+                    onClick={() => setFieldOfStudySelection(filter.id)}
+                  />
+                  <label for={`radio-${filter.id}`} class="radio-custom-label">
+                    {filter.name}
+                  </label>
+                </li>
+              ))}
           </ul>
           <button
             className="view-btn d-block w-100 mt-4 "
@@ -313,24 +351,39 @@ function FilterModal({
             type="search"
             placeholder="Enter Keywords to Search"
             aria-label="Search"
+            onChange={(e) => setMajorBodyOfWorkSearch(e.target.value)}
           />
 
           <ul className="child-categories pt-3 ps-0">
-            {majorbodyObj.map((filter) => (
-              <li>
-                <input
-                  id={`radio-${filter.id}`}
-                  class="radio-custom"
-                  name="radio-group"
-                  type="radio"
-                  checked={majorbodyWorkSelection == filter.id}
-                  onClick={() => setMajorBodyworkSelection(filter.id)}
-                />
-                <label for={`radio-${filter.id}`} class="radio-custom-label">
-                  {filter.name}
-                </label>
-              </li>
-            ))}
+            {majorbodyObj
+              .filter((val) => {
+                if (majorBodyOfWorkSearch == "") {
+                  return val;
+                } else {
+                  if (
+                    val.name
+                      .toLowerCase()
+                      .includes(majorBodyOfWorkSearch.toLowerCase())
+                  ) {
+                    return val;
+                  }
+                }
+              })
+              .map((filter) => (
+                <li>
+                  <input
+                    id={`radio-${filter.id}`}
+                    class="radio-custom"
+                    name="radio-group"
+                    type="radio"
+                    checked={majorbodyWorkSelection == filter.id}
+                    onClick={() => setMajorBodyworkSelection(filter.id)}
+                  />
+                  <label for={`radio-${filter.id}`} class="radio-custom-label">
+                    {filter.name}
+                  </label>
+                </li>
+              ))}
           </ul>
           <button
             className="view-btn d-block w-100 mt-4 "
@@ -365,24 +418,39 @@ function FilterModal({
             type="search"
             placeholder="Enter Keywords to Search"
             aria-label="Search"
+            onChange={(e) => setInfluenceImpactSearch(e.target.value)}
           />
 
           <ul className="child-categories pt-3 ps-0">
-            {influenceImpactObj.map((filter) => (
-              <li>
-                <input
-                  id={`radio-${filter.id}`}
-                  class="radio-custom"
-                  name="radio-group"
-                  type="radio"
-                  checked={influenceImpactSelection == filter.id}
-                  onClick={() => setInfluenceImpactSelection(filter.id)}
-                />
-                <label for={`radio-${filter.id}`} class="radio-custom-label">
-                  {filter.name}
-                </label>
-              </li>
-            ))}
+            {influenceImpactObj
+              .filter((val) => {
+                if (influenceImpactSearch == "") {
+                  return val;
+                } else {
+                  if (
+                    val.name
+                      .toLowerCase()
+                      .includes(influenceImpactSearch.toLowerCase())
+                  ) {
+                    return val;
+                  }
+                }
+              })
+              .map((filter) => (
+                <li>
+                  <input
+                    id={`radio-${filter.id}`}
+                    class="radio-custom"
+                    name="radio-group"
+                    type="radio"
+                    checked={influenceImpactSelection == filter.id}
+                    onClick={() => setInfluenceImpactSelection(filter.id)}
+                  />
+                  <label for={`radio-${filter.id}`} class="radio-custom-label">
+                    {filter.name}
+                  </label>
+                </li>
+              ))}
           </ul>
           <button
             className="view-btn d-block w-100 mt-4 "
@@ -418,24 +486,35 @@ function FilterModal({
             type="search"
             placeholder="Enter Keywords to Search"
             aria-label="Search"
+            onChange={(e) => setYearSearch(e.target.value)}
           />
 
           <ul className="child-categories pt-3 ps-0">
-            {yearObj.map((filter) => (
-              <li>
-                <input
-                  id={`radio-${filter.id}`}
-                  class="radio-custom"
-                  name="radio-group"
-                  type="radio"
-                  checked={yearSelection == filter.id}
-                  onClick={() => setYearSelection(filter.id)}
-                />
-                <label for={`radio-${filter.id}`} class="radio-custom-label">
-                  {filter.year}
-                </label>
-              </li>
-            ))}
+            {yearObj
+              .filter((val) => {
+                if (yearSearch == "") {
+                  return val;
+                } else {
+                  if (val.year.toString().includes(yearSearch)) {
+                    return val;
+                  }
+                }
+              })
+              .map((filter) => (
+                <li>
+                  <input
+                    id={`radio-${filter.id}`}
+                    class="radio-custom"
+                    name="radio-group"
+                    type="radio"
+                    checked={yearSelection == filter.id}
+                    onClick={() => setYearSelection(filter.id)}
+                  />
+                  <label for={`radio-${filter.id}`} class="radio-custom-label">
+                    {filter.year}
+                  </label>
+                </li>
+              ))}
           </ul>
           <button
             className="view-btn d-block w-100 mt-4 "
