@@ -5,7 +5,7 @@
 }
 .main-wrapper-filter {
   justify-content: space-between;
-  gap: 30px;
+  gap: 20px;
   align-items: center;
 }
 #filters {
@@ -28,8 +28,9 @@
   text-align: left;
   padding: 0;
   padding-bottom: 10px;
-  font-size: 14px;
+  font-size: 13px;
   position: relative;
+  padding-right: 9px;
 }
 
 #select-btn:hover {
@@ -115,22 +116,22 @@ ul.options li[aria-selected="true"] {
 }
 }
 /* width */
-::-webkit-scrollbar {
+ul::-webkit-scrollbar {
   width: 4px;
   border-radius: 5px;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
+ul::-webkit-scrollbar-track {
   background: #adacac; 
 }
  
 /* Handle */
-::-webkit-scrollbar-thumb {
+ul::-webkit-scrollbar-thumb {
   background: #223247; 
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+ul::-webkit-scrollbar-thumb:hover {
   background: rgb(156, 156, 156); 
 }
