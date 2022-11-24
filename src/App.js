@@ -8,6 +8,7 @@ import Timeline from "./Components/Timeline";
 import { BrowserRouter } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import Mobile from "./Mobile/Mobile";
+import { useState } from "react";
 
 function App() {
   const useDesktopMediaQuery = () =>
@@ -27,40 +28,76 @@ function App() {
 
     return isMobile ? children : null;
   };
+
+  const [SelectedCategory, setSelectedCategory] = useState("");
+  const [selectedFieldOfStudy, setSelectedFieldOfStudy] = useState("");
+  const [majorBodyOfWork, setMajorBodyOfWork] = useState("");
+  const [InfluenceImpact, setInfluenceImpact] = useState("");
+  const [selectedYear, setSelectedYear] = useState(0);
+  // console.log(selectedYear, "selectedYear");
+
+  const clearFilters = () => {
+    setSelectedCategory("");
+    setSelectedFieldOfStudy("");
+    setMajorBodyOfWork("");
+    setInfluenceImpact("");
+    setSelectedYear(0);
+  };
   return (
     <>
       <DesktopSize>
         <>
-        <div className="filter-header">
-        <div className="container-fluid">
-        <div className="container">
-        <div className="row align-items-center">
-             <div className="col-lg-10">
-              <div className="main-wrapper-filter d-flex">
-               <Filters />
-               <Filtertwo></Filtertwo>
-               <Filterthree></Filterthree>
-               <Filterfour></Filterfour>
-               <Filterfive></Filterfive>
-          
+          <div className="filter-header">
+            <div className="container-fluid">
+              <div className="container">
+                <div className="row align-items-center">
+                  <div className="col-lg-10">
+                    <div className="main-wrapper-filter d-flex">
+                      <Filters
+                        SelectedCategory={SelectedCategory}
+                        setSelectedCategory={setSelectedCategory}
+                      />
+                      <Filtertwo
+                        selectedFieldOfStudy={selectedFieldOfStudy}
+                        setSelectedFieldOfStudy={setSelectedFieldOfStudy}
+                      />
+                      <Filterthree
+                        majorBodyOfWork={majorBodyOfWork}
+                        setMajorBodyOfWork={setMajorBodyOfWork}
+                      />
+                      <Filterfour
+                        InfluenceImpact={InfluenceImpact}
+                        setInfluenceImpact={setInfluenceImpact}
+                      />
+                      <Filterfive
+                        setSelectedYear={setSelectedYear}
+                        selectedYear={selectedYear}
+                      />
+                    </div>
+                  </div>
+                  <div className="col-lg-2 text-end pt-3">
+                    <a
+                      className="clear-filter"
+                      onClick={clearFilters}
+                      style={{ cursor: "pointer" }}
+                    >
+                      Clear Filter
+                    </a>
+                  </div>
+                </div>
               </div>
-             </div>
-             <div className="col-lg-2 text-end pt-3" >
-             <a href="#" className="clear-filter">Clear Filter</a>
-             </div>
-             
             </div>
-        </div>
-        </div>
-        </div>
-        
+          </div>
           <div className="container">
             <BrowserRouter>
-           
-            
-             
               <Timeline />
-              <Dashboard />
+              <Dashboard
+                selectedYear={selectedYear}
+                SelectedCategory={SelectedCategory}
+                selectedFieldOfStudy={selectedFieldOfStudy}
+                majorBodyOfWork={majorBodyOfWork}
+                InfluenceImpact={InfluenceImpact}
+              />
             </BrowserRouter>
           </div>
         </>

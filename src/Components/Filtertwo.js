@@ -1,19 +1,20 @@
-import React, {
-  useState
-} from "react";
+import React, { useState } from "react";
 import "./styles/Filters.css";
-
-
-const Filtertwo = () => {
+import Data from "./Data/AllData.json";
+const Filtertwo = ({ selectedFieldOfStudy, setSelectedFieldOfStudy }) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
   const optionsList = [
-    " Anthropology",
-    " Anthropology ",
-    " Anthropology ",
-    " Anthropology ",
-    " Anthropology ",
-    " Anthropology "
+    "Select Field",
+    ...Array.from(
+      new Set(
+        Data?.Database?.map((item) =>
+          item?.[" Field of study and training "]
+            ?.split(",")
+            ?.map((item) => item.trim())
+        )?.flat(10)
+      )
+    ),
   ];
   const toggleOptions = () => {
     setIsOptionsOpen(!isOptionsOpen);
@@ -30,52 +31,48 @@ const Filtertwo = () => {
       default:
         break;
     }
-};
+  };
   return (
     <div id="filters">
-    <div className="select-wrapper">
-   
-   <span className="sort-label">Field of Study</span>
-  <button id="select-btn"
-    type="button"
-    aria-haspopup="listbox"
-    aria-expanded={isOptionsOpen}
-    className={isOptionsOpen ? "expanded" : ""}
-    onClick={toggleOptions}
-  >
-    {optionsList[selectedOption]}
-  </button>
-  <ul
-    className={`options ${isOptionsOpen ? "show" : ""}`}
-    role="listbox"
-    aria-activedescendant={optionsList[selectedOption]}
-    tabIndex={-1}
-  >
-  {optionsList.map((option, index) => (
-    <li
-  id={option}
-        role="option"
-        aria-selected={selectedOption == index}
-        tabIndex={0}
-        onKeyDown={handleKeyDown(index)}
-        onClick={() => {
-      setSelectedOption(index);
-            setIsOptionsOpen(false);
-        }}
-    >
-  {option}
-    </li>
-  ))}
-    
-  </ul>
-  
+      <div className="select-wrapper">
+        <span className="sort-label">Field of Study</span>
+        <button
+          id="select-btn"
+          type="button"
+          aria-haspopup="listbox"
+          aria-expanded={isOptionsOpen}
+          className={isOptionsOpen ? "expanded" : ""}
+          onClick={toggleOptions}
+        >
+          {/* {optionsList[selectedOption]} */}
+          {selectedFieldOfStudy || "Select Field"}
+        </button>
+        <ul
+          className={`options ${isOptionsOpen ? "show" : ""}`}
+          role="listbox"
+          aria-activedescendant={optionsList[selectedOption]}
+          tabIndex={-1}
+        >
+          {optionsList.map((option, index) => (
+            <li
+              id={option}
+              role="option"
+              aria-selected={selectedOption == index}
+              tabIndex={0}
+              onKeyDown={handleKeyDown(index)}
+              onClick={() => {
+                setSelectedOption(index);
+                setSelectedFieldOfStudy(option);
+                setIsOptionsOpen(false);
+              }}
+            >
+              {option}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
-    
-   
-    
-  </div>
+  );
+};
 
-  )
-}
-
-export default Filtertwo
+export default Filtertwo;

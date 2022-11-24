@@ -1,55 +1,64 @@
 import React from "react";
 import testPerson from "./Data/Pics/2.jpeg";
 import { useNavigate } from "react-router-dom";
-
-function Child({ params }) {
+import DummyImage from "./Data/Pics/2.jpeg";
+import CategoriesData from "./Data/CategoriesData";
+import Avatar from "react-avatar";
+function Child({ params, setSelectedItem, selectedItem }) {
   // console.log(params.id, params.backgroundColor);
+  // console.log(params["Prize Category"], "asgbjhbas");
   const navigate = useNavigate();
-  const subjectClickHandler = (subID, isRouting) => {
-    if (isRouting) {
-      navigate(`/subject-details/${subID}`, {
-        state: { subId: params.subjectId, subText: params.text },
-      });
-    }
-  };
+  // const subjectClickHandler = (subID, isRouting) => {
+  //   if (isRouting) {
+  //     navigate(`/subject-details/${subID}`, {
+  //       state: { subId: params.subjectId, subText: params.text },
+  //     });
+  //   }
+  // };
   const personClickHandler = (lauID, isRouting) => {
     if (isRouting) {
       navigate(`/laurate-details/${lauID}`);
     }
   };
-  if (params.type === "subject" || params.type === "sub-subject") {
+  if (params.Name) {
     return (
       <div
         style={{
-          color: `${params.textColor}`,
-          border: `${params.borderThickness} ${
-            params.borderStyle ? params.borderStyle : "solid"
-          } ${params.borderColor}`,
+          color: `#223247`,
+          border: `5px solid ${
+            CategoriesData.find((item) =>
+              params["Prize Category"]?.includes(item?.name)
+            )?.colorCode || "#D2D2D2"
+          }`,
           borderRadius: 100,
-          backgroundColor: `${params.backgroundColor}`,
+          // backgroundColor: `${params.backgroundColor}`,
           height: "90px",
           width: "90px",
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-          padding: "2px",
           overflow: "hidden",
-          scale: `${params.scaleFactor}`,
-          opacity: `${params.isActive ? "100%" : "50%"}`,
-          cursor: `${params.isRouting ? "pointer" : null}`,
+          scale: 1,
+          // opacity: `${params.isActive ? "100%" : "50%"}`,
+          // cursor: `${params.isRouting ? "pointer" : null}`,
+          cursor: "pointer",
         }}
-        onClick={() => subjectClickHandler(params.subjectId, params.isRouting)}
+        onClick={() => setSelectedItem(params)}
       >
-        {params.text}
+        {/* {params} */}
+        <img
+          src={`images/${params?.Name}.jpg`}
+          // srcset={`images/${params?.Name}.png,images/${params?.Name}.jpeg`}
+          srcSet={`images/${params?.Name}.png 1280w,images/${params?.Name}.jpeg 1280w`}
+          width="100%"
+          // height="100%"
+          alt={params.Name}
+        />
       </div>
     );
-  }
-  if (params.type === "person") {
+  } else {
     return (
       <div
         style={{
-          borderRadius: 50,
-          border: `${params.borderThickness} solid ${params.borderColor}`,
+          borderRadius: 100,
+          border: `2px solid #D2D2D2`,
           height: "90px",
           width: "90px",
           display: "flex",
@@ -57,13 +66,13 @@ function Child({ params }) {
           alignItems: "center",
           padding: "2px",
           overflow: "hidden",
-          scale: `${params.scaleFactor}`,
-          opacity: `${params.isActive ? "100%" : "50%"}`,
-          cursor: `${params.isRouting ? "pointer" : null}`,
+          scale: 1,
+          opacity: "100%",
+          cursor: `pointer`,
         }}
-        onClick={() => personClickHandler(params.laurateId, params.isRouting)}
+        // onClick={() => personClickHandler(params.laurateId, params.isRouting)}
       >
-        <img src={params.image} width="120px" height="120px" alt="test" />
+        {params}
       </div>
     );
   }

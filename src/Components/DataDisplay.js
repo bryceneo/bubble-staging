@@ -14,26 +14,82 @@ import "react-bubble-ui/dist/index.css";
 import Child from "./Child";
 import InstaFilters from "./InstaFilters";
 import { useLocation, useNavigate } from "react-router-dom";
-
-function DataDisplay({ dataId, zoom }) {
+import data from "./Data/AllData.json";
+import { shuffleArrayElements } from "../utilities";
+function DataDisplay({
+  dataId,
+  zoom,
+  selectedYear,
+  SelectedCategory,
+  selectedFieldOfStudy,
+  majorBodyOfWork,
+  InfluenceImpact,
+}) {
   const [topPanel, setTopPanel] = useState(undefined);
+  const [selectedItem, setSelectedItem] = useState(null);
   const { state } = useLocation();
   const { subId, subText } = state ? state : { subId: "", subText: "" };
   const navigate = useNavigate();
+  let Winners = data?.Database;
+  // const fieldsOfStudy =
+  // console.log(Winners,"Winners")
 
-  let data;
-  if (dataId === 1) data = first;
-  if (dataId === 2) data = second;
-  if (dataId === 3) data = third;
-  if (dataId === 4) data = fourth;
-  if (dataId === 5) data = fifth;
-  if (dataId === 6) data = sixth;
-  if (dataId === "year") {
-    const { year } = state;
-    if (year === 2010) data = year2010;
-    if (year === 2012) data = year2012;
-    if (year === 2013) data = year2013;
+  if (selectedYear) {
+    const newWinners = Winners?.filter(
+      (item) => item["Infosys Prize"] === selectedYear
+    );
+    Winners = newWinners;
   }
+
+  if (SelectedCategory) {
+    const newWinners = Winners?.filter((item) =>
+      item["Prize Category"].includes(SelectedCategory)
+    );
+    Winners = newWinners;
+  }
+
+  if (selectedFieldOfStudy) {
+    const newWinners = Winners?.filter((item) =>
+      item[" Field of study and training "].includes(selectedFieldOfStudy)
+    );
+    Winners = newWinners;
+  }
+
+  if (majorBodyOfWork) {
+    const newWinners = Winners?.filter((item) =>
+      item["Major body of work -time of prize"].includes(majorBodyOfWork)
+    );
+    Winners = newWinners;
+  }
+
+  if (InfluenceImpact) {
+    const newWinners = Winners?.filter((item) =>
+      item["Influence/Impact"].includes(InfluenceImpact)
+    );
+    Winners = newWinners;
+  }
+
+  const fieldsOfStudy = new Set(
+    data?.Database?.map((item) =>
+      item?.[" Field of study and training "]
+        ?.split(",")
+        ?.map((item) => item.trim())
+    ).flat(3)
+  );
+
+  // let data;
+  // if (dataId === 1) data = first;
+  // if (dataId === 2) data = second;
+  // if (dataId === 3) data = third;
+  // if (dataId === 4) data = fourth;
+  // if (dataId === 5) data = fifth;
+  // if (dataId === 6) data = sixth;
+  // if (dataId === "year") {
+  //   const { year } = state;
+  //   if (year === 2010) data = year2010;
+  //   if (year === 2012) data = year2012;
+  //   if (year === 2013) data = year2013;
+  // }
 
   let subjectNav = (
     <div
@@ -44,11 +100,10 @@ function DataDisplay({ dataId, zoom }) {
     </div>
   );
 
-  useEffect(() => {
-    if (dataId === 1 || dataId === "year") setTopPanel(undefined);
-    else if (dataId === 6) setTopPanel(subjectNav);
-    else setTopPanel(<InstaFilters />);
-  }, [dataId, subjectNav]);
+  // useEffect(() => {
+  //  if(selectedYear)
+
+  // }, [selectedYear]);
 
   const options = {
     size: 180,
@@ -65,9 +120,25 @@ function DataDisplay({ dataId, zoom }) {
     compact: true,
     gravitation: 1,
   };
-  const children = data.map((item) => {
-    return <Child className="child" key={item.id} params={item} />;
+
+  console.log(Winners, "Winners");
+
+  const children = shuffleArrayElements([
+    ...Winners,
+    ...Array.from(fieldsOfStudy),
+  ]).map((item) => {
+    return (
+      <Child
+        className="child"
+        key={item.id}
+        params={item}
+        selectedItem={selectedItem}
+        setSelectedItem={setSelectedItem}
+      />
+    );
   });
+
+  // console.log(Array.from(fieldsOfStudy), "Winners.concat(fieldsOfStudy)");
 
   const scaleValue = zoom / 3 + 1.01;
   // const marginValue = `${zoom * 3}em`;

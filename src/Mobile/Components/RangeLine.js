@@ -2,7 +2,7 @@ import React from "react";
 import rangeLine from "../Data/rangeLine";
 
 function RangeLine({ selectedRange = 2, selectedColors }) {
-  console.log(selectedColors);
+  // console.log(selectedColors);
   const { color, bgColor } = selectedColors;
   return (
     <>
