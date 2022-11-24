@@ -28,14 +28,15 @@ function Child({ params, setSelectedItem, selectedItem }) {
           border: `5px solid ${
             CategoriesData.find((item) =>
               params["Prize Category"]?.includes(item?.name)
-            )?.colorCode || "#D2D2D2"
+            )?.colorCode ||
+            CategoriesData.find((item) => item?.name === "Others")?.colorCode
           }`,
           borderRadius: 100,
           // backgroundColor: `${params.backgroundColor}`,
           height: "90px",
           width: "90px",
           overflow: "hidden",
-          scale: 1,
+          // scale: 2,
           // opacity: `${params.isActive ? "100%" : "50%"}`,
           // cursor: `${params.isRouting ? "pointer" : null}`,
           cursor: "pointer",
@@ -50,6 +51,9 @@ function Child({ params, setSelectedItem, selectedItem }) {
           width="100%"
           // height="100%"
           alt={params.Name}
+          style={{
+            cursor: "pointer",
+          }}
         />
       </div>
     );

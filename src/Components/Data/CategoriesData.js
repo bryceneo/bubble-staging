@@ -11,7 +11,7 @@ export default [
   },
   {
     id: 3,
-    name: "Mathematics and Mathematical Sciences",
+    name: "Mathematical Sciences",
     colorCode: "#2CC7C9",
   },
   {
