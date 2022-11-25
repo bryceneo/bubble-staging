@@ -69,14 +69,17 @@ function DataDisplay({
     Winners = newWinners;
   }
 
-  const fieldsOfStudy = new Set(
-    data?.Database?.map((item) =>
-      item?.[" Field of study and training "]
-        ?.split(",")
-        ?.map((item) => item.trim())
-    ).flat(3)
+  const fieldsOfStudy = Array.from(
+    new Set(
+      data?.Database?.map((item) =>
+        item?.[" Field of study and training "]
+          ?.split(",")
+          ?.map((item) => item.trim())
+      ).flat(3)
+    )
   );
 
+  fieldsOfStudy.splice(fieldsOfStudy.length / 2, 0, selectedYear);
   // let data;
   // if (dataId === 1) data = first;
   // if (dataId === 2) data = second;
@@ -100,10 +103,14 @@ function DataDisplay({
     </div>
   );
 
-  // useEffect(() => {
-  //  if(selectedYear)
+  useEffect(() => {
+    if (selectedItem?.Name) setTopPanel(<InstaFilters />);
+    else {
+      setTopPanel(null);
+    }
+  }, [selectedItem]);
 
-  // }, [selectedYear]);
+  // console.log(selectedItem, "selectedItem");
 
   const options = {
     size: 180,
@@ -121,19 +128,17 @@ function DataDisplay({
     gravitation: 1,
   };
 
-  console.log(Winners, "Winners");
+  // console.log(Winners, "Winners");
 
-  const children = shuffleArrayElements([
-    ...Winners,
-    ...Array.from(fieldsOfStudy),
-  ]).map((item) => {
+  const children = [...Winners, ...fieldsOfStudy].map((item, index) => {
     return (
       <Child
         className="child"
-        key={item.id}
+        key={index}
         params={item}
         selectedItem={selectedItem}
         setSelectedItem={setSelectedItem}
+        selectedYear={selectedYear}
       />
     );
   });

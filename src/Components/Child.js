@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import DummyImage from "./Data/Pics/2.jpeg";
 import CategoriesData from "./Data/CategoriesData";
 import Avatar from "react-avatar";
-function Child({ params, setSelectedItem, selectedItem }) {
+function Child({ params, setSelectedItem, selectedItem, selectedYear }) {
   // console.log(params.id, params.backgroundColor);
   // console.log(params["Prize Category"], "asgbjhbas");
   const navigate = useNavigate();
@@ -20,7 +20,44 @@ function Child({ params, setSelectedItem, selectedItem }) {
       navigate(`/laurate-details/${lauID}`);
     }
   };
-  if (params.Name) {
+
+  const backgroundColor = () => {
+    if (selectedItem?.Name) {
+      if (selectedItem[" Field of study and training "].includes(params))
+        return "#F1AC4D ";
+      if (
+        selectedItem["Major body of work -time of prize"].includes(params) ||
+        selectedItem["Influence/Impact"].includes(params)
+      )
+        return "#ffff";
+    }
+    return "";
+  };
+
+  const getTextColor = () => {
+    if (
+      (selectedItem?.Name &&
+        selectedItem[" Field of study and training "].includes(params)) ||
+      params === selectedYear
+    )
+      return "#ffffff";
+  };
+
+  const getBorderStyle = () => {
+    if (
+      selectedItem?.Name &&
+      selectedItem["Major body of work -time of prize"].includes(params)
+    )
+      return "2px solid #F1AC4D";
+    if (
+      selectedItem?.Name &&
+      selectedItem[" Field of study and training "].includes(params)
+    )
+      return "";
+    return "2px solid #D2D2D2";
+  };
+
+  if (params?.Name) {
     return (
       <div
         style={{
@@ -37,7 +74,11 @@ function Child({ params, setSelectedItem, selectedItem }) {
           width: "90px",
           overflow: "hidden",
           // scale: 2,
-          // opacity: `${params.isActive ? "100%" : "50%"}`,
+          opacity: selectedItem?.Name
+            ? selectedItem?.Name === params.Name
+              ? "100%"
+              : "50%"
+            : "100%",
           // cursor: `${params.isRouting ? "pointer" : null}`,
           cursor: "pointer",
         }}
@@ -49,12 +90,13 @@ function Child({ params, setSelectedItem, selectedItem }) {
           // srcset={`images/${params?.Name}.png,images/${params?.Name}.jpeg`}
           srcSet={`images/${params?.Name}.png 1280w,images/${params?.Name}.jpeg 1280w`}
           width="100%"
-          // height="100%"
+          height="100%"
           alt={params.Name}
           style={{
             cursor: "pointer",
           }}
         />
+        {/* <p>{params.Name}</p> */}
       </div>
     );
   } else {
@@ -62,7 +104,7 @@ function Child({ params, setSelectedItem, selectedItem }) {
       <div
         style={{
           borderRadius: 100,
-          border: `2px solid #D2D2D2`,
+          border: getBorderStyle(),
           height: "90px",
           width: "90px",
           display: "flex",
@@ -73,10 +115,13 @@ function Child({ params, setSelectedItem, selectedItem }) {
           scale: 1,
           opacity: "100%",
           cursor: `pointer`,
+          backgroundColor:
+            params === selectedYear ? "#14202E" : backgroundColor(),
+          color: getTextColor(),
         }}
         // onClick={() => personClickHandler(params.laurateId, params.isRouting)}
       >
-        {params}
+        {params === selectedYear ? `${selectedYear} Prize Winners` : params}
       </div>
     );
   }

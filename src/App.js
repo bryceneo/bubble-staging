@@ -33,7 +33,7 @@ function App() {
   const [selectedFieldOfStudy, setSelectedFieldOfStudy] = useState("");
   const [majorBodyOfWork, setMajorBodyOfWork] = useState("");
   const [InfluenceImpact, setInfluenceImpact] = useState("");
-  const [selectedYear, setSelectedYear] = useState(0);
+  const [selectedYear, setSelectedYear] = useState();
   // console.log(selectedYear, "selectedYear");
 
   const clearFilters = () => {
@@ -41,7 +41,7 @@ function App() {
     setSelectedFieldOfStudy("");
     setMajorBodyOfWork("");
     setInfluenceImpact("");
-    setSelectedYear(0);
+    setSelectedYear();
   };
   return (
     <>

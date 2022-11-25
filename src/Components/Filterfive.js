@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./styles/Filters.css";
 
 import Data from "./Data/AllData.json";
+import { useEffect } from "react";
 
 const Filterfive = ({ setSelectedYear, selectedYear }) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
@@ -12,6 +13,7 @@ const Filterfive = ({ setSelectedYear, selectedYear }) => {
       new Set(Data?.Database?.map((item) => item?.["Infosys Prize"]))
     ),
   ];
+
   const toggleOptions = () => {
     setIsOptionsOpen(!isOptionsOpen);
   };
@@ -28,6 +30,7 @@ const Filterfive = ({ setSelectedYear, selectedYear }) => {
         break;
     }
   };
+
   return (
     <div id="filters">
       <div className="select-wrapper">

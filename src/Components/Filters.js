@@ -5,13 +5,12 @@ function Filters({ SelectedCategory, setSelectedCategory }) {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
   const optionsList = [
-    ...Array.from(
-      new Set(
-        Data?.Database?.map((item) =>
-          item?.["Prize Category"]?.split(",")?.map((item) => item.trim())
-        )?.flat(10)
-      )
-    ),
+    "Social Sciences",
+    "Physical Sciences",
+    "Mathematical Sciences",
+    "Life Sciences",
+    "Humanities",
+    "Engineering and Computer Science",
   ];
   const toggleOptions = () => {
     setIsOptionsOpen(!isOptionsOpen);
