@@ -2,7 +2,54 @@
   direction: column;
   justify-content: center;
   align-items: center;
-max-width: 240px;
+max-width: 22%;
   width: 100%;
   border-right: 1px solid #dbdada;
+}
+@media screen  and (max-width:992px){
+  #sidePanel {
+    max-width: 175px;
+  }
+  .categories-list li{
+    font-size: 12px;
+  }
+  #instaFilters{
+    flex-wrap: wrap;
+  }
+  .filter {
+    padding: 2px 23px 2px 38px;
+    font-size: 12px;
+}
+.filter:before {
+  height: 15px;
+  width: 15px;
+  top: 15%;
+  left: 4px;
+}
+.zoom-in, .zoom-out {
+  padding: 1px 6px;
+  border: 1px solid #111;
+  background: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.yearline-mob{
+  justify-content: center;
+}
+.graph-wrapper{
+  overflow: hidden;
+}
+.graph-wrapper #test-graph-wrapper{
+  overflow: auto;
+}
+}
+@media screen  and (max-width:767px){
+  .yearline-mob{
+    justify-content: center;
+  }
+}
+@media screen  and (max-width:540px){
+  .yearline-mob{
+    justify-content: unset;
+  }
 }

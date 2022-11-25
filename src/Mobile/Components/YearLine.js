@@ -12,15 +12,17 @@ function YearLine({ selectedYear }) {
           bottom: "0",
           left: "0",
           width: "100%",
+          background: "#f6f6f6",
         }}
       >
-        <div
+        <div className="yearline-mob"
           style={{
             display: "flex",
             paddingRight: "50px",
             direction: "rtl",
             overflow: "auto",
-            margin:"10px 0",
+            padding:"10px 0",
+            background: "#f6f6f6"
           }}
         >
           {yearLine.map((year) => {

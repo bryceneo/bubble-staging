@@ -4,21 +4,42 @@ import Data from "./Data/AllData.json";
 const Filtertwo = ({ selectedFieldOfStudy, setSelectedFieldOfStudy }) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
+  // const optionsList = [
+  //   "Select Field",
+  //   ...Array.from(
+  //     new Set(
+  //       Data?.Database?.map((item) =>
+  //         item?.[" Field of study and training "]
+  //           ?.split(",")
+  //           ?.map((item) => item.trim())
+  //       )?.flat(10)
+  //     )
+  //   ),
+  // ];
   const optionsList = [
-    "Select Field",
-    ...Array.from(
-      new Set(
-        Data?.Database?.map((item) =>
-          item?.[" Field of study and training "]
-            ?.split(",")
-            ?.map((item) => item.trim())
-        )?.flat(10)
-      )
-    ),
+    "Select Field Of Study",
+    " Anthropology ",
+    "Economics",
+    " Chemical Engineering ",
+    " Physics ",
+    " History",
+    " Mathematics ",
+    " Mechanical Engineering",
   ];
-  const toggleOptions = () => {
-    setIsOptionsOpen(!isOptionsOpen);
-  };
+  // const toggleOptions = () => {
+  //   // setIsOptionsOpen(true);
+  //   if (switchBoard == "01000") {
+  //     setSwitchBoard("00000");
+  //     // console.log("reseting switch board");
+  //   } else {
+  //     setSwitchBoard("01000");
+  //     // console.log("setting Switch board for first");
+  //   }
+  // };
+ 
+  // const toggleOptions = () => {
+  //   setIsOptionsOpen(!isOptionsOpen);
+  // };
   const handleKeyDown = (index) => (e) => {
     switch (e.key) {
       case " ":
@@ -26,7 +47,8 @@ const Filtertwo = ({ selectedFieldOfStudy, setSelectedFieldOfStudy }) => {
       case "Enter":
         e.preventDefault();
         setSelectedOption(index);
-        setIsOptionsOpen(false);
+        setSwitchBoard("00000");
+        // setIsOptionsOpen(false);
         break;
       default:
         break;
@@ -42,7 +64,7 @@ const Filtertwo = ({ selectedFieldOfStudy, setSelectedFieldOfStudy }) => {
           aria-haspopup="listbox"
           aria-expanded={isOptionsOpen}
           className={isOptionsOpen ? "expanded" : ""}
-          onClick={toggleOptions}
+          // onClick={toggleOptions}
         >
           {/* {optionsList[selectedOption]} */}
           {selectedFieldOfStudy || "Select Field"}

@@ -1,11 +1,12 @@
-.filter-header{
-  background: #F9F9F9;
-    box-shadow: 0px 3px 6px #00000029;
-    opacity: 1;
+.filter-header {
+  background: #f9f9f9;
+  box-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
 }
-.main-wrapper-filter{
+.main-wrapper-filter {
   justify-content: space-between;
-  gap: 30px;
+  gap: 20px;
+  align-items: center;
 }
 #filters {
   height: 5em;
@@ -14,21 +15,22 @@
   justify-content: center;
   align-items: center;
 }
-.select-wrapper .sort-label{
-  color: #8695A8;
+.select-wrapper .sort-label {
+  color: #8695a8;
   font-size: 12px;
 }
 #select-btn {
   border: 0;
-  border-bottom: 1px solid #8695A8;
+  border-bottom: 1px solid #8695a8;
   background: transparent;
   width: 100%;
   position: relative;
   text-align: left;
   padding: 0;
   padding-bottom: 10px;
-  font-size: 14px;
+  font-size: 13px;
   position: relative;
+  padding-right: 9px;
 }
 
 #select-btn:hover {
@@ -49,14 +51,17 @@
 }
 
 ul.options {
-  border: 1px solid #a3a7ab;
+  box-shadow: 0px 3px 6px #00000029;
   display: none;
-  background: #f6f6f6;
+  background: #fff;
   list-style: none;
-  padding: 4px 0;
+  padding: 10px 0;
   margin-top: -4px;
   position: absolute;
   z-index: 3;
+  border-radius: 5px;
+  height: 195px;
+  overflow-x: auto;
 }
 
 ul.show {
@@ -65,19 +70,68 @@ ul.show {
 
 ul.options li {
   padding: 6px 10px;
+  font-size: 12px;
 }
-
-ul.options li:active,
-ul.options li:focus,
-ul.options li:hover,
-ul.options li[aria-selected="true"] {
-  background: #8695A8;
+ ul.options li:focus, ul.options li:hover{
+  background: #efefef;
   cursor: pointer;
+  color: #000;
 }
-.clear-filter{
+/* ul.options li:active,
+ul.options li[aria-selected="true"] {
+  background: #223247;
+  cursor: pointer;
+  color: #fff;
+} */
+.clear-filter {
   padding: 10px 15px;
+  border: 1px solid #223247;
   background-color: #223247;
   color: #fff;
   font-size: 12px;
   text-decoration: none;
+  transition: ease-out all 0.3s;
+}
+.clear-filter:hover {
+  color: #223247;
+  background: transparent;
+  border: 1px solid #223247;
+}
+@media screen and (max-width:1199px){
+  #select-btn{
+    font-size: 12px;
+  }
+}
+@media  screen and (max-width:1024px) {
+  #select-btn{
+    padding-bottom: 1px;
+    font-size: 12px;
+  }
+}
+@media screen  and (max-width:992px){
+  .main-wrapper-filter {
+    gap: 0px 18px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+}
+/* width */
+ul::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 5px;
+}
+
+/* Track */
+ul::-webkit-scrollbar-track {
+  background: #adacac; 
+}
+ 
+/* Handle */
+ul::-webkit-scrollbar-thumb {
+  background: #223247; 
+}
+
+/* Handle on hover */
+ul::-webkit-scrollbar-thumb:hover {
+  background: rgb(156, 156, 156); 
 }

@@ -15,7 +15,14 @@ const Filterfive = ({ setSelectedYear, selectedYear }) => {
   ];
 
   const toggleOptions = () => {
-    setIsOptionsOpen(!isOptionsOpen);
+    // setIsOptionsOpen(true);
+    if (switchBoard == "00001") {
+      setSwitchBoard("00000");
+      // console.log("reseting switch board");
+    } else {
+      setSwitchBoard("00001");
+      // console.log("setting Switch board for first");
+    }
   };
   const handleKeyDown = (index) => (e) => {
     switch (e.key) {
@@ -30,7 +37,6 @@ const Filterfive = ({ setSelectedYear, selectedYear }) => {
         break;
     }
   };
-
   return (
     <div id="filters">
       <div className="select-wrapper">
