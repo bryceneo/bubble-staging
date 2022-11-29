@@ -10,18 +10,52 @@ import prizeDetailsAll from "./Data/prizeDetailsAll";
 import prizeDetailsWork from "./Data/prizeDetailsWork";
 import prizeDetailsStudies from "./Data/prizeDetailsStudies";
 import prizeDetailsInfluence from "./Data/prizeDetailsInfluence";
-import DataDisplay from "./Components/DataDisplay";
+import DataDisplay from "../Components/DataDisplay";
 import FilterHeader from "./Components/FilterHeader";
 
-function Mobile() {
+function Mobile({
+  selectedYear,
+  SelectedCategory,
+  selectedFieldOfStudy,
+  majorBodyOfWork,
+  InfluenceImpact,
+  setSelectedCategory,
+  setSelectedFieldOfStudy,
+  setMajorBodyOfWork,
+  setInfluenceImpact,
+  setSelectedYear,
+}) {
   return (
     <>
-      <FilterHeader />
+      <FilterHeader
+        selectedYear={selectedYear}
+        SelectedCategory={SelectedCategory}
+        selectedFieldOfStudy={selectedFieldOfStudy}
+        majorBodyOfWork={majorBodyOfWork}
+        InfluenceImpact={InfluenceImpact}
+        setSelectedCategory={setSelectedCategory}
+        setSelectedFieldOfStudy={setSelectedFieldOfStudy}
+        setMajorBodyOfWork={setMajorBodyOfWork}
+        setInfluenceImpact={setInfluenceImpact}
+        setSelectedYear={setSelectedYear}
+      />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<PrizeWinners />} />
-          <Route path="prize-winners/:year" element={<PrizeWinners />} />
-          <Route path="prize-details/:prizeId" element={<PrizeDetails />}>
+          <Route
+            path="/"
+            element={
+              <DataDisplay
+                selectedYear={selectedYear}
+                SelectedCategory={SelectedCategory}
+                selectedFieldOfStudy={selectedFieldOfStudy}
+                majorBodyOfWork={majorBodyOfWork}
+                InfluenceImpact={InfluenceImpact}
+                mobileView
+              />
+            }
+          />
+          {/* <Route path="prize-winners/:year" element={<PrizeWinners />} /> */}
+          {/* <Route path="prize-details/:prizeId" element={<PrizeDetails />}>
             <Route
               path="all"
               element={
@@ -58,14 +92,14 @@ function Mobile() {
                 />
               }
             />
-          </Route>
-          <Route path="subject-areas/:subjectId" element={<SubjectAreas />} />
+          </Route> */}
+          {/* <Route path="subject-areas/:subjectId" element={<SubjectAreas />} />
           <Route path="field-relations/:field" element={<FieldRelations />} />
           <Route path="year-ranges/:range" element={<YearRanges />} />
           <Route
             path="laurates-of-subject/:subject"
             element={<LauratesOfSubjects />}
-          />
+          /> */}
         </Routes>
       </BrowserRouter>
     </>

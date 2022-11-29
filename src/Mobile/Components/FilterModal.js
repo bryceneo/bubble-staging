@@ -1,81 +1,71 @@
 import React, { useEffect, useState } from "react";
-
+import CategoriesData from "../Data/CategoriesData";
+import Data from "../../Components/Data/AllData.json";
 function FilterModal({
   selectedCategory,
   setSelectedCategory,
   selectedFieldOfStudy,
   setSelectedFieldOfStudy,
-  selectedMajorBody,
-  setSelecteMajorBody,
-  selectedInfluenceImpact,
-  setSelecteInfluenceImpact,
+  majorBodyOfWork,
+  setMajorBodyOfWork,
+  InfluenceImpact,
+  setInfluenceImpact,
   selectedYear,
-  setSelecteYear,
+  setSelectedYear,
   setIsModalOpen,
 }) {
   const [modalPage, setModalPage] = useState("filter");
   const categoryObj = [
-    { id: 1, name: "Social Sciences" },
-    { id: 2, name: "Humanities" },
-    { id: 3, name: "Life Sciences" },
-    { id: 4, name: "Mathematical Sciences" },
-    { id: 5, name: "Physical Sciences" },
-    { id: 6, name: "Social Sciences" },
+    "Select Category",
+    "Social Sciences",
+    "Physical Sciences",
+    "Mathematical Sciences",
+    "Life Sciences",
+    "Humanities",
+    "Engineering and Computer Science",
   ];
   const filterObj = [
-    { id: 1, name: " Anthropology " },
-    { id: 2, name: "Economics" },
-    { id: 3, name: " Chemical Engineering " },
-    { id: 4, name: " Physics " },
-    { id: 5, name: " History" },
-    { id: 6, name: " Mathematics " },
+    ...Array.from(
+      new Set(
+        Data?.Database?.map((item) =>
+          item?.["Field of study and training"]
+            ?.split(",")
+            ?.map((item) => item.trim())
+        )?.flat(10)
+      )
+    ),
   ];
   const majorbodyObj = [
-    { id: 1, name: " Plant Genetics" },
-    { id: 2, name: " Polymer Science " },
-    { id: 3, name: " Material Engineering" },
-    { id: 4, name: " Cell  Biology" },
-    { id: 5, name: "  Biophysics " },
-    { id: 6, name: "Supramolecular Chemistry" },
+    ...Array.from(
+      new Set(
+        Data?.Database?.map((item) =>
+          item?.["Major body of work -time of prize"]
+            ?.split(",")
+            ?.map((item) => item.trim())
+        )?.flat(10)
+      )
+    ),
   ];
   const influenceImpactObj = [
-    { id: 1, name: "Molecular Chemistry" },
-    { id: 2, name: "Archaeology" },
-    { id: 3, name: "Theoretical Linguistics" },
-    { id: 4, name: "Mathematical Sciences" },
-    { id: 5, name: "Biochemistry" },
-    { id: 6, name: "Database Optimization" },
+    ...Array.from(
+      new Set(
+        Data?.Database?.map((item) =>
+          item?.["Influence/Impact"]?.split(",")?.map((item) => item.trim())
+        )?.flat(10)
+      )
+    ),
   ];
   const yearObj = [
-    { id: 1, year: 2000 },
-    { id: 2, year: 2001 },
-    { id: 3, year: 2002 },
-    { id: 4, year: 2003 },
-    { id: 5, year: 2004 },
-    { id: 6, year: 2005 },
-    { id: 7, year: 2006 },
-    { id: 8, year: 2007 },
-    { id: 9, year: 2008 },
-    { id: 10, year: 2009 },
-    { id: 11, year: 2010 },
-    { id: 12, year: 2011 },
-    { id: 13, year: 2012 },
-    { id: 14, year: 2013 },
-    { id: 15, year: 2014 },
-    { id: 16, year: 2015 },
-    { id: 17, year: 2016 },
-    { id: 18, year: 2017 },
-    { id: 19, year: 2018 },
-    { id: 20, year: 2019 },
-    { id: 21, year: 2020 },
-    { id: 22, year: 2021 },
+    ...Array.from(
+      new Set(Data?.Database?.map((item) => item?.["Infosys Prize"]))
+    ),
   ];
   const handleResetFilter = () => {
-    setSelectedCategory(0);
-    setSelectedFieldOfStudy(0);
-    setSelecteMajorBody(0);
-    setSelecteInfluenceImpact(0);
-    selectedYear(0);
+    setSelectedCategory("");
+    setSelectedFieldOfStudy("");
+    setMajorBodyOfWork("");
+    setInfluenceImpact("");
+    selectedYear("");
     setIsModalOpen(false);
   };
   const handleApplyFilter = () => {
@@ -87,11 +77,10 @@ function FilterModal({
     useState(selectedFieldOfStudy);
   // console.log("categorySelection", categorySelection);
   const [majorbodyWorkSelection, setMajorBodyworkSelection] =
-    useState(selectedMajorBody);
-  const [influenceImpactSelection, setInfluenceImpactSelection] = useState(
-    selectedInfluenceImpact
-  );
-  const [yearSelection, setYearSelection] = useState(selectedInfluenceImpact);
+    useState(majorBodyOfWork);
+  const [influenceImpactSelection, setInfluenceImpactSelection] =
+    useState(InfluenceImpact);
+  const [yearSelection, setYearSelection] = useState(InfluenceImpact);
   // console.log("majorbodySelection", majorbodyWorkSelection);
 
   //Search Terms
@@ -110,15 +99,15 @@ function FilterModal({
     setIsModalOpen(false);
   };
   const handleMajorBodyChoose = () => {
-    setSelecteMajorBody(majorbodyWorkSelection);
+    setMajorBodyOfWork(majorbodyWorkSelection);
     setIsModalOpen(false);
   };
   const handleInfluenceImpactChoose = () => {
-    setSelecteInfluenceImpact(influenceImpactSelection);
+    setInfluenceImpact(influenceImpactSelection);
     setIsModalOpen(false);
   };
   const handleYearChoose = () => {
-    setSelecteYear(yearSelection);
+    setSelectedYear(yearSelection);
     setIsModalOpen(false);
   };
   const handleCancel = () => {
@@ -139,9 +128,10 @@ function FilterModal({
           <p className="m-0">Category</p>
           <span className="category-span d-block">
             {" "}
-            {selectedCategory
+            {/* {selectedCategory
               ? categoryObj[selectedCategory - 1].name
-              : undefined}
+              : undefined} */}
+            {selectedCategory || ""}
           </span>
         </div>
         <div
@@ -150,9 +140,10 @@ function FilterModal({
         >
           <p className="m-0">Field of Study</p>
           <span className="category-span d-block">
-            {selectedFieldOfStudy
+            {/* {selectedFieldOfStudy
               ? filterObj[selectedFieldOfStudy - 1].name
-              : undefined}
+              : undefined} */}
+            {selectedFieldOfStudy || ""}
           </span>
         </div>
         <div
@@ -160,22 +151,14 @@ function FilterModal({
           onClick={() => setModalPage("majorBodyOfWork")}
         >
           <p className="m-0">Major Body of Work</p>
-          <span className="category-span d-block">
-            {selectedMajorBody
-              ? majorbodyObj[selectedMajorBody - 1].name
-              : undefined}
-          </span>
+          <span className="category-span d-block">{majorBodyOfWork || ""}</span>
         </div>
         <div
           className="category pt-4 pb-4"
           onClick={() => setModalPage("influenceImpact")}
         >
           <p className="m-0">Influence/Impact Area</p>
-          <span className="category-span d-block">
-            {selectedInfluenceImpact
-              ? influenceImpactObj[selectedInfluenceImpact - 1].name
-              : undefined}
-          </span>
+          <span className="category-span d-block">{InfluenceImpact || ""}</span>
         </div>
         <div
           className="category pt-4 pb-4"
@@ -183,7 +166,7 @@ function FilterModal({
         >
           <p className="m-0">Year</p>
           <span className="category-span d-block">
-            {selectedYear ? yearObj[selectedYear - 1].year : undefined}
+            {selectedYear || ""}
           </span>{" "}
         </div>
 
@@ -210,7 +193,7 @@ function FilterModal({
 
           <div class="modal-title">
             <span class="modal-heading">Category</span>
-            <span class="results">12 Results available</span>
+            {/* <span class="results">12 Results available</span> */}
           </div>
           <input
             class="form-control me-2"
@@ -227,9 +210,7 @@ function FilterModal({
                   return val;
                 } else {
                   if (
-                    val.name
-                      .toLowerCase()
-                      .includes(categorySearch.toLowerCase())
+                    val.toLowerCase().includes(categorySearch.toLowerCase())
                   ) {
                     return val;
                   }
@@ -238,15 +219,15 @@ function FilterModal({
               .map((cat) => (
                 <li>
                   <input
-                    id={`radio-${cat.id}`}
+                    id={`radio-${cat}`}
                     class="radio-custom"
                     name="radio-group"
                     type="radio"
-                    checked={categorySelection == cat.id}
-                    onClick={() => setCategorySelection(cat.id)}
+                    checked={categorySelection == cat}
+                    onClick={() => setCategorySelection(cat)}
                   />
-                  <label for={`radio-${cat.id}`} class="radio-custom-label">
-                    {cat.name}
+                  <label for={`radio-${cat}`} class="radio-custom-label">
+                    {cat}
                   </label>
                 </li>
               ))}
@@ -277,7 +258,7 @@ function FilterModal({
 
           <div class="modal-title">
             <span class="modal-heading">Field Of Study</span>
-            <span class="results">12 Results available</span>
+            {/* <span class="results">12 Results available</span> */}
           </div>
           <input
             class="form-control me-2"
@@ -294,9 +275,7 @@ function FilterModal({
                   return val;
                 } else {
                   if (
-                    val.name
-                      .toLowerCase()
-                      .includes(fieldOfStudySearch.toLowerCase())
+                    val.toLowerCase().includes(fieldOfStudySearch.toLowerCase())
                   ) {
                     return val;
                   }
@@ -305,15 +284,15 @@ function FilterModal({
               .map((filter) => (
                 <li>
                   <input
-                    id={`radio-${filter.id}`}
+                    id={`radio-${filter}`}
                     class="radio-custom"
                     name="radio-group"
                     type="radio"
-                    checked={fieldOfStudySelection == filter.id}
-                    onClick={() => setFieldOfStudySelection(filter.id)}
+                    checked={fieldOfStudySelection == filter}
+                    onClick={() => setFieldOfStudySelection(filter)}
                   />
-                  <label for={`radio-${filter.id}`} class="radio-custom-label">
-                    {filter.name}
+                  <label for={`radio-${filter}`} class="radio-custom-label">
+                    {filter}
                   </label>
                 </li>
               ))}
@@ -361,7 +340,7 @@ function FilterModal({
                   return val;
                 } else {
                   if (
-                    val.name
+                    val
                       .toLowerCase()
                       .includes(majorBodyOfWorkSearch.toLowerCase())
                   ) {
@@ -372,15 +351,15 @@ function FilterModal({
               .map((filter) => (
                 <li>
                   <input
-                    id={`radio-${filter.id}`}
+                    id={`radio-${filter}`}
                     class="radio-custom"
                     name="radio-group"
                     type="radio"
-                    checked={majorbodyWorkSelection == filter.id}
-                    onClick={() => setMajorBodyworkSelection(filter.id)}
+                    checked={majorbodyWorkSelection == filter}
+                    onClick={() => setMajorBodyworkSelection(filter)}
                   />
-                  <label for={`radio-${filter.id}`} class="radio-custom-label">
-                    {filter.name}
+                  <label for={`radio-${filter}`} class="radio-custom-label">
+                    {filter}
                   </label>
                 </li>
               ))}
@@ -411,7 +390,7 @@ function FilterModal({
 
           <div class="modal-title">
             <span class="modal-heading">Influence/Impact Area</span>
-            <span class="results">12 Results available</span>
+            {/* <span class="results">12 Results available</span> */}
           </div>
           <input
             class="form-control me-2"
@@ -428,7 +407,7 @@ function FilterModal({
                   return val;
                 } else {
                   if (
-                    val.name
+                    val
                       .toLowerCase()
                       .includes(influenceImpactSearch.toLowerCase())
                   ) {
@@ -439,15 +418,15 @@ function FilterModal({
               .map((filter) => (
                 <li>
                   <input
-                    id={`radio-${filter.id}`}
+                    id={`radio-${filter}`}
                     class="radio-custom"
                     name="radio-group"
                     type="radio"
-                    checked={influenceImpactSelection == filter.id}
-                    onClick={() => setInfluenceImpactSelection(filter.id)}
+                    checked={influenceImpactSelection == filter}
+                    onClick={() => setInfluenceImpactSelection(filter)}
                   />
-                  <label for={`radio-${filter.id}`} class="radio-custom-label">
-                    {filter.name}
+                  <label for={`radio-${filter}`} class="radio-custom-label">
+                    {filter}
                   </label>
                 </li>
               ))}
@@ -479,7 +458,7 @@ function FilterModal({
 
           <div class="modal-title">
             <span class="modal-heading">Year</span>
-            <span class="results">12 Results available</span>
+            {/* <span class="results">12 Results available</span> */}
           </div>
           <input
             class="form-control me-2"
@@ -495,7 +474,7 @@ function FilterModal({
                 if (yearSearch == "") {
                   return val;
                 } else {
-                  if (val.year.toString().includes(yearSearch)) {
+                  if (toString(val).includes(yearSearch)) {
                     return val;
                   }
                 }
@@ -503,15 +482,15 @@ function FilterModal({
               .map((filter) => (
                 <li>
                   <input
-                    id={`radio-${filter.id}`}
+                    id={`radio-${filter}`}
                     class="radio-custom"
                     name="radio-group"
                     type="radio"
-                    checked={yearSelection == filter.id}
-                    onClick={() => setYearSelection(filter.id)}
+                    checked={yearSelection == filter}
+                    onClick={() => setYearSelection(filter)}
                   />
-                  <label for={`radio-${filter.id}`} class="radio-custom-label">
-                    {filter.year}
+                  <label for={`radio-${filter}`} class="radio-custom-label">
+                    {filter}
                   </label>
                 </li>
               ))}

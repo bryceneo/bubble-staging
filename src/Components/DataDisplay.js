@@ -194,7 +194,7 @@ function DataDisplay({
       ) : (
         <div id="dataDisplay">
           {/* {topPanel} */}
-          {selectedItem?.Name && <InstaFilters selectedItem={selectedItem} />}
+          {selectedItem?.Name && !mobileView && <InstaFilters selectedItem={selectedItem} />}
           {selectedItem && !selectedItem?.Name && !mobileView && subjectNav}
           {mobileView && (
             <>
