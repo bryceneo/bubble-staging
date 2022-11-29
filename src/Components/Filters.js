@@ -4,35 +4,8 @@ import Data from "./Data/AllData.json";
 function Filters({ SelectedCategory, setSelectedCategory }) {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
-
-  useEffect(() => {
-    setSelectedOptions((prev) => ({ ...prev, one: selectedOption }));
-  }, [selectedOption]);
-
-  useEffect(() => {
-    if (selectedOptions.one == 0) setSelectedOption(0);
-  }, [selectedOptions]);
-
-  useEffect(() => {
-    if (switchBoard == "10000") {
-      setIsOptionsOpen(true);
-      // console.log("First is on");
-    } else {
-      setIsOptionsOpen(false);
-      // console.log("First is off");
-    }
-  }, [switchBoard]);
-  const toggleOptions = () => {
-    // setIsOptionsOpen(true);
-    if (switchBoard == "10000") {
-      setSwitchBoard("00000");
-      // console.log("reseting switch board");
-    } else {
-      setSwitchBoard("10000");
-      // console.log("setting Switch board for first");
-    }
-  };
   const optionsList = [
+    "Select Category",
     "Social Sciences",
     "Physical Sciences",
     "Mathematical Sciences",
@@ -40,7 +13,9 @@ function Filters({ SelectedCategory, setSelectedCategory }) {
     "Humanities",
     "Engineering and Computer Science",
   ];
-
+  const toggleOptions = () => {
+    setIsOptionsOpen(!isOptionsOpen);
+  };
   const handleKeyDown = (index) => (e) => {
     switch (e.key) {
       case " ":
@@ -48,7 +23,6 @@ function Filters({ SelectedCategory, setSelectedCategory }) {
       case "Enter":
         e.preventDefault();
         setSelectedOption(index);
-        setSwitchBoard("00000");
         setIsOptionsOpen(false);
         break;
       default:
@@ -86,7 +60,7 @@ function Filters({ SelectedCategory, setSelectedCategory }) {
               onClick={() => {
                 setSelectedOption(index);
                 setIsOptionsOpen(false);
-                setSelectedCategory(option);
+                setSelectedCategory(option === "Select Category" ? "" : option);
               }}
             >
               {option}

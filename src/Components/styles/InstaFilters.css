@@ -9,14 +9,17 @@
 
 .filter {
   cursor: pointer;
-    background: #fff;
-    padding: 3px 24px 3px 38px;
-    border: 1px solid #dfdfdf;
-    border-radius: 30px;
-    font-size: 13px;
-    position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 3px 24px 3px 24px;
+  border: 1px solid #dfdfdf;
+  border-radius: 30px;
+  font-size: 13px;
+  position: relative;
 }
-.filter:before {
+/* .filter:before {
   content: '';
   position: absolute;
   height: 17px;
@@ -27,8 +30,8 @@
   top: 50%;
   left: 4px;
   transform: translateY(-50%);
-}
-#instaFilters .filter:nth-child(2):before{
+} */
+/* #instaFilters .filter:nth-child(2):before{
   background: #ffffff;
 }
 #instaFilters .filter:nth-child(3):before{
@@ -38,4 +41,4 @@
 #instaFilters .filter:nth-child(4):before{
   background: #F4F4F4;
   border-color: #D2D2D2;
-}
+} */

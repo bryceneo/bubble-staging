@@ -29,9 +29,4 @@ export default [
     name: "Engineering and Computer Science",
     colorCode: "#704CA2",
   },
-  {
-    id: 7,
-    name: "Others",
-    colorCode: "#D2D2D2",
-  },
 ];

@@ -5,6 +5,7 @@ const Filterthree = ({ majorBodyOfWork, setMajorBodyOfWork }) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
   const optionsList = [
+    "Select Body of work",
     ...Array.from(
       new Set(
         Data?.Database?.map((item) =>
@@ -60,7 +61,7 @@ const Filterthree = ({ majorBodyOfWork, setMajorBodyOfWork }) => {
               onKeyDown={handleKeyDown(index)}
               onClick={() => {
                 setSelectedOption(index);
-                setMajorBodyOfWork(option);
+                setMajorBodyOfWork(option === "Select Body of work" ? "" : option);
                 setIsOptionsOpen(false);
               }}
             >

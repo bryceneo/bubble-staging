@@ -1,33 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import testPerson from "./Data/Pics/2.jpeg";
 import { useNavigate } from "react-router-dom";
 import DummyImage from "./Data/Pics/2.jpeg";
 import CategoriesData from "./Data/CategoriesData";
 import Avatar from "react-avatar";
-function Child({ params, setSelectedItem, selectedItem, selectedYear }) {
-  // console.log(params.id, params.backgroundColor);
-  // console.log(params["Prize Category"], "asgbjhbas");
+function Child({
+  params,
+  setSelectedItem,
+  selectedItem,
+  selectedYear,
+  relatedSubjects,
+}) {
   const navigate = useNavigate();
-  // const subjectClickHandler = (subID, isRouting) => {
-  //   if (isRouting) {
-  //     navigate(`/subject-details/${subID}`, {
-  //       state: { subId: params.subjectId, subText: params.text },
-  //     });
-  //   }
-  // };
-  const personClickHandler = (lauID, isRouting) => {
-    if (isRouting) {
-      navigate(`/laurate-details/${lauID}`);
-    }
-  };
+
+  const CategoryColor = selectedItem
+    ? CategoriesData?.find((item) =>
+        selectedItem["Prize Category"]?.includes(item?.name)
+      )?.colorCode
+    : "";
+
+  // console.log(params, "params");
+  // console.log(relatedSubjects, "relatedSubjects");
 
   const backgroundColor = () => {
     if (selectedItem?.Name) {
-      if (selectedItem[" Field of study and training "].includes(params))
-        return "#F1AC4D ";
+      if (selectedItem["Field of study and training"].includes(params))
+        return CategoryColor;
       if (
-        selectedItem["Major body of work -time of prize"].includes(params) ||
-        selectedItem["Influence/Impact"].includes(params)
+        selectedItem["Major body of work -time of prize"]?.includes(params) ||
+        selectedItem["Influence/Impact"]?.includes(params)
       )
         return "#ffff";
     }
@@ -37,8 +38,10 @@ function Child({ params, setSelectedItem, selectedItem, selectedYear }) {
   const getTextColor = () => {
     if (
       (selectedItem?.Name &&
-        selectedItem[" Field of study and training "].includes(params)) ||
-      params === selectedYear
+        selectedItem["Field of study and training"]?.includes(params)) ||
+      params === selectedYear ||
+      selectedItem === params ||
+      relatedSubjects?.includes(params)
     )
       return "#ffffff";
   };
@@ -46,15 +49,55 @@ function Child({ params, setSelectedItem, selectedItem, selectedYear }) {
   const getBorderStyle = () => {
     if (
       selectedItem?.Name &&
-      selectedItem["Major body of work -time of prize"].includes(params)
+      selectedItem["Major body of work -time of prize"]?.includes(params)
     )
-      return "2px solid #F1AC4D";
+      return "2px solid" + CategoryColor;
     if (
       selectedItem?.Name &&
-      selectedItem[" Field of study and training "].includes(params)
+      selectedItem["Influence/Impact"]?.includes(params)
+    )
+      return "2px dashed" + CategoryColor;
+    if (
+      selectedItem?.Name &&
+      selectedItem["Field of study and training"]?.includes(params)
     )
       return "";
     return "2px solid #D2D2D2";
+  };
+
+  const isIteminSubjects = () => {
+    return (
+      selectedItem &&
+      (params["Prize Category"]?.includes(selectedItem) ||
+        params["Field of study and training"]?.includes(selectedItem) ||
+        params["Major body of work -time of prize"]?.includes(selectedItem) ||
+        params["Influence/Impact"]?.includes(selectedItem))
+    );
+  };
+
+  const isSubjectInItem = () => {
+    return (
+      selectedItem?.Name &&
+      (selectedItem?.Name === params?.Name ||
+        selectedItem["Prize Category"]?.includes(params) ||
+        selectedItem["Field of study and training"]?.includes(params) ||
+        selectedItem["Major body of work -time of prize"]?.includes(params) ||
+        selectedItem["Influence/Impact"]?.includes(params))
+    );
+  };
+
+  const getOpacity = () => {
+    // console.log(params);
+    if (
+      !selectedItem ||
+      isIteminSubjects(selectedItem) ||
+      isSubjectInItem(selectedItem) ||
+      params === selectedItem ||
+      params === selectedYear ||
+      (selectedItem && !selectedItem?.Name && relatedSubjects?.includes(params))
+    )
+      return "100%";
+    return "50%";
   };
 
   if (params?.Name) {
@@ -70,25 +113,21 @@ function Child({ params, setSelectedItem, selectedItem, selectedYear }) {
           }`,
           borderRadius: 100,
           // backgroundColor: `${params.backgroundColor}`,
-          height: "90px",
-          width: "90px",
+          height: "100px",
+          width: "100px",
           overflow: "hidden",
           // scale: 2,
-          opacity: selectedItem?.Name
-            ? selectedItem?.Name === params.Name
-              ? "100%"
-              : "50%"
-            : "100%",
+          opacity: getOpacity(),
+
           // cursor: `${params.isRouting ? "pointer" : null}`,
           cursor: "pointer",
         }}
         onClick={() => setSelectedItem(params)}
       >
-        {/* {params} */}
         <img
           src={`images/${params?.Name}.jpg`}
           // srcset={`images/${params?.Name}.png,images/${params?.Name}.jpeg`}
-          srcSet={`images/${params?.Name}.png 1280w,images/${params?.Name}.jpeg 1280w`}
+          // srcSet={`images/${params?.Name}.png 1280w,images/${params?.Name}.jpeg 1280w`}
           width="100%"
           height="100%"
           alt={params.Name}
@@ -96,30 +135,36 @@ function Child({ params, setSelectedItem, selectedItem, selectedYear }) {
             cursor: "pointer",
           }}
         />
-        {/* <p>{params.Name}</p> */}
       </div>
     );
   } else {
     return (
       <div
         style={{
-          borderRadius: 100,
+          borderRadius: "100%",
           border: getBorderStyle(),
-          height: "90px",
-          width: "90px",
+          minHeight: "100px",
+          width: "100px",
+          padding: "10px",
           display: "flex",
           justifyContent: "space-around",
           alignItems: "center",
-          padding: "2px",
           overflow: "hidden",
           scale: 1,
-          opacity: "100%",
+          opacity: getOpacity(),
           cursor: `pointer`,
           backgroundColor:
-            params === selectedYear ? "#14202E" : backgroundColor(),
+            params === selectedYear ||
+            selectedItem === params ||
+            (selectedItem &&
+              !selectedItem?.Name &&
+              relatedSubjects?.includes(params))
+              ? "#14202E"
+              : backgroundColor(),
           color: getTextColor(),
         }}
         // onClick={() => personClickHandler(params.laurateId, params.isRouting)}
+        onClick={() => setSelectedItem(params)}
       >
         {params === selectedYear ? `${selectedYear} Prize Winners` : params}
       </div>

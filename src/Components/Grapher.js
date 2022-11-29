@@ -1,8 +1,90 @@
 import React from "react";
 import { Graph } from "react-d3-graph";
 import data from "./Data/graphData";
+import allData from "../Components/Data/AllData.json";
 
-function Grapher() {
+const picGenerator = (node) => {
+  return (
+    <div
+      style={{
+        borderRadius: "100%",
+        objectFit: "contain",
+        overflow: "hidden",
+        height: "80px",
+        width: "80px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        color: "#ffffff",
+        backgroundColor: "#223247",
+      }}
+    >
+      <img src={node.svg} height={"100%"} width={"100%"} alt={node.name} />
+    </div>
+  );
+};
+function Grapher({ selectedItem, relatedSubjects, setDisplayGraph }) {
+  console.log(selectedItem, "selectedItem");
+  const centralNode = {
+    id: selectedItem,
+    symbolType: "circle",
+    labelPosition: "center",
+    x: 150,
+    y: 300,
+  };
+  let links = [];
+
+  const winners = allData?.Database?.filter(
+    (person) =>
+      person["Field of study and training"]?.includes(selectedItem) ||
+      person["Major body of work -time of prize"]?.includes(selectedItem) ||
+      person["Influence/Impact"]?.includes(selectedItem) ||
+      person["Influence/Impact"]?.includes(selectedItem)
+  )?.map((winner) => {
+    links.push({
+      source: selectedItem,
+      target: winner?.Name,
+    });
+    return {
+      id: winner?.Name,
+      name: winner?.Name,
+      svg: "images/" + winner?.Name + ".jpg",
+      viewGenerator: picGenerator,
+    };
+  });
+
+  const relatedSubjectsNode = relatedSubjects?.map((subject) => {
+    // console.log(
+    //   allData?.Database?.find((person) => {
+    //     return (
+    //       person["Field of study and training"]?.includes(subject) ||
+    //       person["Major body of work -time of prize"]?.includes(subject) ||
+    //       person["Influence/Impact"]?.includes(subject)
+    //     );
+    //   })
+    // );
+    links.push({
+      source: selectedItem,
+      target: subject,
+    });
+    // links.push({
+    //   source: subject,
+    //   target:
+    //   allData?.Database?.find((person) => {
+    //       return (
+    //         person["Field of study and training"]?.includes(subject) ||
+    //         person["Major body of work -time of prize"]?.includes(subject) ||
+    //         person["Influence/Impact"]?.includes(subject)
+    //       );
+    //     })?.Name || selectedItem,
+    // });
+    return {
+      id: subject,
+      symbolType: "circle",
+      labelPosition: "center",
+    };
+  });
+
   const nodeDiv = (node) => (
     <div
       style={{
@@ -24,6 +106,11 @@ function Grapher() {
     </div>
   );
 
+  let data = {
+    links: links,
+    nodes: [centralNode, ...winners, ...relatedSubjectsNode],
+  };
+
   const [ref, setRef] = React.useState(null);
   const config = {
     directed: false,
@@ -32,7 +119,7 @@ function Grapher() {
     focusZoom: 5,
     collapsible: true,
     height: 700,
-    width: 700,
+    // width: 700,
     highlightDegree: 2,
     highlightOpacity: 0.5,
     linkHighlightBehavior: false,
@@ -40,7 +127,7 @@ function Grapher() {
     minZoom: 0.05,
     nodeHighlightBehavior: false, // comment this to reset nodes positions to work
     panAndZoom: true,
-    staticGraph: false,
+    // staticGraph: false,
 
     d3: {
       alphaTarget: 0.05,
@@ -90,8 +177,8 @@ function Grapher() {
     setRef(ref);
   }, []);
   return (
-    <div className="graph-wrapper w-100 text-center">
-      {/* <button onClick={resetNodesPositions}>Reset Nodes</button> */}
+    <div className="graph-wrapper w-100 p-3">
+      <button onClick={() => setDisplayGraph(false)}>Back</button>
       <Graph id="test" data={data} config={config} ref={handleRefChange} />
     </div>
   );

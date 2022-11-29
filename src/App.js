@@ -33,7 +33,9 @@ function App() {
   const [selectedFieldOfStudy, setSelectedFieldOfStudy] = useState("");
   const [majorBodyOfWork, setMajorBodyOfWork] = useState("");
   const [InfluenceImpact, setInfluenceImpact] = useState("");
-  const [selectedYear, setSelectedYear] = useState();
+  const [selectedYear, setSelectedYear] = useState(
+    new Date().getFullYear() - 1
+  );
   // console.log(selectedYear, "selectedYear");
 
   const clearFilters = () => {
@@ -41,7 +43,7 @@ function App() {
     setSelectedFieldOfStudy("");
     setMajorBodyOfWork("");
     setInfluenceImpact("");
-    setSelectedYear();
+    setSelectedYear(new Date().getFullYear() - 1);
   };
   return (
     <>
@@ -103,7 +105,18 @@ function App() {
         </>
       </DesktopSize>
       <MobileSize>
-        <Mobile />
+        <Mobile
+          selectedYear={selectedYear}
+          SelectedCategory={SelectedCategory}
+          selectedFieldOfStudy={selectedFieldOfStudy}
+          majorBodyOfWork={majorBodyOfWork}
+          InfluenceImpact={InfluenceImpact}
+          setSelectedCategory={setSelectedCategory}
+          setSelectedFieldOfStudy={setSelectedFieldOfStudy}
+          setMajorBodyOfWork={setMajorBodyOfWork}
+          setInfluenceImpact={setInfluenceImpact}
+          setSelectedYear={setSelectedYear}
+        />
       </MobileSize>
     </>
   );

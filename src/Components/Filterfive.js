@@ -8,21 +8,13 @@ const Filterfive = ({ setSelectedYear, selectedYear }) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
   const optionsList = [
-    "Select Year",
     ...Array.from(
       new Set(Data?.Database?.map((item) => item?.["Infosys Prize"]))
     ),
   ];
 
   const toggleOptions = () => {
-    // setIsOptionsOpen(true);
-    if (switchBoard == "00001") {
-      setSwitchBoard("00000");
-      // console.log("reseting switch board");
-    } else {
-      setSwitchBoard("00001");
-      // console.log("setting Switch board for first");
-    }
+    setIsOptionsOpen(!isOptionsOpen);
   };
   const handleKeyDown = (index) => (e) => {
     switch (e.key) {
@@ -37,6 +29,7 @@ const Filterfive = ({ setSelectedYear, selectedYear }) => {
         break;
     }
   };
+
   return (
     <div id="filters">
       <div className="select-wrapper">

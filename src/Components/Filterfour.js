@@ -5,6 +5,7 @@ const Filterfour = ({ InfluenceImpact, setInfluenceImpact }) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
   const optionsList = [
+    "Select Category",
     ...Array.from(
       new Set(
         Data?.Database?.map((item) =>
@@ -59,7 +60,7 @@ const Filterfour = ({ InfluenceImpact, setInfluenceImpact }) => {
               onKeyDown={handleKeyDown(index)}
               onClick={() => {
                 setSelectedOption(index);
-                setInfluenceImpact(option);
+                setInfluenceImpact(option === "Select Category" ? "" : option);
                 setIsOptionsOpen(false);
               }}
             >
