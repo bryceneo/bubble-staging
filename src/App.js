@@ -37,6 +37,7 @@ function App() {
   const [selectedYear, setSelectedYear] = useState(
     new Date().getFullYear() - 1
   );
+
   // console.log(selectedYear, "selectedYear");
 
   const clearFilters = () => {
@@ -118,7 +119,6 @@ function App() {
           setInfluenceImpact={setInfluenceImpact}
           setSelectedYear={setSelectedYear}
         />
-        
       </MobileSize>
     </>
   );

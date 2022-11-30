@@ -1,10 +1,14 @@
 import React from "react";
+import CategoriesData from "../Data/CategoriesData";
 import "./Styles/Winnercard.css";
 
-function WinnerCard({ selectedItem, selectedYear }) {
+function WinnerCard({ selectedItem, selectedYear, setSelectedItem }) {
   return (
     <>
       <div className="winner-card">
+        <button className="" onClick={() => setSelectedItem(null)}>
+          Back
+        </button>
         <img
           src={"images/" + selectedItem?.Name + ".jpg"}
           height={"100px"}
@@ -19,7 +23,16 @@ function WinnerCard({ selectedItem, selectedYear }) {
         <div className="winner-empname">{selectedItem?.Name}</div>
         <div className="winner-sub">
           {selectedYear} laurate in{" "}
-          <span className="sub-active">{selectedItem["Prize Category"]}</span>
+          <span
+            className="sub-active"
+            style={{
+              backgroundColor: CategoriesData?.find((item) =>
+                selectedItem["Prize Category"]?.includes(item.name)
+              )?.colorCode,
+            }}
+          >
+            {selectedItem["Prize Category"]}
+          </span>
         </div>
         <div className="view-profile">View Aneesh profile </div>
       </div>

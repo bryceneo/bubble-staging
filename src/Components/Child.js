@@ -11,6 +11,7 @@ function Child({
   selectedYear,
   relatedSubjects,
   mobileView,
+  selectedField,
 }) {
   const navigate = useNavigate();
 
@@ -21,11 +22,14 @@ function Child({
     : "";
 
   // console.log(params, "params");
-  // console.log(relatedSubjects, "relatedSubjects");
+  // console.log(selectedField, "selectedField");
 
   const backgroundColor = () => {
     if (selectedItem?.Name) {
-      if (selectedItem["Field of study and training"].includes(params))
+      if (
+        selectedItem["Field of study and training"].includes(params) &&
+        (!selectedField || selectedField === "Field of study and training")
+      )
         return CategoryColor;
       if (
         selectedItem["Major body of work -time of prize"]?.includes(params) ||
@@ -45,17 +49,19 @@ function Child({
       relatedSubjects?.includes(params)
     )
       return "#ffffff";
+    else return "";
   };
-
   const getBorderStyle = () => {
     if (
       selectedItem?.Name &&
-      selectedItem["Major body of work -time of prize"]?.includes(params)
+      selectedItem["Major body of work -time of prize"]?.includes(params) &&
+      (!selectedField || selectedField === "Major body of work -time of prize")
     )
       return "2px solid" + CategoryColor;
     if (
       selectedItem?.Name &&
-      selectedItem["Influence/Impact"]?.includes(params)
+      selectedItem["Influence/Impact"]?.includes(params) &&
+      (!selectedField || selectedField === "Influence/Impact")
     )
       return "2px dashed" + CategoryColor;
     if (

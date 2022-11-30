@@ -24,6 +24,8 @@ function Mobile({
   setMajorBodyOfWork,
   setInfluenceImpact,
   setSelectedYear,
+  selectedField,
+  setSelectedField,
 }) {
   return (
     <>
@@ -51,6 +53,8 @@ function Mobile({
                 majorBodyOfWork={majorBodyOfWork}
                 InfluenceImpact={InfluenceImpact}
                 setSelectedYear={setSelectedYear}
+                selectedField={selectedField}
+                setSelectedField={setSelectedField}
                 mobileView
               />
             }

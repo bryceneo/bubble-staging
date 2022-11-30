@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./styles/InstaFilters.css";
 import CategoriesData from "./Data/CategoriesData";
-function InstaFilters({ selectedItem }) {
+function InstaFilters({ selectedItem, setSelectedField }) {
   const navigate = useNavigate();
   const color =
     CategoriesData?.find((category) =>
@@ -17,22 +17,22 @@ function InstaFilters({ selectedItem }) {
   return (
     <div id="instaFilters">
       <div
-        // onClick={() => navigate("/laurate-details/field-of-study-&-training")}
         className={"filter"}
+        onClick={() => setSelectedField("Field of study and training")}
       >
         <div style={{ ...circleStyle, backgroundColor: color }}></div>
-        <div>Field of study & training</div>
+        <div>Field of study and training</div>
       </div>
       <div
-        // onClick={() => navigate("/laurate-details/major-body-of-work")}
         className={"filter"}
+        onClick={() => setSelectedField("Major body of work -time of prize")}
       >
         <div style={{ ...circleStyle, border: `2px solid ${color}` }}></div>
         <div>Major Body of work</div>
       </div>
       <div
-        // onClick={() => navigate("/laurate-details/influence-impact")}
         className={"filter"}
+        onClick={() => setSelectedField("Influence/Impact")}
       >
         <div style={{ ...circleStyle, border: `2px dashed ${color}` }}></div>
         <div>Influence/Impact</div>

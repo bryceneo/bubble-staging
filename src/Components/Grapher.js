@@ -24,7 +24,7 @@ const picGenerator = (node) => {
   );
 };
 function Grapher({ selectedItem, relatedSubjects, setDisplayGraph }) {
-  console.log(selectedItem, "selectedItem");
+  // console.log(selectedItem, "selectedItem");
   const centralNode = {
     id: selectedItem,
     symbolType: "circle",

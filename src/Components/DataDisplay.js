@@ -39,6 +39,7 @@ function DataDisplay({
   const { state } = useLocation();
   const [shiffledList, setShuffledList] = useState(null);
   const [relatedSubjects, setRelatedSubjects] = useState([]);
+  const [selectedField, setSelectedField] = useState("");
   const { subId, subText } = state ? state : { subId: "", subText: "" };
   const navigate = useNavigate();
   let Winners = data?.Database;
@@ -176,6 +177,7 @@ function DataDisplay({
         selectedYear={selectedYear}
         relatedSubjects={relatedSubjects}
         mobileView={mobileView}
+        selectedField={selectedField}
       />
     );
   });
@@ -199,8 +201,12 @@ function DataDisplay({
         <div id="dataDisplay">
           {/* {topPanel} */}
           {selectedItem?.Name && !mobileView && (
-            <InstaFilters selectedItem={selectedItem} />
+            <InstaFilters
+              selectedItem={selectedItem}
+              setSelectedField={setSelectedField}
+            />
           )}
+          {selectedItem && !selectedItem?.Name && !mobileView && subjectNav}
           {mobileView && !selectedItem?.Name && (
             <>
               <div className="prize-winner-title">
@@ -214,6 +220,7 @@ function DataDisplay({
             <PRIZE_DETAILS
               selectedItem={selectedItem}
               selectedYear={selectedYear}
+              setSelectedItem={setSelectedItem}
             />
           ) : (
             <div
@@ -236,10 +243,12 @@ function DataDisplay({
                   {children}
                 </BubbleUI>
               </div>
-              <YearLine
-                setSelectedYear={setSelectedYear}
-                selectedYear={selectedYear}
-              />
+              {mobileView && (
+                <YearLine
+                  setSelectedYear={setSelectedYear}
+                  selectedYear={selectedYear}
+                />
+              )}
             </div>
           )}
         </div>
