@@ -19,6 +19,8 @@ import { shuffleArrayElements } from "../utilities";
 import Grapher from "./Grapher";
 import { getRelatedSubjects } from "./utilities";
 import Categories from "./Categories";
+import YearLine from "../Mobile/Components/YearLine";
+import PRIZE_DETAILS from "../Mobile/Components/PRIZE_DETAILS";
 function DataDisplay({
   dataId,
   zoom,
@@ -28,6 +30,7 @@ function DataDisplay({
   majorBodyOfWork,
   InfluenceImpact,
   mobileView,
+  setSelectedYear,
 }) {
   const [topPanel, setTopPanel] = useState(undefined);
   const [selectedItem, setSelectedItem] = useState(null);
@@ -172,6 +175,7 @@ function DataDisplay({
         setSelectedItem={setSelectedItem}
         selectedYear={selectedYear}
         relatedSubjects={relatedSubjects}
+        mobileView={mobileView}
       />
     );
   });
@@ -194,9 +198,10 @@ function DataDisplay({
       ) : (
         <div id="dataDisplay">
           {/* {topPanel} */}
-          {selectedItem?.Name && !mobileView && <InstaFilters selectedItem={selectedItem} />}
-          {selectedItem && !selectedItem?.Name && !mobileView && subjectNav}
-          {mobileView && (
+          {selectedItem?.Name && !mobileView && (
+            <InstaFilters selectedItem={selectedItem} />
+          )}
+          {mobileView && !selectedItem?.Name && (
             <>
               <div className="prize-winner-title">
                 Prize winners {selectedYear}
@@ -204,25 +209,39 @@ function DataDisplay({
               <Categories mobileView />
             </>
           )}
-          <div
-            style={{
-              overflow: "hidden",
-            }}
-          >
+
+          {mobileView && selectedItem?.Name ? (
+            <PRIZE_DETAILS
+              selectedItem={selectedItem}
+              selectedYear={selectedYear}
+            />
+          ) : (
             <div
               style={{
-                scale: `${scaleValue}`,
-                // padding: `${marginValue}`,
+                overflow: "hidden",
               }}
             >
-              <BubbleUI
-                options={mobileView ? Mobileoptions : options}
-                className="myBubbleUI"
+              {/* {mobileView && selectedItem?.Name && <PRIZE_DETAILS />} */}
+
+              <div
+                style={{
+                  scale: `${scaleValue}`,
+                  // padding: `${marginValue}`,
+                }}
               >
-                {children}
-              </BubbleUI>
+                <BubbleUI
+                  options={mobileView ? Mobileoptions : options}
+                  className="myBubbleUI"
+                >
+                  {children}
+                </BubbleUI>
+              </div>
+              <YearLine
+                setSelectedYear={setSelectedYear}
+                selectedYear={selectedYear}
+              />
             </div>
-          </div>
+          )}
         </div>
       )}
     </>

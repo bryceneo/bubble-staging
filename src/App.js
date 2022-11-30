@@ -9,6 +9,7 @@ import { BrowserRouter } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import Mobile from "./Mobile/Mobile";
 import { useState } from "react";
+import YearLine from "./Mobile/Components/YearLine";
 
 function App() {
   const useDesktopMediaQuery = () =>
@@ -117,6 +118,7 @@ function App() {
           setInfluenceImpact={setInfluenceImpact}
           setSelectedYear={setSelectedYear}
         />
+        
       </MobileSize>
     </>
   );

@@ -50,10 +50,15 @@ function Mobile({
                 selectedFieldOfStudy={selectedFieldOfStudy}
                 majorBodyOfWork={majorBodyOfWork}
                 InfluenceImpact={InfluenceImpact}
+                setSelectedYear={setSelectedYear}
                 mobileView
               />
             }
           />
+          {/* <Route
+            path="/laurate"
+            element={<PrizeDetails  />}
+          /> */}
           {/* <Route path="prize-winners/:year" element={<PrizeWinners />} /> */}
           {/* <Route path="prize-details/:prizeId" element={<PrizeDetails />}>
             <Route

@@ -10,6 +10,7 @@ function Child({
   selectedItem,
   selectedYear,
   relatedSubjects,
+  mobileView,
 }) {
   const navigate = useNavigate();
 

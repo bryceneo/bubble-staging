@@ -6,10 +6,10 @@ import { Outlet, Route, Routes } from "react-router-dom";
 import "./Styles/Fieldrelation.css";
 import ViewAll from "./ViewAll";
 
-function PRIZE_DETAILS() {
+function PRIZE_DETAILS({ selectedItem, selectedYear }) {
   return (
     <>
-      <WinnerCard />
+      <WinnerCard selectedItem={selectedItem} selectedYear={selectedYear} />
       <InstaFilters />
       <Outlet />
       <div className="text-center">
