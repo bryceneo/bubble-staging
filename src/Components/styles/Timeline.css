@@ -104,6 +104,9 @@
   -webkit-align-items: center;
   align-items: center;
 }
+.range-year, .selected-range {
+  font-size: 14px;
+}
 @media screen and (max-width:992px) {
   .emp-name{
     font-size: 20px;

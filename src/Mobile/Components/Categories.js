@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CategoriesData from "../Data/CategoriesData";
 import "./Styles/Categories.css";
 
+
 function Categories() {
   const [catgories, setcategories] = useState(CategoriesData);
   return (

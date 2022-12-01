@@ -166,7 +166,7 @@ function Grapher({ selectedItem, relatedSubjects, setDisplayGraph }) {
   }, []);
   return (
     <div className="graph-wrapper w-100 p-3">
-      <button onClick={() => setDisplayGraph(false)}>Back</button>
+      <button className="back-btn" onClick={() => setDisplayGraph(false)}>Back</button>
       <Graph id="test" data={data} config={config} ref={handleRefChange} />
     </div>
   );
