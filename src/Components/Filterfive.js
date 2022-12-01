@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import "./styles/Filters.css";
-
 import Data from "./Data/AllData.json";
 import { useEffect } from "react";
+import { useDetectClickOutside } from "react-detect-click-outside";
+
 
 const Filterfive = ({ setSelectedYear, selectedYear }) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
+  const ref = useDetectClickOutside({
+    onTriggered: () => setIsOptionsOpen(false),
+  });
   const optionsList = [
     ...Array.from(
       new Set(Data?.Database?.map((item) => item?.["Infosys Prize"]))
@@ -32,7 +36,7 @@ const Filterfive = ({ setSelectedYear, selectedYear }) => {
 
   return (
     <div id="filters">
-      <div className="select-wrapper">
+      <div className="select-wrapper" ref={ref}>
         <span className="sort-label">Year</span>
         <button
           id="select-btn"

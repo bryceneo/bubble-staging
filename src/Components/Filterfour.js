@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import "./styles/Filters.css";
 import Data from "./Data/AllData.json";
+import { useDetectClickOutside } from "react-detect-click-outside";
+
 const Filterfour = ({ InfluenceImpact, setInfluenceImpact }) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
+  const ref = useDetectClickOutside({
+    onTriggered: () => setIsOptionsOpen(false),
+  });
   const [selectedOption, setSelectedOption] = useState(0);
   const optionsList = [
     "Select Category",
@@ -31,8 +36,8 @@ const Filterfour = ({ InfluenceImpact, setInfluenceImpact }) => {
     }
   };
   return (
-    <div id="filters">
-      <div className="select-wrapper">
+    <div id="filters" >
+      <div className="select-wrapper" ref={ref}>
         <span className="sort-label">Influence/Impact</span>
         <button
           id="select-btn"

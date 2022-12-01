@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import CategoriesData from "../Data/CategoriesData";
 import Data from "../../Components/Data/AllData.json";
 function FilterModal({
-  selectedCategory,
+  SelectedCategory,
   setSelectedCategory,
   selectedFieldOfStudy,
   setSelectedFieldOfStudy,
@@ -16,7 +16,6 @@ function FilterModal({
 }) {
   const [modalPage, setModalPage] = useState("filter");
   const categoryObj = [
-    "Select Category",
     "Social Sciences",
     "Physical Sciences",
     "Mathematical Sciences",
@@ -72,7 +71,7 @@ function FilterModal({
     setIsModalOpen(false);
   };
 
-  const [categorySelection, setCategorySelection] = useState(selectedCategory);
+  const [categorySelection, setCategorySelection] = useState(SelectedCategory);
   const [fieldOfStudySelection, setFieldOfStudySelection] =
     useState(selectedFieldOfStudy);
   // console.log("categorySelection", categorySelection);
@@ -127,11 +126,7 @@ function FilterModal({
         >
           <p className="m-0">Category</p>
           <span className="category-span d-block">
-            {" "}
-            {/* {selectedCategory
-              ? categoryObj[selectedCategory - 1].name
-              : undefined} */}
-            {selectedCategory || ""}
+            {SelectedCategory || ""}
           </span>
         </div>
         <div
