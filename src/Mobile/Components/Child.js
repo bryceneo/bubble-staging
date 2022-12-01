@@ -2,7 +2,7 @@ import React from "react";
 import testPerson from "../Data/Pics/2.jpeg";
 import { useNavigate } from "react-router-dom";
 
-function Child({ params, selectedField }) {
+function Child({ params, selectedField, setSelectedSubject, setMode, mode }) {
   const navigate = useNavigate();
   const subjectClickHandler = (subID, isRouting) => {
     if (isRouting) {
@@ -63,7 +63,10 @@ function Child({ params, selectedField }) {
     return (
       <div
         style={fieldOfstudyStyle}
-        onClick={() => subjectClickHandler(params.subjectId, params.isRouting)}
+        // onClick={() => {
+        //   setSelectedSubject(params.text);
+        //   setMode(mode === "subjects" ? "" : "subjects");
+        // }}
       >
         {params.text}
       </div>

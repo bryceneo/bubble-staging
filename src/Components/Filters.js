@@ -34,8 +34,8 @@ function Filters({ SelectedCategory, setSelectedCategory }) {
     }
   };
   return (
-    <div id="filters" ref={ref}>
-      <div className="select-wrapper">
+    <div id="filters">
+      <div className="select-wrapper" ref={ref}>
         <span className="sort-label">Category</span>
         <button
           id="select-btn"

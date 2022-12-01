@@ -33,6 +33,7 @@ function PRIZE_DETAILS({
 
   const [selectedSubject, setSelectedSubject] = useState("");
   const [selectedField, setSelectedField] = useState("");
+  const [mode, setMode] = useState("");
   let subjects = [];
   selectedItem["Field of study and training"]?.split(",")?.map((item) => {
     const subject = {
@@ -119,7 +120,8 @@ function PRIZE_DETAILS({
         <Laurates_Of_Subjects
           selectedSubject={selectedSubject}
           setSelectedSubject={setSelectedSubject}
-          mode="subjects"
+          // mode={mode}
+          setMode={setMode}
           color={color}
         />
       ) : (
@@ -133,12 +135,19 @@ function PRIZE_DETAILS({
           <InstaFilters setSelectedField={setSelectedField} color={color} />
           <Outlet />
           <div className="text-center">
-            <DataDisplay data={subjects} selectedField={selectedField} />
+            <DataDisplay
+              data={subjects}
+              selectedField={selectedField}
+              setSelectedSubject={setSelectedSubject}
+              // mode={mode}
+              // setMode={setMode}
+            />
             <Categories />
             <ViewAll
               prizeCategory={selectedItem["Prize Category"]?.split("-")[0]}
               selectedSubject={selectedSubject}
               setSelectedSubject={setSelectedSubject}
+              setMode={setMode}
             />
           </div>
         </>

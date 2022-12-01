@@ -2,11 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Styles/ViewAll.css";
 
-function ViewAll({ prizeCategory, selectedSubject, setSelectedSubject, mode }) {
+function ViewAll({
+  prizeCategory,
+  selectedSubject,
+  setSelectedSubject,
+  mode,
+  setMode,
+}) {
   return (
     <button
       className="view-btn"
-      onClick={() => setSelectedSubject(prizeCategory)}
+      onClick={() => {
+        setSelectedSubject(prizeCategory);
+        setMode("");
+      }}
     >
       View all laureates in {prizeCategory}
     </button>

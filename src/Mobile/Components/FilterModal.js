@@ -119,7 +119,7 @@ function FilterModal({
       <>
         <div className="modal-title">
           <span className="modal-heading">Filter By</span>
-          <span className="results">{totalItems} Results available</span>
+          <span className="results">{totalItems || 0} Results available</span>
         </div>
         <div
           onClick={() => setModalPage("category")}

@@ -9,6 +9,7 @@ function Laurates_Of_Subjects({
   setSelectedSubject,
   mode,
   color,
+  setMode
 }) {
   const laurates = [];
   const [startDate, setStartDate] = useState(2008);

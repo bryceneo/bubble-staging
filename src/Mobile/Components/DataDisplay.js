@@ -3,7 +3,15 @@ import BubbleUI from "react-bubble-ui";
 import "react-bubble-ui/dist/index.css";
 import Child from "./Child";
 
-function DataDisplay({ data, bubbleOptions, height = "500px", selectedField }) {
+function DataDisplay({
+  data,
+  bubbleOptions,
+  height = "500px",
+  selectedField,
+  setMode,
+  mode,
+  setSelectedSubject,
+}) {
   const options = {
     size: 180,
     // size: zoom,
@@ -26,6 +34,9 @@ function DataDisplay({ data, bubbleOptions, height = "500px", selectedField }) {
         key={item.id ? item.id : `e${index}`}
         params={item}
         selectedField={selectedField}
+        setMode={setMode}
+        setSelectedSubject={setSelectedSubject}
+        mode={mode}
       />
     );
   });
