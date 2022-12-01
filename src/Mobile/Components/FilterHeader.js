@@ -12,7 +12,8 @@ function FilterHeader({
   InfluenceImpact,
   setInfluenceImpact,
   selectedYear,
-  setSelectedYear
+  setSelectedYear,
+  onBackClick,
 }) {
   // const [selectedCategory, setSelectedCategory] = useState(0);
   // const [selectedFieldOfStudy, setSelectedFieldOfStudy] = useState(0);
@@ -25,8 +26,16 @@ function FilterHeader({
   const closeModal = () => setIsModalOpen(false);
   return (
     <>
-      <div id="filter-mob" onClick={openModal}>
-        FilterHeader
+      <div id="filter-mob" className="d-flex justify-content-between">
+        {onBackClick && (
+          <i
+            className="fa fa-arrow-left"
+            style={{ fontSize: "16px", color: "white" }}
+            onClick={onBackClick}
+          ></i>
+        )}
+        <div style={{ textTransform: "uppercase" }}>Infosys Prize</div>
+        <div className="filter-icon" onClick={openModal}></div>
       </div>
       <Modal
         isOpen={isModalOpen}

@@ -21,6 +21,6 @@ export const getRelatedSubjects = (selectedItem, Winners) => {
         });
       }
     });
-    return relatedSubjects;
+    return Array.from(new Set(relatedSubjects));
   }
 };

@@ -4,7 +4,7 @@
   color: #fff;
   position: relative;
 }
-#filter-mob:after {
+.filter-icon:after {
   content: "\f0b0";
   font-family: "Font Awesome 5 Pro";
   font-size: 16px;
@@ -13,10 +13,20 @@
   right: 10px;
   font-weight: 100;
 }
+
+.prev-icon:after {
+    content: "\f0b0";
+    font-family: "Font Awesome 5 Pro";
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    right: 10px;
+    font-weight: 100;
+  }
 .filter-modal {
   background-color: "#24FFF30e";
 }
-#filter-mob:after{
+/* #filter-mob:after{
     content: '\f0b0';
     font-family: 'Font Awesome 5 Pro';
     font-size: 16px;
@@ -24,7 +34,7 @@
     position: absolute;
     right: 10px;
     font-weight: 100;
-}
+} */
 .ReactModal__Overlay{
     background-color: rgb(0 0 0 / 42%) !important;
 }

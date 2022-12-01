@@ -29,18 +29,6 @@ function Mobile({
 }) {
   return (
     <>
-      <FilterHeader
-        selectedYear={selectedYear}
-        SelectedCategory={SelectedCategory}
-        selectedFieldOfStudy={selectedFieldOfStudy}
-        majorBodyOfWork={majorBodyOfWork}
-        InfluenceImpact={InfluenceImpact}
-        setSelectedCategory={setSelectedCategory}
-        setSelectedFieldOfStudy={setSelectedFieldOfStudy}
-        setMajorBodyOfWork={setMajorBodyOfWork}
-        setInfluenceImpact={setInfluenceImpact}
-        setSelectedYear={setSelectedYear}
-      />
       <BrowserRouter>
         <Routes>
           <Route
@@ -51,7 +39,11 @@ function Mobile({
                 SelectedCategory={SelectedCategory}
                 selectedFieldOfStudy={selectedFieldOfStudy}
                 majorBodyOfWork={majorBodyOfWork}
+                setSelectedCategory={setSelectedCategory}
                 InfluenceImpact={InfluenceImpact}
+                setSelectedFieldOfStudy={setSelectedFieldOfStudy}
+                setMajorBodyOfWork={setMajorBodyOfWork}
+                setInfluenceImpact={setInfluenceImpact}
                 setSelectedYear={setSelectedYear}
                 selectedField={selectedField}
                 setSelectedField={setSelectedField}

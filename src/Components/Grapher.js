@@ -38,7 +38,6 @@ function Grapher({ selectedItem, relatedSubjects, setDisplayGraph }) {
     (person) =>
       person["Field of study and training"]?.includes(selectedItem) ||
       person["Major body of work -time of prize"]?.includes(selectedItem) ||
-      person["Influence/Impact"]?.includes(selectedItem) ||
       person["Influence/Impact"]?.includes(selectedItem)
   )?.map((winner) => {
     links.push({
@@ -49,35 +48,24 @@ function Grapher({ selectedItem, relatedSubjects, setDisplayGraph }) {
       id: winner?.Name,
       name: winner?.Name,
       svg: "images/" + winner?.Name + ".jpg",
+      subject:
+        winner["Field of study and training"] +
+        winner["Major body of work -time of prize"] +
+        winner["Influence/Impact"],
       viewGenerator: picGenerator,
     };
   });
 
   const relatedSubjectsNode = relatedSubjects?.map((subject) => {
-    // console.log(
-    //   allData?.Database?.find((person) => {
-    //     return (
-    //       person["Field of study and training"]?.includes(subject) ||
-    //       person["Major body of work -time of prize"]?.includes(subject) ||
-    //       person["Influence/Impact"]?.includes(subject)
-    //     );
-    //   })
-    // );
+    console.log(winners);
     links.push({
-      source: selectedItem,
-      target: subject,
+      source: subject,
+      target: selectedItem,
     });
-    // links.push({
-    //   source: subject,
-    //   target:
-    //   allData?.Database?.find((person) => {
-    //       return (
-    //         person["Field of study and training"]?.includes(subject) ||
-    //         person["Major body of work -time of prize"]?.includes(subject) ||
-    //         person["Influence/Impact"]?.includes(subject)
-    //       );
-    //     })?.Name || selectedItem,
-    // });
+    links.push({
+      source: subject,
+      target: winners?.find((item) => item?.subject?.includes(subject))?.name,
+    });
     return {
       id: subject,
       symbolType: "circle",

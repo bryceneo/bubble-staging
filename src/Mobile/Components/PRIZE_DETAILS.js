@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import InstaFilters from "./InstaFilters";
 import WinnerCard from "./WinnerCard";
 import Categories from "./Categories";
@@ -9,12 +9,29 @@ import DataDisplay from "./DataDisplay";
 import prizeDetailsAll from "../Data/prizeDetailsAll";
 import CategoriesData from "../../Components/Data/CategoriesData";
 // import Data from "../../Components/Data/AllData.json";
-
-function PRIZE_DETAILS({ selectedItem, selectedYear, setSelectedItem }) {
+import lauratesOfSubjects from "../Data/lauratesOfSubjects";
+import Laurates_Of_Subjects from "./LAURATES_OF_SUBJECTS";
+import FilterHeader from "./FilterHeader";
+function PRIZE_DETAILS({
+  selectedItem,
+  selectedYear,
+  setSelectedItem,
+  SelectedCategory,
+  selectedFieldOfStudy,
+  majorBodyOfWork,
+  InfluenceImpact,
+  setSelectedCategory,
+  setSelectedFieldOfStudy,
+  setMajorBodyOfWork,
+  setInfluenceImpact,
+  setSelectedYear,
+}) {
   const color =
     CategoriesData?.find((category) =>
       selectedItem["Prize Category"]?.includes(category?.name)
     )?.colorCode || "";
+
+  const [selectedSubject, setSelectedSubject] = useState("");
 
   let subjects = [];
   selectedItem["Field of study and training"]?.split(",")?.map((item) => {
@@ -79,18 +96,48 @@ function PRIZE_DETAILS({ selectedItem, selectedYear, setSelectedItem }) {
   //   ?.map((item) => subjects.push(item.trim()));
   return (
     <>
-      <WinnerCard
-        selectedItem={selectedItem}
+      <FilterHeader
         selectedYear={selectedYear}
-        setSelectedItem={setSelectedItem}
+        SelectedCategory={SelectedCategory}
+        selectedFieldOfStudy={selectedFieldOfStudy}
+        majorBodyOfWork={majorBodyOfWork}
+        InfluenceImpact={InfluenceImpact}
+        setSelectedCategory={setSelectedCategory}
+        setSelectedFieldOfStudy={setSelectedFieldOfStudy}
+        setMajorBodyOfWork={setMajorBodyOfWork}
+        setInfluenceImpact={setInfluenceImpact}
+        setSelectedYear={setSelectedYear}
+        onBackClick={() =>
+          selectedSubject ? setSelectedSubject("") : setSelectedItem(null)
+        }
       />
-      <InstaFilters />
-      <Outlet />
-      <div className="text-center">
-        <Categories />
-        <DataDisplay data={subjects} />
-        <ViewAll prizeCategory={selectedItem["Prize Category"]}/>
-      </div>
+
+      {selectedSubject ? (
+        <Laurates_Of_Subjects
+          selectedSubject={selectedSubject}
+          setSelectedSubject={setSelectedSubject}
+        />
+      ) : (
+        <>
+          <WinnerCard
+            selectedItem={selectedItem}
+            selectedYear={selectedYear}
+            setSelectedItem={setSelectedItem}
+            color={color}
+          />
+          <InstaFilters />
+          <Outlet />
+          <div className="text-center">
+            <DataDisplay data={subjects} />
+            <Categories />
+            <ViewAll
+              prizeCategory={selectedItem["Prize Category"]?.split("-")[0]}
+              selectedSubject={selectedSubject}
+              setSelectedSubject={setSelectedSubject}
+            />
+          </div>
+        </>
+      )}
     </>
   );
 }

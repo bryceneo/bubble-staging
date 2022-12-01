@@ -1,7 +1,14 @@
 import React from "react";
 import rangeLine from "../Data/rangeLine";
 
-function RangeLine({ selectedRange = 2, selectedColors }) {
+function RangeLine({
+  selectedRange = 2,
+  selectedColors,
+  startDate,
+  endDate,
+  setStartDate,
+  setEndDate,
+}) {
   // console.log(selectedColors);
   const { color, bgColor } = selectedColors;
   return (
@@ -12,11 +19,11 @@ function RangeLine({ selectedRange = 2, selectedColors }) {
           display: "flex",
           justifyContent: "center",
           textAlign: "center",
-          margin:"20px 0",
+          margin: "20px 0",
         }}
       >
         {rangeLine.map((range) => {
-          if (selectedRange === range.id) {
+          if (startDate === range?.startDate) {
             return (
               <div
                 className="selected-range"
@@ -27,6 +34,10 @@ function RangeLine({ selectedRange = 2, selectedColors }) {
                   borderRadius: "8px",
                 }}
                 key={range.id}
+                onClick={() => {
+                  setStartDate(range.startDate);
+                  setEndDate(range.endDate);
+                }}
               >
                 {range.range}
               </div>
@@ -37,6 +48,10 @@ function RangeLine({ selectedRange = 2, selectedColors }) {
               className="range-year"
               style={{ padding: "12px" }}
               key={range.id}
+              onClick={() => {
+                setStartDate(range.startDate);
+                setEndDate(range.endDate);
+              }}
             >
               {range.range}
             </div>

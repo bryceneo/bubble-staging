@@ -41,6 +41,29 @@ function Child({ params }) {
       </div>
     );
   }
+  if (params.type === "person") {
+    return (
+      <div
+        style={{
+          borderRadius: 50,
+          border: `${params.borderThickness} solid ${params.borderColor}`,
+          height: "90px",
+          width: "90px",
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+          padding: "2px",
+          overflow: "hidden",
+          scale: `${params.scaleFactor}`,
+          opacity: `${params.isActive ? "100%" : "50%"}`,
+          cursor: `${params.isRouting ? "pointer" : null}`,
+        }}
+        onClick={() => personClickHandler(params.laurateId, params.isRouting)}
+      >
+        <img src={params.image} width="120px" height="120px" alt="test" />
+      </div>
+    );
+  }
   if (params.type === "empty") {
     return (
       <>

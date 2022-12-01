@@ -21,6 +21,8 @@ import { getRelatedSubjects } from "./utilities";
 import Categories from "./Categories";
 import YearLine from "../Mobile/Components/YearLine";
 import PRIZE_DETAILS from "../Mobile/Components/PRIZE_DETAILS";
+import FilterHeader from "../Mobile/Components/FilterHeader";
+import mobileCategories from "./Categories"
 function DataDisplay({
   dataId,
   zoom,
@@ -31,6 +33,10 @@ function DataDisplay({
   InfluenceImpact,
   mobileView,
   setSelectedYear,
+  setSelectedCategory,
+  setSelectedFieldOfStudy,
+  setMajorBodyOfWork,
+  setInfluenceImpact,
 }) {
   const [topPanel, setTopPanel] = useState(undefined);
   const [selectedItem, setSelectedItem] = useState(null);
@@ -177,7 +183,7 @@ function DataDisplay({
         selectedYear={selectedYear}
         relatedSubjects={relatedSubjects}
         mobileView={mobileView}
-        selectedField={selectedField}
+        selectedField={""}
       />
     );
   });
@@ -209,10 +215,23 @@ function DataDisplay({
           {selectedItem && !selectedItem?.Name && !mobileView && subjectNav}
           {mobileView && !selectedItem?.Name && (
             <>
+              <FilterHeader
+                selectedYear={selectedYear}
+                SelectedCategory={SelectedCategory}
+                selectedFieldOfStudy={selectedFieldOfStudy}
+                majorBodyOfWork={majorBodyOfWork}
+                InfluenceImpact={InfluenceImpact}
+                setSelectedCategory={setSelectedCategory}
+                setSelectedFieldOfStudy={setSelectedFieldOfStudy}
+                setMajorBodyOfWork={setMajorBodyOfWork}
+                setInfluenceImpact={setInfluenceImpact}
+                setSelectedYear={setSelectedYear}
+                // onBackClick={() => setSelectedItem(null)}
+              />
               <div className="prize-winner-title">
                 Prize winners {selectedYear}
               </div>
-              <Categories mobileView />
+              <Categories  />
             </>
           )}
 
@@ -221,6 +240,15 @@ function DataDisplay({
               selectedItem={selectedItem}
               selectedYear={selectedYear}
               setSelectedItem={setSelectedItem}
+              SelectedCategory={SelectedCategory}
+              selectedFieldOfStudy={selectedFieldOfStudy}
+              majorBodyOfWork={majorBodyOfWork}
+              InfluenceImpact={InfluenceImpact}
+              setSelectedCategory={setSelectedCategory}
+              setSelectedFieldOfStudy={setSelectedFieldOfStudy}
+              setMajorBodyOfWork={setMajorBodyOfWork}
+              setInfluenceImpact={setInfluenceImpact}
+              setSelectedYear={setSelectedYear}
             />
           ) : (
             <div
