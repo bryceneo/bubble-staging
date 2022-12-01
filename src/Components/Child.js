@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import DummyImage from "./Data/Pics/2.jpeg";
 import CategoriesData from "./Data/CategoriesData";
 import Avatar from "react-avatar";
+import "./styles/Child.css";
+import Tooltip from "rc-tooltip";
 function Child({
   params,
   setSelectedItem,
@@ -12,9 +14,17 @@ function Child({
   relatedSubjects,
   mobileView,
   selectedField,
+  setSelectedField,
 }) {
   const navigate = useNavigate();
+  const [isHovering, setIsHovering] = useState(false);
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
 
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  };
   const CategoryColor = selectedItem
     ? CategoriesData?.find((item) =>
         selectedItem["Prize Category"]?.includes(item?.name)
@@ -32,8 +42,14 @@ function Child({
       )
         return CategoryColor;
       if (
-        selectedItem["Major body of work -time of prize"]?.includes(params) ||
-        selectedItem["Influence/Impact"]?.includes(params)
+        (!selectedField &&
+          selectedItem["Major body of work -time of prize"]?.includes(
+            params
+          )) ||
+        (!selectedField &&
+          selectedItem["Influence/Impact"]?.includes(params)) ||
+        selectedField === "Major body of work -time of prize" ||
+        selectedField === "Influence/Impact"
       )
         return "#ffff";
     }
@@ -43,10 +59,11 @@ function Child({
   const getTextColor = () => {
     if (
       (selectedItem?.Name &&
-        selectedItem["Field of study and training"]?.includes(params)) ||
+        selectedItem["Field of study and training"]?.includes(params) &&
+        (!selectedField || selectedField === "Field of study and training")) ||
       params === selectedYear ||
       selectedItem === params ||
-      relatedSubjects?.includes(params)
+      (!selectedItem?.Name && relatedSubjects?.includes(params))
     )
       return "#ffffff";
     else return "";
@@ -109,40 +126,67 @@ function Child({
 
   if (params?.Name) {
     return (
-      <div
-        style={{
-          color: `#223247`,
-          border: `5px solid ${
-            CategoriesData.find((item) =>
-              params["Prize Category"]?.includes(item?.name)
-            )?.colorCode ||
-            CategoriesData.find((item) => item?.name === "Others")?.colorCode
-          }`,
-          borderRadius: 100,
-          // backgroundColor: `${params.backgroundColor}`,
-          height: "100px",
-          width: "100px",
-          overflow: "hidden",
-          // scale: 2,
-          opacity: getOpacity(),
+      <>
+        <Tooltip
+          placement="top"
+          trigger={["hover"]}
+          showArrow
+          overlay={
+            <div
+              className="emp-popup"
+              // onMouseOver={handleMouseOver}
+              // onMouseOut={handleMouseOut}
+            >
+              <div className="emp-pop-name">Ramesh Pradhan</div>
+              <div className="emp-pop-des">Asst Prof.</div>
+              <div className="emp-pop-info">Random Text</div>
+              <div className="emp-pop-know-more">Know More</div>
+            </div>
+          }
+          visible={false}
+        >
+          <div
+            onMouseEnter={handleMouseOver}
+            onMouseLeave={handleMouseOut}
+            style={{
+              color: `#223247`,
+              border: `5px solid ${
+                CategoriesData.find((item) =>
+                  params["Prize Category"]?.includes(item?.name)
+                )?.colorCode ||
+                CategoriesData.find((item) => item?.name === "Others")
+                  ?.colorCode
+              }`,
+              borderRadius: 100,
+              // backgroundColor: `${params.backgroundColor}`,
+              height: "100px",
+              width: "100px",
+              overflow: "hidden",
+              // scale: 2,
+              opacity: getOpacity(),
 
-          // cursor: `${params.isRouting ? "pointer" : null}`,
-          cursor: "pointer",
-        }}
-        onClick={() => setSelectedItem(params)}
-      >
-        <img
-          src={`images/${params?.Name}.jpg`}
-          // srcset={`images/${params?.Name}.png,images/${params?.Name}.jpeg`}
-          // srcSet={`images/${params?.Name}.png 1280w,images/${params?.Name}.jpeg 1280w`}
-          width="100%"
-          height="100%"
-          alt={params.Name}
-          style={{
-            cursor: "pointer",
-          }}
-        />
-      </div>
+              // cursor: `${params.isRouting ? "pointer" : null}`,
+              cursor: "pointer",
+            }}
+            onClick={() => {
+              setSelectedField("");
+              setSelectedItem(params);
+            }}
+          >
+            <img
+              src={`images/${params?.Name}.jpg`}
+              // srcset={`images/${params?.Name}.png,images/${params?.Name}.jpeg`}
+              // srcSet={`images/${params?.Name}.png 1280w,images/${params?.Name}.jpeg 1280w`}
+              width="100%"
+              height="100%"
+              alt={params.Name}
+              style={{
+                cursor: "pointer",
+              }}
+            />
+          </div>
+        </Tooltip>
+      </>
     );
   } else {
     return (
@@ -171,13 +215,17 @@ function Child({
           color: getTextColor(),
         }}
         // onClick={() => personClickHandler(params.laurateId, params.isRouting)}
-        onClick={() => params !== selectedYear && setSelectedItem(params)}
+        onClick={() => {
+          if (params !== selectedYear) {
+            setSelectedField("");
+            setSelectedItem(params);
+          }
+        }}
       >
         {params === selectedYear ? `${selectedYear} Prize Winners` : params}
       </div>
     );
   }
-  return <div>Failed</div>;
 }
 
 export default Child;

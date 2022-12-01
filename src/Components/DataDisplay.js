@@ -183,7 +183,8 @@ function DataDisplay({
         selectedYear={selectedYear}
         relatedSubjects={relatedSubjects}
         mobileView={mobileView}
-        selectedField={""}
+        selectedField={selectedField}
+        setSelectedField={setSelectedField}
       />
     );
   });

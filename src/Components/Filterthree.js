@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import "./styles/Filters.css";
 import Data from "./Data/AllData.json";
+import { useDetectClickOutside } from "react-detect-click-outside";
 const Filterthree = ({ majorBodyOfWork, setMajorBodyOfWork }) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
+  const ref = useDetectClickOutside({
+    onTriggered: () => setIsOptionsOpen(false),
+  });
   const optionsList = [
     "Select Body of work",
     ...Array.from(
@@ -33,8 +37,8 @@ const Filterthree = ({ majorBodyOfWork, setMajorBodyOfWork }) => {
     }
   };
   return (
-    <div id="filters">
-      <div className="select-wrapper">
+    <div id="filters" >
+      <div className="select-wrapper" ref={ref}>
         <span className="sort-label">Major body of work</span>
         <button
           id="select-btn"

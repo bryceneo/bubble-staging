@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import "./styles/Filters.css";
 import Data from "./Data/AllData.json";
+import { useDetectClickOutside } from "react-detect-click-outside";
 const Filtertwo = ({ selectedFieldOfStudy, setSelectedFieldOfStudy }) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
+  const ref = useDetectClickOutside({
+    onTriggered: () => setIsOptionsOpen(false),
+  });
   const [selectedOption, setSelectedOption] = useState(0);
   const optionsList = [
     "Select Field",
@@ -33,8 +37,8 @@ const Filtertwo = ({ selectedFieldOfStudy, setSelectedFieldOfStudy }) => {
     }
   };
   return (
-    <div id="filters">
-      <div className="select-wrapper">
+    <div id="filters" >
+      <div className="select-wrapper" ref={ref}>
         <span className="sort-label">Field of Study</span>
         <button
           id="select-btn"
