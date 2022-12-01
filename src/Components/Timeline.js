@@ -23,10 +23,29 @@ function Timeline() {
         <Swiper
           className="mySwiper"
           spaceBetween={0}
-          slidesPerView={20}
+          slidesPerView={24}
           mousewheel={true}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
+           breakpoints={
+            {
+              1920:{
+                width:1920,
+                slidesPerView:24,
+                mousewheel:true
+              },
+              1200:{
+                width:1200,
+                slidesPerView:22,
+                // mousewheel:true,
+              },
+              768:{
+                width:768,
+                slidesPerView:18,
+                mousewheel:true,
+              },
+            }
+          }
         >
           <ul class="years-scroll p-0">
             {timelines.map((timeline, index) => {
@@ -41,6 +60,7 @@ function Timeline() {
                 <SwiperSlide key={index} className={timeline.isactive}>
                   <li className="years-scroll-item">
                     <div className="cm">
+                      <div className="mm"></div>
                       <div className="mm"></div>
                       <div className="mm"></div>
                       <div className="mm"></div>

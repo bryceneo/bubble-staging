@@ -6,6 +6,38 @@ max-width: 22%;
   width: 100%;
   border-right: 1px solid #dbdada;
 }
+#test-graph-wrapper{
+  text-align: center;
+}
+.back-btn{
+  position: relative;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "Poppins-SemiBold";
+  border: 0;
+  padding-left: 25px;
+  background-color: transparent;
+}
+.back-btn:before{
+    content: "\f060";
+    position: absolute;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    left: 0px;
+    cursor: pointer;
+}
+@media screen and (max-width: 1920px){
+  #sidePanel {
+    max-width: 20%;
+}
+}
+@media screen and (max-width: 1400px){
+  #sidePanel {
+    max-width: 22%;
+}
+}
+
 @media screen  and (max-width:992px){
   #sidePanel {
     max-width: 175px;

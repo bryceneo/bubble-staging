@@ -29,9 +29,9 @@ function RangeLine({
                 className="selected-range"
                 style={{
                   background: `${bgColor}`,
-                  padding: "12px",
+                  padding: "10px",
                   color: `${color}`,
-                  borderRadius: "8px",
+                  borderRadius: "8px"
                 }}
                 key={range.id}
                 onClick={() => {
@@ -46,7 +46,7 @@ function RangeLine({
           return (
             <div
               className="range-year"
-              style={{ padding: "12px" }}
+              style={{ padding: "10px" }}
               key={range.id}
               onClick={() => {
                 setStartDate(range.startDate);

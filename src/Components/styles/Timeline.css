@@ -23,15 +23,15 @@
   border-top: 1px solid #dbdbdb;
   height: 25px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .years-scroll-item .mm{
   border-right: 1px solid #dbdbdb;
   height: 14px;
-  width: 6%;
+  width: 100%;
 }
-.years-scroll-item .cm .mm:nth-of-type(11){
-  margin-right: 2px;
+.years-scroll-item .cm .mm:nth-of-type(12){
+  border: none;
 }
 .years-scroll-item span{
   font-size: 12px;
@@ -103,6 +103,9 @@
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+}
+.range-year, .selected-range {
+  font-size: 14px;
 }
 @media screen and (max-width:992px) {
   .emp-name{

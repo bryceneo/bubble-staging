@@ -27,14 +27,14 @@ function InstaFilters({ selectedItem, setSelectedField }) {
         className={"filter"}
         onClick={() => setSelectedField("Major body of work -time of prize")}
       >
-        <div style={{ ...circleStyle, border: `2px solid ${color}` }}></div>
+        <div style={{ ...circleStyle, border: `1px solid ${color}` }}></div>
         <div>Major Body of work</div>
       </div>
       <div
         className={"filter"}
         onClick={() => setSelectedField("Influence/Impact")}
       >
-        <div style={{ ...circleStyle, border: `2px dashed ${color}` }}></div>
+        <div style={{ ...circleStyle, border: `2px dotted ${color}` }}></div>
         <div>Influence/Impact</div>
       </div>
     </div>
