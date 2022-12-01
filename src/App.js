@@ -55,7 +55,7 @@ function App() {
             <div className="container-fluid">
               <div className="container">
                 <div className="row align-items-center">
-                  <div className="col-lg-10">
+                  <div className="col-lg-12">
                     <div className="main-wrapper-filter d-flex">
                       <Filters
                         SelectedCategory={SelectedCategory}
@@ -77,9 +77,7 @@ function App() {
                         setSelectedYear={setSelectedYear}
                         selectedYear={selectedYear}
                       />
-                    </div>
-                  </div>
-                  <div className="col-lg-2 text-end pt-3">
+                       <div className="col-lg-2 text-end pt-3">
                     <a
                       className="clear-filter"
                       onClick={clearFilters}
@@ -88,6 +86,10 @@ function App() {
                       Clear Filter
                     </a>
                   </div>
+                    </div>
+                    
+                  </div>
+                 
                 </div>
               </div>
             </div>
