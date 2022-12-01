@@ -1,26 +1,37 @@
 import React from "react";
+import CategoriesData from "../Data/CategoriesData";
 import "./Styles/Winnercard.css";
 
-function WinnerCard() {
+function WinnerCard({ selectedItem, selectedYear, setSelectedItem, color }) {
   return (
     <>
       <div className="winner-card">
-        <div>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnUg_S8jc9xjw-UYRvEBtPdjO1Ytj75rcajbn-FY7z&s"
-            height={"100px"}
-            width={"100px"}
-            style={{
-              borderRadius: "100%",
-              border: "5px solid #F1AC4D",
-            }}
-          ></img>
-        </div>
-        <div className="winner-empname">Aneesh Pradhan</div>
+        <img
+          src={"images/" + selectedItem?.Name + ".jpg"}
+          height={"100px"}
+          width={"100px"}
+          style={{
+            borderRadius: "100%",
+            border: "5px solid " + color,
+          }}
+          alt={selectedItem?.Name}
+        ></img>
+
+        <div className="winner-empname">{selectedItem?.Name}</div>
         <div className="winner-sub">
-          2020 laurate in <span className="sub-active">Social Science</span>
+          {selectedYear} laurate in{" "}
+          <span
+            className="sub-active"
+            style={{
+              backgroundColor: CategoriesData?.find((item) =>
+                selectedItem["Prize Category"]?.includes(item.name)
+              )?.colorCode,
+            }}
+          >
+            {selectedItem["Prize Category"]?.split("-")[0]}
+          </span>
         </div>
-        <div className="view-profile">View Aneesh profile </div>
+        <div className="view-profile">View {selectedItem?.Name} profile </div>
       </div>
     </>
   );

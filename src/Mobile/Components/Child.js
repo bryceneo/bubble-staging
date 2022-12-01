@@ -3,7 +3,6 @@ import testPerson from "../Data/Pics/2.jpeg";
 import { useNavigate } from "react-router-dom";
 
 function Child({ params }) {
-  // console.log(params.id, params.backgroundColor);
   const navigate = useNavigate();
   const subjectClickHandler = (subID, isRouting) => {
     if (isRouting) {
@@ -67,22 +66,24 @@ function Child({ params }) {
   }
   if (params.type === "empty") {
     return (
-      <div
-        style={{
-          borderRadius: 100,
-          backgroundColor: `${params.backgroundColor}`,
-          height: "90px",
-          width: "90px",
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-          padding: "2px",
-          overflow: "hidden",
-          scale: `${params.scaleFactor}`,
-          opacity: `${params.isActive ? "100%" : "50%"}`,
-          cursor: `${params.isRouting ? "pointer" : null}`,
-        }}
-      ></div>
+      <>
+        <div
+          style={{
+            borderRadius: 100,
+            backgroundColor: `${params.backgroundColor}`,
+            height: "90px",
+            width: "90px",
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+            padding: "2px",
+            overflow: "hidden",
+            scale: `${params.scaleFactor}`,
+            opacity: `${params.isActive ? "100%" : "50%"}`,
+            cursor: `${params.isRouting ? "pointer" : null}`,
+          }}
+        ></div>
+      </>
     );
   }
   return <div>Failed</div>;

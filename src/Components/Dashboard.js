@@ -5,17 +5,36 @@ import "./styles/Dashboard.css";
 import { Routes, Route } from "react-router-dom";
 import Grapher from "./Grapher";
 
-function Dashboard() {
+function Dashboard({
+  selectedYear,
+  SelectedCategory,
+  selectedFieldOfStudy,
+  majorBodyOfWork,
+  InfluenceImpact,
+}) {
   const [zoom, SetZoom] = useState(100);
-  console.log(zoom);
+  // console.log(zoom);
 
   return (
     <>
       <div id="dashboard">
         <SidePanel SetZoom={SetZoom} />
         <Routes>
-          <Route path="/" element={<DataDisplay dataId={1} zoom={zoom} />} />
           <Route
+            path="/"
+            element={
+              <DataDisplay
+                dataId={1}
+                zoom={zoom}
+                selectedYear={selectedYear}
+                SelectedCategory={SelectedCategory}
+                selectedFieldOfStudy={selectedFieldOfStudy}
+                majorBodyOfWork={majorBodyOfWork}
+                InfluenceImpact={InfluenceImpact}
+              />
+            }
+          />
+          {/* <Route
             path="/laurate-details/field-of-study-&-training"
             element={<DataDisplay dataId={2} zoom={zoom} />}
           />
@@ -43,7 +62,7 @@ function Dashboard() {
           <Route
             path="/year/:id"
             element={<DataDisplay dataId={"year"} zoom={zoom} />}
-          />
+          /> */}
         </Routes>
       </div>
     </>

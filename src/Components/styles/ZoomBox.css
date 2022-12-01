@@ -32,6 +32,7 @@ input[type="range"]::-webkit-slider-thumb {
   justify-content: space-between;
   padding: 0 0 15px 0;
   border-bottom: 1px solid #cdcdcd;
+  align-items: center;
 }
 .text-b {
   font-family: "Poppins-SemiBold";
@@ -53,34 +54,21 @@ input[type="range"]::-webkit-slider-thumb {
 }
 .input-range{
   position: relative;
+  height: 33px;
+}
+.range-bars{
+  position: absolute;
+  top:50%;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-evenly;
+  pointer-events: none;
 }
 .input-range span.inner-bars {
   height: 10px;
   width: 1px;
   background: #38383861;
   display: block;
-  position: absolute;
-  top: 13px;
-  z-index: -1;
-}
-.input-range span.inner-bars:nth-child(1){
-  left: 3px;
-}
-.input-range span.inner-bars:nth-child(2){
-  left: 20px;
-}
-.input-range span.inner-bars:nth-child(3){
-  left: 40px;
-}
-.input-range span.inner-bars:nth-child(4){
-  left: 60px;
-}
-.input-range span.inner-bars:nth-child(5){
-  left: 80px;
-}
-.input-range span.inner-bars:nth-child(6){
-  left: 100px;
-}
-.input-range span.inner-bars:nth-child(7){
-  left: 117px;
+  
 }

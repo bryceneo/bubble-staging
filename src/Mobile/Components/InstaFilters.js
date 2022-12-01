@@ -7,25 +7,25 @@ function InstaFilters() {
   return (
     <div id="instaFiltersmob">
       <div
-        onClick={() => navigate("/prize-details/1/all")}
+        // onClick={() => navigate("/prize-details/1/all")}
         className={"filter-mob"}
       >
         All
       </div>
       <div
-        onClick={() => navigate("/prize-details/1/studies")}
+        // onClick={() => navigate("/prize-details/1/studies")}
         className={"filter-mob"}
       >
         Studies
       </div>
       <div
-        onClick={() => navigate("/prize-details/1/work")}
+        // onClick={() => navigate("/prize-details/1/work")}
         className={"filter-mob"}
       >
         Work
       </div>
       <div
-        onClick={() => navigate("/prize-details/1/influence")}
+        // onClick={() => navigate("/prize-details/1/influence")}
         className={"filter-mob"}
       >
         Influence

@@ -6,7 +6,7 @@ export default [
   },
   {
     id: 2,
-    name: "Phsical Sciences",
+    name: "Physical Sciences",
     colorCode: "#90C56D",
   },
   {
@@ -26,7 +26,7 @@ export default [
   },
   {
     id: 6,
-    name: "Engineering & Computer Science",
+    name: "Engineering and Computer Science",
     colorCode: "#704CA2",
   },
 ];

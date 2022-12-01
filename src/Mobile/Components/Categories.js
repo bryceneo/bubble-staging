@@ -7,7 +7,9 @@ function Categories() {
   return (
     <>
       <div>
-        <h6 className="categories-title d-none d-lg-block d-xl-none">Categories</h6>
+        <h6 className="categories-title d-none d-lg-block d-xl-none">
+          Categories
+        </h6>
         <div>
           <ul className="categories-list-mobile p-0">
             {catgories.map((category) => {
@@ -16,9 +18,10 @@ function Categories() {
                   <span>{category.name}</span>
                   <span>
                     <div
-                      id="circle1" className="d-none d-lg-block d-xl-none"
+                      id="circle1"
+                      className="d-none d-lg-block d-xl-none"
                       style={{ backgroundColor: category.colorCode }}
-                   ></div>
+                    ></div>
                   </span>
                 </li>
               );

@@ -17,3 +17,6 @@
 .mob-bubbleui{
   height: calc(100vh - 200px);
 }
+.yearline-mob::-webkit-scrollbar {
+  display: none;
+}

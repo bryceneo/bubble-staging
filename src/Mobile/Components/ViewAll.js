@@ -2,13 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Styles/ViewAll.css";
 
-function ViewAll() {
+function ViewAll({ prizeCategory, selectedSubject, setSelectedSubject }) {
   return (
-    <Link to={"/laurates-of-subject/social-science"}>
-      <button className="view-btn">
-        View all laureates in Social Sciences
-      </button>
-    </Link>
+    <button className="view-btn" onClick={() => setSelectedSubject(prizeCategory)}>View all laureates in {prizeCategory}</button>
   );
 }
 

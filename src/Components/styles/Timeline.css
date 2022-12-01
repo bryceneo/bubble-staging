@@ -104,3 +104,8 @@
   -webkit-align-items: center;
   align-items: center;
 }
+@media screen and (max-width:992px) {
+  .emp-name{
+    font-size: 20px;
+  }
+}

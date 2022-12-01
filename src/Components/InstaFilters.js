@@ -1,34 +1,41 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./styles/InstaFilters.css";
-
-function InstaFilters() {
+import CategoriesData from "./Data/CategoriesData";
+function InstaFilters({ selectedItem, setSelectedField }) {
   const navigate = useNavigate();
+  const color =
+    CategoriesData?.find((category) =>
+      selectedItem["Prize Category"]?.includes(category?.name)
+    )?.colorCode || "";
+
+  const circleStyle = {
+    height: "17px",
+    width: "17px",
+    borderRadius: "10px",
+  };
   return (
     <div id="instaFilters">
       <div
-        onClick={() => navigate("/laurate-details/field-of-study-&-training")}
         className={"filter"}
+        onClick={() => setSelectedField("Field of study and training")}
       >
-        Field of study & training
+        <div style={{ ...circleStyle, backgroundColor: color }}></div>
+        <div>Field of study and training</div>
       </div>
       <div
-        onClick={() => navigate("/laurate-details/major-body-of-work")}
         className={"filter"}
+        onClick={() => setSelectedField("Major body of work -time of prize")}
       >
-        Major Body of work
+        <div style={{ ...circleStyle, border: `2px solid ${color}` }}></div>
+        <div>Major Body of work</div>
       </div>
       <div
-        onClick={() => navigate("/laurate-details/influence-impact")}
         className={"filter"}
+        onClick={() => setSelectedField("Influence/Impact")}
       >
-        influence/impact
-      </div>
-      <div
-        onClick={() => navigate("/laurate-details/other-areas")}
-        className={"filter"}
-      >
-        Other Areas
+        <div style={{ ...circleStyle, border: `2px dashed ${color}` }}></div>
+        <div>Influence/Impact</div>
       </div>
     </div>
   );
