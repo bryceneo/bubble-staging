@@ -159,7 +159,7 @@ function Child({
           overflow: "hidden",
           scale: 1,
           opacity: getOpacity(),
-          cursor: `pointer`,
+          cursor: params === selectedYear ? "" : `pointer`,
           backgroundColor:
             params === selectedYear ||
             selectedItem === params ||
@@ -171,7 +171,7 @@ function Child({
           color: getTextColor(),
         }}
         // onClick={() => personClickHandler(params.laurateId, params.isRouting)}
-        onClick={() => setSelectedItem(params)}
+        onClick={() => params !== selectedYear && setSelectedItem(params)}
       >
         {params === selectedYear ? `${selectedYear} Prize Winners` : params}
       </div>

@@ -22,7 +22,7 @@ import Categories from "./Categories";
 import YearLine from "../Mobile/Components/YearLine";
 import PRIZE_DETAILS from "../Mobile/Components/PRIZE_DETAILS";
 import FilterHeader from "../Mobile/Components/FilterHeader";
-import mobileCategories from "./Categories"
+import MobileCategories from "../Mobile/Components/Categories";
 function DataDisplay({
   dataId,
   zoom,
@@ -231,7 +231,7 @@ function DataDisplay({
               <div className="prize-winner-title">
                 Prize winners {selectedYear}
               </div>
-              <Categories  />
+              {mobileView ? <MobileCategories /> : <Categories />}
             </>
           )}
 
