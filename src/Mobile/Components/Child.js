@@ -2,7 +2,7 @@ import React from "react";
 import testPerson from "../Data/Pics/2.jpeg";
 import { useNavigate } from "react-router-dom";
 
-function Child({ params }) {
+function Child({ params, selectedField }) {
   const navigate = useNavigate();
   const subjectClickHandler = (subID, isRouting) => {
     if (isRouting) {
@@ -14,27 +14,55 @@ function Child({ params }) {
       navigate(`/prize-details/${lauID}/studies`);
     }
   };
+
+  const style = {
+    // color: `${params.textColor}`,
+    // border: `${params.borderThickness} ${
+    //   params.borderStyle ? params.borderStyle : "solid"
+    // } ${params.borderColor}`,
+    borderRadius: 100,
+    // backgroundColor: `${params.backgroundColor}`,
+    height: "90px",
+    width: "90px",
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    padding: "2px",
+    overflow: "hidden",
+    scale: `${params.scaleFactor}`,
+    // opacity: `${params.isActive ? "100%" : "50%"}`,
+    // cursor: `${params.isRouting ? "pointer" : null}`,
+  };
+
+  const fieldOfstudyStyle = {
+    ...style,
+    color:
+      !selectedField || selectedField === params?.field
+        ? `${params.textColor}`
+        : "",
+    border:
+      !selectedField || selectedField === params?.field
+        ? `${params.borderThickness} ${
+            params.borderStyle ? params.borderStyle : "solid"
+          } ${params.borderColor}`
+        : "1px solid #C7C7C75E",
+    backgroundColor:
+      !selectedField || selectedField === params?.field
+        ? `${params.backgroundColor}`
+        : "",
+    opacity:
+      !selectedField || selectedField === params?.field
+        ? `${params.isActive ? "100%" : "50%"}`
+        : "",
+    cursor:
+      !selectedField || selectedField === params?.field
+        ? `${params.isRouting ? "pointer" : null}`
+        : "",
+  };
   if (params.type === "subject" || params.type === "sub-subject") {
     return (
       <div
-        style={{
-          color: `${params.textColor}`,
-          border: `${params.borderThickness} ${
-            params.borderStyle ? params.borderStyle : "solid"
-          } ${params.borderColor}`,
-          borderRadius: 100,
-          backgroundColor: `${params.backgroundColor}`,
-          height: "90px",
-          width: "90px",
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-          padding: "2px",
-          overflow: "hidden",
-          scale: `${params.scaleFactor}`,
-          opacity: `${params.isActive ? "100%" : "50%"}`,
-          cursor: `${params.isRouting ? "pointer" : null}`,
-        }}
+        style={fieldOfstudyStyle}
         onClick={() => subjectClickHandler(params.subjectId, params.isRouting)}
       >
         {params.text}

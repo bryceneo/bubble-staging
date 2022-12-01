@@ -8,11 +8,14 @@ function WinnerCard({ selectedItem, selectedYear, setSelectedItem, color }) {
       <div className="winner-card">
         <img
           src={"images/" + selectedItem?.Name + ".jpg"}
-          height={"100px"}
-          width={"100px"}
+          height="100px"
+          width="100px"
           style={{
             borderRadius: "100%",
             border: "5px solid " + color,
+            overflow: "hidden",
+            maxHeight: "100px",
+            maxWidth: "100px"
           }}
           alt={selectedItem?.Name}
         ></img>

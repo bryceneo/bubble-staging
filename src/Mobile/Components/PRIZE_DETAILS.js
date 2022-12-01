@@ -32,7 +32,7 @@ function PRIZE_DETAILS({
     )?.colorCode || "";
 
   const [selectedSubject, setSelectedSubject] = useState("");
-
+  const [selectedField, setSelectedField] = useState("");
   let subjects = [];
   selectedItem["Field of study and training"]?.split(",")?.map((item) => {
     const subject = {
@@ -48,6 +48,7 @@ function PRIZE_DETAILS({
       backgroundColor: color,
       scaleFactor: 1,
       isActive: true,
+      field: "Field of study and training",
     };
     subjects.push(subject);
   });
@@ -66,6 +67,7 @@ function PRIZE_DETAILS({
       backgroundColor: " #FFFFFF5E",
       scaleFactor: 1,
       isActive: true,
+      field: "Major body of work -time of prize",
     };
     subjects.push(subject);
   });
@@ -85,6 +87,7 @@ function PRIZE_DETAILS({
       borderStyle: "dashed",
       scaleFactor: 1,
       isActive: true,
+      field: "Influence/Impact",
     };
     subjects.push(subject);
   });
@@ -116,6 +119,8 @@ function PRIZE_DETAILS({
         <Laurates_Of_Subjects
           selectedSubject={selectedSubject}
           setSelectedSubject={setSelectedSubject}
+          mode="subjects"
+          color={color}
         />
       ) : (
         <>
@@ -125,10 +130,10 @@ function PRIZE_DETAILS({
             setSelectedItem={setSelectedItem}
             color={color}
           />
-          <InstaFilters />
+          <InstaFilters setSelectedField={setSelectedField} color={color} />
           <Outlet />
           <div className="text-center">
-            <DataDisplay data={subjects} />
+            <DataDisplay data={subjects} selectedField={selectedField} />
             <Categories />
             <ViewAll
               prizeCategory={selectedItem["Prize Category"]?.split("-")[0]}

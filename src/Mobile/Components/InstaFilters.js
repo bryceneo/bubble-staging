@@ -1,34 +1,44 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Styles/Instafilters.css";
-
-function InstaFilters() {
+import CategoriesData from "../Data/CategoriesData";
+function InstaFilters({ color, setSelectedField }) {
   const navigate = useNavigate();
+
+  const circleStyle = {
+    height: "17px",
+    width: "17px",
+    borderRadius: "10px",
+  };
   return (
     <div id="instaFiltersmob">
       <div
-        // onClick={() => navigate("/prize-details/1/all")}
         className={"filter-mob"}
+        onClick={() => setSelectedField("")}
       >
-        All
+        <div style={{ ...circleStyle, backgroundColor: "#D8534E" }}></div>
+        <div>All</div>
       </div>
       <div
-        // onClick={() => navigate("/prize-details/1/studies")}
         className={"filter-mob"}
+        onClick={() => setSelectedField("Field of study and training")}
       >
-        Studies
+        <div style={{ ...circleStyle, backgroundColor: color }}></div>
+        <div>Studies</div>
       </div>
       <div
-        // onClick={() => navigate("/prize-details/1/work")}
         className={"filter-mob"}
+        onClick={() => setSelectedField("Major body of work -time of prize")}
       >
-        Work
+        <div style={{ ...circleStyle, border: "2px solid" + color }}></div>
+        <div>Work</div>
       </div>
       <div
-        // onClick={() => navigate("/prize-details/1/influence")}
         className={"filter-mob"}
+        onClick={() => setSelectedField("Influence/Impact")}
       >
-        Influence
+        <div style={{ ...circleStyle, border: "2px dashed" + color }}></div>
+        <div>Influence</div>
       </div>
     </div>
   );

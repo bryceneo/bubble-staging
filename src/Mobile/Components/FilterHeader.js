@@ -14,6 +14,7 @@ function FilterHeader({
   selectedYear,
   setSelectedYear,
   onBackClick,
+  totalItems
 }) {
   // const [selectedCategory, setSelectedCategory] = useState(0);
   // const [selectedFieldOfStudy, setSelectedFieldOfStudy] = useState(0);
@@ -55,6 +56,7 @@ function FilterHeader({
           setInfluenceImpact={setInfluenceImpact}
           selectedYear={selectedYear}
           setSelectedYear={setSelectedYear}
+          totalItems={totalItems}
         />
       </Modal>
     </>
