@@ -120,9 +120,9 @@ function PRIZE_DETAILS({
         <Laurates_Of_Subjects
           selectedSubject={selectedSubject}
           setSelectedSubject={setSelectedSubject}
-          // mode={mode}
-          setMode={setMode}
           color={color}
+          mode={mode}
+          setMode={setMode}
         />
       ) : (
         <>
@@ -139,15 +139,15 @@ function PRIZE_DETAILS({
               data={subjects}
               selectedField={selectedField}
               setSelectedSubject={setSelectedSubject}
-              // mode={mode}
-              // setMode={setMode}
+              mode={mode}
+              setMode={setMode}
             />
             <Categories />
             <ViewAll
               prizeCategory={selectedItem["Prize Category"]?.split("-")[0]}
               selectedSubject={selectedSubject}
               setSelectedSubject={setSelectedSubject}
-              setMode={setMode}
+              // setMode={setMode}
             />
           </div>
         </>

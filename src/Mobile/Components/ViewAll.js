@@ -14,7 +14,11 @@ function ViewAll({
       className="view-btn"
       onClick={() => {
         setSelectedSubject(prizeCategory);
-        setMode("");
+        if (mode === "subjects") {
+          setMode("");
+        } else {
+          setMode("subjects");
+        }
       }}
     >
       View all laureates in {prizeCategory}

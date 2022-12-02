@@ -7,9 +7,9 @@ import ViewAll from "./ViewAll";
 function Laurates_Of_Subjects({
   selectedSubject,
   setSelectedSubject,
-  mode,
   color,
-  setMode
+  mode,
+  setMode,
 }) {
   const laurates = [];
   const [startDate, setStartDate] = useState(2008);
@@ -101,6 +101,7 @@ function Laurates_Of_Subjects({
       // console.log(subjects, "subjects");
       setSubjects(subjects);
     }
+    console.log(mode, "mode1");
   }, [mode]);
   return (
     <>
@@ -118,6 +119,9 @@ function Laurates_Of_Subjects({
         data={mode === "subjects" ? subjects : laurates}
         bubbleOptions={{ numCols: 4 }}
         height={"100%"}
+        setSelectedSubject={setSelectedSubject}
+        setMode={setMode}
+        selectedSubject={selectedSubject}
       />
       {mode !== "subjects" ? (
         <RangeLine
@@ -134,6 +138,7 @@ function Laurates_Of_Subjects({
             selectedSubject={selectedSubject}
             setSelectedSubject={setSelectedSubject}
             mode="subjects"
+            setMode={setMode}
           />
         </div>
       )}
