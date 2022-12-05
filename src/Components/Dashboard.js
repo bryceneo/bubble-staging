@@ -14,11 +14,12 @@ function Dashboard({
 }) {
   const [zoom, SetZoom] = useState(100);
   // console.log(zoom);
+  const [displayGraph, setDisplayGraph] = useState(false);
 
   return (
     <>
       <div id="dashboard">
-        <SidePanel SetZoom={SetZoom} />
+        <SidePanel SetZoom={SetZoom} displayGraph={displayGraph} />
         <Routes>
           <Route
             path="/"
@@ -31,6 +32,8 @@ function Dashboard({
                 selectedFieldOfStudy={selectedFieldOfStudy}
                 majorBodyOfWork={majorBodyOfWork}
                 InfluenceImpact={InfluenceImpact}
+                displayGraph={displayGraph}
+                setDisplayGraph={setDisplayGraph}
               />
             }
           />

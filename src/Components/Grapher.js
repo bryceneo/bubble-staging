@@ -2,6 +2,7 @@ import React from "react";
 import { Graph } from "react-d3-graph";
 import data from "./Data/graphData";
 import allData from "../Components/Data/AllData.json";
+import CategoriesData from "./Data/CategoriesData";
 
 const picGenerator = (node) => {
   return (
@@ -17,6 +18,7 @@ const picGenerator = (node) => {
         alignItems: "center",
         color: "#ffffff",
         backgroundColor: "#223247",
+        border: node.border
       }}
     >
       <img src={node.svg} height={"100%"} width={"100%"} alt={node.name} />
@@ -52,6 +54,9 @@ function Grapher({ selectedItem, relatedSubjects, setDisplayGraph }) {
         winner["Field of study and training"] +
         winner["Major body of work -time of prize"] +
         winner["Influence/Impact"],
+      border:
+        "5px solid " +
+        CategoriesData?.find((item) => winner["Prize Category"].includes(item?.name)).colorCode,
       viewGenerator: picGenerator,
     };
   });
@@ -101,20 +106,20 @@ function Grapher({ selectedItem, relatedSubjects, setDisplayGraph }) {
   const [ref, setRef] = React.useState(null);
   const config = {
     directed: false,
-    automaticRearrangeAfterDropNode: true,
+    // automaticRearrangeAfterDropNode: true,
     focusAnimationDuration: 0.75,
     focusZoom: 5,
-    collapsible: true,
+    collapsible: false,
     height: 700,
     // width: 700,
-    highlightDegree: 2,
+    highlightDegree: 100,
     highlightOpacity: 0.5,
     linkHighlightBehavior: false,
     maxZoom: 12,
     minZoom: 0.05,
     nodeHighlightBehavior: false, // comment this to reset nodes positions to work
     panAndZoom: true,
-    // staticGraph: false,
+    staticGraph: false,
 
     d3: {
       alphaTarget: 0.05,
@@ -165,7 +170,9 @@ function Grapher({ selectedItem, relatedSubjects, setDisplayGraph }) {
   }, []);
   return (
     <div className="graph-wrapper w-100 p-3">
-      <button className="back-btn" onClick={() => setDisplayGraph(false)}>Back</button>
+      <button className="back-btn" onClick={() => setDisplayGraph(false)}>
+        Back
+      </button>
       <Graph id="test" data={data} config={config} ref={handleRefChange} />
     </div>
   );

@@ -15,7 +15,7 @@ function ZoomBox({ SetZoom }) {
   };
   const decrement = () => {
     let min = -2;
-    if (count >= min) {
+    if (count >= min && count > -2) { 
       setCount(count - 1);
     }
   };
@@ -46,7 +46,7 @@ function ZoomBox({ SetZoom }) {
           <input
             type="range"
             max={3}
-            min={-3}
+            min={-2}
             name="range"
             value={count}
             // onChange={(event) =>

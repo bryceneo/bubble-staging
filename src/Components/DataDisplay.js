@@ -37,11 +37,13 @@ function DataDisplay({
   setSelectedFieldOfStudy,
   setMajorBodyOfWork,
   setInfluenceImpact,
+  displayGraph,
+  setDisplayGraph
 }) {
   const [topPanel, setTopPanel] = useState(undefined);
   const [selectedItem, setSelectedItem] = useState(null);
   const [subjectFilter, setSubjectFilter] = useState("");
-  const [displayGraph, setDisplayGraph] = useState(false);
+  // const [displayGraph, setDisplayGraph] = useState(false);
   const { state } = useLocation();
   const [shiffledList, setShuffledList] = useState(null);
   const [relatedSubjects, setRelatedSubjects] = useState([]);
