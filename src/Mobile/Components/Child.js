@@ -98,8 +98,8 @@ function Child({ params, selectedField, setSelectedSubject, setMode, mode }) {
         <img
           src={
             params?.img !== ""
-              ? `../../../${params?.img}`
-              : `../../../public/images/No.jpg`
+              ? `../../${params?.img}`
+              : `../../public/images/No.jpg`
           }
           width="120px"
           height="120px"
