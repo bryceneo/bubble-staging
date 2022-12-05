@@ -97,6 +97,9 @@ ul.options li[aria-selected="true"] {
   background: transparent;
   border: 1px solid #223247;
 }
+.main-wrapper-filter{
+  display: flex;
+}
 @media screen and (max-width:1199px){
   #select-btn{
     font-size: 12px;
@@ -110,9 +113,13 @@ ul.options li[aria-selected="true"] {
 }
 @media screen  and (max-width:992px){
   .main-wrapper-filter {
-    gap: 0px 18px;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+}
+#filters{
+  display: block;
+  margin-top: 10px;
+  height: 4em;
 }
 }
 /* width */
