@@ -228,6 +228,7 @@ function DataDisplay({
                 setInfluenceImpact={setInfluenceImpact}
                 setSelectedYear={setSelectedYear}
                 // onBackClick={() => setSelectedItem(null)}
+                totalItems={Winners?.length || 0}
               />
               <div className="prize-winner-title">
                 Prize winners {selectedYear}

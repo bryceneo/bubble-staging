@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 10px 0 10px;
+    padding: 10px 10px 0 10px;
     gap: 4px;
 }
 .filter-mob {
@@ -13,8 +13,11 @@
     border-radius: 30px;
     font-size: 14px;
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px
 }
-.filter-mob:before {
+/* .filter-mob:before {
     content: '';
     position: absolute;
     height: 15px;
@@ -24,8 +27,8 @@
     border-radius: 10px;
     top: 8px;
     left: 7px;
-}
-#instaFiltersmob .filter-mob:nth-child(1):before {
+} */
+/* #instaFiltersmob .filter-mob:nth-child(1):before {
     background: #D8534E;
 }
 #instaFiltersmob .filter-mob:nth-child(2):before {
@@ -38,4 +41,4 @@
 #instaFiltersmob .filter-mob:nth-child(4):before {
     background: #F4F4F4;
     border-color: #D2D2D2;
-}
+} */

@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import laureatesOfSubjects from "../Data/lauratesOfSubjects";
 import DataDisplay from "./DataDisplay";
 import RangeLine from "./RangeLine";
 import Data from "../../Components/Data/AllData.json";
-function Laurates_Of_Subjects({ selectedSubject, setSelectedSubject }) {
+import ViewAll from "./ViewAll";
+function Laurates_Of_Subjects({
+  selectedSubject,
+  setSelectedSubject,
+  color,
+  mode,
+  setMode,
+}) {
   const laurates = [];
   const [startDate, setStartDate] = useState(2008);
   const [endDate, setEndDate] = useState(startDate + 4);
+  let [subjects, setSubjects] = useState([]);
 
   const checkSubjectInLaurate = (person) => {
     return (
@@ -41,24 +49,99 @@ function Laurates_Of_Subjects({ selectedSubject, setSelectedSubject }) {
       laurates.push(node);
     }
   );
+
+  useEffect(() => {
+    if (mode === "subjects") {
+      let subjects = [];
+
+      Data?.Database?.filter((person) => {
+        return (
+          person["Prize Category"]?.includes(selectedSubject) ||
+          person["Field of study and training"]?.includes(selectedSubject) ||
+          person["Major body of work -time of prize"]?.includes(
+            selectedSubject
+          ) ||
+          person["Influence/Impact"]?.includes(selectedSubject)
+        );
+      })?.map((person) => {
+        person["Field of study and training"]
+          ?.split(",")
+          ?.map((item) => subjects.push(item?.trim()));
+        person["Major body of work -time of prize"]
+          ?.split(",")
+          ?.map((item) => subjects?.push(item?.trim()));
+        person["Influence/Impact"]
+          ?.split(",")
+          ?.map((item) => subjects?.push(item?.trim()));
+      });
+      subjects = Array.from(new Set(subjects))?.filter(
+        (item) => !selectedSubject?.includes(item)
+      );
+      subjects.splice(subjects.length / 3, 0, selectedSubject);
+      subjects = subjects.map((item) => {
+        const node = {
+          id: item,
+          type: "subject",
+          // subjectId: "dse23456",
+
+          isRouting: false,
+          text: item,
+          textColor: selectedSubject?.includes(item) ? "#ffffff" : "#000000",
+          borderThickness: "2px",
+          // borderColor:
+          backgroundColor: selectedSubject?.includes(item)
+            ? color
+            : "#C7C7C75E",
+          scaleFactor: 1,
+          isActive: true,
+          // field: "Field of study and training",
+        };
+        return node;
+      });
+      // console.log(subjects, "subjects");
+      setSubjects(subjects);
+    }
+    console.log(mode, "mode1");
+  }, [mode]);
   return (
     <>
-      <div className="subject-areas-title grey-text text-center p-3">
-        Laureates in {selectedSubject}
-      </div>
+      {mode !== "subjects" ? (
+        <div className="subject-areas-title grey-text text-center p-3">
+          Laureates in {selectedSubject}
+        </div>
+      ) : (
+        <div className="subject-areas-title  text-center p-3">
+          {selectedSubject} related subject areas
+        </div>
+      )}
       {/* <button className="m-2" onClick={() => setSelectedSubject("")}>Back</button> */}
       <DataDisplay
-        data={laurates}
+        data={mode === "subjects" ? subjects : laurates}
         bubbleOptions={{ numCols: 4 }}
         height={"100%"}
+        setSelectedSubject={setSelectedSubject}
+        setMode={setMode}
+        selectedSubject={selectedSubject}
       />
-      <RangeLine
-        selectedColors={{ color: "#14202E", bgColor: "#F1AC4D" }}
-        startDate={startDate}
-        setStartDate={setStartDate}
-        endDate={endDate}
-        setEndDate={setEndDate} 
-      />
+      {mode !== "subjects" ? (
+        <RangeLine
+          selectedColors={{ color: "#14202E", bgColor: "#F1AC4D" }}
+          startDate={startDate}
+          setStartDate={setStartDate}
+          endDate={endDate}
+          setEndDate={setEndDate}
+        />
+      ) : (
+        <div className="d-flex justify-content-center">
+          <ViewAll
+            prizeCategory={selectedSubject}
+            selectedSubject={selectedSubject}
+            setSelectedSubject={setSelectedSubject}
+            mode="subjects"
+            setMode={setMode}
+          />
+        </div>
+      )}
     </>
   );
 }

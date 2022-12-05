@@ -13,6 +13,7 @@ function FilterModal({
   selectedYear,
   setSelectedYear,
   setIsModalOpen,
+  totalItems,
 }) {
   const [modalPage, setModalPage] = useState("filter");
   const categoryObj = [
@@ -118,7 +119,7 @@ function FilterModal({
       <>
         <div className="modal-title">
           <span className="modal-heading">Filter By</span>
-          <span className="results">5 Results available</span>
+          <span className="results">{totalItems || 0} Results available</span>
         </div>
         <div
           onClick={() => setModalPage("category")}
@@ -318,7 +319,7 @@ function FilterModal({
 
           <div class="modal-title">
             <span class="modal-heading">Major Body of Work</span>
-            <span class="results">12 Results available</span>
+            <span class="results">{totalItems || 0} Results available</span>
           </div>
           <input
             class="form-control me-2"

@@ -57,7 +57,6 @@ function Grapher({ selectedItem, relatedSubjects, setDisplayGraph }) {
   });
 
   const relatedSubjectsNode = relatedSubjects?.map((subject) => {
-    console.log(winners);
     links.push({
       source: subject,
       target: selectedItem,
