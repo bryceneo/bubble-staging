@@ -221,7 +221,7 @@ function Child({
         }}
         // onClick={() => personClickHandler(params.laurateId, params.isRouting)}
         onClick={() => {
-          if (params !== selectedYear || params !== "No Data Found") {
+          if (params !== selectedYear && params !== "No Data Found") {
             setSelectedField("");
             setSelectedItem(params);
           }

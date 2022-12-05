@@ -38,7 +38,7 @@ function DataDisplay({
   setMajorBodyOfWork,
   setInfluenceImpact,
   displayGraph,
-  setDisplayGraph
+  setDisplayGraph,
 }) {
   const [topPanel, setTopPanel] = useState(undefined);
   const [selectedItem, setSelectedItem] = useState(null);
@@ -113,7 +113,11 @@ function DataDisplay({
       selectedYear,
       ...subjects,
     ]);
-    setShuffledList(Array.from(new Set(newShuffledList)));
+    if (newShuffledList?.length > 1)
+      setShuffledList(Array.from(new Set(newShuffledList)));
+    else {
+      setShuffledList(["No Data Found"]);
+    }
   }, [
     selectedYear,
     SelectedCategory,
@@ -157,7 +161,7 @@ function DataDisplay({
     size: 180,
     // size: zoom,
     minSize: 30,
-    gutter: -77,
+    gutter: -65,
     provideProps: true,
     numCols: 4,
     fringeWidth: 500,

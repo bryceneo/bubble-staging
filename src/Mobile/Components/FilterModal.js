@@ -17,6 +17,7 @@ function FilterModal({
 }) {
   const [modalPage, setModalPage] = useState("filter");
   const categoryObj = [
+    "Select Category",
     "Social Sciences",
     "Physical Sciences",
     "Mathematical Sciences",

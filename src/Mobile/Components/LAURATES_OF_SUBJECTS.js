@@ -49,7 +49,21 @@ function Laurates_Of_Subjects({
       laurates.push(node);
     }
   );
+  const NoDataNode = {
+    id: "No Data found",
+    type: "subject",
+    // subjectId: "dse23456",
 
+    isRouting: false,
+    text: "No Data found",
+    textColor: "#ffffff",
+    borderThickness: "2px",
+    // borderColor:
+    backgroundColor: "#14202E",
+    scaleFactor: 1,
+    isActive: true,
+    // field: "Field of study and training",
+  };
   useEffect(() => {
     if (mode === "subjects") {
       let subjects = [];
@@ -99,10 +113,13 @@ function Laurates_Of_Subjects({
         return node;
       });
       // console.log(subjects, "subjects");
-      setSubjects(subjects);
+      if (subjects?.length) setSubjects(subjects);
+      else {
+        setSubjects([NoDataNode]);
+      }
     }
     // console.log(mode, "mode1");
-  }, [mode,selectedSubject]);
+  }, [mode, selectedSubject]);
   return (
     <>
       {mode !== "subjects" ? (
@@ -116,7 +133,13 @@ function Laurates_Of_Subjects({
       )}
       {/* <button className="m-2" onClick={() => setSelectedSubject("")}>Back</button> */}
       <DataDisplay
-        data={mode === "subjects" ? subjects : laurates}
+        data={
+          mode === "subjects"
+            ? subjects
+            : laurates?.length
+            ? laurates
+            : [NoDataNode]
+        }
         bubbleOptions={{ numCols: 4 }}
         height={"100%"}
         setSelectedSubject={setSelectedSubject}
