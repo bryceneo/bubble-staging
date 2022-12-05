@@ -101,8 +101,8 @@ function Laurates_Of_Subjects({
       // console.log(subjects, "subjects");
       setSubjects(subjects);
     }
-    console.log(mode, "mode1");
-  }, [mode]);
+    // console.log(mode, "mode1");
+  }, [mode,selectedSubject]);
   return (
     <>
       {mode !== "subjects" ? (
@@ -122,6 +122,7 @@ function Laurates_Of_Subjects({
         setSelectedSubject={setSelectedSubject}
         setMode={setMode}
         selectedSubject={selectedSubject}
+        color={color}
       />
       {mode !== "subjects" ? (
         <RangeLine

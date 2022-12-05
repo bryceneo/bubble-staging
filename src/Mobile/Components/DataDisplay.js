@@ -12,6 +12,7 @@ function DataDisplay({
   mode,
   setSelectedSubject,
   selectedSubject,
+  color
 }) {
   const options = {
     size: 180,
@@ -39,6 +40,7 @@ function DataDisplay({
         setSelectedSubject={setSelectedSubject}
         mode={mode}
         selectedSubject={selectedSubject}
+        color={color}
       />
     );
   });

@@ -2,14 +2,7 @@ import React from "react";
 import testPerson from "../Data/Pics/2.jpeg";
 import { useNavigate } from "react-router-dom";
 
-function Child({
-  params,
-  selectedField,
-  setSelectedSubject,
-  setMode,
-  mode,
-  selectedSubject,
-}) {
+function Child({ params, selectedField, setSelectedSubject, setMode, mode }) {
   const navigate = useNavigate();
   const subjectClickHandler = (subID, isRouting) => {
     if (isRouting) {
@@ -54,9 +47,7 @@ function Child({
           } ${params.borderColor}`
         : "1px solid #C7C7C75E",
     backgroundColor:
-      !selectedField ||
-      selectedField === params?.field ||
-      selectedSubject === params.text
+      !selectedField || selectedField === params?.field
         ? `${params.backgroundColor}`
         : "",
     opacity:
@@ -76,8 +67,8 @@ function Child({
           setSelectedSubject(params.text);
           if (mode === "subjects") {
             setMode("");
-          } else {
-            setMode("subjects");
+          }else{
+            setMode("subjects")
           }
         }}
       >
