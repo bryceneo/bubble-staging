@@ -18,7 +18,7 @@ function DataDisplay({
     size: 180,
     // size: zoom,
     minSize: 30,
-    gutter: -77,
+    gutter: -65,
     provideProps: true,
     numCols: 4,
     fringeWidth: 500,

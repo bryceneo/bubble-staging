@@ -92,12 +92,7 @@ function PRIZE_DETAILS({
     };
     subjects.push(subject);
   });
-  // selectedItem["Major body of work -time of prize"]
-  //   ?.split(",")
-  //   ?.map((item) => subjects.push(item.trim()));
-  // selectedItem["Influence/Impact"]
-  //   ?.split(",")
-  //   ?.map((item) => subjects.push(item.trim()));
+
   return (
     <>
       <FilterHeader

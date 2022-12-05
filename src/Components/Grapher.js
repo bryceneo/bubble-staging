@@ -56,7 +56,7 @@ function Grapher({ selectedItem, relatedSubjects, setDisplayGraph }) {
         winner["Influence/Impact"],
       border:
         "5px solid " +
-        CategoriesData?.find((item) => winner["Prize Category"].includes(item?.name)).colorCode,
+        CategoriesData?.find((item) => winner["Prize Category"].includes(item?.name)).colorCode || "",
       viewGenerator: picGenerator,
     };
   });

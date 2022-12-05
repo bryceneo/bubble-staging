@@ -15,6 +15,8 @@ function Child({ params, selectedField, setSelectedSubject, setMode, mode }) {
     }
   };
 
+  // console.log("parmas",params)
+
   const style = {
     // color: `${params.textColor}`,
     // border: `${params.borderThickness} ${
@@ -67,8 +69,8 @@ function Child({ params, selectedField, setSelectedSubject, setMode, mode }) {
           setSelectedSubject(params.text);
           if (mode === "subjects") {
             setMode("");
-          }else{
-            setMode("subjects")
+          } else {
+            setMode("subjects");
           }
         }}
       >
@@ -95,7 +97,12 @@ function Child({ params, selectedField, setSelectedSubject, setMode, mode }) {
         }}
         onClick={() => personClickHandler(params.laurateId, params.isRouting)}
       >
-        <img src={params.image} width="120px" height="120px" alt="test" />
+        <img
+          src={params?.img || `images/No.jpg`}
+          width="120px"
+          height="120px"
+          alt="test"
+        />
       </div>
     );
   }
