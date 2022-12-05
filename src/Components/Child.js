@@ -134,7 +134,13 @@ function Child({
             onMouseOut={handleMouseOut}
           >
             <div className="emp-pop-name">{params?.Name}</div>
-            <div className="emp-pop-des">{params["Designation at the time of winning the Prize"]?.split(",")[0]}</div>
+            <div className="emp-pop-des">
+              {
+                params["Designation at the time of winning the Prize"]?.split(
+                  ","
+                )[0]
+              }
+            </div>
             {/* <div className="emp-pop-info">Random Text</div> */}
             <div className="emp-pop-know-more">Know More</div>
           </div>
@@ -167,7 +173,11 @@ function Child({
           }}
         >
           <img
-            src={`images/${params?.Name}.jpg`}
+            src={
+              params?.img !== ""
+                ? `../../${params?.img}`
+                : `../../public/images/No.jpg`
+            }
             // srcset={`images/${params?.Name}.png,images/${params?.Name}.jpeg`}
             // srcSet={`images/${params?.Name}.png 1280w,images/${params?.Name}.jpeg 1280w`}
             width="100%"
