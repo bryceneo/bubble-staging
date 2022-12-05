@@ -37,7 +37,7 @@ function Laurates_Of_Subjects({
 
         isRouting: false,
         text: "",
-        image: "images/" + person?.Name + ".jpg",
+        img: "images/" + person?.Name + ".jpg",
         textColor: "#223247",
         borderThickness: "4px",
         borderColor: "#223347",

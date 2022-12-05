@@ -15,6 +15,8 @@ function Child({ params, selectedField, setSelectedSubject, setMode, mode }) {
     }
   };
 
+  // console.log("parmas",params)
+
   const style = {
     // color: `${params.textColor}`,
     // border: `${params.borderThickness} ${
@@ -96,11 +98,7 @@ function Child({ params, selectedField, setSelectedSubject, setMode, mode }) {
         onClick={() => personClickHandler(params.laurateId, params.isRouting)}
       >
         <img
-          src={
-            params?.img !== ""
-              ? `../../${params?.img}`
-              : `../../public/images/No.jpg`
-          }
+          src={params?.img || `images/No.jpg`}
           width="120px"
           height="120px"
           alt="test"
