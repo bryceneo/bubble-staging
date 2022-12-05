@@ -28,7 +28,7 @@ function YearLine({ selectedYear, setSelectedYear }) {
             paddingRight: "50px",
             direction: "rtl",
             overflow: "auto",
-            padding: "10px 0",
+            padding: "15px 0",
             background: "#f6f6f6",
             // height:"64px",
             // width:"64px"
