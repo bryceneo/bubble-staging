@@ -105,7 +105,7 @@
   align-items: center;
 }
 .range-year, .selected-range {
-  font-size: 14px;
+  font-size: 12px;
 }
 @media screen and (max-width:992px) {
   .emp-name{

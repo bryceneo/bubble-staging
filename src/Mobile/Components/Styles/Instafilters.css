@@ -8,10 +8,10 @@
 .filter-mob {
     cursor: pointer;
     background: #fff;
-    padding: 6px 17px 6px 16px;
+    padding: 6px 12px 6px 11px;
     border: 1px solid #dfdfdf;
     border-radius: 30px;
-    font-size: 14px;
+    font-size: 12px;
     position: relative;
     display: flex;
     align-items: center;

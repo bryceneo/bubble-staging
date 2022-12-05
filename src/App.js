@@ -56,7 +56,7 @@ function App() {
               <div className="container">
                 <div className="row align-items-center">
                   <div className="col-lg-12">
-                    <div className="main-wrapper-filter d-flex">
+                    <div className="main-wrapper-filter">
                       <Filters
                         SelectedCategory={SelectedCategory}
                         setSelectedCategory={setSelectedCategory}

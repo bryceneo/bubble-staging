@@ -7,9 +7,10 @@
 .winner-empname{
     font-family: "Poppins-SemiBold";
     font-weight: 600;
-    font-size: 24px;
-    line-height: 0.9;
+    font-size: 21px;
+    line-height: 30px;
     padding: 12px 0;
+   
 }
 .winner-sub{
     font-size: 14px;
@@ -30,6 +31,6 @@
 }
 .sub-active{
     /* background-color: #F1AC4D; */
-    padding: 5px;
+    padding: 3px;
     border-radius: 4px;
 }

@@ -30,6 +30,8 @@ function YearLine({ selectedYear, setSelectedYear }) {
             overflow: "auto",
             padding: "10px 0",
             background: "#f6f6f6",
+            // height:"64px",
+            // width:"64px"
           }}
         >
           {yearLine.map((year) => {
@@ -46,11 +48,16 @@ function YearLine({ selectedYear, setSelectedYear }) {
                     fontSize: "12px",
                     padding: "11px 7px",
                     color: "#fff",
+                    // height:"40px",
+                    // width:"50px"
                   }}
                   key={year}
                   onClick={() => setSelectedYear(year)}
                 >
+                  <span className="year-line-yr">
                   {year}
+                  </span>
+                 
                 </div>
               );
             return (
@@ -60,11 +67,15 @@ function YearLine({ selectedYear, setSelectedYear }) {
                   cursor: "pointer",
                   fontSize: "12px",
                   padding: "11px 7px",
+                  // height:"40px",
+                  //   width:"50px"
                 }}
                 key={year}
                 onClick={() => setSelectedYear(year)}
-              >
-                {year}
+              ><span className="year-line-yr">
+                 {year}
+              </span>
+               
               </div>
             );
           })}

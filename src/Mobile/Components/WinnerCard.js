@@ -34,7 +34,7 @@ function WinnerCard({ selectedItem, selectedYear, setSelectedItem, color }) {
             {selectedItem["Prize Category"]?.split("-")[0]}
           </span>
         </div>
-        <div className="view-profile">View {selectedItem?.Name} profile </div>
+        <div className="view-profile pt-4">View {selectedItem?.Name} profile </div>
       </div>
     </>
   );
