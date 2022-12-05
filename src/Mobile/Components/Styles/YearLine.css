@@ -20,3 +20,7 @@
 .yearline-mob::-webkit-scrollbar {
   display: none;
 }
+.year-line-yr{
+  height: 20px;
+  width: 30px;
+}
