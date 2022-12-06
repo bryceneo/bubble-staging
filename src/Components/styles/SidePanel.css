@@ -8,6 +8,8 @@ max-width: 22%;
 }
 #test-graph-wrapper{
   text-align: center;
+}
+  .graph-wrapper{
   height: 500px;
   overflow-y: auto;
 }
@@ -88,23 +90,23 @@ max-width: 22%;
   }
 }
 /* width */
-#test-graph-wrapper::-webkit-scrollbar {
+.graph-wrapper::-webkit-scrollbar {
   width:8px;
 }
 
 /* Track */
-#test-graph-wrapper::-webkit-scrollbar-track {
+.graph-wrapper::-webkit-scrollbar-track {
   background: #adacac; 
 }
  
 /* Handle */
-#test-graph-wrapper::-webkit-scrollbar-thumb {
+.graph-wrapper::-webkit-scrollbar-thumb {
   background: #223247; 
   border-radius: 5px;
 }
 
 /* Handle on hover */
-#test-graph-wrapper::-webkit-scrollbar-thumb:hover {
+.graph-wrapper::-webkit-scrollbar-thumb:hover {
   background: #223247;
 }
 ._2MD0k{
