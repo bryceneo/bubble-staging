@@ -12,6 +12,7 @@ import CategoriesData from "../../Components/Data/CategoriesData";
 import lauratesOfSubjects from "../Data/lauratesOfSubjects";
 import Laurates_Of_Subjects from "./LAURATES_OF_SUBJECTS";
 import FilterHeader from "./FilterHeader";
+import { findColorOfSubject } from "../../Components/utilities";
 function PRIZE_DETAILS({
   selectedItem,
   selectedYear,
@@ -36,6 +37,7 @@ function PRIZE_DETAILS({
   const [mode, setMode] = useState("");
   let subjects = [];
   selectedItem["Field of study and training"]?.split(",")?.map((item) => {
+    const subjectColor = findColorOfSubject(CategoriesData, item);
     const subject = {
       id: item,
       type: "subject",
@@ -46,7 +48,7 @@ function PRIZE_DETAILS({
       textColor: "#ffffff",
       borderThickness: "2px",
 
-      backgroundColor: color,
+      backgroundColor: subjectColor,
       scaleFactor: 1,
       isActive: true,
       field: "Field of study and training",

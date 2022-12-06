@@ -24,3 +24,16 @@ export const getRelatedSubjects = (selectedItem, Winners) => {
     return Array.from(new Set(relatedSubjects));
   }
 };
+export const findColorOfSubject = (categoriesData, subject) => {
+  console.log(
+    categoriesData?.find((category) =>
+      category.subjects?.includes(subject.trim())
+    )?.colorCode,
+    "colorCode"
+  );
+  return (
+    categoriesData?.find((category) =>
+      category.subjects?.includes(subject.trim())
+    )?.colorCode || ""
+  );
+};

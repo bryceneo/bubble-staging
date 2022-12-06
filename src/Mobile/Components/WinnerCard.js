@@ -7,7 +7,7 @@ function WinnerCard({ selectedItem, selectedYear, setSelectedItem, color }) {
     <>
       <div className="winner-card">
         <img
-          src={"images/" + selectedItem?.Name + ".jpg"}
+          src={selectedItem?.img || "images/No.jpg"}
           height="100px"
           width="100px"
           style={{

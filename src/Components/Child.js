@@ -40,7 +40,11 @@ function Child({
         selectedItem["Field of study and training"].includes(params) &&
         (!selectedField || selectedField === "Field of study and training")
       )
-        return CategoryColor;
+        return (
+          CategoriesData?.find((category) =>
+            category.subjects?.includes(params)
+          )?.colorCode || CategoryColor
+        );
       if (
         (!selectedField &&
           selectedItem["Major body of work -time of prize"]?.includes(
@@ -74,13 +78,23 @@ function Child({
       selectedItem["Major body of work -time of prize"]?.includes(params) &&
       (!selectedField || selectedField === "Major body of work -time of prize")
     )
-      return "2px solid" + CategoryColor;
+      return (
+        "2px solid" +
+          CategoriesData?.find((category) =>
+            category.subjects?.includes(params.trim())
+          )?.colorCode || CategoryColor
+      );
     if (
       selectedItem?.Name &&
       selectedItem["Influence/Impact"]?.includes(params) &&
       (!selectedField || selectedField === "Influence/Impact")
     )
-      return "2px dashed" + CategoryColor;
+      return (
+        "2px dashed" +
+          CategoriesData?.find((category) =>
+            category.subjects?.includes(params.trim())
+          )?.colorCode || CategoryColor
+      );
     if (
       selectedItem?.Name &&
       selectedItem["Field of study and training"]?.includes(params)
@@ -127,6 +141,27 @@ function Child({
   if (params?.Name) {
     return (
       <>
+        {/* Hover panel */}
+        {isHovering && (
+          <>
+            <div
+              className="emp-popup"
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
+              <div className="emp-pop-name">{params?.Name}</div>
+              <div className="emp-pop-des">
+                {
+                  params["Designation at the time of winning the Prize"]?.split(
+                    ","
+                  )[0]
+                }
+              </div>
+              {/* <div className="emp-pop-info">{}</div> */}
+              <div className="emp-pop-know-more">Know More</div>
+            </div>
+          </>
+        )}
         <div
           onMouseEnter={handleMouseOver}
           onMouseLeave={handleMouseOut}
