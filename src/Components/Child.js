@@ -6,6 +6,7 @@ import CategoriesData from "./Data/CategoriesData";
 import Avatar from "react-avatar";
 import "./styles/Child.css";
 import Tooltip from "rc-tooltip";
+import { findColorOfSubject } from "./utilities";
 function Child({
   params,
   setSelectedItem,
@@ -40,11 +41,7 @@ function Child({
         selectedItem["Field of study and training"].includes(params) &&
         (!selectedField || selectedField === "Field of study and training")
       )
-        return (
-          CategoriesData?.find((category) =>
-            category.subjects?.includes(params)
-          )?.colorCode || CategoryColor
-        );
+        return findColorOfSubject(CategoriesData, params) || CategoryColor;
       if (
         (!selectedField &&
           selectedItem["Major body of work -time of prize"]?.includes(
@@ -79,10 +76,8 @@ function Child({
       (!selectedField || selectedField === "Major body of work -time of prize")
     )
       return (
-        "2px solid" +
-          CategoriesData?.find((category) =>
-            category.subjects?.includes(params.trim())
-          )?.colorCode || CategoryColor
+        "2px solid" + findColorOfSubject(CategoriesData, params) ||
+        CategoryColor
       );
     if (
       selectedItem?.Name &&
@@ -90,10 +85,8 @@ function Child({
       (!selectedField || selectedField === "Influence/Impact")
     )
       return (
-        "2px dashed" +
-          CategoriesData?.find((category) =>
-            category.subjects?.includes(params.trim())
-          )?.colorCode || CategoryColor
+        "2px dashed" + findColorOfSubject(CategoriesData, params) ||
+        CategoryColor
       );
     if (
       selectedItem?.Name &&

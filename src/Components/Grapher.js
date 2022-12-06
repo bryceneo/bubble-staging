@@ -49,7 +49,7 @@ function Grapher({ selectedItem, relatedSubjects, setDisplayGraph }) {
     return {
       id: winner?.Name,
       name: winner?.Name,
-      svg: "images/" + winner?.Name + ".jpg",
+      svg: winner?.img || "images/No.jpg",
       subject:
         winner["Field of study and training"] +
         winner["Major body of work -time of prize"] +

@@ -48,7 +48,7 @@ function PRIZE_DETAILS({
       textColor: "#ffffff",
       borderThickness: "2px",
 
-      backgroundColor: subjectColor,
+      backgroundColor: subjectColor || color,
       scaleFactor: 1,
       isActive: true,
       field: "Field of study and training",
