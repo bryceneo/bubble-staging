@@ -40,7 +40,6 @@ function DataDisplay({
   displayGraph,
   setDisplayGraph,
 }) {
-  const [topPanel, setTopPanel] = useState(undefined);
   const [selectedItem, setSelectedItem] = useState(null);
   const [subjectFilter, setSubjectFilter] = useState("");
   // const [displayGraph, setDisplayGraph] = useState(false);
