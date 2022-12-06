@@ -110,7 +110,7 @@ function Grapher({ selectedItem, relatedSubjects, setDisplayGraph }) {
     focusAnimationDuration: 0.75,
     focusZoom: 5,
     collapsible: false,
-    height: 700,
+    height: 800,
     // width: 700,
     highlightDegree: 100,
     highlightOpacity: 0.5,
