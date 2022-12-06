@@ -9,7 +9,7 @@ max-width: 22%;
 #test-graph-wrapper{
   text-align: center;
   height: 500px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .back-btn{
   position: relative;
@@ -86,4 +86,24 @@ max-width: 22%;
   .yearline-mob{
     justify-content: unset;
   }
+}
+/* width */
+#test-graph-wrapper::-webkit-scrollbar {
+  width:8px;
+}
+
+/* Track */
+#test-graph-wrapper::-webkit-scrollbar-track {
+  background: #adacac; 
+}
+ 
+/* Handle */
+#test-graph-wrapper::-webkit-scrollbar-thumb {
+  background: #223247; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+#test-graph-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #223247;
 }
