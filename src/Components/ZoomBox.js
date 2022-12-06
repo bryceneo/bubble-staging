@@ -46,7 +46,7 @@ function ZoomBox({ SetZoom }) {
           <input
             type="range"
             max={3}
-            min={-2}
+            min={-3}
             name="range"
             value={count}
             // onChange={(event) =>

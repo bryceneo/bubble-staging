@@ -28,6 +28,7 @@ function DataDisplay({
     showGuides: false,
     compact: true,
     gravitation: 1,
+    compact: true
   };
   const children = data.map((item, index) => {
     return (
