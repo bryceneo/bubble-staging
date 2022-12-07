@@ -133,31 +133,10 @@ function Child({
 
   if (params?.Name) {
     return (
-      <>
-        {/* Hover panel */}
-        {isHovering && (
-          <>
-            <div
-              className="emp-popup"
-              onMouseOver={handleMouseOver}
-              onMouseOut={handleMouseOut}
-            >
-              <div className="emp-pop-name">{params?.Name}</div>
-              <div className="emp-pop-des">
-                {
-                  params["Designation at the time of winning the Prize"]?.split(
-                    ","
-                  )[0]
-                }
-              </div>
-              {/* <div className="emp-pop-info">{}</div> */}
-              <div className="emp-pop-know-more">Know More</div>
-            </div>
-          </>
-        )}
+      <div>
         <div
-          onMouseEnter={handleMouseOver}
-          onMouseLeave={handleMouseOut}
+          // onMouseEnter={handleMouseOver}
+          // onMouseLeave={handleMouseOut}
           style={{
             color: `#223247`,
             border: `5px solid ${
@@ -182,19 +161,43 @@ function Child({
             setSelectedItem(params);
           }}
         >
-          <img
-            src={params?.img || `images/No.jpg`}
-            // srcset={`images/${params?.Name}.png,images/${params?.Name}.jpeg`}
-            // srcSet={`images/${params?.Name}.png 1280w,images/${params?.Name}.jpeg 1280w`}
-            width="100%"
-            height="100%"
-            alt={params.Name}
-            style={{
-              cursor: "pointer",
-            }}
-          />
+          <Tooltip
+            placement="top"
+            trigger={["hover"]}
+            overlay={
+              <div
+                className="emp-popup"
+                onMouseOver={handleMouseOver}
+                onMouseOut={handleMouseOut}
+              >
+                <div className="emp-pop-name">{params?.Name}</div>
+                <div className="emp-pop-des">
+                  {
+                    params[
+                      "Designation at the time of winning the Prize"
+                    ]?.split(",")[0]
+                  }
+                </div>
+                {/* <div className="emp-pop-info">{}</div> */}
+                <div className="emp-pop-know-more">Know More</div>
+              </div>
+            }
+          >
+            <img
+              src={params?.img || `images/No.jpg`}
+              className="asdasasads"
+              // srcset={`images/${params?.Name}.png,images/${params?.Name}.jpeg`}
+              // srcSet={`images/${params?.Name}.png 1280w,images/${params?.Name}.jpeg 1280w`}
+              width="100%"
+              height="100%"
+              alt={params.Name}
+              style={{
+                cursor: "pointer",
+              }}
+            />
+          </Tooltip>
         </div>
-      </>
+      </div>
     );
   } else {
     return (
