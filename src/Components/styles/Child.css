@@ -2,7 +2,7 @@
   background: #fff;
   /* box-shadow: 0px 3px 6px #00000029; */
   /* border: 1px solid #70707099; */
-  padding: 15px 10px;
+padding: auto;
   /* position: absolute; */
   border-radius: 5px;
   top: -85px;
@@ -35,22 +35,28 @@
   z-index: 11;
 }
 .emp-pop-name {
-  font-size: 16px;
+  font-size: 13px;
   font-family: "Poppins-Semibold";
   font-weight: 600;
   line-height: 20px;
 }
 .emp-pop-des {
   color: #727272;
-  font-size: 14px;
+  font-size: 12px;
 }
 .emp-pop-info {
   color: #223247;
-  font-size: 12px;
+  font-size: 11px;
 }
 .emp-pop-know-more {
   color: #3a58e9;
-  font-size: 12px;
+  font-size: 11px;
   cursor: pointer;
   user-select: none;
+  padding-top: 10px;
+  text-align: center;
+  line-height: 20px;
+}
+.rc-tooltip {
+  opacity: 1 !important;
 }

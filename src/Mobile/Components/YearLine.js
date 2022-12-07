@@ -48,6 +48,7 @@ function YearLine({ selectedYear, setSelectedYear }) {
                     fontSize: "12px",
                     padding: "11px 7px",
                     color: "#fff",
+                    lineHeight:"20px",
                     // height:"40px",
                     // width:"50px"
                   }}
