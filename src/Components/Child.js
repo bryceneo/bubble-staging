@@ -203,16 +203,20 @@ function Child({
     return (
       <div
         style={{
-          borderRadius: "100%",
+          // borderRadius: "100%",
           border: getBorderStyle(),
-          minHeight: "100px",
-          width: "100px",
-          padding: "10px",
+          // height: "85px",
+          width: "100%",
+          height: "100%",
+          borderRadius: "50%",
+          // padding: "34px 5px",
           display: "flex",
-          justifyContent: "space-around",
+          justifyContent: "center",
           alignItems: "center",
-          overflow: "hidden",
-          scale: 1,
+          // overflow: "hidden",
+          // scale: 1,
+          // textAlign: "center",
+
           opacity: getOpacity(),
           cursor:
             params === selectedYear || params === "No Data Found"

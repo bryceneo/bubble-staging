@@ -141,16 +141,17 @@ function DataDisplay({
   // console.log(selectedItem, "selectedItem");
 
   const options = {
-    size: 180,
+    size: 98,
     // size: zoom,
-    minSize: 40,
-    gutter: -65,
+    minSize: 58,
+    gutter: 15,
     provideProps: true,
     numCols: 9,
     fringeWidth: 500,
     yRadius: 200,
     xRadius: 200,
     cornerRadius: 0,
+    
     showGuides: false,
     compact: true,
     gravitation: 1,
