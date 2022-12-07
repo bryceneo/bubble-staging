@@ -7,7 +7,6 @@ padding: auto;
   border-radius: 5px;
   top: -85px;
   z-index: 1;
-  /* width: fit-content; */
 }
 .emp-popup:before {
   content: "";
@@ -56,7 +55,4 @@ padding: auto;
   padding-top: 10px;
   text-align: center;
   line-height: 20px;
-}
-.rc-tooltip {
-  opacity: 1 !important;
 }
