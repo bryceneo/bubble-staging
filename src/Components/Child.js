@@ -148,6 +148,7 @@ function Child({
             borderRadius: 100,
             // backgroundColor: `${params.backgroundColor}`,
             height: "100px",
+
             width: "100px",
             overflow: "hidden",
             // scale: 2,
@@ -209,6 +210,7 @@ function Child({
           width: "100%",
           height: "100%",
           borderRadius: "50%",
+          padding: "5px",
           // padding: "34px 5px",
           display: "flex",
           justifyContent: "center",
