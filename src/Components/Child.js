@@ -134,53 +134,56 @@ function Child({
   if (params?.Name) {
     return (
       <div>
-        <div
-          // onMouseEnter={handleMouseOver}
-          // onMouseLeave={handleMouseOut}
-          style={{
-            color: `#223247`,
-            border: `5px solid ${
-              CategoriesData.find((item) =>
-                params["Prize Category"]?.includes(item?.name)
-              )?.colorCode ||
-              CategoriesData.find((item) => item?.name === "Others")?.colorCode
-            }`,
-            width: "100%",
-            height: "100%",
-            borderRadius: "50%",
-            overflow: "hidden",
-            // scale: 2,
-            opacity: getOpacity(),
-
-            // cursor: `${params.isRouting ? "pointer" : null}`,
-            cursor: "pointer",
-          }}
-          onClick={() => {
-            setSelectedField("");
-            setSelectedItem(params);
-          }}
-        >
-          <Tooltip
-            placement="top"
-            trigger={["hover"]}
-            overlay={
-              <div
-                className="emp-popup"
-                onMouseOver={handleMouseOver}
-                onMouseOut={handleMouseOut}
-              >
-                <div className="emp-pop-name">{params?.Name}</div>
-                <div className="emp-pop-des">
-                  {
-                    params[
-                      "Designation at the time of winning the Prize"
-                    ]?.split(",")[0]
-                  }
-                </div>
-                {/* <div className="emp-pop-info">{}</div> */}
-                <div className="emp-pop-know-more">Know More</div>
+        <Tooltip
+          placement="top"
+          trigger={["hover"]}
+          overlay={
+            <div
+              className="emp-popup"
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
+              <div className="emp-pop-name">{params?.Name}</div>
+              <div className="emp-pop-des">
+                {
+                  params["Designation at the time of winning the Prize"]?.split(
+                    ","
+                  )[0]
+                }
               </div>
-            }
+              {/* <div className="emp-pop-info">{}</div> */}
+              <div className="emp-pop-know-more">Know More</div>
+            </div>
+          }
+        >
+          <div
+            // onMouseEnter={handleMouseOver}
+            // onMouseLeave={handleMouseOut}
+            style={{
+              color: `#223247`,
+              border: `5px solid ${
+                CategoriesData.find((item) =>
+                  params["Prize Category"]?.includes(item?.name)
+                )?.colorCode ||
+                CategoriesData.find((item) => item?.name === "Others")
+                  ?.colorCode
+              }`,
+              minWidth: "98px",
+              minHeight: "98px",
+              width: "100%",
+              height: "100%",
+              borderRadius: "50%",
+              overflow: "hidden",
+              // scale: 2,
+              opacity: getOpacity(),
+
+              // cursor: `${params.isRouting ? "pointer" : null}`,
+              cursor: "pointer",
+            }}
+            onClick={() => {
+              setSelectedField("");
+              setSelectedItem(params);
+            }}
           >
             <img
               src={params?.img || `images/No.jpg`}
@@ -194,8 +197,8 @@ function Child({
                 cursor: "pointer",
               }}
             />
-          </Tooltip>
-        </div>
+          </div>
+        </Tooltip>
       </div>
     );
   } else {
