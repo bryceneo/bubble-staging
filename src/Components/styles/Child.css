@@ -56,3 +56,6 @@ padding: auto;
   text-align: center;
   line-height: 20px;
 }
+.rc-tooltip-placement-top {
+  opacity: 1 !important;
+}
