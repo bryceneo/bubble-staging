@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { useNavigate } from "react-router-dom";
 
-function Timeline() {
+function Timeline({ selectedYear }) {
   const navigate = useNavigate();
   const [timelines, setTimeLinedata] = useState(TimeLineYearData);
   const yearClickHandler = (year) => {
@@ -18,7 +18,7 @@ function Timeline() {
   };
   return (
     <>
-      <h4 className="mt-4 mb-4 emp-name">Laureate Ramesh Pradhan</h4>
+      <h4 className="mt-4 mb-4 emp-name">Laureates in {selectedYear}</h4>
       <div className=" mb-3">
         <Swiper
           className="mySwiper"
@@ -27,25 +27,23 @@ function Timeline() {
           mousewheel={true}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
-           breakpoints={
-            {
-              1920:{
-                width:1920,
-                slidesPerView:24,
-                mousewheel:true
-              },
-              1200:{
-                width:1200,
-                slidesPerView:22,
-                // mousewheel:true,
-              },
-              768:{
-                width:768,
-                slidesPerView:18,
-                mousewheel:true,
-              },
-            }
-          }
+          breakpoints={{
+            1920: {
+              width: 1920,
+              slidesPerView: 24,
+              mousewheel: true,
+            },
+            1200: {
+              width: 1200,
+              slidesPerView: 22,
+              // mousewheel:true,
+            },
+            768: {
+              width: 768,
+              slidesPerView: 18,
+              mousewheel: true,
+            },
+          }}
         >
           <ul class="years-scroll p-0">
             {timelines.map((timeline, index) => {
