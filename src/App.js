@@ -96,7 +96,7 @@ function App() {
           </div>
           <div className="container">
             <BrowserRouter>
-              <Timeline />
+              <Timeline  selectedYear={selectedYear}/>
               <Dashboard
                 selectedYear={selectedYear}
                 SelectedCategory={SelectedCategory}

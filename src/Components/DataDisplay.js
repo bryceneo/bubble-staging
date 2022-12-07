@@ -257,7 +257,7 @@ function DataDisplay({
               setInfluenceImpact={setInfluenceImpact}
               setSelectedYear={setSelectedYear}
             />
-          ) : (
+          ) : shiffledList?.length > 1 ? (
             <div
               style={{
                 overflow: "hidden",
@@ -284,6 +284,13 @@ function DataDisplay({
                   selectedYear={selectedYear}
                 />
               )}
+            </div>
+          ) : (
+            <div
+             className="no-data-title"
+              // onClick={() => setDi splayGraph(true)}
+            >
+              No Data found
             </div>
           )}
         </div>
