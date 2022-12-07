@@ -109,6 +109,13 @@ max-width: 22%;
 .graph-wrapper::-webkit-scrollbar-thumb:hover {
   background: #223247;
 }
-/* ._2MD0k{
-  padding-top: 100px;
+/* .main-data:has(.emp-popup){
+  overflow: visible;
+}
+._1Lxpd:has(.emp-popup){
+  overflow: visible;
+}
+._2MD0k:has(.emp-popup){
+  overflow: visible;
+  z-index: 8;
 } */

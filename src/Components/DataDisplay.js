@@ -144,10 +144,10 @@ function DataDisplay({
     size: 180,
     // size: zoom,
     minSize: 40,
-    gutter: -65,
+    gutter: -50,
     provideProps: true,
     numCols: 9,
-    fringeWidth: 500,
+    fringeWidth: 800,
     yRadius: 200,
     xRadius: 200,
     cornerRadius: 0,
@@ -258,7 +258,7 @@ function DataDisplay({
               setSelectedYear={setSelectedYear}
             />
           ) : (
-            <div
+            <div className="main-data"
               style={{
                 overflow: "hidden",
               }}
