@@ -158,13 +158,13 @@ function DataDisplay({
   };
 
   const Mobileoptions = {
-    size: 180,
+    size: 95,
     // size: zoom,
-    minSize: 30,
-    gutter: -65,
+    minSize: 40,
+    gutter: 10,
     provideProps: true,
     numCols: 4,
-    fringeWidth: 500,
+    fringeWidth: 350,
     yRadius: 50,
     xRadius: 50,
     cornerRadius: 0,

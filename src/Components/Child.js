@@ -145,11 +145,9 @@ function Child({
               )?.colorCode ||
               CategoriesData.find((item) => item?.name === "Others")?.colorCode
             }`,
-            borderRadius: 100,
-            // backgroundColor: `${params.backgroundColor}`,
-            height: "100px",
-
-            width: "100px",
+            width: "100%",
+            height: "100%",
+            borderRadius: "50%",
             overflow: "hidden",
             // scale: 2,
             opacity: getOpacity(),
