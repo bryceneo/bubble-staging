@@ -3,26 +3,40 @@ import { Graph } from "react-d3-graph";
 import data from "./Data/graphData";
 import allData from "../Components/Data/AllData.json";
 import CategoriesData from "./Data/CategoriesData";
+import Tooltip from "rc-tooltip";
 
 const picGenerator = (node) => {
   return (
-    <div
-      style={{
-        borderRadius: "100%",
-        objectFit: "contain",
-        overflow: "hidden",
-        height: "80px",
-        width: "80px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        color: "#ffffff",
-        backgroundColor: "#223247",
-        border: node.border
-      }}
+    <Tooltip
+      placement="top"
+      trigger={["hover"]}
+      overlay={
+        <div className="emp-popup">
+          <div className="emp-pop-name">{node?.name}</div>
+          <div className="emp-pop-des">{node?.designation?.split(",")[0]}</div>
+          {/* <div className="emp-pop-info">{}</div> */}
+          <div className="emp-pop-know-more">Know More</div>
+        </div>
+      }
     >
-      <img src={node.svg} height={"100%"} width={"100%"} alt={node.name} />
-    </div>
+      <div
+        style={{
+          borderRadius: "100%",
+          objectFit: "contain",
+          overflow: "hidden",
+          height: "80px",
+          width: "80px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          color: "#ffffff",
+          backgroundColor: "#223247",
+          border: node.border,
+        }}
+      >
+        <img src={node.svg} height={"100%"} width={"100%"} alt={node.name} />
+      </div>
+    </Tooltip>
   );
 };
 function Grapher({ selectedItem, relatedSubjects, setDisplayGraph }) {
@@ -50,13 +64,16 @@ function Grapher({ selectedItem, relatedSubjects, setDisplayGraph }) {
       id: winner?.Name,
       name: winner?.Name,
       svg: winner?.img || "images/No.jpg",
+      designation: winner["Designation at the time of winning the Prize"],
       subject:
         winner["Field of study and training"] +
         winner["Major body of work -time of prize"] +
         winner["Influence/Impact"],
       border:
         "5px solid " +
-        CategoriesData?.find((item) => winner["Prize Category"].includes(item?.name)).colorCode || "",
+          CategoriesData?.find((item) =>
+            winner["Prize Category"].includes(item?.name)
+          ).colorCode || "",
       viewGenerator: picGenerator,
     };
   });

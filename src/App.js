@@ -10,7 +10,7 @@ import { useMediaQuery } from "react-responsive";
 import Mobile from "./Mobile/Mobile";
 import { useState } from "react";
 import YearLine from "./Mobile/Components/YearLine";
-
+import 'rc-tooltip/assets/bootstrap_white.css';
 function App() {
   const useDesktopMediaQuery = () =>
     useMediaQuery({ query: "(min-width: 769px)" });
