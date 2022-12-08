@@ -1,26 +1,51 @@
 .outer-div {
   overflow: "hidden";
 }
+
 .inner-div {
   display: "flex";
   padding-right: "50px";
   direction: "rtl";
   overflow: "auto";
 }
-.year-link{
+
+.year-link {
   color: #707070;
   text-decoration: none;
 }
-.mob-bubbleui ._376IX{
+
+.mob-bubbleui ._376IX {
   display: none;
 }
-.mob-bubbleui{
+
+.mob-bubbleui {
   height: calc(100vh - 200px);
 }
+
 .yearline-mob::-webkit-scrollbar {
   display: none;
 }
-.year-line-yr{
+
+.year-line-yr {
   height: 20px;
   width: 30px;
+}
+
+.yearSwiper .year-circle {
+  height: 45px;
+  width: 45px;
+ 
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+  color: #111;
+}
+.yearSwiper .year-circle.selected-year {
+ background-color: #223247;
+}
+.yearSwiper .year-circle.selected-year span{
+  color: #fff;
 }

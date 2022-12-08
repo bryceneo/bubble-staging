@@ -4,6 +4,10 @@
   height: 15px;
   border-radius: 50px; /* specify the radius */
 }
+.selected-circle{
+  outline: 1px solid #90c56d;
+ outline-offset: 4px;
+}
 .categories-list li {
   font-size: 14px;
   font-family: 'Poppins-Regular';

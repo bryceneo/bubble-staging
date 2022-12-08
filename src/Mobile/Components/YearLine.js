@@ -2,6 +2,7 @@ import React from "react";
 import { Link, Navigate } from "react-router-dom";
 // import yearLine from "../Data/yearLine";
 import Data from "../../Components/Data/AllData.json";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "./Styles/YearLine.css";
 const yearLine = [
   ...Array.from(
@@ -11,7 +12,103 @@ const yearLine = [
 function YearLine({ selectedYear, setSelectedYear }) {
   return (
     <>
-      <div
+      <Swiper
+          className="yearSwiper"
+          spaceBetween={0}
+          slidesPerView={9}
+          mousewheel={true}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+          
+        >
+         
+                <SwiperSlide>
+                 <div className="year-circle">
+                  <span className="range-year">2008</span>
+                 </div>
+                </SwiperSlide>
+         
+         
+                <SwiperSlide>
+                 <div className="year-circle">
+                  <span className="range-year">2008</span>
+                 </div>
+                </SwiperSlide>
+                
+                <SwiperSlide>
+                 <div className="year-circle">
+                  <span className="range-year">2008</span>
+                 </div>
+                </SwiperSlide>
+                
+                <SwiperSlide>
+                 <div className="year-circle">
+                  <span className="range-year">2008</span>
+                 </div>
+                </SwiperSlide>
+                
+                <SwiperSlide>
+                 <div className="year-circle">
+                  <span className="range-year">2008</span>
+                 </div>
+                </SwiperSlide>
+                
+                <SwiperSlide>
+                 <div className="year-circle">
+                  <span className="range-year">2008</span>
+                 </div>
+                </SwiperSlide>
+                
+                <SwiperSlide>
+                 <div className="year-circle">
+                  <span className="range-year">2008</span>
+                 </div>
+                </SwiperSlide>
+                
+                <SwiperSlide>
+                 <div className="year-circle">
+                  <span className="range-year">2008</span>
+                 </div>
+                </SwiperSlide>
+                
+                <SwiperSlide>
+                 <div className="year-circle">
+                  <span className="range-year">2008</span>
+                 </div>
+                </SwiperSlide>
+                
+                <SwiperSlide>
+                 <div className="year-circle">
+                  <span className="range-year">2008</span>
+                 </div>
+                </SwiperSlide>
+                
+                <SwiperSlide>
+                 <div className="year-circle">
+                  <span className="range-year">2008</span>
+                 </div>
+                </SwiperSlide>
+                
+                <SwiperSlide>
+                 <div className="year-circle">
+                  <span className="range-year">2008</span>
+                 </div>
+                </SwiperSlide>
+                
+                <SwiperSlide>
+                 <div className="year-circle">
+                  <span className="range-year">2008</span>
+                 </div>
+                </SwiperSlide>
+                
+                <SwiperSlide>
+                 <div className="year-circle">
+                  <span className="range-year">2008</span>
+                 </div>
+                </SwiperSlide>
+          
+        </Swiper>
+      {/* <div
         style={{
           overflow: "hidden",
           position: "fixed",
@@ -81,7 +178,7 @@ function YearLine({ selectedYear, setSelectedYear }) {
             );
           })}
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
