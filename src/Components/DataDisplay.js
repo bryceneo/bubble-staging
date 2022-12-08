@@ -39,6 +39,7 @@ function DataDisplay({
   setInfluenceImpact,
   displayGraph,
   setDisplayGraph,
+  setSubjectForTimeLine
 }) {
   const [selectedItem, setSelectedItem] = useState(null);
   const [subjectFilter, setSubjectFilter] = useState("");
@@ -191,6 +192,7 @@ function DataDisplay({
         mobileView={mobileView}
         selectedField={selectedField}
         setSelectedField={setSelectedField}
+        setSubjectForTimeLine={setSubjectForTimeLine}
       />
     );
   });

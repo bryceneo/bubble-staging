@@ -16,6 +16,7 @@ function Child({
   mobileView,
   selectedField,
   setSelectedField,
+  setSubjectForTimeLine
 }) {
   const navigate = useNavigate();
   const [isHovering, setIsHovering] = useState(false);
@@ -183,6 +184,7 @@ function Child({
             onClick={() => {
               setSelectedField("");
               setSelectedItem(params);
+              setSubjectForTimeLine("")
             }}
           >
             <img
@@ -240,6 +242,7 @@ function Child({
           if (params !== selectedYear && params !== "No Data Found") {
             setSelectedField("");
             setSelectedItem(params);
+            setSubjectForTimeLine(params)
           }
         }}
       >

@@ -1,42 +1,5 @@
 export default [
   {
-    id: 0,
-    year: "",
-  },
-  {
-    id: 1,
-    year: 2000,
-  },
-  {
-    id: 2,
-    year: 2001,
-  },
-  {
-    id: 3,
-    year: 2002,
-  },
-  {
-    id: 4,
-    year: 2003,
-  },
-  {
-    id: 5,
-    year: 2004,
-  },
-  {
-    id: 6,
-    year: 2005,
-  },
-  {
-    id: 7,
-    year: 2006,
-  },
-  {
-    id: 8,
-    year: 2007,
-    // isactive: "swiper-slide-active",
-  },
-  {
     id: 9,
     year: 2008,
     // isactive: "swiper-slide-active",
@@ -105,9 +68,5 @@ export default [
     id: 22,
     year: 2021,
     // isactive: "swiper-slide-active",
-  },
-  {
-    id: 23,
-    year: 2022,
   },
 ];

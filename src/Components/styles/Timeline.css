@@ -21,7 +21,7 @@
 .years-scroll-item .cm{
   border-left: 1px solid #dbdbdb;
   border-top: 1px solid #dbdbdb;
-  height: 25px;
+  /* height: 25px; */
   display: flex;
   justify-content: space-between;
 }
@@ -37,7 +37,7 @@
   font-size: 12px;
   text-align: center;
   color: #dbdbdb;
-  margin-left: -13px;
+  margin-left: 13px;
 }
 .years-scroll-item{
   position: relative;

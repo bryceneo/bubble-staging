@@ -8,106 +8,34 @@ const yearLine = [
   ...Array.from(
     new Set(Data?.Database?.map((item) => item?.["Infosys Prize"]))
   ),
-].reverse();
+];
 function YearLine({ selectedYear, setSelectedYear }) {
   return (
     <>
       <Swiper
-          className="yearSwiper"
-          spaceBetween={0}
-          slidesPerView={9}
-          mousewheel={true}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-          
-        >
-         
-                <SwiperSlide>
-                 <div className="year-circle">
-                  <span className="range-year">2008</span>
-                 </div>
-                </SwiperSlide>
-         
-         
-                <SwiperSlide>
-                 <div className="year-circle">
-                  <span className="range-year">2008</span>
-                 </div>
-                </SwiperSlide>
-                
-                <SwiperSlide>
-                 <div className="year-circle">
-                  <span className="range-year">2008</span>
-                 </div>
-                </SwiperSlide>
-                
-                <SwiperSlide>
-                 <div className="year-circle">
-                  <span className="range-year">2008</span>
-                 </div>
-                </SwiperSlide>
-                
-                <SwiperSlide>
-                 <div className="year-circle">
-                  <span className="range-year">2008</span>
-                 </div>
-                </SwiperSlide>
-                
-                <SwiperSlide>
-                 <div className="year-circle">
-                  <span className="range-year">2008</span>
-                 </div>
-                </SwiperSlide>
-                
-                <SwiperSlide>
-                 <div className="year-circle">
-                  <span className="range-year">2008</span>
-                 </div>
-                </SwiperSlide>
-                
-                <SwiperSlide>
-                 <div className="year-circle">
-                  <span className="range-year">2008</span>
-                 </div>
-                </SwiperSlide>
-                
-                <SwiperSlide>
-                 <div className="year-circle">
-                  <span className="range-year">2008</span>
-                 </div>
-                </SwiperSlide>
-                
-                <SwiperSlide>
-                 <div className="year-circle">
-                  <span className="range-year">2008</span>
-                 </div>
-                </SwiperSlide>
-                
-                <SwiperSlide>
-                 <div className="year-circle">
-                  <span className="range-year">2008</span>
-                 </div>
-                </SwiperSlide>
-                
-                <SwiperSlide>
-                 <div className="year-circle">
-                  <span className="range-year">2008</span>
-                 </div>
-                </SwiperSlide>
-                
-                <SwiperSlide>
-                 <div className="year-circle">
-                  <span className="range-year">2008</span>
-                 </div>
-                </SwiperSlide>
-                
-                <SwiperSlide>
-                 <div className="year-circle">
-                  <span className="range-year">2008</span>
-                 </div>
-                </SwiperSlide>
-          
-        </Swiper>
+        className="yearSwiper"
+        spaceBetween={0}
+        slidesPerView={9}
+        mousewheel={true}
+        // onSlideChange={() => console.log("slide change")}
+        // onSwiper={(swiper) => console.log(swiper)}
+      >
+        {yearLine?.map((year, index) => {
+          return (
+            <SwiperSlide onClick={() => setSelectedYear(year)} key={index}>
+              <div
+                className={`year-circle`}
+                style={{
+                  backgroundColor: selectedYear == year ? "#14202E" : "",
+                  color: selectedYear == year ? "#ffffff" : "",
+                }}
+              >
+                <span className="range-year">{year}</span>
+              </div>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
       {/* <div
         style={{
           overflow: "hidden",

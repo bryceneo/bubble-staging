@@ -8,54 +8,48 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { useNavigate } from "react-router-dom";
 
-function Timeline({ selectedYear }) {
+function Timeline({ selectedYear, setSelectedYear, subjectForTimeline }) {
   const navigate = useNavigate();
   const [timelines, setTimeLinedata] = useState(TimeLineYearData);
   const yearClickHandler = (year) => {
-    if (year == 2010 || year == 2012 || year == 2013) {
-      navigate(`/year/${year}`, { state: { year } });
-    }
+    setSelectedYear(year);
   };
   return (
     <>
-      <h4 className="mt-4 mb-4 emp-name">Laureates in {selectedYear}</h4>
+      <h4 className="mt-4 mb-4 emp-name">
+        Laureates in {selectedYear}{" "}
+        {`${subjectForTimeline ? " - " + subjectForTimeline : ""}`}
+      </h4>
       <div className=" mb-3">
         <Swiper
-          className="mySwiper"
+          // className="mySwiper"
           spaceBetween={0}
-          slidesPerView={24}
+          slidesPerView={timelines?.length}
           mousewheel={true}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
-          breakpoints={{
-            1920: {
-              width: 1920,
-              slidesPerView: 24,
-              mousewheel: true,
-            },
-            1200: {
-              width: 1200,
-              slidesPerView: 22,
-              // mousewheel:true,
-            },
-            768: {
-              width: 768,
-              slidesPerView: 18,
-              mousewheel: true,
-            },
-          }}
+          // breakpoints={{
+          //   1920: {
+          //     width: 1920,
+          //     slidesPerView: 24,
+          //     mousewheel: true,
+          //   },
+          //   1200: {
+          //     width: 1200,
+          //     slidesPerView: 22,
+          //     // mousewheel:true,
+          //   },
+          //   768: {
+          //     width: 768,
+          //     slidesPerView: 18,
+          //     mousewheel: true,
+          //   },
+          // }}
         >
           <ul class="years-scroll p-0">
             {timelines.map((timeline, index) => {
               return (
-                // <Swiper
-                //   className="mySwiper"
-                //   spaceBetween={50}
-                //   slidesPerView={3}
-                //   onSlideChange={() => console.log("slide change")}
-                //   onSwiper={(swiper) => console.log(swiper)}
-                // >
-                <SwiperSlide key={index} className={timeline.isactive}>
+                <SwiperSlide key={index} >
                   <li className="years-scroll-item">
                     <div className="cm">
                       <div className="mm"></div>
@@ -72,7 +66,6 @@ function Timeline({ selectedYear }) {
                       <div className="mm"></div>
                     </div>
                     <span
-                      className="year-txt"
                       onClick={() => yearClickHandler(timeline.year)}
                       style={{
                         cursor: "pointer",
@@ -82,7 +75,6 @@ function Timeline({ selectedYear }) {
                     </span>
                   </li>
                 </SwiperSlide>
-                // </Swiper>
               );
             })}
           </ul>

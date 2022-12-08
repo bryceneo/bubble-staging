@@ -12,6 +12,7 @@ function Dashboard({
   majorBodyOfWork,
   InfluenceImpact,
   setSelectedCategory,
+  setSubjectForTimeLine
 }) {
   const [zoom, SetZoom] = useState(100);
   // console.log(zoom);
@@ -41,6 +42,7 @@ function Dashboard({
                 displayGraph={displayGraph}
                 setDisplayGraph={setDisplayGraph}
                 setSelectedCategory={setSelectedCategory}
+                setSubjectForTimeLine={setSubjectForTimeLine}
               />
             }
           />

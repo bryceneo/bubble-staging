@@ -20,28 +20,16 @@ function Categories({ SelectedCategory, setSelectedCategory }) {
                   }}
                 >
                   <span>{category.name}</span>
-                  <span
-                    style={{
-                      border:
-                        SelectedCategory === category?.name
-                          ? "1px solid" + category.colorCode
-                          : "",
-                      padding: "1px",
-                      borderRadius: "100%",
-                      // textAlign: "center",
-                      // display: "flex",
-                      // justifyContent: "center",
-                      // alignItems: "center",
-                      // width: "20px",
-                      // height: "20px",
-                      // width: "fitContent",
-                      // height: "fitContent",
-                    }}
-                  >
+                  <span>
                     <div
                       id="circle1"
                       style={{
                         backgroundColor: category.colorCode,
+                        outline:
+                          SelectedCategory === category?.name
+                            ? "1px solid " + category.colorCode
+                            : "none",
+                        outlineOffset: "2px",
                       }}
                     ></div>
                   </span>

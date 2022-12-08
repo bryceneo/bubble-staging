@@ -10,7 +10,7 @@ import { useMediaQuery } from "react-responsive";
 import Mobile from "./Mobile/Mobile";
 import { useState } from "react";
 import YearLine from "./Mobile/Components/YearLine";
-import 'rc-tooltip/assets/bootstrap_white.css';
+import "rc-tooltip/assets/bootstrap_white.css";
 function App() {
   const useDesktopMediaQuery = () =>
     useMediaQuery({ query: "(min-width: 769px)" });
@@ -37,7 +37,7 @@ function App() {
   const [selectedYear, setSelectedYear] = useState(
     new Date().getFullYear() - 1
   );
-
+  const [subjectForTimeline, setSubjectForTimeLine] = useState("");
   // console.log(selectedYear, "selectedYear");
 
   const clearFilters = () => {
@@ -77,26 +77,29 @@ function App() {
                         setSelectedYear={setSelectedYear}
                         selectedYear={selectedYear}
                       />
-                       <div className="col-lg-2 text-end pt-3">
-                    <a
-                      className="clear-filter"
-                      onClick={clearFilters}
-                      style={{ cursor: "pointer" }}
-                    >
-                      Clear Filter
-                    </a>
-                  </div>
+                      <div className="col-lg-2 text-end pt-3">
+                        <a
+                          className="clear-filter"
+                          onClick={clearFilters}
+                          style={{ cursor: "pointer" }}
+                        >
+                          Clear Filter
+                        </a>
+                      </div>
                     </div>
-                    
                   </div>
-                 
                 </div>
               </div>
             </div>
           </div>
           <div className="container">
             <BrowserRouter>
-              <Timeline  selectedYear={selectedYear}/>
+              <Timeline
+                selectedYear={selectedYear}
+                setSelectedYear={setSelectedYear}
+                // subjectForTimeline={subjectForTimeline}
+                // setSubjectForTimeLine={setSubjectForTimeLine}
+              />
               <Dashboard
                 selectedYear={selectedYear}
                 SelectedCategory={SelectedCategory}
@@ -104,6 +107,7 @@ function App() {
                 selectedFieldOfStudy={selectedFieldOfStudy}
                 majorBodyOfWork={majorBodyOfWork}
                 InfluenceImpact={InfluenceImpact}
+                // setSubjectForTimeLine={setSubjectForTimeLine}
               />
             </BrowserRouter>
           </div>
