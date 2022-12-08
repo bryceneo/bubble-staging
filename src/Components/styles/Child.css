@@ -35,14 +35,14 @@
   z-index: 11;
 }
 .emp-pop-name {
-  font-size: 13px;
+  font-size: 12px;
   font-family: "Poppins-Semibold";
   font-weight: 600;
   line-height: 20px;
 }
 .emp-pop-des {
   color: #727272;
-  font-size: 12px;
+  font-size: 11px;
 }
 .emp-pop-info {
   color: #223247;
@@ -59,4 +59,5 @@
 }
 .rc-tooltip-placement-top {
   opacity: 1 !important;
+  max-width: 170px;
 }
