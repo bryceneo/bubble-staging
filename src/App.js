@@ -100,6 +100,7 @@ function App() {
               <Dashboard
                 selectedYear={selectedYear}
                 SelectedCategory={SelectedCategory}
+                setSelectedCategory={setSelectedCategory}
                 selectedFieldOfStudy={selectedFieldOfStudy}
                 majorBodyOfWork={majorBodyOfWork}
                 InfluenceImpact={InfluenceImpact}

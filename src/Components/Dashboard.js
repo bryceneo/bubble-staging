@@ -11,6 +11,7 @@ function Dashboard({
   selectedFieldOfStudy,
   majorBodyOfWork,
   InfluenceImpact,
+  setSelectedCategory,
 }) {
   const [zoom, SetZoom] = useState(100);
   // console.log(zoom);
@@ -19,7 +20,12 @@ function Dashboard({
   return (
     <>
       <div id="dashboard">
-        <SidePanel SetZoom={SetZoom} displayGraph={displayGraph} />
+        <SidePanel
+          SetZoom={SetZoom}
+          displayGraph={displayGraph}
+          SelectedCategory={SelectedCategory}
+          setSelectedCategory={setSelectedCategory}
+        />
         <Routes>
           <Route
             path="/"
@@ -34,6 +40,7 @@ function Dashboard({
                 InfluenceImpact={InfluenceImpact}
                 displayGraph={displayGraph}
                 setDisplayGraph={setDisplayGraph}
+                setSelectedCategory={setSelectedCategory}
               />
             }
           />
