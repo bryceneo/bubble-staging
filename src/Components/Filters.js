@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./styles/Filters.css";
 import Data from "./Data/AllData.json";
 import { useDetectClickOutside } from "react-detect-click-outside";
+
 function Filters({ SelectedCategory, setSelectedCategory }) {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const ref = useDetectClickOutside({
@@ -57,6 +58,7 @@ function Filters({ SelectedCategory, setSelectedCategory }) {
           {optionsList.map((option, index) => (
             <li
               id={option}
+              key={index}
               role="option"
               aria-selected={selectedOption == index}
               tabIndex={0}

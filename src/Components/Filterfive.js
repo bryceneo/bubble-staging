@@ -4,8 +4,11 @@ import Data from "./Data/AllData.json";
 import { useEffect } from "react";
 import { useDetectClickOutside } from "react-detect-click-outside";
 
-
-const Filterfive = ({ setSelectedYear, selectedYear }) => {
+const Filterfive = ({
+  setSelectedYear,
+  selectedYear,
+  setSelectedYearRange,
+}) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
   const ref = useDetectClickOutside({
@@ -15,12 +18,14 @@ const Filterfive = ({ setSelectedYear, selectedYear }) => {
     ...Array.from(
       new Set(Data?.Database?.map((item) => item?.["Infosys Prize"]))
     ),
+    "custom range",
   ];
 
   const toggleOptions = () => {
     setIsOptionsOpen(!isOptionsOpen);
   };
   const handleKeyDown = (index) => (e) => {
+    // localStorage.setItem("selection", "dropdown");
     switch (e.key) {
       case " ":
       case "SpaceBar":
@@ -33,6 +38,8 @@ const Filterfive = ({ setSelectedYear, selectedYear }) => {
         break;
     }
   };
+
+  // console.log("################");
 
   return (
     <div id="filters">
@@ -58,12 +65,14 @@ const Filterfive = ({ setSelectedYear, selectedYear }) => {
           {optionsList.map((option, index) => (
             <li
               id={option}
+              key={index}
               role="option"
               aria-selected={selectedOption == index}
               tabIndex={0}
               onKeyDown={handleKeyDown(index)}
               onClick={() => {
                 setSelectedYear(option);
+                // setSelectedYearRange([]);
                 setSelectedOption(index);
                 setIsOptionsOpen(false);
               }}
@@ -77,4 +86,4 @@ const Filterfive = ({ setSelectedYear, selectedYear }) => {
   );
 };
 
-export default Filterfive;
+export default React.memo(Filterfive);

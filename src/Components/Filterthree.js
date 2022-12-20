@@ -37,7 +37,7 @@ const Filterthree = ({ majorBodyOfWork, setMajorBodyOfWork }) => {
     }
   };
   return (
-    <div id="filters" >
+    <div id="filters">
       <div className="select-wrapper" ref={ref}>
         <span className="sort-label">Major body of work</span>
         <button
@@ -59,13 +59,16 @@ const Filterthree = ({ majorBodyOfWork, setMajorBodyOfWork }) => {
           {optionsList.map((option, index) => (
             <li
               id={option}
+              key={index}
               role="option"
               aria-selected={selectedOption == index}
               tabIndex={0}
               onKeyDown={handleKeyDown(index)}
               onClick={() => {
                 setSelectedOption(index);
-                setMajorBodyOfWork(option === "Select Body of work" ? "" : option);
+                setMajorBodyOfWork(
+                  option === "Select Body of work" ? "" : option
+                );
                 setIsOptionsOpen(false);
               }}
             >

@@ -37,7 +37,7 @@ const Filtertwo = ({ selectedFieldOfStudy, setSelectedFieldOfStudy }) => {
     }
   };
   return (
-    <div id="filters" >
+    <div id="filters">
       <div className="select-wrapper" ref={ref}>
         <span className="sort-label">Field of Study</span>
         <button
@@ -61,12 +61,15 @@ const Filtertwo = ({ selectedFieldOfStudy, setSelectedFieldOfStudy }) => {
             <li
               id={option}
               role="option"
+              key={index}
               aria-selected={selectedOption == index}
               tabIndex={0}
               onKeyDown={handleKeyDown(index)}
               onClick={() => {
                 setSelectedOption(index);
-                setSelectedFieldOfStudy(option === "Select Field" ? "" : option);
+                setSelectedFieldOfStudy(
+                  option === "Select Field" ? "" : option
+                );
                 setIsOptionsOpen(false);
               }}
             >

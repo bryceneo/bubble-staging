@@ -41,6 +41,9 @@ const picGenerator = (node) => {
 };
 function Grapher({ selectedItem, relatedSubjects, setDisplayGraph }) {
   // console.log(selectedItem, "selectedItem");
+  // console.log(relatedSubjects, "relatedSubjects");
+  // console.log(setDisplayGraph, "setDisplayGraph");
+
   const centralNode = {
     id: selectedItem,
     symbolType: "circle",
@@ -128,7 +131,7 @@ function Grapher({ selectedItem, relatedSubjects, setDisplayGraph }) {
     focusZoom: 5,
     collapsible: false,
     height: 50 * data?.nodes?.length + 150,
-    width:  50 * data?.nodes?.length + 200,
+    width: 50 * data?.nodes?.length + 200,
     highlightDegree: 100,
     highlightOpacity: 0.5,
     linkHighlightBehavior: false,
@@ -140,7 +143,7 @@ function Grapher({ selectedItem, relatedSubjects, setDisplayGraph }) {
 
     d3: {
       alphaTarget: 0.05,
-      gravity: -500,
+      gravity: -550,
       linkLength: 1,
       linkStrength: 20,
     },

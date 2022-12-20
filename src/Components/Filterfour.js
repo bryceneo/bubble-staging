@@ -36,7 +36,7 @@ const Filterfour = ({ InfluenceImpact, setInfluenceImpact }) => {
     }
   };
   return (
-    <div id="filters" >
+    <div id="filters">
       <div className="select-wrapper" ref={ref}>
         <span className="sort-label">Influence/Impact</span>
         <button
@@ -59,6 +59,7 @@ const Filterfour = ({ InfluenceImpact, setInfluenceImpact }) => {
           {optionsList.map((option, index) => (
             <li
               id={option}
+              key={index}
               role="option"
               aria-selected={selectedOption == index}
               tabIndex={0}

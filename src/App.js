@@ -37,8 +37,17 @@ function App() {
   const [selectedYear, setSelectedYear] = useState(
     new Date().getFullYear() - 1
   );
+  const [selectedYearRange, setSelectedYearRange] = useState([
+    new Date().getFullYear() - 3,
+    new Date().getFullYear() - 1,
+  ]);
+
   const [subjectForTimeline, setSubjectForTimeLine] = useState("");
   // console.log(selectedYear, "selectedYear");
+
+  const chooseYearRange = (val) => {
+    setSelectedYearRange(val);
+  };
 
   const clearFilters = () => {
     setSelectedCategory("");
@@ -76,6 +85,7 @@ function App() {
                       <Filterfive
                         setSelectedYear={setSelectedYear}
                         selectedYear={selectedYear}
+                        setSelectedYearRange={setSelectedYearRange}
                       />
                       <div className="col-lg-2 text-end pt-3">
                         <a
@@ -94,15 +104,22 @@ function App() {
           </div>
           <div className="container">
             <BrowserRouter>
-              <Timeline
-                selectedYear={selectedYear}
-                setSelectedYear={setSelectedYear}
-                // subjectForTimeline={subjectForTimeline}
-                // setSubjectForTimeLine={setSubjectForTimeLine}
-              />
+              {typeof selectedYear !== "number" && (
+                <Timeline
+                  selectedYear={selectedYear}
+                  setSelectedYear={setSelectedYear}
+                  chooseYearRange={chooseYearRange}
+                  selectedYearRange={selectedYearRange}
+                  setSelectedYearRange={setSelectedYearRange}
+                  // subjectForTimeline={subjectForTimeline}
+                  // setSubjectForTimeLine={setSubjectForTimeLine}
+                />
+              )}
               <Dashboard
                 selectedYear={selectedYear}
                 SelectedCategory={SelectedCategory}
+                selectedYearRange={selectedYearRange}
+                setSelectedYearRange={setSelectedYearRange}
                 setSelectedCategory={setSelectedCategory}
                 selectedFieldOfStudy={selectedFieldOfStudy}
                 majorBodyOfWork={majorBodyOfWork}

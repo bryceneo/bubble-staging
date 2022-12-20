@@ -12,11 +12,14 @@ function Dashboard({
   majorBodyOfWork,
   InfluenceImpact,
   setSelectedCategory,
-  setSubjectForTimeLine
+  selectedYearRange,
+  // setSubjectForTimeLine,
 }) {
   const [zoom, SetZoom] = useState(100);
   // console.log(zoom);
   const [displayGraph, setDisplayGraph] = useState(false);
+
+  // console.log("in dashboard   ", selectedYear, selectedYearRange);
 
   return (
     <>
@@ -35,6 +38,7 @@ function Dashboard({
                 dataId={1}
                 zoom={zoom}
                 selectedYear={selectedYear}
+                selectedYearRange={selectedYearRange}
                 SelectedCategory={SelectedCategory}
                 selectedFieldOfStudy={selectedFieldOfStudy}
                 majorBodyOfWork={majorBodyOfWork}
@@ -42,7 +46,7 @@ function Dashboard({
                 displayGraph={displayGraph}
                 setDisplayGraph={setDisplayGraph}
                 setSelectedCategory={setSelectedCategory}
-                setSubjectForTimeLine={setSubjectForTimeLine}
+                // setSubjectForTimeLine={setSubjectForTimeLine}
               />
             }
           />

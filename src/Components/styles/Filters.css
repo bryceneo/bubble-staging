@@ -5,7 +5,8 @@
 }
 .main-wrapper-filter {
   justify-content: space-between;
-  gap: 20px;
+  /* gap: 20px; */
+  align-self: center;
   align-items: center;
 }
 #filters {
@@ -34,7 +35,7 @@
   height: 24px;
   -webkit-line-clamp: 1;
   overflow: hidden;
-  
+
   /* display: -webkit-box; */
 }
 
@@ -77,7 +78,8 @@ ul.options li {
   padding: 6px 10px;
   font-size: 12px;
 }
- ul.options li:focus, ul.options li:hover{
+ul.options li:focus,
+ul.options li:hover {
   background: #efefef;
   cursor: pointer;
   color: #000;
@@ -102,38 +104,37 @@ ul.options li[aria-selected="true"] {
   background: transparent;
   border: 1px solid #223247;
 }
-.main-wrapper-filter{
+.main-wrapper-filter {
   display: flex;
 }
-@media screen and (max-width:1320px){
-  #select-btn{
+@media screen and (max-width: 1320px) {
+  #select-btn {
     font-size: 12px;
     height: 22px;
   }
 }
-@media  screen and (max-width:1024px) {
-  #select-btn{
+@media screen and (max-width: 1024px) {
+  #select-btn {
     padding-bottom: 1px;
     font-size: 12px;
   }
- 
 }
-@media screen  and (max-width:992px){
+@media screen and (max-width: 992px) {
   .main-wrapper-filter {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-}
-#filters{
-  display: block;
-  margin-top: 10px;
-  height: 4em;
-}
-#select-btn{
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-width: 200px;
-}
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #filters {
+    display: block;
+    margin-top: 10px;
+    height: 4em;
+  }
+  #select-btn {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px;
+  }
 }
 /* width */
 ul::-webkit-scrollbar {
@@ -143,15 +144,15 @@ ul::-webkit-scrollbar {
 
 /* Track */
 ul::-webkit-scrollbar-track {
-  background: #adacac; 
+  background: #adacac;
 }
- 
+
 /* Handle */
 ul::-webkit-scrollbar-thumb {
-  background: #223247; 
+  background: #223247;
 }
 
 /* Handle on hover */
 ul::-webkit-scrollbar-thumb:hover {
-  background: rgb(156, 156, 156); 
+  background: rgb(156, 156, 156);
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./styles/DataDisplay.css";
 import first from "./Data/home";
 import second from "./Data/laurateDetails";
@@ -27,6 +27,7 @@ function DataDisplay({
   dataId,
   zoom,
   selectedYear,
+  selectedYearRange,
   SelectedCategory,
   selectedFieldOfStudy,
   majorBodyOfWork,
@@ -39,7 +40,7 @@ function DataDisplay({
   setInfluenceImpact,
   displayGraph,
   setDisplayGraph,
-  setSubjectForTimeLine
+  // setSubjectForTimeLine,
 }) {
   const [selectedItem, setSelectedItem] = useState(null);
   const [subjectFilter, setSubjectFilter] = useState("");
@@ -51,14 +52,27 @@ function DataDisplay({
   const { subId, subText } = state ? state : { subId: "", subText: "" };
   const navigate = useNavigate();
   let Winners = data?.Database;
-  // const fieldsOfStudy =
-  // console.log(Winners,"Winners")
 
-  if (selectedYear) {
+  // let yearLength = [];
+
+  // console.log("val of selected year  ", selectedYear);
+
+  // console.log("val of selectedYearRange   ", selectedYearRange);
+
+  if (typeof selectedYear === "number") {
     const newWinners = Winners?.filter(
       (item) => item["Infosys Prize"] === selectedYear
     );
     Winners = newWinners;
+  } else {
+    let winnersList = [];
+    for (let i = selectedYearRange[0]; i <= selectedYearRange[1]; i++) {
+      const newWinners = Winners?.filter((item) => item["Infosys Prize"] === i);
+      // yearLength.push(i);
+      winnersList = [...winnersList, ...newWinners];
+      winnersList = Array.from(new Set(winnersList));
+    }
+    Winners = winnersList;
   }
 
   if (SelectedCategory) {
@@ -107,12 +121,16 @@ function DataDisplay({
     )
   );
 
+  // console.log("Winners  11 ", Winners);
+
   useEffect(() => {
     const newShuffledList = shuffleArrayElements([
       ...Winners,
       selectedYear,
       ...subjects,
     ]);
+
+    // console.log("newShuffledList   ------>>>>>>>>>>    ", newShuffledList);
     if (newShuffledList?.length > 1)
       setShuffledList(Array.from(new Set(newShuffledList)));
     else {
@@ -120,6 +138,7 @@ function DataDisplay({
     }
   }, [
     selectedYear,
+    selectedYearRange,
     SelectedCategory,
     selectedFieldOfStudy,
     majorBodyOfWork,
@@ -152,7 +171,7 @@ function DataDisplay({
     yRadius: 200,
     xRadius: 200,
     cornerRadius: 0,
-    
+
     showGuides: false,
     compact: true,
     gravitation: 1,
@@ -179,23 +198,60 @@ function DataDisplay({
   // console.log(typeof(Winners),"typeof(subjects)");
   // console.log(subjects.splice.apply(subjects, [2, 0].concat(Winners)),"dwfsdasdadas");
 
+  // const childrenRange = selectedYearRange?.map((item, index) => {
+  //   console.log("inside ragnge ", item);
+  //   return (
+  //     <Child
+  //       key={index}
+  //       params={item}
+  //       selectedItem={selectedItem}
+  //       setSelectedItem={setSelectedItem}
+  //       selectedYear={selectedYear}
+  //       relatedSubjects={relatedSubjects}
+  //       mobileView={mobileView}
+  //       selectedField={selectedField}
+  //       setSelectedField={setSelectedField}
+  //       setDisplayGraph={setDisplayGraph}
+  //     />
+  //   );
+  // });
+
   const children = shiffledList?.map((item, index) => {
+    // console.log("  index  ------>>  ", index);
+    // console.log("  item  ------>>  ", item);
+    // console.log("   selectedItem ------>>  ", selectedItem);
+    // console.log("   selectedYear ------>>  ", selectedYear);
+    // console.log("   relatedSubjects ------>>  ", relatedSubjects);
+
     return (
       <Child
-        className="child"
+        // className="child"
         key={index}
         params={item}
         selectedItem={selectedItem}
         setSelectedItem={setSelectedItem}
         selectedYear={selectedYear}
+        selectedYearRange={selectedYearRange}
         relatedSubjects={relatedSubjects}
         mobileView={mobileView}
         selectedField={selectedField}
         setSelectedField={setSelectedField}
-        setSubjectForTimeLine={setSubjectForTimeLine}
+        setDisplayGraph={setDisplayGraph}
+        // setSubjectForTimeLine={setSubjectForTimeLine}
       />
     );
   });
+
+  // const childrenRange = data.map((item, index) => {
+  //   return (
+  //     <Child
+  //       className="child"
+  //       key={item.id ? item.id : `e${index}`}
+  //       params={item}
+  //       selectedField={selectedField}
+  //     />
+  //   );
+  // });
 
   // console.log(Array.from(fieldsOfStudy), "Winners.concat(fieldsOfStudy)");
 
@@ -221,7 +277,7 @@ function DataDisplay({
               setSelectedField={setSelectedField}
             />
           )}
-          {selectedItem && !selectedItem?.Name && !mobileView && subjectNav}
+          {/* {selectedItem && !selectedItem?.Name && !mobileView && subjectNav} */}
           {mobileView && !selectedItem?.Name && (
             <>
               <FilterHeader
@@ -290,7 +346,7 @@ function DataDisplay({
             </div>
           ) : (
             <div
-             className="no-data-title"
+              className="no-data-title"
               // onClick={() => setDi splayGraph(true)}
             >
               No Data found

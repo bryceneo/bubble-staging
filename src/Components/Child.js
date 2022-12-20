@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import testPerson from "./Data/Pics/2.jpeg";
 import { useNavigate } from "react-router-dom";
 import DummyImage from "./Data/Pics/2.jpeg";
@@ -12,11 +12,13 @@ function Child({
   setSelectedItem,
   selectedItem,
   selectedYear,
+  selectedYearRange,
   relatedSubjects,
   mobileView,
   selectedField,
   setSelectedField,
-  setSubjectForTimeLine
+  setDisplayGraph,
+  // setSubjectForTimeLine,
 }) {
   const navigate = useNavigate();
   const [isHovering, setIsHovering] = useState(false);
@@ -63,7 +65,7 @@ function Child({
       (selectedItem?.Name &&
         selectedItem["Field of study and training"]?.includes(params) &&
         (!selectedField || selectedField === "Field of study and training")) ||
-      params === selectedYear ||
+      typeof params === "number" ||
       selectedItem === params ||
       (!selectedItem?.Name && relatedSubjects?.includes(params))
     )
@@ -124,7 +126,7 @@ function Child({
       !selectedItem ||
       isIteminSubjects(selectedItem) ||
       isSubjectInItem(selectedItem) ||
-      params === selectedItem ||
+      typeof params === "number" ||
       params === selectedYear ||
       (selectedItem && !selectedItem?.Name && relatedSubjects?.includes(params))
     )
@@ -184,7 +186,7 @@ function Child({
             onClick={() => {
               setSelectedField("");
               setSelectedItem(params);
-              setSubjectForTimeLine("")
+              // setSubjectForTimeLine("");
             }}
           >
             <img
@@ -224,11 +226,11 @@ function Child({
 
           opacity: getOpacity(),
           cursor:
-            params === selectedYear || params === "No Data Found"
+            typeof params === "number" || params === "No Data Found"
               ? ""
               : `pointer`,
           backgroundColor:
-            params === selectedYear ||
+            typeof params === "number" ||
             selectedItem === params ||
             (selectedItem &&
               !selectedItem?.Name &&
@@ -237,16 +239,24 @@ function Child({
               : backgroundColor(),
           color: getTextColor(),
         }}
+        // onClick={toggleGraph}
         // onClick={() => personClickHandler(params.laurateId, params.isRouting)}
         onClick={() => {
-          if (params !== selectedYear && params !== "No Data Found") {
+          if (
+            params !== selectedYear &&
+            params !== "No Data Found" &&
+            typeof params !== "number"
+          ) {
             setSelectedField("");
             setSelectedItem(params);
-            setSubjectForTimeLine(params)
+            // setSubjectForTimeLine(params)
+            setTimeout(() => {
+              setDisplayGraph(true);
+            }, 100);
           }
         }}
       >
-        {params === selectedYear ? `${selectedYear} Prize Winners` : params}
+        {typeof params === "number" ? `${params} Prize Winners` : params}
       </div>
     );
   }
