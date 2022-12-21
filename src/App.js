@@ -69,24 +69,26 @@ function App() {
       >
         <DesktopSize>
           <>
-            <div className="container-fluid filter-header ">
-              <div className="container ">
-                <div className="row align-items-center">
-                  <div className="col-lg-12">
-                    <div className="main-wrapper-filter">
-                      <Filters />
-                      <Filtertwo />
-                      <Filterthree />
-                      <Filterfour />
-                      <Filterfive />
-                      <div className="col-lg-2 text-end pt-3">
-                        <button
-                          className="clear-filter"
-                          onClick={clearFilters}
-                          style={{ cursor: "pointer" }}
-                        >
-                          Clear Filter
-                        </button>
+            <div className="filter-header  ">
+              <div className="container-fluid ">
+                <div className="container ">
+                  <div className="row align-items-center">
+                    <div className="col-lg-12">
+                      <div className="main-wrapper-filter">
+                        <Filters />
+                        <Filtertwo />
+                        <Filterthree />
+                        <Filterfour />
+                        <Filterfive />
+                        <div className="col-lg-2 text-end pt-3">
+                          <button
+                            className="clear-filter"
+                            onClick={clearFilters}
+                            style={{ cursor: "pointer" }}
+                          >
+                            Clear Filter
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>

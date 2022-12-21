@@ -33,6 +33,7 @@ function Timeline() {
         </h4>
 
         <RangeSelector
+          height={60}
           defaultValue={selectedYearRange}
           onValueChange={async (e) => {
             // setYearRange(e);

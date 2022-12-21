@@ -12,7 +12,7 @@ function DataDisplay({
   mode,
   setSelectedSubject,
   selectedSubject,
-  color
+  color,
 }) {
   const options = {
     size: 180,
@@ -28,7 +28,7 @@ function DataDisplay({
     showGuides: false,
     compact: true,
     gravitation: 1,
-    compact: true
+    compact: true,
   };
   const children = data.map((item, index) => {
     return (

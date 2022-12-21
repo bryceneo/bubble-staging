@@ -13,9 +13,8 @@
   text-align: center;
   font-size: 11px;
   padding: 15px 10px;
-  
 }
-.myBubbleUI div{
+.myBubbleUI div {
   transition: ease-out all 0.5s;
 }
 .child {
