@@ -9,8 +9,9 @@ import { BrowserRouter } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import Mobile from "./Mobile/Mobile";
 import { useState } from "react";
-import YearLine from "./Mobile/Components/YearLine";
 import "rc-tooltip/assets/bootstrap_white.css";
+import { AppContext } from "./Context/AppContext";
+
 function App() {
   const useDesktopMediaQuery = () =>
     useMediaQuery({ query: "(min-width: 769px)" });
@@ -34,116 +35,77 @@ function App() {
   const [selectedFieldOfStudy, setSelectedFieldOfStudy] = useState("");
   const [majorBodyOfWork, setMajorBodyOfWork] = useState("");
   const [InfluenceImpact, setInfluenceImpact] = useState("");
-  const [selectedYear, setSelectedYear] = useState(
-    new Date().getFullYear() - 1
-  );
+  const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
   const [selectedYearRange, setSelectedYearRange] = useState([
-    new Date().getFullYear() - 3,
-    new Date().getFullYear() - 1,
+    new Date().getFullYear() - 2,
+    new Date().getFullYear(),
   ]);
-
-  const [subjectForTimeline, setSubjectForTimeLine] = useState("");
-  // console.log(selectedYear, "selectedYear");
-
-  const chooseYearRange = (val) => {
-    setSelectedYearRange(val);
-  };
 
   const clearFilters = () => {
     setSelectedCategory("");
     setSelectedFieldOfStudy("");
     setMajorBodyOfWork("");
     setInfluenceImpact("");
-    setSelectedYear(new Date().getFullYear() - 1);
+    setSelectedYear(new Date().getFullYear());
   };
+
   return (
     <>
-      <DesktopSize>
-        <>
-          <div className="filter-header">
-            <div className="container-fluid">
-              <div className="container">
+      <AppContext.Provider
+        value={{
+          SelectedCategory,
+          setSelectedCategory,
+          selectedFieldOfStudy,
+          setSelectedFieldOfStudy,
+          majorBodyOfWork,
+          setMajorBodyOfWork,
+          InfluenceImpact,
+          setInfluenceImpact,
+          selectedYear,
+          setSelectedYear,
+          selectedYearRange,
+          setSelectedYearRange,
+        }}
+      >
+        <DesktopSize>
+          <>
+            <div className="container-fluid filter-header ">
+              <div className="container ">
                 <div className="row align-items-center">
                   <div className="col-lg-12">
                     <div className="main-wrapper-filter">
-                      <Filters
-                        SelectedCategory={SelectedCategory}
-                        setSelectedCategory={setSelectedCategory}
-                      />
-                      <Filtertwo
-                        selectedFieldOfStudy={selectedFieldOfStudy}
-                        setSelectedFieldOfStudy={setSelectedFieldOfStudy}
-                      />
-                      <Filterthree
-                        majorBodyOfWork={majorBodyOfWork}
-                        setMajorBodyOfWork={setMajorBodyOfWork}
-                      />
-                      <Filterfour
-                        InfluenceImpact={InfluenceImpact}
-                        setInfluenceImpact={setInfluenceImpact}
-                      />
-                      <Filterfive
-                        setSelectedYear={setSelectedYear}
-                        selectedYear={selectedYear}
-                        setSelectedYearRange={setSelectedYearRange}
-                      />
+                      <Filters />
+                      <Filtertwo />
+                      <Filterthree />
+                      <Filterfour />
+                      <Filterfive />
                       <div className="col-lg-2 text-end pt-3">
-                        <a
+                        <button
                           className="clear-filter"
                           onClick={clearFilters}
                           style={{ cursor: "pointer" }}
                         >
                           Clear Filter
-                        </a>
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="container">
-            <BrowserRouter>
-              {typeof selectedYear !== "number" && (
-                <Timeline
-                  selectedYear={selectedYear}
-                  setSelectedYear={setSelectedYear}
-                  chooseYearRange={chooseYearRange}
-                  selectedYearRange={selectedYearRange}
-                  setSelectedYearRange={setSelectedYearRange}
-                  // subjectForTimeline={subjectForTimeline}
-                  // setSubjectForTimeLine={setSubjectForTimeLine}
-                />
-              )}
-              <Dashboard
-                selectedYear={selectedYear}
-                SelectedCategory={SelectedCategory}
-                selectedYearRange={selectedYearRange}
-                setSelectedYearRange={setSelectedYearRange}
-                setSelectedCategory={setSelectedCategory}
-                selectedFieldOfStudy={selectedFieldOfStudy}
-                majorBodyOfWork={majorBodyOfWork}
-                InfluenceImpact={InfluenceImpact}
-                // setSubjectForTimeLine={setSubjectForTimeLine}
-              />
-            </BrowserRouter>
-          </div>
-        </>
-      </DesktopSize>
-      <MobileSize>
-        <Mobile
-          selectedYear={selectedYear}
-          SelectedCategory={SelectedCategory}
-          selectedFieldOfStudy={selectedFieldOfStudy}
-          majorBodyOfWork={majorBodyOfWork}
-          InfluenceImpact={InfluenceImpact}
-          setSelectedCategory={setSelectedCategory}
-          setSelectedFieldOfStudy={setSelectedFieldOfStudy}
-          setMajorBodyOfWork={setMajorBodyOfWork}
-          setInfluenceImpact={setInfluenceImpact}
-          setSelectedYear={setSelectedYear}
-        />
-      </MobileSize>
+
+            <div className="container">
+              <BrowserRouter>
+                {typeof selectedYear !== "number" && <Timeline />}
+                <Dashboard />
+              </BrowserRouter>
+            </div>
+          </>
+        </DesktopSize>
+        <MobileSize>
+          <Mobile />
+        </MobileSize>
+      </AppContext.Provider>
     </>
   );
 }

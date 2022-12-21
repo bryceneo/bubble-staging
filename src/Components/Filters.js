@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./styles/Filters.css";
 import Data from "./Data/AllData.json";
 import { useDetectClickOutside } from "react-detect-click-outside";
+import { AppContext } from "../Context/AppContext";
 
-function Filters({ SelectedCategory, setSelectedCategory }) {
+function Filters(
+  {
+    // SelectedCategory, setSelectedCategory
+  }
+) {
+  const { SelectedCategory, setSelectedCategory } = useContext(AppContext);
+
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const ref = useDetectClickOutside({
     onTriggered: () => setIsOptionsOpen(false),

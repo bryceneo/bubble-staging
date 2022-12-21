@@ -1,8 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./styles/Filters.css";
 import Data from "./Data/AllData.json";
 import { useDetectClickOutside } from "react-detect-click-outside";
-const Filtertwo = ({ selectedFieldOfStudy, setSelectedFieldOfStudy }) => {
+import { AppContext } from "../Context/AppContext";
+const Filtertwo = (
+  {
+    // selectedFieldOfStudy, setSelectedFieldOfStudy
+  }
+) => {
+  const { selectedFieldOfStudy, setSelectedFieldOfStudy } =
+    useContext(AppContext);
+
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const ref = useDetectClickOutside({
     onTriggered: () => setIsOptionsOpen(false),

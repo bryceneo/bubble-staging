@@ -13,94 +13,12 @@ import prizeDetailsInfluence from "./Data/prizeDetailsInfluence";
 import DataDisplay from "../Components/DataDisplay";
 import FilterHeader from "./Components/FilterHeader";
 
-function Mobile({
-  selectedYear,
-  SelectedCategory,
-  selectedFieldOfStudy,
-  majorBodyOfWork,
-  InfluenceImpact,
-  setSelectedCategory,
-  setSelectedFieldOfStudy,
-  setMajorBodyOfWork,
-  setInfluenceImpact,
-  setSelectedYear,
-  selectedField,
-  setSelectedField,
-}) {
+function Mobile({}) {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route
-            path="/"
-            element={
-              <DataDisplay
-                selectedYear={selectedYear}
-                SelectedCategory={SelectedCategory}
-                selectedFieldOfStudy={selectedFieldOfStudy}
-                majorBodyOfWork={majorBodyOfWork}
-                setSelectedCategory={setSelectedCategory}
-                InfluenceImpact={InfluenceImpact}
-                setSelectedFieldOfStudy={setSelectedFieldOfStudy}
-                setMajorBodyOfWork={setMajorBodyOfWork}
-                setInfluenceImpact={setInfluenceImpact}
-                setSelectedYear={setSelectedYear}
-                selectedField={selectedField}
-                setSelectedField={setSelectedField}
-                mobileView
-              />
-            }
-          />
-          {/* <Route
-            path="/laurate"
-            element={<PrizeDetails  />}
-          /> */}
-          {/* <Route path="prize-winners/:year" element={<PrizeWinners />} /> */}
-          {/* <Route path="prize-details/:prizeId" element={<PrizeDetails />}>
-            <Route
-              path="all"
-              element={
-                <DataDisplay
-                  data={prizeDetailsAll}
-                  bubbleOptions={{ numCols: 5 }}
-                />
-              }
-            />
-            <Route
-              path="studies"
-              element={
-                <DataDisplay
-                  data={prizeDetailsStudies}
-                  bubbleOptions={{ numCols: 5 }}
-                />
-              }
-            />
-            <Route
-              path="work"
-              element={
-                <DataDisplay
-                  data={prizeDetailsWork}
-                  bubbleOptions={{ numCols: 5 }}
-                />
-              }
-            />
-            <Route
-              path="influence"
-              element={
-                <DataDisplay
-                  data={prizeDetailsInfluence}
-                  bubbleOptions={{ numCols: 5 }}
-                />
-              }
-            />
-          </Route> */}
-          {/* <Route path="subject-areas/:subjectId" element={<SubjectAreas />} />
-          <Route path="field-relations/:field" element={<FieldRelations />} />
-          <Route path="year-ranges/:range" element={<YearRanges />} />
-          <Route
-            path="laurates-of-subject/:subject"
-            element={<LauratesOfSubjects />}
-          /> */}
+          <Route path="/" element={<DataDisplay mobileView />} />
         </Routes>
       </BrowserRouter>
     </>

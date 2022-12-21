@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import testPerson from "./Data/Pics/2.jpeg";
 import { useNavigate } from "react-router-dom";
 import DummyImage from "./Data/Pics/2.jpeg";
@@ -7,19 +7,28 @@ import Avatar from "react-avatar";
 import "./styles/Child.css";
 import Tooltip from "rc-tooltip";
 import { findColorOfSubject } from "./utilities";
+import { AppContext } from "../Context/AppContext";
 function Child({
   params,
   setSelectedItem,
   selectedItem,
-  selectedYear,
-  selectedYearRange,
+  // selectedYear,
+  // selectedYearRange,
   relatedSubjects,
   mobileView,
   selectedField,
   setSelectedField,
-  setDisplayGraph,
+  // setDisplayGraph,
   // setSubjectForTimeLine,
 }) {
+  const {
+    selectedYear,
+    displayGraph,
+    setDisplayGraph,
+    selectedYearRange,
+    setSelectedYearRange,
+  } = useContext(AppContext);
+
   const navigate = useNavigate();
   const [isHovering, setIsHovering] = useState(false);
   const handleMouseOver = () => {

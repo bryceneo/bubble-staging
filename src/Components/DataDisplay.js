@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "./styles/DataDisplay.css";
 import first from "./Data/home";
 import second from "./Data/laurateDetails";
@@ -23,41 +23,34 @@ import YearLine from "../Mobile/Components/YearLine";
 import PRIZE_DETAILS from "../Mobile/Components/PRIZE_DETAILS";
 import FilterHeader from "../Mobile/Components/FilterHeader";
 import MobileCategories from "../Mobile/Components/Categories";
-function DataDisplay({
-  dataId,
-  zoom,
-  selectedYear,
-  selectedYearRange,
-  SelectedCategory,
-  selectedFieldOfStudy,
-  majorBodyOfWork,
-  InfluenceImpact,
-  mobileView,
-  setSelectedYear,
-  setSelectedCategory,
-  setSelectedFieldOfStudy,
-  setMajorBodyOfWork,
-  setInfluenceImpact,
-  displayGraph,
-  setDisplayGraph,
-  // setSubjectForTimeLine,
-}) {
+import { AppContext } from "../Context/AppContext";
+
+function DataDisplay({ mobileView }) {
+  const {
+    zoom,
+    selectedYear,
+    setSelectedYear,
+    selectedYearRange,
+    setSelectedFieldOfStudy,
+    setMajorBodyOfWork,
+    setInfluenceImpact,
+    SelectedCategory,
+    selectedFieldOfStudy,
+    majorBodyOfWork,
+    InfluenceImpact,
+    displayGraph,
+    setDisplayGraph,
+    setSelectedCategory,
+  } = useContext(AppContext);
+
   const [selectedItem, setSelectedItem] = useState(null);
-  const [subjectFilter, setSubjectFilter] = useState("");
-  // const [displayGraph, setDisplayGraph] = useState(false);
-  const { state } = useLocation();
   const [shiffledList, setShuffledList] = useState(null);
   const [relatedSubjects, setRelatedSubjects] = useState([]);
   const [selectedField, setSelectedField] = useState("");
-  const { subId, subText } = state ? state : { subId: "", subText: "" };
-  const navigate = useNavigate();
+
+  const scaleValue = zoom / 3 + 1.01;
+
   let Winners = data?.Database;
-
-  // let yearLength = [];
-
-  // console.log("val of selected year  ", selectedYear);
-
-  // console.log("val of selectedYearRange   ", selectedYearRange);
 
   if (typeof selectedYear === "number") {
     const newWinners = Winners?.filter(
@@ -121,15 +114,12 @@ function DataDisplay({
     )
   );
 
-  // console.log("Winners  11 ", Winners);
-
   useEffect(() => {
     const newShuffledList = shuffleArrayElements([
       ...Winners,
       selectedYear,
       ...subjects,
     ]);
-
     // console.log("newShuffledList   ------>>>>>>>>>>    ", newShuffledList);
     if (newShuffledList?.length > 1)
       setShuffledList(Array.from(new Set(newShuffledList)));
@@ -158,8 +148,6 @@ function DataDisplay({
     </div>
   );
 
-  // console.log(selectedItem, "selectedItem");
-
   const options = {
     size: 98,
     // size: zoom,
@@ -171,7 +159,6 @@ function DataDisplay({
     yRadius: 200,
     xRadius: 200,
     cornerRadius: 0,
-
     showGuides: false,
     compact: true,
     gravitation: 1,
@@ -192,71 +179,22 @@ function DataDisplay({
     compact: true,
     gravitation: 1,
   };
-  // console.log("subjects",subjects);
-  // console.log("winners", Winners);
-
-  // console.log(typeof(Winners),"typeof(subjects)");
-  // console.log(subjects.splice.apply(subjects, [2, 0].concat(Winners)),"dwfsdasdadas");
-
-  // const childrenRange = selectedYearRange?.map((item, index) => {
-  //   console.log("inside ragnge ", item);
-  //   return (
-  //     <Child
-  //       key={index}
-  //       params={item}
-  //       selectedItem={selectedItem}
-  //       setSelectedItem={setSelectedItem}
-  //       selectedYear={selectedYear}
-  //       relatedSubjects={relatedSubjects}
-  //       mobileView={mobileView}
-  //       selectedField={selectedField}
-  //       setSelectedField={setSelectedField}
-  //       setDisplayGraph={setDisplayGraph}
-  //     />
-  //   );
-  // });
 
   const children = shiffledList?.map((item, index) => {
-    // console.log("  index  ------>>  ", index);
-    // console.log("  item  ------>>  ", item);
-    // console.log("   selectedItem ------>>  ", selectedItem);
-    // console.log("   selectedYear ------>>  ", selectedYear);
-    // console.log("   relatedSubjects ------>>  ", relatedSubjects);
-
+    // console.log("A: item", item, item?.Name);
     return (
       <Child
-        // className="child"
         key={index}
         params={item}
         selectedItem={selectedItem}
         setSelectedItem={setSelectedItem}
-        selectedYear={selectedYear}
-        selectedYearRange={selectedYearRange}
-        relatedSubjects={relatedSubjects}
-        mobileView={mobileView}
         selectedField={selectedField}
         setSelectedField={setSelectedField}
-        setDisplayGraph={setDisplayGraph}
-        // setSubjectForTimeLine={setSubjectForTimeLine}
+        relatedSubjects={relatedSubjects}
+        // mobileView={mobileView}
       />
     );
   });
-
-  // const childrenRange = data.map((item, index) => {
-  //   return (
-  //     <Child
-  //       className="child"
-  //       key={item.id ? item.id : `e${index}`}
-  //       params={item}
-  //       selectedField={selectedField}
-  //     />
-  //   );
-  // });
-
-  // console.log(Array.from(fieldsOfStudy), "Winners.concat(fieldsOfStudy)");
-
-  const scaleValue = zoom / 3 + 1.01;
-  // const marginValue = `${zoom * 3}em`;
 
   return (
     <>

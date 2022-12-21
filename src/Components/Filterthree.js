@@ -1,8 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./styles/Filters.css";
 import Data from "./Data/AllData.json";
 import { useDetectClickOutside } from "react-detect-click-outside";
-const Filterthree = ({ majorBodyOfWork, setMajorBodyOfWork }) => {
+import { AppContext } from "../Context/AppContext";
+const Filterthree = (
+  {
+    // majorBodyOfWork, setMajorBodyOfWork
+  }
+) => {
+  const { majorBodyOfWork, setMajorBodyOfWork } = useContext(AppContext);
+
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
   const ref = useDetectClickOutside({

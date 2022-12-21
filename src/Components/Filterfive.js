@@ -1,14 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./styles/Filters.css";
 import Data from "./Data/AllData.json";
 import { useEffect } from "react";
 import { useDetectClickOutside } from "react-detect-click-outside";
+import { AppContext } from "../Context/AppContext";
 
-const Filterfive = ({
-  setSelectedYear,
-  selectedYear,
-  setSelectedYearRange,
-}) => {
+const Filterfive = () => {
+  const { selectedYear, setSelectedYear } = useContext(AppContext);
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
   const ref = useDetectClickOutside({
