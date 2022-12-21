@@ -1,6 +1,11 @@
 import React, { useContext } from "react";
 import "./styles/Timeline.css";
-import RangeSelector, { Scale } from "devextreme-react/range-selector";
+import RangeSelector, {
+  Format,
+  Label,
+  Scale,
+  SliderMarker,
+} from "devextreme-react/range-selector";
 import data from "./Data/AllData.json";
 
 // Import Swiper styles
@@ -19,6 +24,9 @@ function Timeline() {
     ...new Set(data.Database.map((item) => item["Infosys Prize"])),
   ];
 
+  // YearList = [200, 300, 400, 500, 600];
+
+  console.log("A::", YearList);
   return (
     <>
       <div className="">
@@ -33,7 +41,7 @@ function Timeline() {
         </h4>
 
         <RangeSelector
-          height={60}
+          height={80}
           defaultValue={selectedYearRange}
           onValueChange={async (e) => {
             // setYearRange(e);
@@ -41,11 +49,16 @@ function Timeline() {
           }}
         >
           <Scale
+            categories={""}
             startValue={YearList[0]}
             endValue={YearList[YearList.length - 1]}
             minorTickInterval={1}
             tickInterval={1}
-          ></Scale>
+          >
+            <Label>
+              <Format type="decimal" />
+            </Label>
+          </Scale>
         </RangeSelector>
       </div>
     </>
