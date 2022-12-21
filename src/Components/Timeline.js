@@ -3,7 +3,7 @@ import "./styles/Timeline.css";
 import TimeLineYearData from "./Data/TimeLineYearData";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import RangeSelector, { Scale } from "devextreme-react/range-selector";
+import RangeSelector, { Scale, SliderMarker, MinorTick, Label } from "devextreme-react/range-selector";
 
 // Import Swiper styles
 import "swiper/css";
@@ -54,7 +54,7 @@ function Timeline({
               }`}
         </h4>
 
-        <RangeSelector
+        <RangeSelector id="range-selector"
           // title="Select House Price Range"
           defaultValue={defaultValue}
           onValueChange={async (e) => {
@@ -65,12 +65,20 @@ function Timeline({
             // localStorage.setItem("selection", "slider");
           }}
         >
+          
           <Scale
             startValue={start}
             endValue={end}
             minorTickInterval={1}
             tickInterval={1}
-          ></Scale>
+            
+          >
+            <MinorTick visible={false} />
+
+          </Scale>
+          <SliderMarker
+            color = '#14202E'
+          />
         </RangeSelector>
 
         {/* <Swiper
